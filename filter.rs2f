@@ -1,0 +1,4 @@
+meta {
+    name = "Jarnhopurs GIM Filter"
+    description = "Jarnhopurs OSRS Loot Filter, targeted for GIM players, with minor UI/graphical changes."
+}
