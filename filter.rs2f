@@ -1,7 +1,135 @@
-meta {
-    name="Jarnhopurs GIM Filter"
-    description="Jarnhopurs OSRS Loot Filter, targeted for GIM players, with minor UI/graphical changes."
-}
+/*@ define:module:header
+hidden: true
+name: header
+*/
+
+meta { name = "Jarnhopur's GIM Filter"; 
+description = "Jarnhopurs OSRS Loot Filter, targeted for GIM players, with minor UI/graphical changes."; }
+
+
+/*@ define:module:welcome
+name: Welcome
+subtitle: Welcome to Jarnhopur's Filter
+description: |
+    Here is my personal filters for my GIM team. I like the default runelite ground markers for the most part so this filter has only minor UI/Graphical updates, alongside area/monster specific hide rules and dedicated setups for PvM drops.
+*/
+
+/*@ define:module:settings
+name: Settings
+subtitle: Basic Global Settings 
+*/
+
+/*@ define:input:settings
+label: Global Drops
+type: boolean
+group: Show
+*/
+#define SHOW_GLOBAL_DROPS true
+
+apply (!SHOW_GLOBAL_DROPS && ownership:0) {hidden = true;}
+
+/*@ define:input:settings
+label: Unowned Drops
+type: boolean
+group: Show
+*/
+#define SHOW_OTHER_DROPS false
+
+apply (!SHOW_OTHER_DROPS && ownership:2) {hidden = true;}
+
+/*@ define:input:settings
+label: Despawn Timer
+type: boolean
+group: Show
+*/
+#define SHOW_DEPSAWN_TIMER true
+
+apply (SHOW_DEPSAWN_TIMER) {showDespawn = true;}
+
+/*@ define:input:settings
+label: Item Value
+type: boolean
+group: Show
+*/
+#define SHOW_ITEM_VALUE true
+
+apply (SHOW_ITEM_VALUE) {showDespawn = true;}
+
+/*@ define:module:values
+name: Value Customization
+subtitle: Set the Values you'll be using for the Filter's Tiering System. 
+*/
+
+/*@ define:input:values
+type: number
+label: Tier 1
+group: Values
+*/
+#define VALUE_TIER_1 5000
+
+/*@ define:input:values
+type: number
+label: Tier 2
+group: Values
+*/
+#define VALUE_TIER_2 20000
+
+/*@ define:input:values
+type: number
+label: Tier 3
+group: Values
+*/
+#define VALUE_TIER_3 100000
+
+/*@ define:input:values
+type: number
+label: Tier 4
+group: Values
+*/
+#define VALUE_TIER_4 1000000
+
+/*@ define:input:values
+type: number
+label: Tier 5
+group: Values
+*/
+#define VALUE_TIER_5 10000000
+
+/*@ define:input:values
+type: text
+label: Tier 1
+group: Drop Sounds
+*/
+#define TIER_1_SOUND "Tier1.wav"
+
+/*@ define:input:values
+type: text
+label: Tier 2
+group: Drop Sounds
+*/
+#define TIER_2_SOUND "Tier2.wav"
+
+/*@ define:input:values
+type: text
+label: Tier 3
+group: Drop Sounds
+*/
+#define TIER_3_SOUND "Tier3.wav"
+
+/*@ define:input:values
+type: text
+label: Tier 4
+group: Drop Sounds
+*/
+#define TIER_4_SOUND "Tier4.wav"
+
+/*@ define:input:values
+type: text
+label: Tier 5
+group: Drop Sounds
+*/
+#define TIER_5_SOUND "Tier5.wav"
+
 /*@ define:module:Hidden Items
 name: Hidden Items
 subtitle: Items not shown
