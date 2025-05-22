@@ -2,3 +2,19 @@ meta {
     name="Jarnhopurs GIM Filter"
     description="Jarnhopurs OSRS Loot Filter, targeted for GIM players, with minor UI/graphical changes."
 }
+/*@ define:module:Hidden Items
+name: Hidden Items
+subtitle: Items not shown
+description: |
+    Items not shown under any circumstances
+*/
+
+/*@ define:input:Hidden Items
+type: stringlist
+label: Items To Hide
+*/
+#define VAR_ITEMS_TO_HIDE []
+
+if (name:VAR_ITEMS_TO_HIDE) {
+    hidden = true;
+}
