@@ -3,8 +3,7 @@ hidden: true
 name: header
 */
 
-meta { name = "Jarnhopur's GIM Filter"; 
-description = "Jarnhopurs OSRS Loot Filter, targeted for GIM players, with minor UI/graphical changes."; }
+meta { name = "Jarnhopur's GIM Filter"; description = "Jarnhopurs OSRS Loot Filter, targeted for GIM players, with minor UI/graphical changes."; }
 
 
 /*@ define:module:welcome
