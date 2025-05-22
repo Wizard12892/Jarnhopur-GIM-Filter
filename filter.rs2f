@@ -128,20 +128,3 @@ label: Tier 5
 group: Drop Sounds
 */
 #define TIER_5_SOUND "Tier5.wav"
-
-/*@ define:module:Hidden Items
-name: Hidden Items
-subtitle: Items not shown
-description: |
-    Items not shown under any circumstances
-*/
-
-/*@ define:input:Hidden Items
-type: stringlist
-label: Items To Hide
-*/
-#define VAR_ITEMS_TO_HIDE []
-
-if (name:VAR_ITEMS_TO_HIDE) {
-    hidden = true;
-}
