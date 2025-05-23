@@ -418,6 +418,75 @@ description: |
   Provides per-monster filtering for common monsters.
 */
 
+#define CONST_AREA_ADAMANT_DRAGON [1539,5063,0,1559,5087,0] // [[Lithkren Vault]]
+#define CONST_ADAMANT_DRAGON_RULE(_cond) rule ((area:CONST_AREA_ADAMANT_DRAGON) && (_cond))
+
+/*@ define:input
+type: enumlist
+label: 'Always Hide'
+group: Adamant Dragon
+enum: ["Dragon Bones", "Adamantite Bar"]
+*/
+#define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_100 []
+CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Adamant Dragon
+enum: ["Adamant Platebody", "Rune Mace", "Rune Scimitar", "Dragon Med Helm", "Dragon Platelegs", "Dragon Plateskirt"]
+*/
+#define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Runes and Ammunition'
+group: Adamant Dragon
+enum: ["Admant Arrows", "Wrath Rune", "Chaos Rune", "Death Rune"]
+*/
+#define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: Adamant Dragon
+enum: ["Grimy Avantoe", "Grimy Ranarr Weed", "Grimy Snapdragon", "Grimy Torstol", "Admant Bolts(unf)", "Adamant Javeling Heads", "Diamond", "Dragon Javelin Heads", "Adamantite Ore", "Adamantite Bar", "Dragon Bolts (Unf)"]
+*/
+#define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_MATERIALS []
+CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Adamant Dragon
+enum: ["Wrath Talisman"]
+*/
+#define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_OTHER []
+CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Adamant Dragon
+enum: ["Brimstone Key", "Clue Scroll (Elite)", "Dragon Limbs", "Dragon Metal Slice", "Draconic Visage"]
+*/
+#define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY []
+CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
+
 /*@ define:module:slayer
 name: 'PvM: Slayer'
 description: |
