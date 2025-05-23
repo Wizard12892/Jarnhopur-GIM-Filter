@@ -1,3 +1,8 @@
+// Replace MONSTER with the Bosses name. Define a location for the boss.
+// Location codes can be found at https://mejrs.github.io/osrs
+// To add items to the selectable list, add them to enum.
+// Once selected on the website GUI the items will be added to the ENUMLIST_FILTER.
+
 #define CONST_AREA_MONSTER [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
 #define CONST_MONSTER_RULE(_cond) rule (area:CONST_AREA_MONSTER && (_cond))
 
