@@ -425,7 +425,7 @@ description: |
 type: enumlist
 label: 'Always Hide'
 group: Adamant Dragon
-enum: ["Dragon Bones", "Adamantite Bar"]
+enum: ["Dragon bones", "Adamantite bar"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_100 []
 CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_100) {
@@ -436,7 +436,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_100) {
 type: enumlist
 label: 'Hide: Weapons and Armour'
 group: Adamant Dragon
-enum: ["Adamant Platebody", "Rune Mace", "Rune Scimitar", "Dragon Med Helm", "Dragon Platelegs", "Dragon Plateskirt"]
+enum: ["Adamant platebody", "Rune mace", "Rune scimitar", "Dragon med helm", "Dragon platelegs", "Dragon plateskirt"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
 CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
@@ -447,7 +447,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_WEAPONSANDARM
 type: enumlist
 label: 'Hide: Runes and Ammunition'
 group: Adamant Dragon
-enum: ["Admant Arrows", "Wrath Rune", "Chaos Rune", "Death Rune"]
+enum: ["Admant arrow", "Wrath rune", "Chaos rune", "Death rune"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
 CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
@@ -458,7 +458,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUN
 type: enumlist
 label: 'Hide: Materials'
 group: Adamant Dragon
-enum: ["Grimy Avantoe", "Grimy Ranarr Weed", "Grimy Snapdragon", "Grimy Torstol", "Admant Bolts(unf)", "Adamant Javeling Heads", "Diamond", "Dragon Javelin Heads", "Adamantite Ore", "Adamantite Bar", "Dragon Bolts (Unf)"]
+enum: ["Grimy avantoe", "Grimy ranarr weed", "Grimy snapdragon", "Grimy torstol", "Adamant bolts(unf)", "Adamant javelin heads", "Diamond", "Dragon javelin heads", "Adamantite ore", "Adamantite bar", "Dragon bolts (unf)"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_MATERIALS []
 CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_MATERIALS) {
@@ -469,7 +469,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_MATERIALS) {
 type: enumlist
 label: 'Hide: Other'
 group: Adamant Dragon
-enum: ["Wrath Talisman"]
+enum: ["Wrath talisman"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_OTHER []
 CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_OTHER) {
@@ -480,7 +480,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_OTHER) {
 type: enumlist
 label: 'Hide: Tertiary'
 group: Adamant Dragon
-enum: ["Brimstone Key", "Clue Scroll (Elite)", "Dragon Limbs", "Dragon Metal Slice", "Draconic Visage"]
+enum: ["Brimstone key", "Clue scroll (elite)", "Dragon limbs", "Dragon metal slice", "Draconic visage"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY []
 CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY) {
