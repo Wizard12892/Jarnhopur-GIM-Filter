@@ -41,6 +41,17 @@ CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 
 /*@ define:input
 type: enumlist
+label: 'Hide: Materials'
+group: MONSTER
+enum: ["Item 1", "Item 2", "Item 3"]
+*/
+#define VAR_MONSTER_ENUMLIST_FILTER_MATERIALS []
+CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
 label: 'Hide: Other'
 group: MONSTER
 enum: ["Item 1", "Item 2", "Item 3"]
