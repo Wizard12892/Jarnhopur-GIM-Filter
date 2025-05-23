@@ -1,0 +1,13 @@
+/*@ define:module:header
+hidden: true
+name: header
+*/
+
+meta { name = "NAME"; description = "Description"; }
+
+/*@ define:module:welcome
+name: Welcome
+subtitle: Welcome to Filter
+description: |
+    Description Here.
+*/
