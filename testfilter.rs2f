@@ -83,6 +83,54 @@ label: Default Style
 
 apply (true) { VAR_DEFAULTS_STYLE }
 
+/*@ define:module:sorting
+---
+name: Sorting
+subtitle: Picking up the good stuff first
+description: |
+  This allows you to order the pickup menu in a few different ways.
+
+  NOTE: This requires that "Price Sort" in the "Custom Menu Swaps" plugin under "Ground Item Sort" to be DISABLED.
+*/
+
+/*@ define:module:filtering
+---
+name: Filtering
+subtitle: Sifting through the junk
+description: |
+  Provides a few different ways to filter out items.
+*/
+
+/*@ define:group
+---
+name: Individual Items
+description: |
+  Individual Items
+  ---
+
+  Showing and hiding individual items.
+*/
+
+/*@ define:module:foodandpotions
+name: Food and Potions
+subtitle: Find your supply drops with ease.
+*/
+
+/*@ define:module:alchs
+name: Alchables
+subtitle: Easily identify high value alchables.
+*/
+
+/*@ define:module:herbs
+name: Herbs
+subtitle: Find your herbs with ease.
+*/
+
+/*@ define:module:seeds
+name: Seeds
+subtitle: Find your seeds with ease.
+*/
+
 /*@ define:module:values
 name: Item Value Customization
 subtitle: Set the GP amount for the tier system. 
