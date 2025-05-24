@@ -565,6 +565,79 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 
+#define CONST_AREA_AVIANSIE0 [2833,5250,0,2878,5315,0] // [[God Wars Dungeon]]
+#define CONST_AREA_AVIANSIE1 [3015,10143,0,3037,10167,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AVIANSIE_RULE(_cond) rule ((area:CONST_AREA_AVIANSIE0 || area:CONST_AREA_AVIANSIE1) && (_cond))
+
+/*@ define:input
+type: enumlist
+label: 'Always Hide'
+group: Aviansie
+enum: ["Bones", "Feather"]
+*/
+#define VAR_AVIANSIE_ENUMLIST_FILTER_100 []
+CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Aviansie
+enum: ["Rune dagger(p+)"]
+*/
+#define VAR_AVIANSIE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Runes and Ammunition'
+group: Aviansie
+enum: ["Air rune", "Water rune", "Law rune", "Nature rune", "Chaos rune", "Body rune", "Blood rune", "Mind rune", "Chaos rune"]
+*/
+#define VAR_AVIANSIE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: Aviansie
+enum: [
+  "Grimy guam leaf", "Grimy marrentill", "Grimy tarromin", "Grimy harralander", "Grimy ranarr weed", "Grimy irit leaf", "Grimy avantoe", "Grimy kwuarm", "Grimy cadantine", "Grimy lantadyme", "Grimy dwarf weed",
+  "Adamantite bar", "Silver ore", "Runite limbs"
+]
+*/
+#define VAR_AVIANSIE_ENUMLIST_FILTER_MATERIALS []
+CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Aviansie
+enum: ["Antipoison(3)", "Swordfish"]
+*/
+#define VAR_AVIANSIE_ENUMLIST_FILTER_OTHER []
+CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Aviansie
+enum: ["Ensouled aviansie head", "Ecumenical key", "Clue scroll (hard)", "Brimstone key"]
+*/
+#define VAR_AVIANSIE_ENUMLIST_FILTER_TERTIARY []
+CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
+
 /*@ define:module:slayer
 name: 'PvM: Slayer'
 description: |
