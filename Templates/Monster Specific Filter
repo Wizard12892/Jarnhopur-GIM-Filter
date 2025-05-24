@@ -3,6 +3,31 @@
 // To add items to the selectable list, add them to enum.
 // Once selected on the website GUI the items will be added to the ENUMLIST_FILTER.
 
+/* Template for using Copilot AI to create the filter for a specific monster.
+Can you create a code block using the Monster Specific Filter as the baseline for a Monster named:
+
+
+Be sure to replace MONSTER in the code lines with the name above.
+
+For Always add items:
+
+
+For Weapons and Armour add items:
+
+
+For Runes and Ammunition add items:
+
+
+For Materials add items:
+
+
+For Other add items:
+
+
+For Tertiary add items:
+
+*/
+
 #define CONST_AREA_MONSTER0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
 #define CONST_AREA_MONSTER1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
 #define CONST_MONSTER_RULE(_cond) rule ((area:CONST_AREA_MONSTER0 ||   area:CONST_AREA_MONSTER1 || ETC AS NEEDED) && (_cond))
