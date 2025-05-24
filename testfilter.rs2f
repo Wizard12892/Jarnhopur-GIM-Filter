@@ -423,7 +423,7 @@ description: |
 
 /*@ define:input
 type: enumlist
-label: 'Always Hide'
+label: 'Hide: Always'
 group: Adamant Dragon
 enum: ["Dragon bones", "Adamantite bar"]
 */
@@ -497,7 +497,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 
 /*@ define:input
 type: enumlist
-label: 'Always Hide'
+label: 'Hide: Always'
 group: Ankou
 enum: ["Bones"]
 */

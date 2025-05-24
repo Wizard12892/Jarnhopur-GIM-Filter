@@ -8,7 +8,7 @@
 
 /*@ define:input
 type: enumlist
-label: 'Always Hide'
+label: 'Hide: Always'
 group: MONSTER NAME
 enum: ["Item 1", "Item 2", "Item 3"]
 */
