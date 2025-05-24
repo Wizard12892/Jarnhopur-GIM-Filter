@@ -487,6 +487,84 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 
+#define CONST_AREA_ANKOU0 [2957,3739,0,2996,3769,0] // [[The Forgotten Cemetery]]
+#define CONST_AREA_ANKOU1 [2310,5192,0,2338,5239,0] // [[Stronghold of Security: Sepulchre of Death1]]
+#define CONST_AREA_ANKOU2 [2352,5235,0,2367,5247,0] // [[Stronghold of Security: Sepulchre of Death2]]
+#define CONST_AREA_ANKOU3 [2466,9795,0,2487,9812,0] // [[Stronghold Slayer Cave]]
+#define CONST_AREA_ANKOU4 [3339,10060,0,3381,10093,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_ANKOU5 [1631,9988,0,1653,10001,0] // [[Catacombs of Kourend]]
+#define CONST_ANKOU_RULE(_cond) rule ((area:CONST_AREA_ANKOU0 || area:CONST_AREA_ANKOU1 || area:CONST_AREA_ANKOU2 || area:CONST_AREA_ANKOU3 || area:CONST_AREA_ANKOU4 || area:CONST_AREA_ANKOU5) && (_cond))
+
+/*@ define:input
+type: enumlist
+label: 'Always Hide'
+group: Ankou
+enum: ["Bones"]
+*/
+#define VAR_ANKOU_ENUMLIST_FILTER_100 []
+CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Ankou
+enum: ["Black knife", "Black robe"]
+*/
+#define VAR_ANKOU_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Runes and Ammunition'
+group: Ankou
+enum: ["Death rune", "Blood rune", "Adamant arrow", "Law rune", "Blood rune"]
+*/
+#define VAR_ANKOU_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: Ankou
+enum: [
+  "Grimy guam leaf", "Grimy marrentill", "Grimy tarromin", "Grimy harralander", "Grimy ranarr weed", "Grimy irit leaf", "Grimy avantoe", "Grimy kwuarm", "Grimy cadantine", "Grimy lantadyme", "Grimy dwarf weed",
+  "Limpwurt seed", "Strawberry seed", "Marrentill seed", "Jangerberry seed", "Tarromin seed", "Wildblood seed", "Watermelon seed", "Harralander seed", "Snape grass seed", "Ranarr seed", "Whiteberry seed", "Mushroom spore", "Toadflax seed", "Belladonna seed", "Irit seed", "Poison ivy seed", "Avantoe seed", "Cactus seed", "Kwuarm seed", "Potato cactus seed", "Snapdragon seed", "Cadantine seed", "Lantadyme seed", "Dwarf weed seed", "Torstol seed",
+  "Pure essence", "Mithril ore"
+]
+*/
+#define VAR_ANKOU_ENUMLIST_FILTER_MATERIALS []
+CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Ankou
+enum: ["Dark fishing bait", "Left skull half", "Bass", "Weapon poison", "Fried mushrooms"]
+*/
+#define VAR_ANKOU_ENUMLIST_FILTER_OTHER []
+CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Ankou
+enum: ["Looting bag", "Brimstone key", "Clue scroll (hard)", "Ancient shard", "Dark totem base", "Dark totem middle", "Dark totem top"]
+*/
+#define VAR_ANKOU_ENUMLIST_FILTER_TERTIARY []
+CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
+
 /*@ define:module:slayer
 name: 'PvM: Slayer'
 description: |
