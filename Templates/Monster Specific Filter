@@ -42,6 +42,7 @@ enum: ["Item 1", "Item 2", "Item 3"]
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_100) {
   hidden = true;
 }
+
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
