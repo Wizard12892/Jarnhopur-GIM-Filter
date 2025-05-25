@@ -423,7 +423,7 @@ description: |
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: ADAMANT_DRAGON
+group: Adamant Dragon
 enum: ["Adamantite bar", "Dragon bones"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_100 []
@@ -434,7 +434,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: ADAMANT_DRAGON
+group: Adamant Dragon
 enum: ["Adamant platebody", "Dragon med helm", "Dragon platelegs", "Dragon plateskirt", "Rune mace", "Rune scimitar"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -445,7 +445,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_WEAPONSANDARM
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: ADAMANT_DRAGON
+group: Adamant Dragon
 enum: ["Adamant arrow", "Chaos rune", "Death rune", "Wrath rune"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -456,7 +456,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUN
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: ADAMANT_DRAGON
+group: Adamant Dragon
 enum: ["Adamant bolts(unf)", "Adamant javelin heads", "Adamantite bar", "Adamantite ore", "Diamond", "Dragon bolts (unf)", "Dragon javelin heads"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_MATERIALS []
@@ -467,7 +467,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: ADAMANT_DRAGON
+group: Adamant Dragon
 enum: ["Wrath talisman"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -478,7 +478,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: ADAMANT_DRAGON
+group: Adamant Dragon
 enum: ["Brimstone key", "Draconic visage", "Dragon limbs", "Dragon metal slice"]
 */
 #define VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -499,7 +499,7 @@ CONST_ADAMANT_DRAGON_RULE (name:VAR_ADAMANT_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: ANKOU
+group: Ankou
 enum: ["Bones"]
 */
 #define VAR_ANKOU_ENUMLIST_FILTER_100 []
@@ -510,7 +510,7 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: ANKOU
+group: Ankou
 enum: ["Adamant platelegs", "Black knife", "Black robe"]
 */
 #define VAR_ANKOU_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -521,7 +521,7 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: ANKOU
+group: Ankou
 enum: ["Adamant arrow", "Blood rune", "Death rune", "Law rune", "Rune arrow"]
 */
 #define VAR_ANKOU_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -532,7 +532,7 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: ANKOU
+group: Ankou
 enum: ["Mithril ore", "Pure essence", "Rune essence"]
 */
 #define VAR_ANKOU_ENUMLIST_FILTER_MATERIALS []
@@ -543,7 +543,7 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: ANKOU
+group: Ankou
 enum: ["Bass", "Coins", "Dark fishing bait", "Fishing bait", "Fried mushrooms", "Left skull half", "Mithril ore", "Weapon poison"]
 */
 #define VAR_ANKOU_ENUMLIST_FILTER_OTHER []
@@ -554,7 +554,7 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: ANKOU
+group: Ankou
 enum: ["Brimstone key", "Clue scroll (elite)", "Looting bag", "Reward casket (elite)"]
 */
 #define VAR_ANKOU_ENUMLIST_FILTER_TERTIARY []
@@ -571,7 +571,7 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: AVIANSIE
+group: Aviansie
 enum: ["Bones", "Feather"]
 */
 #define VAR_AVIANSIE_ENUMLIST_FILTER_100 []
@@ -582,7 +582,7 @@ CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: AVIANSIE
+group: Aviansie
 enum: ["Rune dagger(p+)"]
 */
 #define VAR_AVIANSIE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -593,7 +593,7 @@ CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: AVIANSIE
+group: Aviansie
 enum: ["Air rune", "Blood rune", "Body rune", "Chaos rune", "Law rune", "Mind rune", "Nature rune", "Water rune"]
 */
 #define VAR_AVIANSIE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -604,7 +604,7 @@ CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: AVIANSIE
+group: Aviansie
 enum: ["Adamantite bar", "Runite limbs", "Silver ore"]
 */
 #define VAR_AVIANSIE_ENUMLIST_FILTER_MATERIALS []
@@ -615,7 +615,7 @@ CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: AVIANSIE
+group: Aviansie
 enum: ["Antipoison(3)", "Swordfish"]
 */
 #define VAR_AVIANSIE_ENUMLIST_FILTER_OTHER []
@@ -626,7 +626,7 @@ CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: AVIANSIE
+group: Aviansie
 enum: ["Brimstone key", "Ensouled aviansie head"]
 */
 #define VAR_AVIANSIE_ENUMLIST_FILTER_TERTIARY []
@@ -643,7 +643,7 @@ CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: BANDIT
+group: Bandit
 enum: ["Bones"]
 */
 #define VAR_BANDIT_ENUMLIST_FILTER_100 []
@@ -654,7 +654,7 @@ CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: BANDIT
+group: Bandit
 enum: ["Adamant scimitar", "Dragon longsword", "Iron scimitar", "Mithril axe", "Mithril sq shield", "Rune full helm", "Rune med helm", "Rune scimitar", "Steel axe", "Steel sq shield"]
 */
 #define VAR_BANDIT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -665,7 +665,7 @@ CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: BANDIT
+group: Bandit
 enum: ["Air rune", "Blood rune", "Chaos rune", "Death rune", "Law rune", "Mind rune", "Nature rune", "Water rune"]
 */
 #define VAR_BANDIT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -676,7 +676,7 @@ CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: BANDIT
+group: Bandit
 enum: ["Coal", "Dark fishing bait"]
 */
 #define VAR_BANDIT_ENUMLIST_FILTER_OTHER []
@@ -687,7 +687,7 @@ CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: BANDIT
+group: Bandit
 enum: ["Looting bag"]
 */
 #define VAR_BANDIT_ENUMLIST_FILTER_TERTIARY []
@@ -704,7 +704,7 @@ CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: BLACK_DEMON
+group: Black Demon
 enum: ["Malicious ashes"]
 */
 #define VAR_BLACK_DEMON_ENUMLIST_FILTER_100 []
@@ -715,7 +715,7 @@ CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: BLACK_DEMON
+group: Black Demon
 enum: ["Adamant battleaxe", "Adamant dagger", "Adamant platebody", "Black axe", "Black sword", "Mithril kiteshield", "Rune chainbody", "Rune dagger", "Rune full helm", "Rune med helm", "Rune sword", "Steel battleaxe"]
 */
 #define VAR_BLACK_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -726,7 +726,7 @@ CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: BLACK_DEMON
+group: Black Demon
 enum: ["Air rune", "Blood rune", "Chaos rune", "Death rune", "Fire rune", "Law rune"]
 */
 #define VAR_BLACK_DEMON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -737,7 +737,7 @@ CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_RUNESANDAMMUNITION)
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: BLACK_DEMON
+group: Black Demon
 enum: ["Adamantite bar", "Adamantite ore"]
 */
 #define VAR_BLACK_DEMON_ENUMLIST_FILTER_MATERIALS []
@@ -748,7 +748,7 @@ CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: BLACK_DEMON
+group: Black Demon
 enum: ["Defence potion(3)", "Lobster"]
 */
 #define VAR_BLACK_DEMON_ENUMLIST_FILTER_OTHER []
@@ -759,7 +759,7 @@ CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: BLACK_DEMON
+group: Black Demon
 enum: ["Brimstone key", "Ensouled demon head", "Looting bag"]
 */
 #define VAR_BLACK_DEMON_ENUMLIST_FILTER_TERTIARY []
@@ -776,7 +776,7 @@ CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: BLACK_DRAGON
+group: Black Dragon
 enum: ["Black dragonhide", "Dragon bones"]
 */
 #define VAR_BLACK_DRAGON_ENUMLIST_FILTER_100 []
@@ -787,7 +787,7 @@ CONST_BLACK_DRAGON_RULE (name:VAR_BLACK_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: BLACK_DRAGON
+group: Black Dragon
 enum: ["Adamant 2h sword", "Adamant battleaxe", "Adamant platebody", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril kiteshield", "Rune axe", "Rune kiteshield", "Rune knife", "Rune longsword", "Rune med helm"]
 */
 #define VAR_BLACK_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -798,7 +798,7 @@ CONST_BLACK_DRAGON_RULE (name:VAR_BLACK_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR)
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: BLACK_DRAGON
+group: Black Dragon
 enum: ["Adamant dart(p)", "Adamant javelin", "Air rune", "Blood rune", "Chaos rune", "Death rune", "Fire rune", "Law rune"]
 */
 #define VAR_BLACK_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -809,7 +809,7 @@ CONST_BLACK_DRAGON_RULE (name:VAR_BLACK_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITIO
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: BLACK_DRAGON
+group: Black Dragon
 enum: ["Adamantite bar", "Chocolate cake", "Dragon javelin heads", "Monkfish"]
 */
 #define VAR_BLACK_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -820,7 +820,7 @@ CONST_BLACK_DRAGON_RULE (name:VAR_BLACK_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: BLACK_DRAGON
+group: Black Dragon
 enum: ["Brimstone key", "Draconic visage", "Ensouled dragon head", "Looting bag"]
 */
 #define VAR_BLACK_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -837,7 +837,7 @@ CONST_BLACK_DRAGON_RULE (name:VAR_BLACK_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: BLACK_KNIGHT
+group: Black Knight
 enum: ["Bones"]
 */
 #define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_100 []
@@ -848,7 +848,7 @@ CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: BLACK_KNIGHT
+group: Black Knight
 enum: ["Iron full helm", "Iron sword", "Steel mace"]
 */
 #define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -859,7 +859,7 @@ CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_WEAPONSANDARMOUR)
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: BLACK_KNIGHT
+group: Black Knight
 enum: ["Body rune", "Chaos rune", "Cosmic rune", "Death rune", "Earth rune", "Law rune", "Mind rune", "Mithril arrow"]
 */
 #define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -870,7 +870,7 @@ CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_RUNESANDAMMUNITIO
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: BLACK_KNIGHT
+group: Black Knight
 enum: ["Pot of flour", "Steel bar", "Tin ore"]
 */
 #define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_MATERIALS []
@@ -881,7 +881,7 @@ CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: BLACK_KNIGHT
+group: Black Knight
 enum: ["Bread"]
 */
 #define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_OTHER []
@@ -892,7 +892,7 @@ CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: BLACK_KNIGHT
+group: Black Knight
 enum: ["Looting bag"]
 */
 #define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_TERTIARY []
@@ -909,7 +909,7 @@ CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: BLUE_DRAGON
+group: Blue Dragon
 enum: ["Blue dragonhide", "Dragon bones"]
 */
 #define VAR_BLUE_DRAGON_ENUMLIST_FILTER_100 []
@@ -920,7 +920,7 @@ CONST_BLUE_DRAGON_RULE (name:VAR_BLUE_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: BLUE_DRAGON
+group: Blue Dragon
 enum: ["Adamant full helm", "Mithril axe", "Mithril kiteshield", "Mithril spear", "Rune dagger", "Steel battleaxe", "Steel platelegs"]
 */
 #define VAR_BLUE_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -931,7 +931,7 @@ CONST_BLUE_DRAGON_RULE (name:VAR_BLUE_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: BLUE_DRAGON
+group: Blue Dragon
 enum: ["Fire rune", "Law rune", "Nature rune", "Water rune"]
 */
 #define VAR_BLUE_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -942,7 +942,7 @@ CONST_BLUE_DRAGON_RULE (name:VAR_BLUE_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION)
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: BLUE_DRAGON
+group: Blue Dragon
 enum: ["Adamantite ore", "Bass"]
 */
 #define VAR_BLUE_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -953,7 +953,7 @@ CONST_BLUE_DRAGON_RULE (name:VAR_BLUE_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: BLUE_DRAGON
+group: Blue Dragon
 enum: ["Brimstone key", "Ensouled dragon head", "Frozen tear", "Scaly blue dragonhide", "Tooth half of key (moon key)"]
 */
 #define VAR_BLUE_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -970,7 +970,7 @@ CONST_BLUE_DRAGON_RULE (name:VAR_BLUE_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: BRONZE_DRAGON
+group: Bronze Dragon
 enum: ["Bronze bar", "Dragon bones"]
 */
 #define VAR_BRONZE_DRAGON_ENUMLIST_FILTER_100 []
@@ -981,7 +981,7 @@ CONST_BRONZE_DRAGON_RULE (name:VAR_BRONZE_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: BRONZE_DRAGON
+group: Bronze Dragon
 enum: ["Adamant dart(p)", "Adamant platebody", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril kiteshield", "Rune knife", "Rune longsword"]
 */
 #define VAR_BRONZE_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -992,7 +992,7 @@ CONST_BRONZE_DRAGON_RULE (name:VAR_BRONZE_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOU
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: BRONZE_DRAGON
+group: Bronze Dragon
 enum: ["Adamant javelin", "Blood rune", "Death rune", "Fire rune", "Law rune", "Mithril bolts"]
 */
 #define VAR_BRONZE_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1003,7 +1003,7 @@ CONST_BRONZE_DRAGON_RULE (name:VAR_BRONZE_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNIT
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: BRONZE_DRAGON
+group: Bronze Dragon
 enum: ["Adamantite bar", "Swordfish"]
 */
 #define VAR_BRONZE_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -1014,7 +1014,7 @@ CONST_BRONZE_DRAGON_RULE (name:VAR_BRONZE_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: BRONZE_DRAGON
+group: Bronze Dragon
 enum: ["Brimstone key"]
 */
 #define VAR_BRONZE_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -1031,7 +1031,7 @@ CONST_BRONZE_DRAGON_RULE (name:VAR_BRONZE_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: CATABLEPON
+group: Catablepon
 enum: ["Bones"]
 */
 #define VAR_CATABLEPON_ENUMLIST_FILTER_100 []
@@ -1042,7 +1042,7 @@ CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: CATABLEPON
+group: Catablepon
 enum: ["Adamant med helm"]
 */
 #define VAR_CATABLEPON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1053,7 +1053,7 @@ CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: CATABLEPON
+group: Catablepon
 enum: ["Chaos rune", "Cosmic rune", "Fire rune", "Law rune", "Mithril arrow", "Water rune"]
 */
 #define VAR_CATABLEPON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1064,7 +1064,7 @@ CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: CATABLEPON
+group: Catablepon
 enum: ["Coal", "Eye of newt", "Pure essence", "Rune essence"]
 */
 #define VAR_CATABLEPON_ENUMLIST_FILTER_MATERIALS []
@@ -1075,7 +1075,7 @@ CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: CATABLEPON
+group: Catablepon
 enum: ["Top of sceptre", "Trout", "Unlit torch"]
 */
 #define VAR_CATABLEPON_ENUMLIST_FILTER_OTHER []
@@ -1092,7 +1092,7 @@ CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: CHAOS_DRUID
+group: Chaos Druid
 enum: ["Bones"]
 */
 #define VAR_CHAOS_DRUID_ENUMLIST_FILTER_100 []
@@ -1103,7 +1103,7 @@ CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: CHAOS_DRUID
+group: Chaos Druid
 enum: ["Air rune", "Body rune", "Earth rune", "Law rune", "Mind rune", "Mithril bolts", "Nature rune"]
 */
 #define VAR_CHAOS_DRUID_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1114,7 +1114,7 @@ CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_RUNESANDAMMUNITION)
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: CHAOS_DRUID
+group: Chaos Druid
 enum: ["Bronze longsword", "Snape grass", "Unholy mould", "Vial of water"]
 */
 #define VAR_CHAOS_DRUID_ENUMLIST_FILTER_OTHER []
@@ -1125,7 +1125,7 @@ CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: CHAOS_DRUID
+group: Chaos Druid
 enum: ["Ensouled chaos druid head", "Looting bag"]
 */
 #define VAR_CHAOS_DRUID_ENUMLIST_FILTER_TERTIARY []
@@ -1142,7 +1142,7 @@ CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: COW
+group: Cow
 enum: ["Bones", "Cowhide", "Raw beef"]
 */
 #define VAR_COW_ENUMLIST_FILTER_100 []
@@ -1153,7 +1153,7 @@ CONST_COW_RULE (name:VAR_COW_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: COW
+group: Cow
 enum: ["Clue scroll (beginner)"]
 */
 #define VAR_COW_ENUMLIST_FILTER_TERTIARY []
@@ -1170,7 +1170,7 @@ CONST_COW_RULE (name:VAR_COW_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: CROCODILE
+group: Crocodile
 enum: ["Bones"]
 */
 #define VAR_CROCODILE_ENUMLIST_FILTER_100 []
@@ -1181,7 +1181,7 @@ CONST_CROCODILE_RULE (name:VAR_CROCODILE_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: CROCODILE
+group: Crocodile
 enum: ["Clue scroll (elite)", "Reward casket (elite)"]
 */
 #define VAR_CROCODILE_ENUMLIST_FILTER_TERTIARY []
@@ -1198,7 +1198,7 @@ CONST_CROCODILE_RULE (name:VAR_CROCODILE_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: DAGANNOTH
+group: Dagannoth
 enum: ["Bones"]
 */
 #define VAR_DAGANNOTH_ENUMLIST_FILTER_100 []
@@ -1209,7 +1209,7 @@ CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: DAGANNOTH
+group: Dagannoth
 enum: ["Bronze spear", "Iron spear", "Mithril spear"]
 */
 #define VAR_DAGANNOTH_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1220,7 +1220,7 @@ CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: DAGANNOTH
+group: Dagannoth
 enum: ["Mithril javelin", "Steel arrow", "Water rune"]
 */
 #define VAR_DAGANNOTH_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1231,7 +1231,7 @@ CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: DAGANNOTH
+group: Dagannoth
 enum: ["Casket", "Opal bolt tips"]
 */
 #define VAR_DAGANNOTH_ENUMLIST_FILTER_OTHER []
@@ -1242,7 +1242,7 @@ CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: DAGANNOTH
+group: Dagannoth
 enum: ["Brimstone key", "Dagannoth ribs", "Ensouled dagannoth head"]
 */
 #define VAR_DAGANNOTH_ENUMLIST_FILTER_TERTIARY []
@@ -1259,7 +1259,7 @@ CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: DARK_WARRIOR
+group: Dark Warrior
 enum: ["Bones"]
 */
 #define VAR_DARK_WARRIOR_ENUMLIST_FILTER_100 []
@@ -1270,7 +1270,7 @@ CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: DARK_WARRIOR
+group: Dark Warrior
 enum: ["Adamant med helm", "Black mace", "Black med helm", "Bronze med helm", "Iron mace", "Mithril mace", "Steel mace", "Steel med helm"]
 */
 #define VAR_DARK_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1281,7 +1281,7 @@ CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR)
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: DARK_WARRIOR
+group: Dark Warrior
 enum: ["Bronze arrow", "Chaos rune", "Earth rune", "Mind rune", "Nature rune", "Water rune"]
 */
 #define VAR_DARK_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1292,7 +1292,7 @@ CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITIO
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: DARK_WARRIOR
+group: Dark Warrior
 enum: ["Dark fishing bait", "Iron ore", "Sardine"]
 */
 #define VAR_DARK_WARRIOR_ENUMLIST_FILTER_OTHER []
@@ -1303,7 +1303,7 @@ CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: DARK_WARRIOR
+group: Dark Warrior
 enum: ["Looting bag"]
 */
 #define VAR_DARK_WARRIOR_ENUMLIST_FILTER_TERTIARY []
@@ -1320,7 +1320,7 @@ CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: DWARF
+group: Dwarf
 enum: ["Bones"]
 */
 #define VAR_DWARF_ENUMLIST_FILTER_100 []
@@ -1331,7 +1331,7 @@ CONST_DWARF_RULE (name:VAR_DWARF_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: DWARF
+group: Dwarf
 enum: ["Bronze battleaxe", "Bronze med helm", "Bronze pickaxe", "Iron battleaxe"]
 */
 #define VAR_DWARF_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1342,7 +1342,7 @@ CONST_DWARF_RULE (name:VAR_DWARF_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: DWARF
+group: Dwarf
 enum: ["Bronze bolts", "Chaos rune", "Nature rune"]
 */
 #define VAR_DWARF_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1353,7 +1353,7 @@ CONST_DWARF_RULE (name:VAR_DWARF_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: DWARF
+group: Dwarf
 enum: ["Bronze bar", "Coal", "Copper ore", "Hammer", "Iron bar", "Iron ore", "Tin ore"]
 */
 #define VAR_DWARF_ENUMLIST_FILTER_OTHER []
@@ -1364,7 +1364,7 @@ CONST_DWARF_RULE (name:VAR_DWARF_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: DWARF
+group: Dwarf
 enum: ["Clue scroll (beginner)"]
 */
 #define VAR_DWARF_ENUMLIST_FILTER_TERTIARY []
@@ -1381,7 +1381,7 @@ CONST_DWARF_RULE (name:VAR_DWARF_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: FIRE_GIANT
+group: Fire Giant
 enum: ["Big bones"]
 */
 #define VAR_FIRE_GIANT_ENUMLIST_FILTER_100 []
@@ -1392,7 +1392,7 @@ CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: FIRE_GIANT
+group: Fire Giant
 enum: ["Fire battlestaff", "Mithril sq shield", "Rune scimitar", "Steel axe"]
 */
 #define VAR_FIRE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1403,7 +1403,7 @@ CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: FIRE_GIANT
+group: Fire Giant
 enum: ["Blood rune", "Chaos rune", "Fire rune", "Law rune", "Rune arrow"]
 */
 #define VAR_FIRE_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1414,7 +1414,7 @@ CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: FIRE_GIANT
+group: Fire Giant
 enum: ["Lobster", "Steel bar", "Strength potion(2)"]
 */
 #define VAR_FIRE_GIANT_ENUMLIST_FILTER_OTHER []
@@ -1425,7 +1425,7 @@ CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: FIRE_GIANT
+group: Fire Giant
 enum: ["Brimstone key", "Curved bone", "Ensouled giant head", "Fire giant bone", "Giant champion scroll", "Long bone", "Looting bag"]
 */
 #define VAR_FIRE_GIANT_ENUMLIST_FILTER_TERTIARY []
@@ -1442,7 +1442,7 @@ CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: FLESH_CRAWLER
+group: Flesh Crawler
 enum: ["Body rune", "Dust rune", "Fire rune", "Nature rune"]
 */
 #define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1453,7 +1453,7 @@ CONST_FLESH_CRAWLER_RULE (name:VAR_FLESH_CRAWLER_ENUMLIST_FILTER_RUNESANDAMMUNIT
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: FLESH_CRAWLER
+group: Flesh Crawler
 enum: ["Iron ore", "Silver bar"]
 */
 #define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_MATERIALS []
@@ -1464,7 +1464,7 @@ CONST_FLESH_CRAWLER_RULE (name:VAR_FLESH_CRAWLER_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: FLESH_CRAWLER
+group: Flesh Crawler
 enum: ["Ashes", "Bottom of sceptre", "Coins"]
 */
 #define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_OTHER []
@@ -1481,7 +1481,7 @@ CONST_FLESH_CRAWLER_RULE (name:VAR_FLESH_CRAWLER_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: GHOUL
+group: Ghoul
 enum: ["Bones"]
 */
 #define VAR_GHOUL_ENUMLIST_FILTER_100 []
@@ -1492,7 +1492,7 @@ CONST_GHOUL_RULE (name:VAR_GHOUL_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: GHOUL
+group: Ghoul
 enum: ["Ghoul bone", "Ghoul champion scroll"]
 */
 #define VAR_GHOUL_ENUMLIST_FILTER_TERTIARY []
@@ -1509,7 +1509,7 @@ CONST_GHOUL_RULE (name:VAR_GHOUL_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: GOBLIN
+group: Goblin
 enum: ["Bones"]
 */
 #define VAR_GOBLIN_ENUMLIST_FILTER_100 []
@@ -1520,7 +1520,7 @@ CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: GOBLIN
+group: Goblin
 enum: ["Bronze axe", "Bronze scimitar", "Bronze spear", "Bronze sq shield"]
 */
 #define VAR_GOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1531,7 +1531,7 @@ CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: GOBLIN
+group: Goblin
 enum: ["Body rune", "Bronze arrow", "Bronze bolts", "Bronze javelin", "Chaos rune", "Earth rune", "Mind rune", "Nature rune", "Water rune"]
 */
 #define VAR_GOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1542,7 +1542,7 @@ CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: GOBLIN
+group: Goblin
 enum: ["Air talisman", "Beer", "Brass necklace", "Chef's hat", "Goblin book", "Goblin mail", "Grapes", "Hammer", "Red cape", "Tin ore"]
 */
 #define VAR_GOBLIN_ENUMLIST_FILTER_OTHER []
@@ -1553,7 +1553,7 @@ CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: GOBLIN
+group: Goblin
 enum: ["Clue scroll (beginner)", "Ensouled goblin head", "Goblin champion scroll", "Goblin skull"]
 */
 #define VAR_GOBLIN_ENUMLIST_FILTER_TERTIARY []
@@ -1570,7 +1570,7 @@ CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: GREATER_DEMON
+group: Greater Demon
 enum: ["Vile ashes"]
 */
 #define VAR_GREATER_DEMON_ENUMLIST_FILTER_100 []
@@ -1581,7 +1581,7 @@ CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: GREATER_DEMON
+group: Greater Demon
 enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Adamant kiteshield", "Adamant platelegs", "Mithril kiteshield", "Rune full helm", "Steel 2h sword", "Steel axe", "Steel battleaxe"]
 */
 #define VAR_GREATER_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1592,7 +1592,7 @@ CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOU
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: GREATER_DEMON
+group: Greater Demon
 enum: ["Blood rune", "Chaos rune", "Death rune", "Fire rune"]
 */
 #define VAR_GREATER_DEMON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1603,7 +1603,7 @@ CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_RUNESANDAMMUNIT
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: GREATER_DEMON
+group: Greater Demon
 enum: ["Gold bar", "Gold ore", "Thread", "Tuna"]
 */
 #define VAR_GREATER_DEMON_ENUMLIST_FILTER_OTHER []
@@ -1614,7 +1614,7 @@ CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: GREATER_DEMON
+group: Greater Demon
 enum: ["Brimstone key", "Ensouled demon head", "Looting bag"]
 */
 #define VAR_GREATER_DEMON_ENUMLIST_FILTER_TERTIARY []
@@ -1631,7 +1631,7 @@ CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: GREEN_DRAGON
+group: Green Dragon
 enum: ["Dragon bones", "Green dragonhide"]
 */
 #define VAR_GREEN_DRAGON_ENUMLIST_FILTER_100 []
@@ -1642,7 +1642,7 @@ CONST_GREEN_DRAGON_RULE (name:VAR_GREEN_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: GREEN_DRAGON
+group: Green Dragon
 enum: ["Adamant dagger", "Adamant full helm", "Adamant kiteshield", "Adamant sword", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril kiteshield", "Mithril platelegs", "Mithril spear", "Rune dagger", "Steel battleaxe", "Steel platelegs"]
 */
 #define VAR_GREEN_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1653,7 +1653,7 @@ CONST_GREEN_DRAGON_RULE (name:VAR_GREEN_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR)
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: GREEN_DRAGON
+group: Green Dragon
 enum: ["Blood rune", "Death rune", "Fire rune", "Law rune", "Nature rune", "Water rune"]
 */
 #define VAR_GREEN_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1664,7 +1664,7 @@ CONST_GREEN_DRAGON_RULE (name:VAR_GREEN_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITIO
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: GREEN_DRAGON
+group: Green Dragon
 enum: ["Adamantite ore", "Bass", "Mithril ore", "Monkfish"]
 */
 #define VAR_GREEN_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -1675,7 +1675,7 @@ CONST_GREEN_DRAGON_RULE (name:VAR_GREEN_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: GREEN_DRAGON
+group: Green Dragon
 enum: ["Clue scroll (elite)", "Ensouled dragon head", "Looting bag", "Reward casket (elite)"]
 */
 #define VAR_GREEN_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -1692,7 +1692,7 @@ CONST_GREEN_DRAGON_RULE (name:VAR_GREEN_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: HELLHOUND
+group: Hellhound
 enum: ["Vile ashes"]
 */
 #define VAR_HELLHOUND_ENUMLIST_FILTER_100 []
@@ -1703,7 +1703,7 @@ CONST_HELLHOUND_RULE (name:VAR_HELLHOUND_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: HELLHOUND
+group: Hellhound
 enum: ["Smouldering stone"]
 */
 #define VAR_HELLHOUND_ENUMLIST_FILTER_OTHER []
@@ -1714,7 +1714,7 @@ CONST_HELLHOUND_RULE (name:VAR_HELLHOUND_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: HELLHOUND
+group: Hellhound
 enum: ["Brimstone key", "Clue scroll (elite)", "Ensouled hellhound head", "Looting bag", "Reward casket (elite)"]
 */
 #define VAR_HELLHOUND_ENUMLIST_FILTER_TERTIARY []
@@ -1731,7 +1731,7 @@ CONST_HELLHOUND_RULE (name:VAR_HELLHOUND_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: HILL_GIANT
+group: Hill Giant
 enum: ["Big bones"]
 */
 #define VAR_HILL_GIANT_ENUMLIST_FILTER_100 []
@@ -1742,7 +1742,7 @@ CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: HILL_GIANT
+group: Hill Giant
 enum: ["Iron dagger", "Iron full helm", "Iron kiteshield", "Iron med helm", "Steel longsword", "Steel scimitar"]
 */
 #define VAR_HILL_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1753,7 +1753,7 @@ CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: HILL_GIANT
+group: Hill Giant
 enum: ["Chaos rune", "Cosmic rune", "Death rune", "Fire rune", "Iron arrow", "Law rune", "Mind rune", "Nature rune", "Steel arrow", "Water rune"]
 */
 #define VAR_HILL_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1764,7 +1764,7 @@ CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: HILL_GIANT
+group: Hill Giant
 enum: ["Beer", "Body talisman", "Limpwurt root"]
 */
 #define VAR_HILL_GIANT_ENUMLIST_FILTER_OTHER []
@@ -1775,7 +1775,7 @@ CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: HILL_GIANT
+group: Hill Giant
 enum: ["Clue scroll (beginner)", "Curved bone", "Ensouled giant head", "Giant champion scroll", "Key (medium)", "Long bone", "Looting bag"]
 */
 #define VAR_HILL_GIANT_ENUMLIST_FILTER_TERTIARY []
@@ -1792,7 +1792,7 @@ CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: HOBGOBLIN
+group: Hobgoblin
 enum: ["Bones"]
 */
 #define VAR_HOBGOBLIN_ENUMLIST_FILTER_100 []
@@ -1803,7 +1803,7 @@ CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: HOBGOBLIN
+group: Hobgoblin
 enum: ["Bronze spear", "Iron spear", "Iron sword", "Steel dagger", "Steel longsword", "Steel spear"]
 */
 #define VAR_HOBGOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1814,7 +1814,7 @@ CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: HOBGOBLIN
+group: Hobgoblin
 enum: ["Body rune", "Chaos rune", "Cosmic rune", "Fire rune", "Iron javelin", "Law rune", "Nature rune", "Water rune"]
 */
 #define VAR_HOBGOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1825,7 +1825,7 @@ CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: HOBGOBLIN
+group: Hobgoblin
 enum: ["Goblin mail", "Limpwurt root", "Trading sticks"]
 */
 #define VAR_HOBGOBLIN_ENUMLIST_FILTER_OTHER []
@@ -1836,7 +1836,7 @@ CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: HOBGOBLIN
+group: Hobgoblin
 enum: ["Clue scroll (beginner)", "Hobgoblin champion scroll", "Looting bag"]
 */
 #define VAR_HOBGOBLIN_ENUMLIST_FILTER_TERTIARY []
@@ -1853,7 +1853,7 @@ CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: ICE_GIANT
+group: Ice Giant
 enum: ["Big bones"]
 */
 #define VAR_ICE_GIANT_ENUMLIST_FILTER_100 []
@@ -1864,7 +1864,7 @@ CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: ICE_GIANT
+group: Ice Giant
 enum: ["Adamant dagger", "Adamant kiteshield", "Adamant mace", "Adamant sq shield", "Adamant sword", "Black kiteshield", "Iron 2h sword", "Iron platelegs", "Mithril axe", "Mithril mace", "Mithril platelegs", "Mithril sq shield", "Rune dagger", "Steel axe", "Steel sword"]
 */
 #define VAR_ICE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1875,7 +1875,7 @@ CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: ICE_GIANT
+group: Ice Giant
 enum: ["Adamant arrow", "Blood rune", "Body rune", "Chaos rune", "Cosmic rune", "Death rune", "Law rune", "Mind rune", "Nature rune", "Water rune"]
 */
 #define VAR_ICE_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1886,7 +1886,7 @@ CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: ICE_GIANT
+group: Ice Giant
 enum: ["Banana", "Jug of wine", "Mithril ore"]
 */
 #define VAR_ICE_GIANT_ENUMLIST_FILTER_OTHER []
@@ -1897,7 +1897,7 @@ CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: ICE_GIANT
+group: Ice Giant
 enum: ["Clue scroll (beginner)", "Curved bone", "Ensouled giant head", "Frozen tear", "Giant champion scroll", "Ice giant ribs", "Long bone", "Looting bag"]
 */
 #define VAR_ICE_GIANT_ENUMLIST_FILTER_TERTIARY []
@@ -1914,7 +1914,7 @@ CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: ICE_WARRIOR
+group: Ice Warrior
 enum: ["Iron battleaxe", "Mithril mace"]
 */
 #define VAR_ICE_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -1925,7 +1925,7 @@ CONST_ICE_WARRIOR_RULE (name:VAR_ICE_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: ICE_WARRIOR
+group: Ice Warrior
 enum: ["Adamant arrow", "Blood rune", "Chaos rune", "Cosmic rune", "Death rune", "Law rune", "Mithril arrow", "Nature rune"]
 */
 #define VAR_ICE_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1936,7 +1936,7 @@ CONST_ICE_WARRIOR_RULE (name:VAR_ICE_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITION)
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: ICE_WARRIOR
+group: Ice Warrior
 enum: ["Frozen tear", "Looting bag"]
 */
 #define VAR_ICE_WARRIOR_ENUMLIST_FILTER_TERTIARY []
@@ -1953,7 +1953,7 @@ CONST_ICE_WARRIOR_RULE (name:VAR_ICE_WARRIOR_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: ICEFIEND
+group: Icefiend
 enum: ["Air rune", "Water rune"]
 */
 #define VAR_ICEFIEND_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -1964,7 +1964,7 @@ CONST_ICEFIEND_RULE (name:VAR_ICEFIEND_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: ICEFIEND
+group: Icefiend
 enum: ["Coins"]
 */
 #define VAR_ICEFIEND_ENUMLIST_FILTER_OTHER []
@@ -1975,7 +1975,7 @@ CONST_ICEFIEND_RULE (name:VAR_ICEFIEND_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: ICEFIEND
+group: Icefiend
 enum: ["Frozen tear", "Looting bag"]
 */
 #define VAR_ICEFIEND_ENUMLIST_FILTER_TERTIARY []
@@ -1992,7 +1992,7 @@ CONST_ICEFIEND_RULE (name:VAR_ICEFIEND_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: IRON_DRAGON
+group: Iron Dragon
 enum: ["Dragon bones", "Iron bar"]
 */
 #define VAR_IRON_DRAGON_ENUMLIST_FILTER_100 []
@@ -2003,7 +2003,7 @@ CONST_IRON_DRAGON_RULE (name:VAR_IRON_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: IRON_DRAGON
+group: Iron Dragon
 enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Adamant sq shield", "Rune battleaxe", "Rune dart(p)", "Rune knife", "Rune med helm"]
 */
 #define VAR_IRON_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2014,7 +2014,7 @@ CONST_IRON_DRAGON_RULE (name:VAR_IRON_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: IRON_DRAGON
+group: Iron Dragon
 enum: ["Adamant bolts", "Blood rune", "Rune javelin", "Soul rune"]
 */
 #define VAR_IRON_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2025,7 +2025,7 @@ CONST_IRON_DRAGON_RULE (name:VAR_IRON_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION)
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: IRON_DRAGON
+group: Iron Dragon
 enum: ["Adamantite bar", "Curry", "Runite limbs", "Super strength(1)"]
 */
 #define VAR_IRON_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -2036,7 +2036,7 @@ CONST_IRON_DRAGON_RULE (name:VAR_IRON_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: IRON_DRAGON
+group: Iron Dragon
 enum: ["Brimstone key", "Draconic visage"]
 */
 #define VAR_IRON_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -2053,7 +2053,7 @@ CONST_IRON_DRAGON_RULE (name:VAR_IRON_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: JUNGLE_HORROR
+group: Jungle Horror
 enum: ["Bones"]
 */
 #define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_100 []
@@ -2064,7 +2064,7 @@ CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: JUNGLE_HORROR
+group: Jungle Horror
 enum: ["Iron javelin", "Iron kiteshield", "Iron spear", "Iron warhammer"]
 */
 #define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2075,7 +2075,7 @@ CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_WEAPONSANDARMOU
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: JUNGLE_HORROR
+group: Jungle Horror
 enum: ["Death rune", "Nature rune"]
 */
 #define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2086,7 +2086,7 @@ CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_RUNESANDAMMUNIT
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: JUNGLE_HORROR
+group: Jungle Horror
 enum: ["Iron ore", "Mahogany logs", "Teak logs"]
 */
 #define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_MATERIALS []
@@ -2097,7 +2097,7 @@ CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: JUNGLE_HORROR
+group: Jungle Horror
 enum: ["Big bones", "Bones", "Pineapple"]
 */
 #define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_OTHER []
@@ -2108,7 +2108,7 @@ CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: JUNGLE_HORROR
+group: Jungle Horror
 enum: ["Ensouled horror head"]
 */
 #define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_TERTIARY []
@@ -2125,7 +2125,7 @@ CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: LAVA_DRAGON
+group: Lava Dragon
 enum: ["Black dragonhide", "Lava dragon bones", "Lava scale"]
 */
 #define VAR_LAVA_DRAGON_ENUMLIST_FILTER_100 []
@@ -2136,7 +2136,7 @@ CONST_LAVA_DRAGON_RULE (name:VAR_LAVA_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: LAVA_DRAGON
+group: Lava Dragon
 enum: ["Adamant 2h sword", "Adamant platebody", "Lava battlestaff", "Rune axe", "Rune dart", "Rune full helm", "Rune kiteshield", "Rune knife", "Rune longsword", "Rune med helm"]
 */
 #define VAR_LAVA_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2147,7 +2147,7 @@ CONST_LAVA_DRAGON_RULE (name:VAR_LAVA_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: LAVA_DRAGON
+group: Lava Dragon
 enum: ["Blood rune", "Death rune", "Fire rune", "Lava rune", "Law rune", "Rune javelin", "Runite bolts"]
 */
 #define VAR_LAVA_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2158,7 +2158,7 @@ CONST_LAVA_DRAGON_RULE (name:VAR_LAVA_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION)
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: LAVA_DRAGON
+group: Lava Dragon
 enum: ["Adamantite bar", "Chocolate cake", "Dragon javelin heads", "Fire orb", "Fire talisman", "Onyx bolt tips"]
 */
 #define VAR_LAVA_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -2169,7 +2169,7 @@ CONST_LAVA_DRAGON_RULE (name:VAR_LAVA_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: LAVA_DRAGON
+group: Lava Dragon
 enum: ["Draconic visage", "Ensouled dragon head", "Looting bag"]
 */
 #define VAR_LAVA_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -2186,7 +2186,7 @@ CONST_LAVA_DRAGON_RULE (name:VAR_LAVA_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: LESSER_DEMON
+group: Lesser Demon
 enum: ["Vile ashes"]
 */
 #define VAR_LESSER_DEMON_ENUMLIST_FILTER_100 []
@@ -2197,7 +2197,7 @@ CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: LESSER_DEMON
+group: Lesser Demon
 enum: ["Adamant chainbody", "Adamant dagger", "Adamant platebody", "Black full helm", "Mithril axe", "Mithril chainbody", "Mithril sq shield", "Rune med helm", "Steel axe", "Steel full helm", "Steel scimitar"]
 */
 #define VAR_LESSER_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2208,7 +2208,7 @@ CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR)
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: LESSER_DEMON
+group: Lesser Demon
 enum: ["Blood rune", "Chaos rune", "Death rune", "Fire rune"]
 */
 #define VAR_LESSER_DEMON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2219,7 +2219,7 @@ CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_RUNESANDAMMUNITIO
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: LESSER_DEMON
+group: Lesser Demon
 enum: ["Gold ore", "Jug of wine"]
 */
 #define VAR_LESSER_DEMON_ENUMLIST_FILTER_OTHER []
@@ -2230,7 +2230,7 @@ CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: LESSER_DEMON
+group: Lesser Demon
 enum: ["Ensouled demon head", "Lesser demon champion scroll", "Looting bag"]
 */
 #define VAR_LESSER_DEMON_ENUMLIST_FILTER_TERTIARY []
@@ -2247,7 +2247,7 @@ CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: MAGIC_AXE
+group: Magic Axe
 enum: ["Iron battleaxe"]
 */
 #define VAR_MAGIC_AXE_ENUMLIST_FILTER_100 []
@@ -2258,7 +2258,7 @@ CONST_MAGIC_AXE_RULE (name:VAR_MAGIC_AXE_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: MAGIC_AXE
+group: Magic Axe
 enum: ["Looting bag"]
 */
 #define VAR_MAGIC_AXE_ENUMLIST_FILTER_TERTIARY []
@@ -2275,7 +2275,7 @@ CONST_MAGIC_AXE_RULE (name:VAR_MAGIC_AXE_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: MAMMOTH
+group: Mammoth
 enum: ["Big bones"]
 */
 #define VAR_MAMMOTH_ENUMLIST_FILTER_100 []
@@ -2286,7 +2286,7 @@ CONST_MAMMOTH_RULE (name:VAR_MAMMOTH_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: MAMMOTH
+group: Mammoth
 enum: ["Acorn", "Coins", "Dark fishing bait", "Limpwurt seed", "Lobster", "Prayer potion(1)", "Steel arrow"]
 */
 #define VAR_MAMMOTH_ENUMLIST_FILTER_OTHER []
@@ -2297,7 +2297,7 @@ CONST_MAMMOTH_RULE (name:VAR_MAMMOTH_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: MAMMOTH
+group: Mammoth
 enum: ["Curved bone", "Long bone", "Looting bag"]
 */
 #define VAR_MAMMOTH_ENUMLIST_FILTER_TERTIARY []
@@ -2314,7 +2314,7 @@ CONST_MAMMOTH_RULE (name:VAR_MAMMOTH_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: MINOTAUR
+group: Minotaur
 enum: ["Bones"]
 */
 #define VAR_MINOTAUR_ENUMLIST_FILTER_100 []
@@ -2325,7 +2325,7 @@ CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: MINOTAUR
+group: Minotaur
 enum: ["Bronze arrow", "Bronze dagger", "Bronze full helm", "Bronze spear", "Iron arrow"]
 */
 #define VAR_MINOTAUR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2336,7 +2336,7 @@ CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: MINOTAUR
+group: Minotaur
 enum: ["Mind rune"]
 */
 #define VAR_MINOTAUR_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2347,7 +2347,7 @@ CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: MINOTAUR
+group: Minotaur
 enum: ["Cooked meat", "Copper ore", "Pure essence", "Right skull half", "Rune essence", "Tin ore"]
 */
 #define VAR_MINOTAUR_ENUMLIST_FILTER_OTHER []
@@ -2358,7 +2358,7 @@ CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: MINOTAUR
+group: Minotaur
 enum: ["Clue scroll (beginner)", "Ensouled minotaur head"]
 */
 #define VAR_MINOTAUR_ENUMLIST_FILTER_TERTIARY []
@@ -2375,7 +2375,7 @@ CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: MITHRIL_DRAGON
+group: Mithril Dragon
 enum: ["Dragon bones", "Mithril bar"]
 */
 #define VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_100 []
@@ -2386,7 +2386,7 @@ CONST_MITHRIL_DRAGON_RULE (name:VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: MITHRIL_DRAGON
+group: Mithril Dragon
 enum: ["Dragon full helm", "Rune battleaxe", "Rune dart(p)", "Rune full helm", "Rune knife", "Rune mace", "Rune spear"]
 */
 #define VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2397,7 +2397,7 @@ CONST_MITHRIL_DRAGON_RULE (name:VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_WEAPONSANDARM
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: MITHRIL_DRAGON
+group: Mithril Dragon
 enum: ["Blood rune", "Rune arrow", "Rune javelin", "Runite bolts", "Soul rune"]
 */
 #define VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2408,7 +2408,7 @@ CONST_MITHRIL_DRAGON_RULE (name:VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUN
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: MITHRIL_DRAGON
+group: Mithril Dragon
 enum: ["Ancient page", "Chewed bones", "Coins", "Dragon javelin heads", "Runite bar"]
 */
 #define VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -2419,7 +2419,7 @@ CONST_MITHRIL_DRAGON_RULE (name:VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: MITHRIL_DRAGON
+group: Mithril Dragon
 enum: ["Brimstone key", "Draconic visage"]
 */
 #define VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -2436,7 +2436,7 @@ CONST_MITHRIL_DRAGON_RULE (name:VAR_MITHRIL_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: MOSS_GIANT
+group: Moss Giant
 enum: ["Big bones"]
 */
 #define VAR_MOSS_GIANT_ENUMLIST_FILTER_100 []
@@ -2447,7 +2447,7 @@ CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: MOSS_GIANT
+group: Moss Giant
 enum: ["Black sq shield", "Magic staff", "Mithril spear", "Mithril sword", "Steel kiteshield", "Steel med helm"]
 */
 #define VAR_MOSS_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2458,7 +2458,7 @@ CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: MOSS_GIANT
+group: Moss Giant
 enum: ["Air rune", "Blood rune", "Chaos rune", "Cosmic rune", "Death rune", "Earth rune", "Iron arrow", "Law rune", "Nature rune", "Steel arrow"]
 */
 #define VAR_MOSS_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2469,7 +2469,7 @@ CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: MOSS_GIANT
+group: Moss Giant
 enum: ["Coal", "Spinach roll", "Steel bar"]
 */
 #define VAR_MOSS_GIANT_ENUMLIST_FILTER_OTHER []
@@ -2480,7 +2480,7 @@ CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: MOSS_GIANT
+group: Moss Giant
 enum: ["Clue scroll (beginner)", "Curved bone", "Ensouled giant head", "Giant champion scroll", "Long bone", "Looting bag", "Moss giant bone", "Mossy key"]
 */
 #define VAR_MOSS_GIANT_ENUMLIST_FILTER_TERTIARY []
@@ -2497,7 +2497,7 @@ CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: OGRE
+group: Ogre
 enum: ["Big bones"]
 */
 #define VAR_OGRE_ENUMLIST_FILTER_100 []
@@ -2508,7 +2508,7 @@ CONST_OGRE_RULE (name:VAR_OGRE_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: OGRE
+group: Ogre
 enum: ["Curved bone", "Ensouled ogre head", "Long bone", "Looting bag", "Ogre ribs"]
 */
 #define VAR_OGRE_ENUMLIST_FILTER_TERTIARY []
@@ -2525,7 +2525,7 @@ CONST_OGRE_RULE (name:VAR_OGRE_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: OTHERWORLDLY_BEING
+group: Otherwordly Being
 enum: ["Blood rune", "Chaos rune", "Cosmic rune", "Death rune", "Law rune", "Nature rune"]
 */
 #define VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2536,7 +2536,7 @@ CONST_OTHERWORLDLY_BEING_RULE (name:VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_RUNES
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: OTHERWORLDLY_BEING
+group: Otherwordly Being
 enum: ["Coins", "Mackerel", "Mithril mace", "Ruby ring"]
 */
 #define VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_OTHER []
@@ -2553,7 +2553,7 @@ CONST_OTHERWORLDLY_BEING_RULE (name:VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_OTHER
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: PIRATE
+group: Pirate
 enum: ["Bones"]
 */
 #define VAR_PIRATE_ENUMLIST_FILTER_100 []
@@ -2564,7 +2564,7 @@ CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: PIRATE
+group: Pirate
 enum: ["Bronze scimitar", "Iron dagger", "Iron platebody"]
 */
 #define VAR_PIRATE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2575,7 +2575,7 @@ CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: PIRATE
+group: Pirate
 enum: ["Air rune", "Bronze arrow", "Chaos rune", "Earth rune", "Fire rune", "Iron bolts", "Law rune", "Nature rune"]
 */
 #define VAR_PIRATE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2586,7 +2586,7 @@ CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: PIRATE
+group: Pirate
 enum: ["Chef's hat", "Iron bar", "Right eye patch"]
 */
 #define VAR_PIRATE_ENUMLIST_FILTER_OTHER []
@@ -2597,7 +2597,7 @@ CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: PIRATE
+group: Pirate
 enum: ["Key (medium)", "Looting bag"]
 */
 #define VAR_PIRATE_ENUMLIST_FILTER_TERTIARY []
@@ -2614,7 +2614,7 @@ CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: RAT
+group: Rat
 enum: ["Bones"]
 */
 #define VAR_RAT_ENUMLIST_FILTER_100 []
@@ -2625,7 +2625,7 @@ CONST_RAT_RULE (name:VAR_RAT_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: RAT
+group: Rat
 enum: ["Looting bag", "Rat bone", "Rat's tail"]
 */
 #define VAR_RAT_ENUMLIST_FILTER_TERTIARY []
@@ -2642,7 +2642,7 @@ CONST_RAT_RULE (name:VAR_RAT_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: RED_DRAGON
+group: Red Dragon
 enum: ["Dragon bones", "Red dragonhide"]
 */
 #define VAR_RED_DRAGON_ENUMLIST_FILTER_100 []
@@ -2653,7 +2653,7 @@ CONST_RED_DRAGON_RULE (name:VAR_RED_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: RED_DRAGON
+group: Red Dragon
 enum: ["Adamant platebody", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril javelin", "Mithril kiteshield", "Rune dart", "Rune longsword"]
 */
 #define VAR_RED_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2664,7 +2664,7 @@ CONST_RED_DRAGON_RULE (name:VAR_RED_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: RED_DRAGON
+group: Red Dragon
 enum: ["Blood rune", "Death rune", "Law rune", "Rune arrow"]
 */
 #define VAR_RED_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2675,7 +2675,7 @@ CONST_RED_DRAGON_RULE (name:VAR_RED_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: RED_DRAGON
+group: Red Dragon
 enum: ["Adamantite bar", "Chocolate cake", "Dragon javelin heads"]
 */
 #define VAR_RED_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -2686,7 +2686,7 @@ CONST_RED_DRAGON_RULE (name:VAR_RED_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: RED_DRAGON
+group: Red Dragon
 enum: ["Brimstone key", "Ensouled dragon head", "Grubby key", "Tattered moon page", "Tattered sun page", "Tattered temple page"]
 */
 #define VAR_RED_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -2703,7 +2703,7 @@ CONST_RED_DRAGON_RULE (name:VAR_RED_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: ROGUE
+group: Rogue
 enum: ["Bones", "Coins"]
 */
 #define VAR_ROGUE_ENUMLIST_FILTER_100 []
@@ -2714,7 +2714,7 @@ CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: ROGUE
+group: Rogue
 enum: ["Bronze med helm", "Iron dagger"]
 */
 #define VAR_ROGUE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2725,7 +2725,7 @@ CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: ROGUE
+group: Rogue
 enum: ["Bronze arrow", "Bronze bolts", "Chaos rune", "Earth rune", "Fire rune", "Mind rune"]
 */
 #define VAR_ROGUE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2736,7 +2736,7 @@ CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: ROGUE
+group: Rogue
 enum: ["Cabbage", "Copper ore", "Earth talisman", "Fishing bait"]
 */
 #define VAR_ROGUE_ENUMLIST_FILTER_OTHER []
@@ -2747,7 +2747,7 @@ CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: ROGUE
+group: Rogue
 enum: ["Clue scroll (beginner)", "Looting bag"]
 */
 #define VAR_ROGUE_ENUMLIST_FILTER_TERTIARY []
@@ -2764,7 +2764,7 @@ CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: SCORPION
+group: Scorpion
 enum: ["Book page 1"]
 */
 #define VAR_SCORPION_ENUMLIST_FILTER_100 []
@@ -2775,7 +2775,7 @@ CONST_SCORPION_RULE (name:VAR_SCORPION_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: SCORPION
+group: Scorpion
 enum: ["Clue scroll (beginner)", "Ensouled scorpion head", "Looting bag"]
 */
 #define VAR_SCORPION_ENUMLIST_FILTER_TERTIARY []
@@ -2792,7 +2792,7 @@ CONST_SCORPION_RULE (name:VAR_SCORPION_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: SHADOW_WARRIOR
+group: Shadow Warrior
 enum: ["Adamant spear", "Black dagger(p)", "Black knife", "Black longsword", "Black robe"]
 */
 #define VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2803,7 +2803,7 @@ CONST_SHADOW_WARRIOR_RULE (name:VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARM
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: SHADOW_WARRIOR
+group: Shadow Warrior
 enum: ["Air rune", "Blood rune", "Cosmic rune", "Death rune"]
 */
 #define VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2814,7 +2814,7 @@ CONST_SHADOW_WARRIOR_RULE (name:VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUN
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: SHADOW_WARRIOR
+group: Shadow Warrior
 enum: ["Coins", "Mithril bar", "Weapon poison"]
 */
 #define VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_OTHER []
@@ -2831,7 +2831,7 @@ CONST_SHADOW_WARRIOR_RULE (name:VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: SKELETON
+group: Skeleton
 enum: ["Bones"]
 */
 #define VAR_SKELETON_ENUMLIST_FILTER_100 []
@@ -2842,7 +2842,7 @@ CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: SKELETON
+group: Skeleton
 enum: ["Iron axe", "Iron med helm", "Iron scimitar", "Iron sword"]
 */
 #define VAR_SKELETON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2853,7 +2853,7 @@ CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: SKELETON
+group: Skeleton
 enum: ["Air rune", "Bronze arrow", "Chaos rune", "Cosmic rune", "Earth rune", "Fire rune", "Iron arrow", "Law rune", "Nature rune", "Steel arrow", "Water rune"]
 */
 #define VAR_SKELETON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2864,7 +2864,7 @@ CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: SKELETON
+group: Skeleton
 enum: ["Bronze bar", "Fire talisman", "Grain", "Iron dagger", "Iron ore"]
 */
 #define VAR_SKELETON_ENUMLIST_FILTER_OTHER []
@@ -2875,7 +2875,7 @@ CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: SKELETON
+group: Skeleton
 enum: ["Clue scroll (beginner)", "Looting bag", "Skeleton champion scroll"]
 */
 #define VAR_SKELETON_ENUMLIST_FILTER_TERTIARY []
@@ -2892,7 +2892,7 @@ CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: SOURHOG
+group: Sourhog
 enum: ["Big bones"]
 */
 #define VAR_SOURHOG_ENUMLIST_FILTER_100 []
@@ -2903,7 +2903,7 @@ CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: SOURHOG
+group: Sourhog
 enum: ["Adamant kiteshield", "Adamant scimitar"]
 */
 #define VAR_SOURHOG_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2914,7 +2914,7 @@ CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: SOURHOG
+group: Sourhog
 enum: ["Air rune", "Chaos rune", "Earth rune", "Mind rune", "Nature rune", "Steel arrow"]
 */
 #define VAR_SOURHOG_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2925,7 +2925,7 @@ CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: SOURHOG
+group: Sourhog
 enum: ["Cabbage", "Cooking apple", "Limpwurt root", "Potato"]
 */
 #define VAR_SOURHOG_ENUMLIST_FILTER_OTHER []
@@ -2936,7 +2936,7 @@ CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: SOURHOG
+group: Sourhog
 enum: ["Curved bone", "Long bone"]
 */
 #define VAR_SOURHOG_ENUMLIST_FILTER_TERTIARY []
@@ -2953,7 +2953,7 @@ CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: STEEL_DRAGON
+group: Steel Dragon
 enum: ["Dragon bones", "Steel bar"]
 */
 #define VAR_STEEL_DRAGON_ENUMLIST_FILTER_100 []
@@ -2964,7 +2964,7 @@ CONST_STEEL_DRAGON_RULE (name:VAR_STEEL_DRAGON_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: STEEL_DRAGON
+group: Steel Dragon
 enum: ["Adamant kiteshield", "Rune axe", "Rune dart(p)", "Rune full helm", "Rune knife", "Rune mace"]
 */
 #define VAR_STEEL_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -2975,7 +2975,7 @@ CONST_STEEL_DRAGON_RULE (name:VAR_STEEL_DRAGON_ENUMLIST_FILTER_WEAPONSANDARMOUR)
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: STEEL_DRAGON
+group: Steel Dragon
 enum: ["Blood rune", "Rune javelin", "Runite bolts", "Soul rune"]
 */
 #define VAR_STEEL_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -2986,7 +2986,7 @@ CONST_STEEL_DRAGON_RULE (name:VAR_STEEL_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITIO
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: STEEL_DRAGON
+group: Steel Dragon
 enum: ["Curry", "Dragon javelin heads", "Runite bar", "Runite limbs", "Super attack(3)", "Super defence(2)"]
 */
 #define VAR_STEEL_DRAGON_ENUMLIST_FILTER_OTHER []
@@ -2997,7 +2997,7 @@ CONST_STEEL_DRAGON_RULE (name:VAR_STEEL_DRAGON_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: STEEL_DRAGON
+group: Steel Dragon
 enum: ["Brimstone key", "Draconic visage"]
 */
 #define VAR_STEEL_DRAGON_ENUMLIST_FILTER_TERTIARY []
@@ -3014,7 +3014,7 @@ CONST_STEEL_DRAGON_RULE (name:VAR_STEEL_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: SUQAH
+group: Suqah
 enum: ["Big bones", "Suqah hide"]
 */
 #define VAR_SUQAH_ENUMLIST_FILTER_100 []
@@ -3025,7 +3025,7 @@ CONST_SUQAH_RULE (name:VAR_SUQAH_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: SUQAH
+group: Suqah
 enum: ["Grimy guam leaf", "Grimy marrentill", "Suqah tooth"]
 */
 #define VAR_SUQAH_ENUMLIST_FILTER_OTHER []
@@ -3036,7 +3036,7 @@ CONST_SUQAH_RULE (name:VAR_SUQAH_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: SUQAH
+group: Suqah
 enum: ["Curved bone", "Long bone"]
 */
 #define VAR_SUQAH_ENUMLIST_FILTER_TERTIARY []
@@ -3053,7 +3053,7 @@ CONST_SUQAH_RULE (name:VAR_SUQAH_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: WATERFIEND
+group: Waterfiend
 enum: ["Fiendish ashes", "Water rune"]
 */
 #define VAR_WATERFIEND_ENUMLIST_FILTER_100 []
@@ -3064,7 +3064,7 @@ CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: WATERFIEND
+group: Waterfiend
 enum: ["Adamant chainbody", "Adamant warhammer", "Blue d'hide vambraces", "Mystic water staff", "Rune full helm", "Rune med helm", "Staff of water", "Water battlestaff"]
 */
 #define VAR_WATERFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -3075,7 +3075,7 @@ CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: WATERFIEND
+group: Waterfiend
 enum: ["Blood rune", "Death rune", "Mist rune", "Mithril arrow", "Mud rune", "Sapphire bolts", "Steam rune", "Water rune"]
 */
 #define VAR_WATERFIEND_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -3086,7 +3086,7 @@ CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: WATERFIEND
+group: Waterfiend
 enum: ["Mithril bar", "Mithril ore", "Raw lobster", "Raw shark", "Shark", "Uncut diamond", "Uncut emerald", "Uncut ruby", "Uncut sapphire", "Watermelon seed"]
 */
 #define VAR_WATERFIEND_ENUMLIST_FILTER_MATERIALS []
@@ -3097,7 +3097,7 @@ CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: WATERFIEND
+group: Waterfiend
 enum: ["Coins", "Oyster", "Seaweed", "Snape grass", "Vial of water", "Water orb", "Water talisman"]
 */
 #define VAR_WATERFIEND_ENUMLIST_FILTER_OTHER []
@@ -3108,7 +3108,7 @@ CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: WATERFIEND
+group: Waterfiend
 enum: ["Brimstone key", "Clue scroll (elite)", "Crystal shard", "Reward casket (elite)"]
 */
 #define VAR_WATERFIEND_ENUMLIST_FILTER_TERTIARY []
@@ -3125,7 +3125,7 @@ CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: WEREWOLF
+group: Werewolf
 enum: ["Wolf bones"]
 */
 #define VAR_WEREWOLF_ENUMLIST_FILTER_100 []
@@ -3136,7 +3136,7 @@ CONST_WEREWOLF_RULE (name:VAR_WEREWOLF_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: WEREWOLF
+group: Werewolf
 enum: ["Mithril chainbody", "Mithril sq shield", "Rune med helm", "Steel axe", "Steel full helm", "Steel scimitar"]
 */
 #define VAR_WEREWOLF_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -3147,7 +3147,7 @@ CONST_WEREWOLF_RULE (name:VAR_WEREWOLF_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: WEREWOLF
+group: Werewolf
 enum: ["Fur", "Grey wolf fur"]
 */
 #define VAR_WEREWOLF_ENUMLIST_FILTER_OTHER []
@@ -3158,7 +3158,7 @@ CONST_WEREWOLF_RULE (name:VAR_WEREWOLF_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: WEREWOLF
+group: Werewolf
 enum: ["Looting bag", "Werewolf bone"]
 */
 #define VAR_WEREWOLF_ENUMLIST_FILTER_TERTIARY []
@@ -3175,7 +3175,7 @@ CONST_WEREWOLF_RULE (name:VAR_WEREWOLF_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: WOLF
+group: Wolf
 enum: ["Bones", "Wolf bones"]
 */
 #define VAR_WOLF_ENUMLIST_FILTER_100 []
@@ -3186,7 +3186,7 @@ CONST_WOLF_RULE (name:VAR_WOLF_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: WOLF
+group: Wolf
 enum: ["Clue scroll (beginner)", "Looting bag", "Wolf bone"]
 */
 #define VAR_WOLF_ENUMLIST_FILTER_TERTIARY []
@@ -3203,7 +3203,7 @@ CONST_WOLF_RULE (name:VAR_WOLF_ENUMLIST_FILTER_TERTIARY) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: ZOMBIE
+group: Zombie
 enum: ["Bones"]
 */
 #define VAR_ZOMBIE_ENUMLIST_FILTER_100 []
@@ -3214,7 +3214,7 @@ CONST_ZOMBIE_RULE (name:VAR_ZOMBIE_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: ZOMBIE
+group: Zombie
 enum: ["Bronze kiteshield", "Bronze longsword", "Bronze med helm", "Iron axe", "Iron dagger", "Iron mace"]
 */
 #define VAR_ZOMBIE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -3225,7 +3225,7 @@ CONST_ZOMBIE_RULE (name:VAR_ZOMBIE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: ZOMBIE
+group: Zombie
 enum: ["Air rune", "Body rune", "Chaos rune", "Cosmic rune", "Fire rune", "Iron arrow", "Mind rune", "Mithril arrow", "Nature rune", "Steel arrow"]
 */
 #define VAR_ZOMBIE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -3236,7 +3236,7 @@ CONST_ZOMBIE_RULE (name:VAR_ZOMBIE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: ZOMBIE
+group: Zombie
 enum: ["Copper ore", "Eye of newt", "Fishing bait", "Tin ore", "Tinderbox"]
 */
 #define VAR_ZOMBIE_ENUMLIST_FILTER_OTHER []
@@ -3247,7 +3247,7 @@ CONST_ZOMBIE_RULE (name:VAR_ZOMBIE_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: ZOMBIE
+group: Zombie
 enum: ["Zombie bone", "Zombie champion scroll"]
 */
 #define VAR_ZOMBIE_ENUMLIST_FILTER_TERTIARY []
