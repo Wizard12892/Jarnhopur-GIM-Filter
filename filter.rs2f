@@ -1348,10 +1348,7 @@ CONST_TORMENTEDDEMON_RULE (name:VAR_TORMENTEDDEMON_ENUMLIST_FILTER_TERTIARY) {
 name: 'PvM: Bosses'
 description: |
   These sections allow you to filter out drops on a per-boss basis.
-  
-  Not all of them have defaults yet, they're being added over time.
 */
-
 
 #define CONST_AREA_YAMA [1472,10048,0,1535,10111,0]
 #define CONST_YAMA_RULE(_cond) rule (area:CONST_AREA_YAMA && (_cond))
