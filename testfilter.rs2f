@@ -92,13 +92,6 @@ description: |
   NOTE: This requires that "Price Sort" in the "Custom Menu Swaps" plugin under "Ground Item Sort" to be DISABLED.
 */
 
-/*@ define:module:filtering
-name: Filtering
-subtitle: Sifting through the junk
-description: |
-  Provides a few different ways to filter out items.
-*/
-
 /*@ define:group
 name: Individual Items
 description: |
