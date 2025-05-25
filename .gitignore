@@ -2,3 +2,5 @@ Parser/main.py
 Parser/monsters.txt
 Parser/template.txt
 Parser/output/merged_output.txt
+Parser/output/PvM Basic.txt
+Parser/output/PvM Slayer.txt
