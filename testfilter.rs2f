@@ -76,7 +76,7 @@ type: style
 group: Default Style
 label: Default Style
 */
-#define VAR_DEFAULTS_STYLE hidden = false;
+#define VAR_DEFAULTS_STYLE hidden = false;fontType = 1;showDespawn = true;
 
 apply (true) { VAR_DEFAULTS_STYLE }
 
