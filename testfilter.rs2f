@@ -51,10 +51,7 @@ label: Ignore ownership value for these items
 
 apply (!SHOW_GLOBAL_DROPS && ownership:0) {hidden = true;}
 
-rule (SHOW_GROUP_DROPS && SHOW_OTHER_DROPS && SHOW_GLOBAL_DROPS && !name:VAR_OWNERSHIP_IGNORE)
-{
-    hidden = true;
-}
+rule (SHOW_GROUP_DROPS && SHOW_OTHER_DROPS && SHOW_GLOBAL_DROPS && !name:VAR_OWNERSHIP_IGNORE) {hidden = true;}
 
 /*@ define:input:settings
 label: Show Despawn Timer
@@ -131,8 +128,6 @@ label: Hidden
 group: Values
 */
 #define VALUE_TIER_0 250
-
-rule (VALUE_TIER_0>)
 
 /*@ define:input:values
 type: number
