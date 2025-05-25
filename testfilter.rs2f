@@ -990,6 +990,103 @@ CONST_Chaos druid_RULE (name:VAR_Chaos druid_ENUMLIST_FILTER_TERTIARY) {
 }
 // END_TERTIARY
 
+// ==== Chromatic Dragons Drops ====
+
+#define CONST_AREA_Chromatic Dragons0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
+#define CONST_AREA_Chromatic Dragons1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
+#define CONST_Chromatic Dragons_RULE(_cond) rule ((area:CONST_AREA_Chromatic Dragons0 ||   area:CONST_AREA_Chromatic Dragons1 || ETC AS NEEDED) && (_cond))
+
+// START_UNIQUE
+/*@ define:input
+type: enumlist
+label: 'Hide: Uniques'
+group: Chromatic Dragons
+enum: ["Dragon token"]
+*/
+#define VAR_Chromatic Dragons_ENUMLIST_FILTER_UNIQUE []
+CONST_Chromatic Dragons_RULE (name:VAR_Chromatic Dragons_ENUMLIST_FILTER_UNIQUE) {
+  hidden = true;
+}
+// END_UNIQUE
+
+// START_ALWAYS
+/*@ define:input
+type: enumlist
+label: 'Hide: Always'
+group: Chromatic Dragons
+enum: ["Black dragonhide", "Blue dragonhide", "Dragon bones", "Green dragonhide", "Red dragonhide"]
+*/
+#define VAR_Chromatic Dragons_ENUMLIST_FILTER_100 []
+CONST_Chromatic Dragons_RULE (name:VAR_Chromatic Dragons_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+// END_ALWAYS
+
+// START_WEAPONSANDARMOUR
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Chromatic Dragons
+enum: ["Adamant 2h sword", "Adamant battleaxe", "Adamant dagger", "Adamant full helm", "Adamant kiteshield", "Adamant platebody", "Adamant sword", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril javelin", "Mithril kiteshield", "Mithril platelegs", "Mithril spear", "Rune axe", "Rune dagger", "Rune dart", "Rune kiteshield", "Rune knife", "Rune longsword", "Rune med helm", "Steel battleaxe", "Steel platelegs"]
+*/
+#define VAR_Chromatic Dragons_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_Chromatic Dragons_RULE (name:VAR_Chromatic Dragons_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+// END_WEAPONSANDARMOUR
+
+// START_RUNESANDAMMUNITION
+/*@ define:input
+type: enumlist
+label: 'Hide: Runes and Ammunition'
+group: Chromatic Dragons
+enum: ["Adamant dart(p)", "Adamant javelin", "Air rune", "Blood rune", "Chaos rune", "Death rune", "Fire rune", "Law rune", "Nature rune", "Rune arrow", "Water rune"]
+*/
+#define VAR_Chromatic Dragons_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_Chromatic Dragons_RULE (name:VAR_Chromatic Dragons_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+  hidden = true;
+}
+// END_RUNESANDAMMUNITION
+
+// START_MATERIALS
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: Chromatic Dragons
+enum: ["Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin"]
+*/
+#define VAR_Chromatic Dragons_ENUMLIST_FILTER_MATERIALS []
+CONST_Chromatic Dragons_RULE (name:VAR_Chromatic Dragons_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+// END_MATERIALS
+
+// START_OTHER
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Chromatic Dragons
+enum: ["Adamantite bar", "Adamantite ore", "Bass", "Chocolate cake", "Dragon javelin heads", "Mithril ore", "Monkfish"]
+*/
+#define VAR_Chromatic Dragons_ENUMLIST_FILTER_OTHER []
+CONST_Chromatic Dragons_RULE (name:VAR_Chromatic Dragons_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+// END_OTHER
+
+// START_TERTIARY
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Chromatic Dragons
+enum: ["Brimstone key", "Clue scroll (elite)", "Draconic visage", "Ensouled dragon head", "Frozen tear", "Grubby key", "Looting bag", "Reward casket (elite)", "Scaly blue dragonhide", "Tattered moon page", "Tattered sun page", "Tattered temple page", "Tooth half of key (moon key)"]
+*/
+#define VAR_Chromatic Dragons_ENUMLIST_FILTER_TERTIARY []
+CONST_Chromatic Dragons_RULE (name:VAR_Chromatic Dragons_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
+// END_TERTIARY
+
 // ==== Crocodile Drops ====
 
 #define CONST_AREA_Crocodile0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
@@ -2509,6 +2606,103 @@ enum: ["Looting bag"]
 */
 #define VAR_Magic axe_ENUMLIST_FILTER_TERTIARY []
 CONST_Magic axe_RULE (name:VAR_Magic axe_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
+// END_TERTIARY
+
+// ==== Metal Dragons Drops ====
+
+#define CONST_AREA_Metal Dragons0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
+#define CONST_AREA_Metal Dragons1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
+#define CONST_Metal Dragons_RULE(_cond) rule ((area:CONST_AREA_Metal Dragons0 ||   area:CONST_AREA_Metal Dragons1 || ETC AS NEEDED) && (_cond))
+
+// START_UNIQUE
+/*@ define:input
+type: enumlist
+label: 'Hide: Uniques'
+group: Metal Dragons
+enum: ["Dragon platelegs", "Dragon plateskirt"]
+*/
+#define VAR_Metal Dragons_ENUMLIST_FILTER_UNIQUE []
+CONST_Metal Dragons_RULE (name:VAR_Metal Dragons_ENUMLIST_FILTER_UNIQUE) {
+  hidden = true;
+}
+// END_UNIQUE
+
+// START_ALWAYS
+/*@ define:input
+type: enumlist
+label: 'Hide: Always'
+group: Metal Dragons
+enum: ["Adamantite bar", "Bronze bar", "Dragon bones", "Iron bar", "Mithril bar", "Runite bar", "Steel bar"]
+*/
+#define VAR_Metal Dragons_ENUMLIST_FILTER_100 []
+CONST_Metal Dragons_RULE (name:VAR_Metal Dragons_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+// END_ALWAYS
+
+// START_WEAPONSANDARMOUR
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Metal Dragons
+enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Adamant dart(p)", "Adamant kiteshield", "Adamant platebody", "Adamant sq shield", "Dragon full helm", "Dragon med helm", "Dragon platelegs", "Dragon plateskirt", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril kiteshield", "Rune axe", "Rune battleaxe", "Rune dart(p)", "Rune full helm", "Rune knife", "Rune longsword", "Rune mace", "Rune med helm", "Rune platebody", "Rune platelegs", "Rune scimitar", "Rune spear", "Rune warhammer"]
+*/
+#define VAR_Metal Dragons_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_Metal Dragons_RULE (name:VAR_Metal Dragons_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+// END_WEAPONSANDARMOUR
+
+// START_RUNESANDAMMUNITION
+/*@ define:input
+type: enumlist
+label: 'Hide: Runes and Ammunition'
+group: Metal Dragons
+enum: ["Adamant arrow", "Adamant bolts", "Adamant javelin", "Blood rune", "Chaos rune", "Death rune", "Fire rune", "Law rune", "Mithril bolts", "Rune arrow", "Rune javelin", "Runite bolts", "Soul rune", "Wrath rune"]
+*/
+#define VAR_Metal Dragons_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_Metal Dragons_RULE (name:VAR_Metal Dragons_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+  hidden = true;
+}
+// END_RUNESANDAMMUNITION
+
+// START_MATERIALS
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: Metal Dragons
+enum: ["Adamant bolts(unf)", "Adamant javelin heads", "Adamantite bar", "Adamantite ore", "Diamond", "Dragon bolts (unf)", "Dragon javelin heads", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy ranarr weed", "Grimy torstol"]
+*/
+#define VAR_Metal Dragons_ENUMLIST_FILTER_MATERIALS []
+CONST_Metal Dragons_RULE (name:VAR_Metal Dragons_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+// END_MATERIALS
+
+// START_OTHER
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Metal Dragons
+enum: ["Adamantite bar", "Ancient page", "Chewed bones", "Curry", "Dragon bolts (unf)", "Dragon javelin heads", "Dragonstone", "Rune javelin heads", "Runite bar", "Runite bolts (unf)", "Runite limbs", "Runite ore", "Super attack(3)", "Super defence(2)", "Super strength(1)", "Swordfish", "Wrath talisman"]
+*/
+#define VAR_Metal Dragons_ENUMLIST_FILTER_OTHER []
+CONST_Metal Dragons_RULE (name:VAR_Metal Dragons_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+// END_OTHER
+
+// START_TERTIARY
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Metal Dragons
+enum: ["Brimstone key", "Draconic visage", "Dragon limbs", "Dragon metal lump", "Dragon metal slice"]
+*/
+#define VAR_Metal Dragons_ENUMLIST_FILTER_TERTIARY []
+CONST_Metal Dragons_RULE (name:VAR_Metal Dragons_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 // END_TERTIARY
@@ -5377,6 +5571,67 @@ CONST_Infernal Mage_RULE (name:VAR_Infernal Mage_ENUMLIST_FILTER_RUNESANDAMMUNIT
 
 
 
+// ==== Jellies Drops ====
+
+#define CONST_AREA_Jellies0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
+#define CONST_AREA_Jellies1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
+#define CONST_Jellies_RULE(_cond) rule ((area:CONST_AREA_Jellies0 ||   area:CONST_AREA_Jellies1 || ETC AS NEEDED) && (_cond))
+
+
+
+// START_WEAPONSANDARMOUR
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Jellies
+enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Black 2h sword", "Mithril boots", "Mithril kiteshield", "Rune full helm", "Rune kiteshield", "Steel 2h sword", "Steel axe", "Steel battleaxe"]
+*/
+#define VAR_Jellies_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_Jellies_RULE (name:VAR_Jellies_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+// END_WEAPONSANDARMOUR
+
+// START_RUNESANDAMMUNITION
+/*@ define:input
+type: enumlist
+label: 'Hide: Runes and Ammunition'
+group: Jellies
+enum: ["Chaos rune", "Death rune"]
+*/
+#define VAR_Jellies_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_Jellies_RULE (name:VAR_Jellies_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+  hidden = true;
+}
+// END_RUNESANDAMMUNITION
+
+
+// START_OTHER
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Jellies
+enum: ["Chaos rune", "Death rune", "Gold bar", "Lobster", "Thread"]
+*/
+#define VAR_Jellies_ENUMLIST_FILTER_OTHER []
+CONST_Jellies_RULE (name:VAR_Jellies_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+// END_OTHER
+
+// START_TERTIARY
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Jellies
+enum: ["Brimstone key", "Looting bag"]
+*/
+#define VAR_Jellies_ENUMLIST_FILTER_TERTIARY []
+CONST_Jellies_RULE (name:VAR_Jellies_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
+// END_TERTIARY
+
 // ==== Killerwatt Drops ====
 
 #define CONST_AREA_Killerwatt0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
@@ -5825,6 +6080,91 @@ enum: ["Brimstone key", "Clue scroll (elite)", "Clue scroll (hard)", "Frozen tea
 */
 #define VAR_Naguas_ENUMLIST_FILTER_TERTIARY []
 CONST_Naguas_RULE (name:VAR_Naguas_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
+// END_TERTIARY
+
+// ==== Nechryaels Drops ====
+
+#define CONST_AREA_Nechryaels0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
+#define CONST_AREA_Nechryaels1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
+#define CONST_Nechryaels_RULE(_cond) rule ((area:CONST_AREA_Nechryaels0 ||   area:CONST_AREA_Nechryaels1 || ETC AS NEEDED) && (_cond))
+
+
+// START_ALWAYS
+/*@ define:input
+type: enumlist
+label: 'Hide: Always'
+group: Nechryaels
+enum: ["Malicious ashes"]
+*/
+#define VAR_Nechryaels_ENUMLIST_FILTER_100 []
+CONST_Nechryaels_RULE (name:VAR_Nechryaels_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+// END_ALWAYS
+
+// START_WEAPONSANDARMOUR
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Nechryaels
+enum: ["Adamant battleaxe", "Adamant kiteshield", "Adamant platelegs", "Mystic air staff", "Rune 2h sword", "Rune axe", "Rune boots", "Rune chainbody", "Rune full helm", "Rune med helm", "Rune sq shield"]
+*/
+#define VAR_Nechryaels_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_Nechryaels_RULE (name:VAR_Nechryaels_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+// END_WEAPONSANDARMOUR
+
+// START_RUNESANDAMMUNITION
+/*@ define:input
+type: enumlist
+label: 'Hide: Runes and Ammunition'
+group: Nechryaels
+enum: ["Air rune", "Blood rune", "Chaos rune", "Death rune", "Law rune", "Soul rune"]
+*/
+#define VAR_Nechryaels_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_Nechryaels_RULE (name:VAR_Nechryaels_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+  hidden = true;
+}
+// END_RUNESANDAMMUNITION
+
+// START_MATERIALS
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: Nechryaels
+enum: ["Celastrus seed", "Dragonfruit tree seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Hespori seed", "Limpwurt seed", "Redwood tree seed", "Spirit seed", "Torstol seed", "White lily seed"]
+*/
+#define VAR_Nechryaels_ENUMLIST_FILTER_MATERIALS []
+CONST_Nechryaels_RULE (name:VAR_Nechryaels_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+// END_MATERIALS
+
+// START_OTHER
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Nechryaels
+enum: ["Gold bar", "Lobster", "Soft clay", "Tuna", "Wine of zamorak"]
+*/
+#define VAR_Nechryaels_ENUMLIST_FILTER_OTHER []
+CONST_Nechryaels_RULE (name:VAR_Nechryaels_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+// END_OTHER
+
+// START_TERTIARY
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Nechryaels
+enum: ["Brimstone key", "Crystal shard", "Looting bag"]
+*/
+#define VAR_Nechryaels_ENUMLIST_FILTER_TERTIARY []
+CONST_Nechryaels_RULE (name:VAR_Nechryaels_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 // END_TERTIARY
@@ -7251,21 +7591,6 @@ CONST_Dagannoth Kings_RULE (name:VAR_Dagannoth Kings_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 // END_TERTIARY
-
-// ==== Deranged archaelogist Drops ====
-
-#define CONST_AREA_Deranged archaelogist0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
-#define CONST_AREA_Deranged archaelogist1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
-#define CONST_Deranged archaelogist_RULE(_cond) rule ((area:CONST_AREA_Deranged archaelogist0 ||   area:CONST_AREA_Deranged archaelogist1 || ETC AS NEEDED) && (_cond))
-
-
-
-
-
-
-
-
-
 
 // ==== General Graardor Drops ====
 
