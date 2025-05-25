@@ -213,7 +213,7 @@ type: style
 group: Styles
 exampleItem: Super Combat Potion(4)
 */
-##define MYPOTS_STYLE textColor = "#fffba600";textAccentColor = "#ff000000";menuTextColor = "#fffba600";fontType = 2;menuSort = 2;icon = Item(12695);
+#define MYPOTS_STYLE textColor = "#fffba600";textAccentColor = "#ff000000";menuTextColor = "#fffba600";fontType = 2;menuSort = 2;icon = Item(12695);
 
 rule (name:MYFOOD_NAMES && stackable:false) {MYFOOD_STYLE}
 rule (name:MYPOTS_NAMES && stackable:false) {MYPOTS_STYLE}
