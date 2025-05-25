@@ -3,113 +3,109 @@
 // To add items to the selectable list, add them to enum.
 // Once selected on the website GUI the items will be added to the ENUMLIST_FILTER.
 
-/* Template for using Copilot AI to create the filter for a specific monster.
-Can you create a code block using the Boss Specific Filter as the baseline for a Boss named:
+#define CONST_AREA_MONSTER [1000,2000,0,2000,1000,0] // [[Location Name]]
+#define CONST_MONSTER_RULE(_cond) rule ((area:CONST_AREA_MONSTER) && (_cond))
 
-
-Be sure to replace MONSTER in the code lines with the name above.
-
-For Always add items:
-
-
-For Uniques add items:
-
-
-For Supplies add items:
-
-
-For Weapons and Armour add items:
-
-
-For Runes and Ammunition add items:
-
-
-For Materials add items:
-
-
-For Other add items:
-
-
-For Tertiary add items:
-
-*/
-
-#define CONST_AREA_MONSTER [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
-#define CONST_MONSTER_RULE(_cond) rule (area:CONST_AREA_MONSTER && (_cond))
-
-/*@ define:input
-type: enumlist
-label: 'Hide: Always'
-group: MONSTER NAME
-enum: ["Item 1", "Item 2", "Item 3"]
-*/
-#define VAR_MONSTER_ENUMLIST_FILTER_100 []
-CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_100) {
-  hidden = true;
-}
-
+// START_UNIQUE
 /*@ define:input
 type: enumlist
 label: 'Hide: Uniques'
 group: MONSTER
-enum: ["Item 1", "Item 2", "Item 3"]
+enum: __UNIQUE_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_UNIQUE []
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_UNIQUE) {
   hidden = true;
 }
+// END_UNIQUE
 
+// START_ALWAYS
+/*@ define:input
+type: enumlist
+label: 'Hide: Always'
+group: MONSTER
+enum: __ALWAYS_ENUM__
+*/
+#define VAR_MONSTER_ENUMLIST_FILTER_100 []
+CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+// END_ALWAYS
+
+// START_SUPPLIES
 /*@ define:input
 type: enumlist
 label: 'Hide: Supplies'
 group: MONSTER
-enum: ["Item 1", "Item 2", "Item 3"]
+enum: __SUPPLIES_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_SUPPLIES []
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
+//END_SUPPLIES
 
+// START_WEAPONSANDARMOUR
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
 group: MONSTER
-enum: ["Item 1", "Item 2", "Item 3"]
+enum: __WEAPONSANDARMOUR_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_WEAPONSANDARMOUR []
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
+// END_WEAPONSANDARMOUR
 
+// START_RUNESANDAMMUNITION
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
 group: MONSTER
-enum: ["Item 1", "Item 2", "Item 3"]
+enum: __RUNESANDAMMUNITION_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_RUNESANDAMMUNITION []
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
+// END_RUNESANDAMMUNITION
 
+// START_MATERIALS
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: MONSTER
+enum: __MATERIALS_ENUM__
+*/
+#define VAR_MONSTER_ENUMLIST_FILTER_MATERIALS []
+CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+// END_MATERIALS
+
+// START_OTHER
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
 group: MONSTER
-enum: ["Item 1", "Item 2", "Item 3"]
+enum: __OTHER_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_OTHER []
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
+// END_OTHER
 
+// START_TERTIARY
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
 group: MONSTER
-enum: ["Item 1", "Item 2", "Item 3"]
+enum: __TERTIARY_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_TERTIARY []
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
+// END_TERTIARY
