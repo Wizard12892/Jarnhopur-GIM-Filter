@@ -84,7 +84,6 @@ label: Default Style
 apply (true) { VAR_DEFAULTS_STYLE }
 
 /*@ define:module:sorting
----
 name: Sorting
 subtitle: Picking up the good stuff first
 description: |
@@ -94,7 +93,6 @@ description: |
 */
 
 /*@ define:module:filtering
----
 name: Filtering
 subtitle: Sifting through the junk
 description: |
@@ -102,11 +100,9 @@ description: |
 */
 
 /*@ define:group
----
 name: Individual Items
 description: |
   Individual Items
-  ---
 
   Showing and hiding individual items.
 */
