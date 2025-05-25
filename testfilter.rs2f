@@ -111,6 +111,7 @@ label: Prioritize Untradeables
 type: stringlist
 label: Items to always show first
 */
+#define VAR_MENU_SORT_ITEMS_FIRST []
 
 /*@ define:group
 name: Individual Items
