@@ -1,0 +1,4 @@
+Parser/main.py
+Parser/monsters.txt
+Parser/template.txt
+Parser/output/merged_output.txt
