@@ -89,6 +89,29 @@ description: |
   NOTE: This requires that "Price Sort" in the "Custom Menu Swaps" plugin under "Ground Item Sort" to be DISABLED.
 */
 
+/*@ define:input:sorting
+type: boolean
+label: Sort by Value
+*/
+#define VAR_SORTING_MENU_SORT_BY_VALUE true
+
+/*@ define:input:sorting
+type: boolean
+label: Prioritize Stackable/Noted items
+*/
+#define VAR_SORTING_MENU_SORT_BY_VALUE_STACKABLES_FIRST false
+
+/*@ define:input:sorting
+type: boolean
+label: Prioritize Untradeables
+*/
+#define VAR_SORTING_MENU_SORT_UNTRADEABLE_FIRST false
+
+/*@ define:input:sorting
+type: stringlist
+label: Items to always show first
+*/
+
 /*@ define:group
 name: Individual Items
 description: |
@@ -97,25 +120,226 @@ description: |
   Showing and hiding individual items.
 */
 
+/*@ define:input:filtering
+type: stringlist
+label: Items to hide
+group: Individual Items
+*/
+#define VAR_GLOBAL_HIDE []
+
+apply (name:VAR_GLOBAL_HIDE) {
+    hidden = true;
+}
+
+/*@ define:input:filtering
+type: stringlist
+label: Items to show
+group: Individual Items
+*/
+#define VAR_GLOBAL_SHOW []
+
+apply (name:VAR_GLOBAL_SHOW) {
+    hidden = false;
+}
+
+/*@ define:input:filtering
+type: enumlist
+label: Clue tiers to force hidden
+group: Clue Scrolls
+enum: [
+  {
+    "value": "Clue scroll (beginner)",
+    "label": "Beginner"
+  },
+  {
+    "value": "Clue scroll (easy)",
+    "label": "Easy"
+  },
+  {
+    "value": "Clue scroll (medium)",
+    "label": "Medium"
+  },
+  {
+    "value": "Clue scroll (hard)",
+    "label": "Hard"
+  },
+  {
+    "value": "Clue scroll (elite)",
+    "label": "Elite"
+  },
+  {
+    "value": "Clue scroll (master)",
+    "label": "Master"
+  }
+]
+*/
+#define VAR_CLUE_SCROLLS_HIDE []
+
+apply (name:VAR_CLUE_SCROLLS_HIDE) {
+    hidden = true;
+}
+
 /*@ define:module:foodandpotions
 name: Food and Potions
 subtitle: Find your supply drops with ease.
 */
+
+/*@ define:input:foodandpotions
+label: Food
+type: stringlist
+group: Food and Potions
+*/
+#define MYFOOD_NAMES ["Manta ray","Dark crab","Anglerfish","Sea turtle","Shark","Cooked karambwan"]
+
+/*@ define:input:foodandpotions
+label: Potions
+type: stringlist
+group: Food and Potions
+*/
+#define MYPOTS_NAMES ["Saradomin brew*","Super restore*","Ranging potion*","Super combat potion*","Prayer potion*","Extended anti-venom+*","Superantipoison*","Stamina potion*","Extended super antifire*","Prayer regeneration*","Goading potion*"]
+
+/*@ define:input:food_and_pots
+label: Food Style
+type: style
+group: Styles
+exampleItem: Shark
+*/
+#define MYFOOD_STYLE textColor = "#ffffc700";textAccentColor = "#ff000000";menuTextColor = "#ffffc700";fontType = 2;icon = Item(385);
+
+/*@ define:input:food_and_pots
+label: Potion Style
+type: style
+group: Styles
+exampleItem: Super Combat Potion(4)
+*/
+#define MYPOTS_STYLE textColor = "#fffba600";borderColor = "#fffba600";textAccentColor = "#ff000000";fontType = 3;icon = Item(12695);
+
+rule (name:MYFOOD_NAMES && stackable:false) {MYFOOD_STYLE}
+rule (name:MYPOTS_NAMES && stackable:false) {MYPOTS_STYLE}
 
 /*@ define:module:alchs
 name: Alchables
 subtitle: Easily identify high value alchables.
 */
 
+/*@ define:input:alchs
+type: boolean
+label: Force items from the alchs list to be shown
+*/
+#define VAR_ALCHS_FORCE_SHOWN true
+
+apply (VAR_ALCHS_FORCE_SHOWN && name:VAR_ALCHS_ITEM_LIST) {
+    hidden = false;
+}
+
+/*@ define:input:alchs
+type: style
+label: Custom style for items on the alchs list
+exampleItem: Rune platelegs
+exampleItemId: 1079
+*/
+#define VAR_ALCHS_CUSTOMSTYLE icon = Sprite(41, 0);
+
+apply (name:VAR_ALCHS_ITEM_LIST) {
+    VAR_ALCHS_CUSTOMSTYLE
+}
+
+
+
+/*@ define:input:alchs
+type: stringlist
+label: List of alchables
+group: List of alchables
+*/
+#define VAR_ALCHS_ITEM_LIST ["* dagger", "*axe", "* mace", "* claws", "* sword", "* Longsword", "* scimitar", "* spear", "* warhammer", "* Battleaxe", "* 2h sword", "* halberd", "* hasta", "* pickaxe", "* full helm", "* platebody", "* platelegs", "* plateskirt", "* kiteshield", "* med helm", "* chainbody", "* sq shield", "* boots", "* crossbow", "*battlestaff", "mystic *", "*d'hide*", "Onyx bolts*"]
+
+/*@ define:input:alchs
+label: Minimum Value
+type: number
+group: Alchs
+*/
+#define ALCHS_VALUE 500
+
+/*@ define:input:alchs
+label: Alchables
+type: style
+group: Styles
+exampleItem: Dragon platelegs
+*/
+
+#define ALCHS_STYLE \
+    color = "#ffffff00"; \
+	menuTextColor = "#ffffff70"; \
+    textAccent = 2;\
+    textAccentColor = "#999e9e29";\
+	icon = Sprite(41,0);
+
+  rule (name:AR_ALCHS_ITEM_LIST && havalue:>=ALCHS_VALUE) {ALCHS_STYLE}
+
 /*@ define:module:herbs
 name: Herbs
 subtitle: Find your herbs with ease.
 */
 
+/*@ define:input:herbs
+label: Alwasy Show
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: Herbs
+*/
+
+#define HERBS_ALWAYS_SHOW ["*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+
+/*@ define:input:herbs
+label: Show if Stackable
+type: enumlist
+enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
+group: Herbs
+*/
+
+#define HERBS_IF_STACKABLE ["*Guam leaf","*Marrentill","*Tarromin","*Harralander"]
+
+/*@ define:input:herbs
+label: Herbs
+type: style
+group: Styles
+exampleItem: Grimy ranarr weed
+*/
+#define HERBS_T0_STYLE textColor = "#ff00e024";textAccentColor = "#ff017300";textAccent = 2;icon = Item(207);
+
 /*@ define:module:seeds
 name: Seeds
 subtitle: Find your seeds with ease.
 */
+
+/*@ define:input:seeds
+label: Alwasy Show
+type: stringlist
+group: Seeds
+*/
+#define SEEDS_ALWAYS_SHOW ["Snape grass seed","Limpwurt seed","White lily seed","Ranarr seed","Toadflax seed","Irit seed","Avantoe seed","Kwuarm seed","Snapdragon seed","Cadantine seed","Lantadyme seed","Dwarf weed seed","Torstol seed","Huasca seed","Maple seed","Yew seed","Magic seed","Teak seed","Mahogany seed","Calquat tree seed","Celastrus seed","Spirit seed","Redwood tree seed","Crystal acorn","Papaya tree seed","Palm tree seed","Dragonfruit tree seed","Seaweed spore","Grape seed","Hespori seed","Potato cactus seed"]
+
+/*@ define:input:seeds
+label: Show if over Minimum Quantity
+type: stringlist
+group: Seeds
+*/
+#define SEEDS_IF_LOTS ["Potato seed","Onion seed","Cabbage seed","Tomato seed","Sweetcorn seed","Strawberry seed","Watermelon seed","Marigold seed","Nasturtium seed","Rosemary seed","Woad seed","White lily seed","Guam seed","Marrentill seed","Tarromin seed","Harralander seed","Asgarnian seed","Barley seed","Hammerstone seed","Jute seed","Krandorian seed","Wildblood seed","Yanillian seed","Redberry seed","Cadavaberry seed","Dwellberry seed","Jangerberry seed","Whiteberry seed","Poison ivy seed","Acorn","Willow seed","Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed"]
+
+/*@ define:input:seeds
+label: Minimum Quantity
+type: number
+group: Seeds
+*/
+#define SEED_QUANTITY 15
+
+/*@ define:input:seeds
+label: Seeds
+type: style
+group: Styles
+exampleItem: Ranarr seed
+*/
+#define SEEDS_T0_STYLE textColor = "#ff00e024";textAccentColor = "#ff017300";textAccent = 2;icon = Item(5295);
 
 /*@ define:module:values
 name: Item Value Customization
