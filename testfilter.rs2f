@@ -6150,134 +6150,134 @@ CONST_KALPHITE_QUEEN_RULE (name:VAR_KALPHITE_QUEEN_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_KREE'ARRA0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
-#define CONST_AREA_KREE'ARRA1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
-#define CONST_KREE'ARRA_RULE(_cond) rule ((area:CONST_AREA_KREE'ARRA0 ||   area:CONST_AREA_KREE'ARRA1 || ETC AS NEEDED) && (_cond))
+#define CONST_AREA_KREEARRA0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
+#define CONST_AREA_KREEARRA1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
+#define CONST_KREEARRA_RULE(_cond) rule ((area:CONST_AREA_KREEARRA0 ||   area:CONST_AREA_KREEARRA1 || ETC AS NEEDED) && (_cond))
 
 /*@ define:input
 type: enumlist
 label: 'Hide: Uniques'
-group: Kree'arra
+group: Kreearra
 enum: ["Armadyl chainskirt", "Armadyl chestplate", "Armadyl helmet", "Armadyl hilt", "Godsword shard 1", "Godsword shard 2", "Godsword shard 3"]
 */
-#define VAR_KREE'ARRA_ENUMLIST_FILTER_UNIQUE []
-CONST_KREE'ARRA_RULE (name:VAR_KREE'ARRA_ENUMLIST_FILTER_UNIQUE) {
+#define VAR_KREEARRA_ENUMLIST_FILTER_UNIQUE []
+CONST_KREEARRA_RULE (name:VAR_KREEARRA_ENUMLIST_FILTER_UNIQUE) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: Kree'arra
+group: Kreearra
 enum: ["Big bones", "Feather", "Frozen key piece (armadyl)"]
 */
-#define VAR_KREE'ARRA_ENUMLIST_FILTER_100 []
-CONST_KREE'ARRA_RULE (name:VAR_KREE'ARRA_ENUMLIST_FILTER_100) {
+#define VAR_KREEARRA_ENUMLIST_FILTER_100 []
+CONST_KREEARRA_RULE (name:VAR_KREEARRA_ENUMLIST_FILTER_100) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: Kree'arra
+group: Kreearra
 enum: ["Black d'hide body", "Rune crossbow"]
 */
-#define VAR_KREE'ARRA_ENUMLIST_FILTER_WEAPONSANDARMOUR []
-CONST_KREE'ARRA_RULE (name:VAR_KREE'ARRA_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+#define VAR_KREEARRA_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_KREEARRA_RULE (name:VAR_KREEARRA_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: Kree'arra
+group: Kreearra
 enum: ["Dragonstone bolts (e)", "Mind rune", "Rune arrow", "Runite bolts"]
 */
-#define VAR_KREE'ARRA_ENUMLIST_FILTER_RUNESANDAMMUNITION []
-CONST_KREE'ARRA_RULE (name:VAR_KREE'ARRA_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
+#define VAR_KREEARRA_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+CONST_KREEARRA_RULE (name:VAR_KREEARRA_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: Kree'arra
+group: Kreearra
 enum: ["Crystal key", "Dwarf weed seed", "Grimy dwarf weed", "Ranging potion(3)", "Super defence(3)", "Yew seed"]
 */
-#define VAR_KREE'ARRA_ENUMLIST_FILTER_OTHER []
-CONST_KREE'ARRA_RULE (name:VAR_KREE'ARRA_ENUMLIST_FILTER_OTHER) {
+#define VAR_KREEARRA_ENUMLIST_FILTER_OTHER []
+CONST_KREEARRA_RULE (name:VAR_KREEARRA_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: Kree'arra
+group: Kreearra
 enum: ["Brimstone key", "Curved bone", "Long bone", "Pet kree'arra"]
 */
-#define VAR_KREE'ARRA_ENUMLIST_FILTER_TERTIARY []
-CONST_KREE'ARRA_RULE (name:VAR_KREE'ARRA_ENUMLIST_FILTER_TERTIARY) {
+#define VAR_KREEARRA_ENUMLIST_FILTER_TERTIARY []
+CONST_KREEARRA_RULE (name:VAR_KREEARRA_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 
 
-#define CONST_AREA_K'RIL_TSUTSAROTH0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
-#define CONST_AREA_K'RIL_TSUTSAROTH1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
-#define CONST_K'RIL_TSUTSAROTH_RULE(_cond) rule ((area:CONST_AREA_K'RIL_TSUTSAROTH0 ||   area:CONST_AREA_K'RIL_TSUTSAROTH1 || ETC AS NEEDED) && (_cond))
+#define CONST_AREA_KRIL_TSUTSAROTH0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
+#define CONST_AREA_KRIL_TSUTSAROTH1 [2000,3000,0,3000,4000,0] // [[Location 2 Name]]
+#define CONST_KRIL_TSUTSAROTH_RULE(_cond) rule ((area:CONST_AREA_KRIL_TSUTSAROTH0 ||   area:CONST_AREA_KRIL_TSUTSAROTH1 || ETC AS NEEDED) && (_cond))
 
 /*@ define:input
 type: enumlist
 label: 'Hide: Uniques'
-group: K'ril Tsutsaroth
+group: Kril Tsutsaroth
 enum: ["Godsword shard 1", "Godsword shard 2", "Godsword shard 3", "Staff of the dead", "Steam battlestaff", "Zamorak hilt", "Zamorakian spear"]
 */
-#define VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_UNIQUE []
-CONST_K'RIL_TSUTSAROTH_RULE (name:VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_UNIQUE) {
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_UNIQUE []
+CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_UNIQUE) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: K'ril Tsutsaroth
+group: Kril Tsutsaroth
 enum: ["Frozen key piece (zamorak)", "Infernal ashes"]
 */
-#define VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_100 []
-CONST_K'RIL_TSUTSAROTH_RULE (name:VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_100) {
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_100 []
+CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_100) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Supplies'
-group: K'ril Tsutsaroth
+group: Kril Tsutsaroth
 enum: ["Super attack(3)", "Super restore(3)", "Super strength(3)", "Zamorak brew(3)"]
 */
-#define VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_SUPPLIES []
-CONST_K'RIL_TSUTSAROTH_RULE (name:VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_SUPPLIES) {
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_SUPPLIES []
+CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: K'ril Tsutsaroth
+group: Kril Tsutsaroth
 enum: ["Adamant arrow(p++)", "Adamant platebody", "Dragon dagger(p++)", "Rune platelegs", "Rune scimitar"]
 */
-#define VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_WEAPONSANDARMOUR []
-CONST_K'RIL_TSUTSAROTH_RULE (name:VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: K'ril Tsutsaroth
+group: Kril Tsutsaroth
 enum: ["Blood rune", "Death rune", "Grimy lantadyme", "Lantadyme seed"]
 */
-#define VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_OTHER []
-CONST_K'RIL_TSUTSAROTH_RULE (name:VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_OTHER) {
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_OTHER []
+CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: K'ril Tsutsaroth
+group: Kril Tsutsaroth
 enum: ["Brimstone key", "Pet k'ril tsutsaroth"]
 */
-#define VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_TERTIARY []
-CONST_K'RIL_TSUTSAROTH_RULE (name:VAR_K'RIL_TSUTSAROTH_ENUMLIST_FILTER_TERTIARY) {
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_TERTIARY []
+CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 
