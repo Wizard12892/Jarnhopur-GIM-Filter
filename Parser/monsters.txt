@@ -1,0 +1,94 @@
+//  ==== PvM: Basic  ==== 
+Ankou
+Aviansie
+Bandit
+Black demon
+Black Knight
+Brutal Dragons {Brutal green dragon; Brutal blue dragon; Brutal red dragon; Brutal black dragon;}
+Catablepon
+Chaos druid
+Chromatic Dragons {Green dragon; Blue dragon; Red dragon; Black dragon; dragon}
+Crocodile
+Dagannoth
+Dark warrior
+Demonic gorilla
+Earth warrior
+Fire giant
+Flesh Crawler
+Goblin
+Greater demon
+Hellhound
+Hill Giant
+Hobgoblin
+Ice giant
+Ice warrior
+Icefiends {Icefiend; Icelord}
+Jungle horror
+Kalphites {Kalphite Worker; Kalphite Soldier; Kalphite Guardian}
+Lava dragon
+Lesser demon
+Lizardmen {Lizardman brute; Lizardman shaman}
+Magic axe
+Metal Dragons {Bronze dragon; Iron dragon; Steel dragon; Mithril dragon; Adamant dragon; Rune dragon}
+Minotaur
+Moss giant
+Ogres {Ogre; Ogre chieftain; Enclave guard; Ogress Shaman; Ogress Warrior}
+Otherworldly being
+Pirate
+Rogue
+Scabarites {Locust rider; Scarab mage; Scarab swarm; Small scarab}
+Shadow warrior
+Skeleton
+Sourhog
+Suqah
+Tormented Demon
+Trolls {Mountain troll; Ice troll grunt; Ice troll runt; Ice troll male; Ice troll female; Ice troll; River troll}
+TzHaar {Tzhaar-Hur; TzHaar-Mej; TzHaar-Xil; TzHaar-Ket}
+Vampyres {Vyrewatch; Vyrewatch Sentinel}
+Waterfiend
+Werewolf
+
+//  ==== PvM: Slayer  ==== 
+Abyssal demon
+Araxyte
+Banshees {Banshee; Twisted Banshee}
+Basilisks {Basilisk; Basilisk Knight}
+Bloodveld {Bloodveld; Mutated Bloodveld}
+Brine rat
+Cave bug
+Cave crawler
+Cave horror
+Cave kraken
+Cave slime
+Cockatrice
+Crawling Hand
+Dark beast
+Drake
+Dust devil
+Fever spider
+Fossil Island Wyverns {Ancient Wyvern; Spitting Wyvern; Taloned Wyvern; Long-tailed Wyvern}
+Gargoyle
+Harpie Bug Swarm
+Hydra
+Infernal Mage
+Jellies {Jelly; Warped Jelly}
+Killerwatt
+Kurask
+Lizards {Desert Lizard; Grimy Lizard; Lizard; Small Lizard; Sulphur Lizard}
+Mogre
+Molanisk
+Naguas {Frost Nagua; Sulphur Nagua}
+Nechryaels {Nechryael; Greater Nechryael}
+Pyrefiend {Pyrefiend; Pyrelord}
+Rockslug
+Sea Snakes {Sea Snake Hatchling; Sea Snake Young}
+Skeletal Wyvern
+Smoke devil
+Spectres {Aberrant spectre; Deviant spectre}
+Spiritual Creatures {Spiritual ranger; Spiritual warrior; Spiritual mage}
+Terror dog
+Turoth
+Wall beast
+Warped Creatures {Warped Terrorbird;Warped Tortoise}
+Wyrm
+Zygomites {Zygomite; Ancient Zygomite}

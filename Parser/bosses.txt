@@ -1,0 +1,50 @@
+//  ==== PvM: Bosses ==== 
+Amoxliatl
+Bryophyta
+Commander Zilyana
+Corporeal Beast
+Dagannoth Kings {Dagannoth Supreme; Dagannoth Rex; Dagannoth Prime}
+Deranged archaeologist
+General Graardor
+Giant Mole
+Hueycoatl {The Hueycoatl}
+Kalphite Queen
+Kree'arra
+K'ril Tsutsaroth
+Nex
+Nightmare {The Nightmare; Phosani's Nightmare}
+Obor
+Phantom Muspah
+Sarachnis
+Scurrius
+Skotizo
+Vorkath
+Yama
+Zulrah
+
+//  ==== PvM: Wilderness Bosses ==== 
+Callisto
+Chaos Elemental
+Chaos Fanatic
+Crazy archaeologist
+King Black Dragon
+Scorpia
+Venenatis
+Vet'ion
+
+
+//  ==== PvM: DT2 Bosses ==== 
+Duke Sucellus
+Leviathan {The Leviathan}
+Vardorvis
+Whisperer {The Whisperer}
+
+
+//  ==== PvM: Slayer Bosses ==== 
+Abyssal Sire
+Alchemical Hydra
+Araxxor
+Cerberus
+Grotesque Guardians
+Kraken
+Thermonuclear smoke devil
