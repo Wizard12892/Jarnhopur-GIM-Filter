@@ -44,7 +44,7 @@
 - Setup a Directory for the Parser to use
     - Loot Filters Parser  
         |-- output  
-        |    |-[Single Monster Outputs will be created here if toggled]  
+        |      |-[Single Monster Outputs will be created here if toggled]  
         |-- parse_monsters.py  
         |-- parse_bosses.py  
         |-- monster_template.txt  
