@@ -3,14 +3,14 @@
 // To add items to the selectable list, add them to enum.
 // Once selected on the website GUI the items will be added to the ENUMLIST_FILTER.
 
-#define CONST_AREA_MONSTER [1000,2000,0,2000,1000,0] // [[Location Name]]
-#define CONST_MONSTER_RULE(_cond) rule ((area:CONST_AREA_MONSTER) && (_cond))
+#define CONST_AREA_MONSTER0 [1000,2000,0,2000,1000,0] // [[Location 1 Name]]
+#define CONST_MONSTER_RULE(_cond) rule ((area:CONST_AREA_MONSTER0) && (_cond))
 
 // START_UNIQUE
 /*@ define:input
 type: enumlist
 label: 'Hide: Uniques'
-group: MONSTER_NAME
+group: MONSTER
 enum: __UNIQUE_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_UNIQUE []
@@ -23,7 +23,7 @@ CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_UNIQUE) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Always'
-group: MONSTER_NAME
+group: MONSTER
 enum: __ALWAYS_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_100 []
@@ -36,20 +36,20 @@ CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_100) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Supplies'
-group: MONSTER_NAME
+group: MONSTER
 enum: __SUPPLIES_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_SUPPLIES []
 CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
-//END_SUPPLIES
+// END_SUPPLIES
 
 // START_WEAPONSANDARMOUR
 /*@ define:input
 type: enumlist
 label: 'Hide: Weapons and Armour'
-group: MONSTER_NAME
+group: MONSTER
 enum: __WEAPONSANDARMOUR_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_WEAPONSANDARMOUR []
@@ -62,7 +62,7 @@ CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Runes and Ammunition'
-group: MONSTER_NAME
+group: MONSTER
 enum: __RUNESANDAMMUNITION_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_RUNESANDAMMUNITION []
@@ -75,7 +75,7 @@ CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Materials'
-group: MONSTER_NAME
+group: MONSTER
 enum: __MATERIALS_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_MATERIALS []
@@ -88,7 +88,7 @@ CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_MATERIALS) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Other'
-group: MONSTER_NAME
+group: MONSTER
 enum: __OTHER_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_OTHER []
@@ -101,7 +101,7 @@ CONST_MONSTER_RULE (name:VAR_MONSTER_ENUMLIST_FILTER_OTHER) {
 /*@ define:input
 type: enumlist
 label: 'Hide: Tertiary'
-group: MONSTER_NAME
+group: MONSTER
 enum: __TERTIARY_ENUM__
 */
 #define VAR_MONSTER_ENUMLIST_FILTER_TERTIARY []
