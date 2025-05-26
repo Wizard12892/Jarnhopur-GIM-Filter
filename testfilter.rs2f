@@ -5360,6 +5360,69 @@ CONST_PYREFIEND_RULE (name:VAR_PYREFIEND_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 
+#define CONST_AREA_REVENANTS0 [3143,3264,0,10238,10052,0] // [[Revenant Caves]]
+#define CONST_REVENANTS_RULE(_cond) rule ((area:CONST_AREA_REVENANTS0) && (_cond))
+
+/*@ define:input
+type: enumlist
+label: 'Hide: Uniques'
+group: Revenants
+enum: ["Amulet of avarice", "Craw's bow (u)", "Thammaron's sceptre (u)", "Viggora's chainmace (u)"]
+*/
+#define VAR_REVENANTS_ENUMLIST_FILTER_UNIQUE []
+CONST_REVENANTS_RULE (name:VAR_REVENANTS_ENUMLIST_FILTER_UNIQUE) {
+  hidden = true;
+}
+/*@ define:input
+type: enumlist
+label: 'Hide: Always'
+group: Revenants
+enum: ["Revenant ether"]
+*/
+#define VAR_REVENANTS_ENUMLIST_FILTER_100 []
+CONST_REVENANTS_RULE (name:VAR_REVENANTS_ENUMLIST_FILTER_100) {
+  hidden = true;
+}
+/*@ define:input
+type: enumlist
+label: 'Hide: Weapons and Armour'
+group: Revenants
+enum: ["Battlestaff", "Bracelet of ethereum (uncharged)", "Dragon dagger", "Dragon longsword", "Dragon med helm", "Dragon platelegs", "Dragon plateskirt", "Rune full helm", "Rune kiteshield", "Rune platebody", "Rune platelegs", "Rune warhammer"]
+*/
+#define VAR_REVENANTS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+CONST_REVENANTS_RULE (name:VAR_REVENANTS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
+  hidden = true;
+}
+/*@ define:input
+type: enumlist
+label: 'Hide: Materials'
+group: Revenants
+enum: ["Adamantite bar", "Black dragonhide", "Blighted manta ray", "Blighted super restore(4)", "Coal", "Magic logs", "Magic seed", "Mahogany plank", "Runite bar", "Runite ore", "Uncut dragonstone", "Yew logs", "Yew seed"]
+*/
+#define VAR_REVENANTS_ENUMLIST_FILTER_MATERIALS []
+CONST_REVENANTS_RULE (name:VAR_REVENANTS_ENUMLIST_FILTER_MATERIALS) {
+  hidden = true;
+}
+/*@ define:input
+type: enumlist
+label: 'Hide: Other'
+group: Revenants
+enum: ["Blood rune", "Death rune", "Dragonstone bolt tips", "Law rune", "Onyx bolt tips", "Revenant cave teleport"]
+*/
+#define VAR_REVENANTS_ENUMLIST_FILTER_OTHER []
+CONST_REVENANTS_RULE (name:VAR_REVENANTS_ENUMLIST_FILTER_OTHER) {
+  hidden = true;
+}
+/*@ define:input
+type: enumlist
+label: 'Hide: Tertiary'
+group: Revenants
+enum: ["Ancient crystal", "Ancient effigy", "Ancient emblem", "Ancient medallion", "Ancient relic", "Ancient statuette", "Ancient totem", "Blighted ancient ice sack", "Blighted anglerfish", "Blighted entangle sack", "Blighted karambwan", "Blighted manta ray", "Blighted super restore(4)", "Blighted teleport spell sack", "Blighted vengeance sack", "Looting bag", "Revenant cave teleport"]
+*/
+#define VAR_REVENANTS_ENUMLIST_FILTER_TERTIARY []
+CONST_REVENANTS_RULE (name:VAR_REVENANTS_ENUMLIST_FILTER_TERTIARY) {
+  hidden = true;
+}
 
 #define CONST_AREA_ROCKSLUG0 [3212,9561,0,3235,9593,0] // [[Lumbridge Swamp Caves]]
 #define CONST_ROCKSLUG_RULE(_cond) rule ((area:CONST_AREA_ROCKSLUG0) && (_cond))
