@@ -13,8 +13,8 @@
     * Materials - Materials encompasses a broad range of categories, essentially anything that can be used.
     * Other - Miscellanous drops as labeled on the wiki.
     * Tertiary
-        - Notes: The script ignores Coins as I deal with those seperately in my filter.
-        -      : It also does not pull any drops from the Rare drop table as I thought that would add too many items to most monsters, they are also caught by my personal filter.
+    - Notes: The script ignores Coins as I deal with those seperately in my filter.
+    - It also does not pull any drops from the Rare drop table as I thought that would add too many items to most monsters, they are also caught by my personal filter.
 - The filter also defines locations where the monsters can be found
     - It uses spawn coordinates from the wiki, it groups the spawns by location, searches for adjacent groups within 32 blocks and combines the groups if found.
     - Then it adds a 10 block buffer zone in all directions to try and account for wander range. [I don't expect this to perfectly enclose every location but I hope it gets decently close.] 
