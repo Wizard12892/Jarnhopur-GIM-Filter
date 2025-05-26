@@ -25,7 +25,7 @@
 - The functionality is basically identical to that of the monster parser. However it required some different code to handle the more unique edge cases that Bosses have over standard mobs.
 - My boss list is seperated into 4 categories to aide in finding the specific boss you're looking for. Standard Bosses, Wildy Bosses, DT2 Bosses, and Slayer Bosses. (As I'm writing this I don't know why I didn't seperate GWD Bosses as well 🤷‍♂️)
 - The Drops have 2 additional categories
-    * **_Uniques_** - This combines Unique drops and Pre=Roll drops into a single category.
+    * **_Uniques_** - This combines Unique drops and Pre-Roll drops into a single category.
     * Always - 100% Drops.
     * **_Supplies_** - Items you might want to pick up to extend your trips.
     * Weapons and Armour
@@ -43,15 +43,15 @@
     - **The List** [monsters.txt or bosses.txt]
 - Setup a Directory for the Parser to use
     - Loot Filters Parser
-        |-- output
-        |    |-<Single Monster Outputs will be created here if toggled>
-        |-- parse_monsters.py
-        |-- parse_bosses.py
-        |-- monster_template.txt
-        |-- boss_template.txt
-        |-- monsters.txt
-        |-- bosses.txt
-        |-- <Combined Monster Output will be created here if toggled>
+        |-- output  
+        |    |-<Single Monster Outputs will be created here if toggled>  
+        |-- parse_monsters.py  
+        |-- parse_bosses.py  
+        |-- monster_template.txt  
+        |-- boss_template.txt  
+        |-- monsters.txt  
+        |-- bosses.txt  
+        |-- <Combined Monster Output will be created here if toggled>  
 - Modify any files with desired toggles or customization
     - There is a list of toggles at the top of the script for some common settings.
 - Open your Command Prompt [Windows Key -> Search CMD]
