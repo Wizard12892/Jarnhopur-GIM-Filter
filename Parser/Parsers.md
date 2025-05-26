@@ -51,8 +51,9 @@
         |-- boss_template.txt
         |-- monsters.txt
         |-- bosses.txt
-        |-- <Combined Monster Output will be created here>
-- Modify any files with desired customization
+        |-- <Combined Monster Output will be created here if toggled>
+- Modify any files with desired toggles or customization
+    - There is a list of toggles at the top of the script for some common settings.
 - Open your Command Prompt [Windows Key -> Search CMD]
 - cd into your directory [IE "cd Documents/Folder_Location"]
 - Run the parser ["python parse_monsters.py" or "python parse_bosses.py"]
