@@ -36,6 +36,27 @@
 - Several Bosses don't have spawn information listed on the wiki and their locations are hard coded into the script. Currently these are Grotesque Guardians, Nex, Yama, and Zulrah.
 - Most other differences are completely script side and typically don't effect the output in any noticeable manner.
 
+###     **How To Use**
+- The first thing you need to do is get three files,
+    - **The Parser** [parse_monsters.py or parse_bosses.py]
+    - **The Template** [monster_template.txt or boss_template.txt]
+    - **The List** [monsters.txt or bosses.txt]
+- Setup a Directory for the Parser to use
+    - Loot Filters Parser
+        |-- output
+        |    |-<Single Monster Outputs will be created here if toggled>
+        |-- parse_monsters.py
+        |-- parse_bosses.py
+        |-- monster_template.txt
+        |-- boss_template.txt
+        |-- monsters.txt
+        |-- bosses.txt
+        |-- <Combined Monster Output will be created here>
+- Modify any files with desired customization
+- Open your Command Prompt [Windows Key -> Search CMD]
+- cd into your directory [IE "cd Documents/Folder_Location"]
+- Run the parser ["python parse_monsters.py" or "python parse_bosses.py"]
+
 ###     **Customization**
 - The formatting for Monster Groups is <Group Name> {Variant1; Variant2; Variant3} These can be added or removed in the monster lists txt file at your leisure.
 - The Drop categories are listed in a library at the begining of the script and can be edited to fit your specific desires. My materials category for example could be broken down in Herbs, Seeds, Ores, Bars, etc allowing more detailed customization.
