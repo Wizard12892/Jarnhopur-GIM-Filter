@@ -4,20 +4,48 @@ from collections import defaultdict
 import os
 import re
 
-# Map enum keys to a list of section title aliases (all lowercase)
+# Settings Toggles
+print_single_monster_outputs = False  # Set to True to write individual files
+output_merged_file = True  # Set to False to skip writing Monsters_Wiki_Parse.txt
+show_progress = True  # Set to False to suppress progress output
+stop_on_error = True  # Set to True to halt on first error
+overwrite_outputs = True  # Set to False to skip writing if file already exists
+output_dir = "output"  # Change this to set a different output folder
+
+# Distance Toggles
+adjacent_group_range = 32  # Default: 32 - Max distance for grouping adjacent coordinates
+wander_range_distance = 10  # Default: 10 - Buffer to add around coordinates for area definitions to account for wander range
+
+# Debug Toggles
+limit_monsters = None  # Set to an integer to limit, or None for all to limit the number of monsters processed for testing
+debug_monsters = False  # Set to True to print each monster before processing
+debug_drops = False  # Set to True to print debug info about drops
+debug_locations = False  # Set to True to print debug info about locations
+debug_enum_mapping = False  # Set to True to print debug info about section-to-enum mapping
+print_unmapped_sections = False  # Set to True to print all unique unmapped section headings at the end
+
+
+unmapped_sections = set()
+
+# Map section title aliases (all lowercase) to enum Categories
+# You can add or remove categories as desired
+# If you add, remove, or change the order of the categories, you must update the enum_order in fill_code_template
 SECTION_ALIASES = {
     "ALWAYS": ["100%", "frozen tears", "ancient shards"],
     "SUPPLIES": ["supplies", "potions", "consumables", "secondary supply roll", "minor drops"],
-    "WEAPONSANDARMOUR": ["weapons and armour", "weapons", "armour", "staves"],
+    "WEAPONSANDARMOUR": ["weapons and armour", "weapons", "armour", "staves", "battleaxes"],
     "RUNESANDAMMUNITION": ["runes and ammunition", "runes", "ammunition", "elemental runes", "catalytic runes", "combination runes"],
-    "MATERIALS": ["materials", "herbs", "seeds", "ores and bars", "fish", "fishing", "bolt tips", "resources", "noted herbs", "food", "talismans", "talismans (noted)", "gemstones", "dragonhide", "fletching materials", "tree-herb seed drop table"],
-    "OTHER": ["other", "gloves", "jewellery", "junk"],
-    "TERTIARY": ["tertiary", "ancient statuettes", "secondary"],
+    "MATERIALS": ["materials", "herbs", "seeds", "ores and bars", "fish", "fishing", "bait", "bolt tips", "resources", "noted herbs", "food", "talismans", "talismans (noted)", "gemstones", "dragonhide", "fletching materials", "tree-herb seed drop table"],
+    "OTHER": ["other", "gloves", "jewellery", "junk", "catacombs drops", "fossils"],
+    "TERTIARY": ["tertiary", "ancient statuettes", "secondary", "catacombs tertiary", "chasm of fire tertiary"],
     "UNIQUE": ["unique", "uniques", "pre-roll", "sigils", "mutagens", "secondary uniques"]
 }
 
+# Items that should be ignored in drop table data from the wiki
 IGNORE_ITEMS = {"Nothing", "Coins"}
 
+# Some drop tables on the wiki are merely references to templates that contain the actual items.
+# This dictionary maps those templates to the items they contain.
 DROP_TABLE_TEMPLATES = {
     "AllotmentSeedDropLines": [
         "Potato seed", "Onion seed", "Cabbage seed", "Tomato seed", "Sweetcorn seed",
@@ -65,6 +93,7 @@ DROP_TABLE_TEMPLATES = {
     ]
 }
 
+# Hardcoded location for the Revenant Caves
 HARDCODED_LOCATIONS = {
     "REVENANTS": {
         "coords": [[3143,3264,0,10238,10052,0]],
@@ -77,12 +106,18 @@ HARDCODED_LOCATIONS = {
 }
 
 def map_section_to_enum(section_title):
-    section_title = section_title.lower().strip()
+    section_title_clean = section_title.lower().strip()
     for enum_key, aliases in SECTION_ALIASES.items():
-        if section_title in aliases:
+        if section_title_clean in aliases:
+            if debug_enum_mapping:
+                print(f"DEBUG: Section heading '{section_title}' mapped to enum '{enum_key}'")
             return enum_key
+    if debug_enum_mapping:
+        print(f"DEBUG: Section heading '{section_title}' mapped to enum 'None'")
+    unmapped_sections.add(section_title.strip())
     return None
 
+# Accessing the Old School RuneScape Wiki API to get wikitext JSON for a given page title
 def get_wikitext(page_title):
     url = "https://oldschool.runescape.wiki/api.php"
     params = {
@@ -96,6 +131,7 @@ def get_wikitext(page_title):
     response.raise_for_status()
     return response.json()['parse']['wikitext']['*']
 
+# Extract items from nodes in the wikitext
 def extract_items_from_nodes(nodes):
     IGNORE_ITEMS = {"Nothing", "Coins"}
     items = set()
@@ -116,6 +152,7 @@ def extract_items_from_nodes(nodes):
                         items.add(val)
     return items
 
+# Extract categorized drops from the wikitext
 def extract_categorized_drops(wikitext):
     code = mwparserfromhell.parse(wikitext)
     categorized_drops = defaultdict(set)
@@ -130,7 +167,6 @@ def extract_categorized_drops(wikitext):
                 categorized_drops[current_section].update(items)
             section_nodes = []
             current_section = map_section_to_enum(node.title.strip())
-            print(f"DEBUG: Section heading '{node.title.strip()}' mapped to enum '{current_section}'")
         else:
             if current_section:
                 section_nodes.append(node)
@@ -142,7 +178,6 @@ def extract_categorized_drops(wikitext):
     # Remove empty categories and sort
     categorized_drops = {k: sorted(v) for k, v in categorized_drops.items() if v}
 
-    print(f"DEBUG: Extracted categorized drops: {categorized_drops}")
     return categorized_drops
 
 def format_enum_block(items):
@@ -150,6 +185,7 @@ def format_enum_block(items):
         return "[]"
     return "[" + ", ".join(f'"{item}"' for item in items) + "]"
 
+# Remove empty sections based on blank enum keys
 def remove_empty_sections(filled, enum_keys):
     for key in enum_keys:
         # Regex to match section between START_KEY and END_KEY including the markers
@@ -177,6 +213,7 @@ def fill_code_template(monster_name, drop_categories, template_text, locations_t
     # Replace group: MONSTER with cleaned monster name
     filled = filled.replace('group: MONSTER', f'group: {monster_display}')
 
+# You must update the enum order to match your template sections if you make changes
     enum_order = [
         "UNIQUE", "ALWAYS", "SUPPLIES", "WEAPONSANDARMOUR",
         "RUNESANDAMMUNITION", "MATERIALS", "OTHER", "TERTIARY"
@@ -201,6 +238,7 @@ def fill_code_template(monster_name, drop_categories, template_text, locations_t
     
     return filled
 
+# Settings for running the batch processing
 def run_batch(monster_list_file='monsters.txt', template_path='monster_template.txt', output_dir='output'):
     groups = parse_monster_list(monster_list_file)
 
@@ -210,13 +248,18 @@ def run_batch(monster_list_file='monsters.txt', template_path='monster_template.
     os.makedirs(output_dir, exist_ok=True)
     merged_results = []
 
-    for group_name, monster_list in groups:
+    for i, (group_name, monster_list) in enumerate(groups):
+        if limit_monsters is not None and i >= limit_monsters:
+            break
+        if show_progress:
+            print(f"Processing group: {group_name} ({len(monster_list)} monsters)")
         try:
-            print(f"\n→ Processing: {group_name} ({', '.join(monster_list)})")
             combined_drops = defaultdict(set)
             combined_locations = []
 
             for monster in monster_list:
+                if debug_monsters:
+                    print(f"Processing monster: '{monster}'")
                 wikitext = get_wikitext(monster)
                 # Extract locations section - check both singular and plural
                 locations_section = ""
@@ -226,18 +269,29 @@ def run_batch(monster_list_file='monsters.txt', template_path='monster_template.
                     locations_section = wikitext.split("\n==Location==")[1].split("\n==")[0]
 
                 if locations_section:
+                    if debug_locations:
+                        print(f"DEBUG: {monster} locations section:\n{locations_section}")
                     combined_locations.append(locations_section)
                 
                 drops = extract_categorized_drops(wikitext)
+                if debug_drops:
+                    print(f"DEBUG: {monster} categorized drops: {dict(drops)}")
                 for k, v in drops.items():
                     combined_drops[k].update(v)
             
             # Join all location sections
             all_locations = "\n".join(combined_locations) if combined_locations else None
+
+            if debug_locations:
+                print(f"DEBUG: Combined locations for {group_name}:\n{all_locations}")
             
             # Sort and deduplicate drops
             combined_drops = {k: sorted(v) for k, v in combined_drops.items() if v}
+
+            if debug_drops:
+                print(f"DEBUG: Combined drops for {group_name}: {dict(combined_drops)}")
             
+            # Use group_name for output, but only use combined drops/locations from members
             filled_text = fill_code_template(
                 group_name, 
                 combined_drops, 
@@ -245,24 +299,35 @@ def run_batch(monster_list_file='monsters.txt', template_path='monster_template.
                 all_locations
             )
 
-            output_file = os.path.join(output_dir, f"output_{group_name.replace(' ', '_')}.txt")
-            with open(output_file, 'w', encoding='utf-8') as f_out:
-                f_out.write(filled_text)
-            print(f"✔ Saved individual file: {output_file}")
+            # Only write individual output files if enabled
+            if print_single_monster_outputs:
+                output_file = os.path.join(output_dir, f"output_{group_name.replace(' ', '_')}.txt")
+                if overwrite_outputs or not os.path.exists(output_file):
+                    with open(output_file, 'w', encoding='utf-8') as f_out:
+                        f_out.write(filled_text)
 
             merged_results.append(f"// ==== {group_name} Drops ====\n\n{filled_text}\n")
 
         except Exception as e:
             print(f"✘ Failed to process {group_name}: {e}")
+            if stop_on_error:
+                raise
 
-    if merged_results:
-        merged_file = os.path.join(output_dir, "merged_output.txt")
-        with open(merged_file, 'w', encoding='utf-8') as f_merge:
-            # Remove the "==== Monster Drops ====" headers and join
-            cleaned_results = [re.sub(r'// ==== .* Drops ====\n\n', '', result) 
-                             for result in merged_results]
-            f_merge.write("\n".join(cleaned_results))
-        print(f"\n✔ Merged output saved to: {merged_file}")
+    if merged_results and output_merged_file:
+        merged_file = "Monsters_Wiki_Parse.txt" # Name of the merged output file
+        if overwrite_outputs or not os.path.exists(merged_file):
+            with open(merged_file, 'w', encoding='utf-8') as f_merge:
+                # Remove the "==== Monster Drops ====" headers and join
+                cleaned_results = [re.sub(r'// ==== .* Drops ====\n\n', '', result) 
+                                 for result in merged_results]
+                f_merge.write("\n".join(cleaned_results))
+        else:
+            print(f"Skipped writing {merged_file} (overwrite_outputs=False and file exists)")
+
+    if print_unmapped_sections and unmapped_sections:
+        print("\nUnmapped section headings (unique):")
+        for heading in sorted(unmapped_sections):
+            print(f"  - {heading}")
 
 def parse_monster_list(monster_list_file):
     groups = []
@@ -280,6 +345,7 @@ def parse_monster_list(monster_list_file):
                 groups.append((line, [line]))
     return groups
 
+# Parse x,y coordinates from location text on the wiki.
 def parse_coordinates(loc_text):
     """Parse x,y coordinates from location text."""
     coords = []
@@ -323,7 +389,6 @@ def extract_location(location_text):
         bracket_match = re.search(r'\[\[([^\[\]]*?)\]\]', location_text)
         if not bracket_match:
             break
-            
         linked_location = bracket_match.group(1)
         # Handle pipe characters
         if '|' in linked_location:
@@ -345,17 +410,14 @@ def extract_location(location_text):
         
         # Replace just this bracketed section
         location_text = location_text.replace(f'[[{bracket_match.group(1)}]]', linked_location)
-    
     return location_text.strip()
 
-def group_coordinates_by_proximity(coords, max_distance=32):
+def group_coordinates_by_proximity(coords, max_distance=adjacent_group_range):
     """Group coordinates that are within max_distance of each other."""
     if not coords:
         return []
-    
     groups = []
     used = set()
-    
     for i, (x1, y1) in enumerate(coords):
         if i in used:
             continue
@@ -376,9 +438,7 @@ def group_coordinates_by_proximity(coords, max_distance=32):
                     current_group.append((x2, y2))
                     used.add(j)
                     break
-        
         groups.append(current_group)
-    
     return groups
 
 def clean_single_location(text):
@@ -391,7 +451,6 @@ def clean_single_location(text):
         match = re.search(r'\[\[([^\[\]]*?)\]\]', text)
         if not match:
             break
-        
         content = match.group(1)
         # Handle piped links
         if '|' in content:
@@ -409,9 +468,7 @@ def clean_single_location(text):
                 content = base_name
             else:
                 content = base_name
-        
         text = text.replace(f'[[{match.group(1)}]]', content)
-    
     return text.strip()
 
 def clean_location_name(location_name):
@@ -430,7 +487,7 @@ def clean_location_name(location_name):
     # Regular single location cleanup
     return clean_single_location(location_name)
 
-def format_area_constants(monster_name, locations_text, buffer_size=10):
+def format_area_constants(monster_name, locations_text, buffer_size=wander_range_distance):
     """Generate area constants for a monster's locations with buffer zone."""
     area_blocks = []
     current_area = 0
