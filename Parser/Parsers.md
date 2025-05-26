@@ -42,16 +42,16 @@
     - **The Template** [monster_template.txt or boss_template.txt]
     - **The List** [monsters.txt or bosses.txt]
 - Setup a Directory for the Parser to use
-    - Loot Filters Parser
+    - Loot Filters Parser  
         |-- output  
-        |    |-<Single Monster Outputs will be created here if toggled>  
+        |    |-[Single Monster Outputs will be created here if toggled]  
         |-- parse_monsters.py  
         |-- parse_bosses.py  
         |-- monster_template.txt  
         |-- boss_template.txt  
         |-- monsters.txt  
         |-- bosses.txt  
-        |-- <Combined Monster Output will be created here if toggled>  
+        |-- [Combined Monster Output will be created here if toggled]  
 - Modify any files with desired toggles or customization
     - There is a list of toggles at the top of the script for some common settings.
 - Open your Command Prompt [Windows Key -> Search CMD]
