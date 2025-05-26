@@ -4,7 +4,7 @@ Aviansie
 Bandit
 Black demon
 Black Knight
-Brutal Dragons {Brutal green dragon; Brutal blue dragon; Brutal red dragon; Brutal black dragon;}
+Brutal Dragons {Brutal green dragon; Brutal blue dragon; Brutal red dragon; Brutal black dragon}
 Catablepon
 Chaos druid
 Chromatic Dragons {Green dragon; Blue dragon; Red dragon; Black dragon; dragon}
@@ -43,7 +43,7 @@ Sourhog
 Suqah
 Tormented Demon
 Trolls {Mountain troll; Ice troll grunt; Ice troll runt; Ice troll male; Ice troll female; Ice troll; River troll}
-TzHaar {Tzhaar-Hur; TzHaar-Mej; TzHaar-Xil; TzHaar-Ket}
+TzHaar {TzHaar-Hur; TzHaar-Mej; TzHaar-Xil; TzHaar-Ket}
 Vampyres {Vyrewatch; Vyrewatch Sentinel}
 Waterfiend
 Werewolf
