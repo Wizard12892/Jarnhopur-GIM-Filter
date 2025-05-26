@@ -13,11 +13,11 @@
     * Materials - Materials encompasses a broad range of categories, essentially anything that can be used.
     * Other - Miscellanous drops as labeled on the wiki.
     * Tertiary
-        Notes: The script ignores Coins as I deal with those seperately in my filter.
-             : It also does not pull any drops from the Rare drop table as I thought that would add too many items to most monsters, they are also caught by my personal filter.
+        - Notes: The script ignores Coins as I deal with those seperately in my filter.
+        -      : It also does not pull any drops from the Rare drop table as I thought that would add too many items to most monsters, they are also caught by my personal filter.
 - The filter also defines locations where the monsters can be found
-    It uses spawn coordinates from the wiki, it groups the spawns by location, searches for adjacent groups within 32 blocks and combines the groups if found.
-    Then it adds a 10 block buffer zone in all directions to try and account for wander range. [I don't expect this to perfectly enclose every location but I hope it gets decently close.] 
+    - It uses spawn coordinates from the wiki, it groups the spawns by location, searches for adjacent groups within 32 blocks and combines the groups if found.
+    - Then it adds a 10 block buffer zone in all directions to try and account for wander range. [I don't expect this to perfectly enclose every location but I hope it gets decently close.] 
 - Lastly it formats all of that data using a template to organize and display the data in a way that [Filterscape](https://filterscape.xyz/) and [Loot Filters](https://runelite.net/plugin-hub/show/loot-filters) can utilize. 
 
 ###     **Boss Parser**
@@ -25,9 +25,9 @@
 - The functionality is basically identical to that of the monster parser. However it required some different code to handle the more unique edge cases that Bosses have over standard mobs.
 - My boss list is seperated into 4 categories to aide in finding the specific boss you're looking for. Standard Bosses, Wildy Bosses, DT2 Bosses, and Slayer Bosses. (As I'm writing this I don't know why I didn't seperate GWD Bosses as well 🤷‍♂️)
 - The Drops have 2 additional categories
-    * **Uniques** - This combines Unique drops and Pre=Roll drops into a single category.
+    * **_Uniques_** - This combines Unique drops and Pre=Roll drops into a single category.
     * Always - 100% Drops.
-    * **Supplies** - Items you might want to pick up to extend your trips.
+    * **_Supplies_** - Items you might want to pick up to extend your trips.
     * Weapons and Armour
     * Runes and Ammunition
     * Materials - Materials encompasses a broad range of categories, essentially anything that can be used.
@@ -39,7 +39,7 @@
 ###     **Customization**
 - The formatting for Monster Groups is <Group Name> {Variant1; Variant2; Variant3} These can be added or removed in the monster lists txt file at your leisure.
 - The Drop categories are listed in a library at the begining of the script and can be edited to fit your specific desires. My materials category for example could be broken down in Herbs, Seeds, Ores, Bars, etc allowing more detailed customization.
-    ! However there are a lot of edge cases in wiki loot that need to be individually assigned to categories. IE Vorkath has a drop table titled 'Dragonhide' that won't be sorted unless specified in the library.
+    * However there are a lot of edge cases in wiki loot that need to be individually assigned to categories. IE Vorkath has a drop table titled 'Dragonhide' that won't be sorted unless specified in the library.
 - The adjacent group range (Default: 32 Blocks) and the wander range (Default: 10 Blocks) are both defined constants and can easily be edited in the python script.
 - The template is also completely customizable. You can change the categories it displays, the order they appear in, and add in any other Loot Filters module customization you would like.
 - Each module is encased by // START and // END tags, these allow the script to remove modules for monsters that don't have any drops in that category.
