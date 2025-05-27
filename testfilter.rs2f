@@ -99,7 +99,7 @@ label: Sort by Value
 type: boolean
 label: Prioritize Stackable/Noted items
 */
-#define VAR_SORTING_MENU_SORT_BY_VALUE_STACKABLES_FIRST false
+#define VAR_SORTING_MENU_SORT_BY_VALUE_STACKABLES_FIRST true
 
 /*@ define:input:sorting
 type: boolean
@@ -112,14 +112,6 @@ type: stringlist
 label: Items to always show first
 */
 #define VAR_MENU_SORT_ITEMS_FIRST []
-
-/*@ define:group
-name: Individual Items
-description: |
-  Individual Items
-
-  Showing and hiding individual items.
-*/
 
 /*@ define:input:filtering
 type: stringlist
@@ -238,7 +230,7 @@ type: stringlist
 label: Alchables Settings
 group: List of alchables
 */
-#define VAR_ALCHS_ITEM_LIST ["* dagger", "*axe", "* mace", "* claws", "* sword", "* Longsword", "* scimitar", "* spear", "* warhammer", "* Battleaxe", "* 2h sword", "* halberd", "* hasta", "* pickaxe", "* full helm", "* platebody", "* platelegs", "* plateskirt", "* kiteshield", "* med helm", "* chainbody", "* sq shield", "* boots", "* crossbow", "*battlestaff", "mystic *", "*d'hide*", "Onyx bolts*"]
+#define VAR_ALCHS_ITEM_LIST ["* dagger","*axe","* mace","* claws","* sword","* Longsword","* scimitar","* spear","* warhammer","* Battleaxe","* 2h sword","* halberd","* hasta","* pickaxe","* full helm","* platebody","* platelegs","* plateskirt","* kiteshield","* med helm","* chainbody","* sq shield","* boots","* crossbow","*battlestaff","mystic *","*d'hide*","Onyx bolts*"]
 
 /*@ define:input:alchs
 label: Alchables Settings
@@ -253,7 +245,6 @@ type: style
 group: Styles
 exampleItem: Dragon platelegs
 */
-
 #define ALCHS_STYLE textAccentColor = "#ffcccc00";textAccent = 4;fontType = 2;highlightTile = true;menuSort = 1;icon = Sprite(41, 0);
 
   rule (name:VAR_ALCHS_ITEM_LIST && havalue:>=ALCHS_VALUE) {ALCHS_STYLE}
@@ -269,7 +260,6 @@ type: enumlist
 enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
 group: Herbs
 */
-
 #define HERBS_ALWAYS_SHOW ["*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
 
 /*@ define:input:herbs
@@ -278,7 +268,6 @@ type: enumlist
 enum: ["*Guam leaf","*Marrentill","*Tarromin","*Harralander","*Ranarr weed","*Toadflax","*Irit leaf","*Avantoe","*Kwuarm","*Huasca","*Snapdragon","*Cadantine","*Lantadyme","*Dwarf weed","*Torstol"]
 group: Herbs
 */
-
 #define HERBS_IF_STACKABLE ["*Guam leaf","*Marrentill","*Tarromin","*Harralander"]
 
 /*@ define:input:herbs
@@ -622,7 +611,7 @@ label: 'Hide: Always'
 group: Ankou
 enum: ["Bones"]
 */
-#define VAR_ANKOU_ENUMLIST_FILTER_100 []
+#define VAR_ANKOU_ENUMLIST_FILTER_100 ["Bones"]
 CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -632,7 +621,7 @@ label: 'Hide: Weapons and Armour'
 group: Ankou
 enum: ["Adamant platelegs", "Black knife", "Black robe"]
 */
-#define VAR_ANKOU_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_ANKOU_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Black robe","Black knife","Adamant platelegs"]
 CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -652,7 +641,7 @@ label: 'Hide: Materials'
 group: Ankou
 enum: ["Avantoe seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Dwarf weed seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Guam seed", "Harralander seed", "Irit seed", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Marrentill seed", "Mithril ore", "Mushroom spore", "Poison ivy seed", "Potato cactus seed", "Pure essence", "Ranarr seed", "Rune essence", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Toadflax seed", "Watermelon seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_ANKOU_ENUMLIST_FILTER_MATERIALS []
+#define VAR_ANKOU_ENUMLIST_FILTER_MATERIALS ["Mushroom spore","Wildblood seed"]
 CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -662,7 +651,7 @@ label: 'Hide: Other'
 group: Ankou
 enum: ["Bass", "Dark fishing bait", "Fishing bait", "Fried mushrooms", "Left skull half", "Mithril ore", "Weapon poison"]
 */
-#define VAR_ANKOU_ENUMLIST_FILTER_OTHER []
+#define VAR_ANKOU_ENUMLIST_FILTER_OTHER ["Bass","Fishing bait","Fried mushrooms","Weapon poison"]
 CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -688,7 +677,7 @@ label: 'Hide: Always'
 group: Aviansie
 enum: ["Bones", "Feather"]
 */
-#define VAR_AVIANSIE_ENUMLIST_FILTER_100 []
+#define VAR_AVIANSIE_ENUMLIST_FILTER_100 ["Bones"]
 CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -708,7 +697,7 @@ label: 'Hide: Runes and Ammunition'
 group: Aviansie
 enum: ["Air rune", "Blood rune", "Body rune", "Chaos rune", "Law rune", "Mind rune", "Nature rune", "Water rune"]
 */
-#define VAR_AVIANSIE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_AVIANSIE_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Body rune"]
 CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -718,7 +707,7 @@ label: 'Hide: Materials'
 group: Aviansie
 enum: ["Adamantite bar", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Runite limbs", "Silver ore"]
 */
-#define VAR_AVIANSIE_ENUMLIST_FILTER_MATERIALS []
+#define VAR_AVIANSIE_ENUMLIST_FILTER_MATERIALS ["Silver ore"]
 CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -728,7 +717,7 @@ label: 'Hide: Other'
 group: Aviansie
 enum: ["Antipoison(3)", "Swordfish"]
 */
-#define VAR_AVIANSIE_ENUMLIST_FILTER_OTHER []
+#define VAR_AVIANSIE_ENUMLIST_FILTER_OTHER ["Antipoison(3)","Swordfish"]
 CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -753,7 +742,7 @@ label: 'Hide: Always'
 group: Bandit
 enum: ["Bones"]
 */
-#define VAR_BANDIT_ENUMLIST_FILTER_100 []
+#define VAR_BANDIT_ENUMLIST_FILTER_100 ["Bones"]
 CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -763,7 +752,7 @@ label: 'Hide: Weapons and Armour'
 group: Bandit
 enum: ["Adamant scimitar", "Dragon longsword", "Iron scimitar", "Mithril axe", "Mithril sq shield", "Rune full helm", "Rune med helm", "Rune scimitar", "Steel axe", "Steel sq shield"]
 */
-#define VAR_BANDIT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_BANDIT_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Iron scimitar","Mithril axe","Mithril sq shield","Steel axe","Steel sq shield"]
 CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -773,7 +762,7 @@ label: 'Hide: Runes and Ammunition'
 group: Bandit
 enum: ["Air rune", "Blood rune", "Chaos rune", "Death rune", "Law rune", "Mind rune", "Nature rune", "Water rune"]
 */
-#define VAR_BANDIT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_BANDIT_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mind rune"]
 CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -833,7 +822,7 @@ label: 'Hide: Weapons and Armour'
 group: Black demon
 enum: ["Adamant battleaxe", "Adamant dagger", "Adamant platebody", "Black axe", "Black sword", "Mithril kiteshield", "Rune chainbody", "Rune dagger", "Rune full helm", "Rune med helm", "Rune sword", "Steel battleaxe"]
 */
-#define VAR_BLACK_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_BLACK_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant battleaxe","Adamant dagger","Black axe","Black sword","Mithril kiteshield","Steel battleaxe"]
 CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -863,7 +852,7 @@ label: 'Hide: Other'
 group: Black demon
 enum: ["Adamantite bar", "Defence potion(3)", "Lobster"]
 */
-#define VAR_BLACK_DEMON_ENUMLIST_FILTER_OTHER []
+#define VAR_BLACK_DEMON_ENUMLIST_FILTER_OTHER ["Defence potion(3)","Lobster"]
 CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -892,7 +881,7 @@ label: 'Hide: Always'
 group: Black Knight
 enum: ["Bones"]
 */
-#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_100 []
+#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_100 ["Bones"]
 CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -902,7 +891,7 @@ label: 'Hide: Weapons and Armour'
 group: Black Knight
 enum: ["Iron full helm", "Iron sword", "Steel mace"]
 */
-#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Iron full helm","Iron sword","Steel mace"]
 CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -912,7 +901,7 @@ label: 'Hide: Runes and Ammunition'
 group: Black Knight
 enum: ["Body rune", "Chaos rune", "Cosmic rune", "Death rune", "Earth rune", "Law rune", "Mind rune", "Mithril arrow"]
 */
-#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Body rune","Mind rune","Mithril arrow"]
 CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -922,7 +911,7 @@ label: 'Hide: Materials'
 group: Black Knight
 enum: ["Avantoe seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Dwarf weed seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Guam seed", "Harralander seed", "Irit seed", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Marrentill seed", "Mushroom spore", "Poison ivy seed", "Pot of flour", "Potato cactus seed", "Ranarr seed", "Snapdragon seed", "Steel bar", "Strawberry seed", "Tarromin seed", "Tin ore", "Toadflax seed", "Watermelon seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_MATERIALS []
+#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_MATERIALS ["Belladonna seed","Cactus seed","Guam seed","Jangerberry seed","Marrentill seed","Mushroom spore","Poison ivy seed","Pot of flour","Strawberry seed","Tarromin seed","Wildblood seed"]
 CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -932,7 +921,7 @@ label: 'Hide: Other'
 group: Black Knight
 enum: ["Bread"]
 */
-#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_OTHER []
+#define VAR_BLACK_KNIGHT_ENUMLIST_FILTER_OTHER ["Bread"]
 CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -960,7 +949,7 @@ label: 'Hide: Always'
 group: Catablepon
 enum: ["Bones"]
 */
-#define VAR_CATABLEPON_ENUMLIST_FILTER_100 []
+#define VAR_CATABLEPON_ENUMLIST_FILTER_100 ["Bones"]
 CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -970,7 +959,7 @@ label: 'Hide: Weapons and Armour'
 group: Catablepon
 enum: ["Adamant med helm"]
 */
-#define VAR_CATABLEPON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_CATABLEPON_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant med helm"]
 CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -980,7 +969,7 @@ label: 'Hide: Runes and Ammunition'
 group: Catablepon
 enum: ["Chaos rune", "Cosmic rune", "Fire rune", "Law rune", "Mithril arrow", "Water rune"]
 */
-#define VAR_CATABLEPON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_CATABLEPON_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mithril arrow"]
 CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -990,7 +979,7 @@ label: 'Hide: Materials'
 group: Catablepon
 enum: ["Cabbage seed", "Coal", "Eye of newt", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Onion seed", "Potato seed", "Pure essence", "Rune essence", "Strawberry seed", "Sweetcorn seed", "Tomato seed", "Watermelon seed"]
 */
-#define VAR_CATABLEPON_ENUMLIST_FILTER_MATERIALS []
+#define VAR_CATABLEPON_ENUMLIST_FILTER_MATERIALS ["Cabbage seed","Eye of newt","Onion seed","Rune essence","Strawberry seed","Sweetcorn seed","Tomato seed"]
 CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -1000,7 +989,7 @@ label: 'Hide: Other'
 group: Catablepon
 enum: ["Top of sceptre", "Trout", "Unlit torch"]
 */
-#define VAR_CATABLEPON_ENUMLIST_FILTER_OTHER []
+#define VAR_CATABLEPON_ENUMLIST_FILTER_OTHER ["Trout","Unlit torch"]
 CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1020,7 +1009,7 @@ label: 'Hide: Always'
 group: Chaos druid
 enum: ["Bones"]
 */
-#define VAR_CHAOS_DRUID_ENUMLIST_FILTER_100 []
+#define VAR_CHAOS_DRUID_ENUMLIST_FILTER_100 ["Bones"]
 CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1030,7 +1019,7 @@ label: 'Hide: Runes and Ammunition'
 group: Chaos druid
 enum: ["Air rune", "Body rune", "Earth rune", "Law rune", "Mind rune", "Mithril bolts", "Nature rune"]
 */
-#define VAR_CHAOS_DRUID_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_CHAOS_DRUID_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Body rune","Mind rune","Mithril bolts"]
 CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1050,7 +1039,7 @@ label: 'Hide: Other'
 group: Chaos druid
 enum: ["Bronze longsword", "Snape grass", "Unholy mould", "Vial of water"]
 */
-#define VAR_CHAOS_DRUID_ENUMLIST_FILTER_OTHER []
+#define VAR_CHAOS_DRUID_ENUMLIST_FILTER_OTHER ["Bronze longsword","Unholy mould","Vial of water"]
 CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1110,7 +1099,7 @@ label: 'Hide: Weapons and Armour'
 group: Chromatic Dragons
 enum: ["Adamant 2h sword", "Adamant battleaxe", "Adamant dagger", "Adamant full helm", "Adamant kiteshield", "Adamant platebody", "Adamant sword", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril javelin", "Mithril kiteshield", "Mithril platelegs", "Mithril spear", "Rune axe", "Rune dagger", "Rune dart", "Rune kiteshield", "Rune knife", "Rune longsword", "Rune med helm", "Steel battleaxe", "Steel platelegs"]
 */
-#define VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant 2h sword","Adamant battleaxe","Adamant dagger","Adamant full helm","Adamant kiteshield","Adamant sword","Mithril 2h sword","Mithril axe","Mithril battleaxe","Mithril javelin","Mithril kiteshield","Mithril platelegs","Mithril spear","Rune dagger","Rune dart","Rune knife","Steel battleaxe","Steel platelegs"]
 CONST_CHROMATIC_DRAGONS_RULE (name:VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1120,7 +1109,7 @@ label: 'Hide: Runes and Ammunition'
 group: Chromatic Dragons
 enum: ["Adamant dart(p)", "Adamant javelin", "Air rune", "Blood rune", "Chaos rune", "Death rune", "Fire rune", "Law rune", "Nature rune", "Rune arrow", "Water rune"]
 */
-#define VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant dart(p)","Adamant javelin"]
 CONST_CHROMATIC_DRAGONS_RULE (name:VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1140,7 +1129,7 @@ label: 'Hide: Other'
 group: Chromatic Dragons
 enum: ["Adamantite bar", "Adamantite ore", "Bass", "Chocolate cake", "Dragon javelin heads", "Mithril ore", "Monkfish"]
 */
-#define VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_OTHER []
+#define VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_OTHER ["Bass","Chocolate cake"]
 CONST_CHROMATIC_DRAGONS_RULE (name:VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1170,7 +1159,7 @@ label: 'Hide: Always'
 group: Crocodile
 enum: ["Bones"]
 */
-#define VAR_CROCODILE_ENUMLIST_FILTER_100 []
+#define VAR_CROCODILE_ENUMLIST_FILTER_100 ["Bones"]
 CONST_CROCODILE_RULE (name:VAR_CROCODILE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1199,7 +1188,7 @@ label: 'Hide: Always'
 group: Dagannoth
 enum: ["Bones"]
 */
-#define VAR_DAGANNOTH_ENUMLIST_FILTER_100 []
+#define VAR_DAGANNOTH_ENUMLIST_FILTER_100 ["Bones"]
 CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1209,7 +1198,7 @@ label: 'Hide: Weapons and Armour'
 group: Dagannoth
 enum: ["Bronze spear", "Iron spear", "Mithril spear"]
 */
-#define VAR_DAGANNOTH_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_DAGANNOTH_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Bronze spear","Iron spear","Mithril spear"]
 CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1219,7 +1208,7 @@ label: 'Hide: Runes and Ammunition'
 group: Dagannoth
 enum: ["Mithril javelin", "Steel arrow", "Water rune"]
 */
-#define VAR_DAGANNOTH_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_DAGANNOTH_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mithril javelin","Steel arrow"]
 CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1229,7 +1218,7 @@ label: 'Hide: Materials'
 group: Dagannoth
 enum: ["Celastrus seed", "Dragonfruit tree seed", "Feather", "Fishing bait", "Harpoon", "Hespori seed", "Lobster pot", "Oyster pearl", "Oyster pearls", "Raw herring", "Raw lobster", "Raw sardine", "Raw tuna", "Redwood tree seed", "Seaweed", "Spirit seed", "Torstol seed", "White lily seed"]
 */
-#define VAR_DAGANNOTH_ENUMLIST_FILTER_MATERIALS []
+#define VAR_DAGANNOTH_ENUMLIST_FILTER_MATERIALS ["Fishing bait","Harpoon","Lobster pot","Oyster pearl","Oyster pearls","Raw herring","Raw lobster","Raw sardine","Raw tuna","Seaweed"]
 CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -1239,7 +1228,7 @@ label: 'Hide: Other'
 group: Dagannoth
 enum: ["Casket", "Opal bolt tips"]
 */
-#define VAR_DAGANNOTH_ENUMLIST_FILTER_OTHER []
+#define VAR_DAGANNOTH_ENUMLIST_FILTER_OTHER ["Casket","Opal bolt tips"]
 CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1267,7 +1256,7 @@ label: 'Hide: Always'
 group: Dark warrior
 enum: ["Bones"]
 */
-#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_100 []
+#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_100 ["Bones"]
 CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1277,7 +1266,7 @@ label: 'Hide: Weapons and Armour'
 group: Dark warrior
 enum: ["Adamant med helm", "Black mace", "Black med helm", "Bronze med helm", "Iron mace", "Mithril mace", "Steel mace", "Steel med helm"]
 */
-#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant med helm","Black mace","Black med helm","Bronze med helm","Iron mace","Mithril mace","Steel mace","Steel med helm"]
 CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1287,7 +1276,7 @@ label: 'Hide: Runes and Ammunition'
 group: Dark warrior
 enum: ["Bronze arrow", "Chaos rune", "Earth rune", "Mind rune", "Nature rune", "Water rune"]
 */
-#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Bronze arrow","Mind rune"]
 CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1307,7 +1296,7 @@ label: 'Hide: Other'
 group: Dark warrior
 enum: ["Dark fishing bait", "Iron ore", "Sardine"]
 */
-#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_OTHER []
+#define VAR_DARK_WARRIOR_ENUMLIST_FILTER_OTHER ["Sardine"]
 CONST_DARK_WARRIOR_RULE (name:VAR_DARK_WARRIOR_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1372,7 +1361,7 @@ label: 'Hide: Materials'
 group: Demonic gorilla
 enum: ["Acorn", "Apple tree seed", "Banana tree seed", "Calquat tree seed", "Curry tree seed", "Grimy cadantine", "Grimy dwarf weed", "Grimy kwuarm", "Grimy lantadyme", "Magic seed", "Maple seed", "Orange tree seed", "Palm tree seed", "Papaya tree seed", "Pineapple seed", "Willow seed", "Yew seed"]
 */
-#define VAR_DEMONIC_GORILLA_ENUMLIST_FILTER_MATERIALS []
+#define VAR_DEMONIC_GORILLA_ENUMLIST_FILTER_MATERIALS ["Acorn","Apple tree seed","Banana tree seed","Curry tree seed","Orange tree seed","Pineapple seed","Willow seed"]
 CONST_DEMONIC_GORILLA_RULE (name:VAR_DEMONIC_GORILLA_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -1397,7 +1386,7 @@ label: 'Hide: Weapons and Armour'
 group: Earth warrior
 enum: ["Staff of earth", "Steel spear"]
 */
-#define VAR_EARTH_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_EARTH_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Steel spear","Staff of earth"]
 CONST_EARTH_WARRIOR_RULE (name:VAR_EARTH_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1417,7 +1406,7 @@ label: 'Hide: Materials'
 group: Earth warrior
 enum: ["Avantoe seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Dwarf weed seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Guam seed", "Harralander seed", "Irit seed", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Marrentill seed", "Mushroom spore", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Toadflax seed", "Watermelon seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_EARTH_WARRIOR_ENUMLIST_FILTER_MATERIALS []
+#define VAR_EARTH_WARRIOR_ENUMLIST_FILTER_MATERIALS ["Belladonna seed","Cactus seed","Jangerberry seed","Marrentill seed","Mushroom spore","Poison ivy seed","Strawberry seed","Tarromin seed","Wildblood seed"]
 CONST_EARTH_WARRIOR_RULE (name:VAR_EARTH_WARRIOR_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -1461,7 +1450,7 @@ label: 'Hide: Weapons and Armour'
 group: Fire giant
 enum: ["Fire battlestaff", "Mithril sq shield", "Rune scimitar", "Steel axe"]
 */
-#define VAR_FIRE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_FIRE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Mithril sq shield","Steel axe"]
 CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1491,7 +1480,7 @@ label: 'Hide: Other'
 group: Fire giant
 enum: ["Lobster", "Steel bar", "Strength potion(2)"]
 */
-#define VAR_FIRE_GIANT_ENUMLIST_FILTER_OTHER []
+#define VAR_FIRE_GIANT_ENUMLIST_FILTER_OTHER ["Lobster","Steel bar","Strength potion(2)"]
 CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1519,7 +1508,7 @@ label: 'Hide: Runes and Ammunition'
 group: Flesh Crawler
 enum: ["Body rune", "Dust rune", "Fire rune", "Nature rune"]
 */
-#define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Body rune"]
 CONST_FLESH_CRAWLER_RULE (name:VAR_FLESH_CRAWLER_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1529,7 +1518,7 @@ label: 'Hide: Materials'
 group: Flesh Crawler
 enum: ["Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Iron ore", "Silver bar"]
 */
-#define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_MATERIALS []
+#define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_MATERIALS ["Grimy guam leaf","Grimy marrentill","Grimy tarromin"]
 CONST_FLESH_CRAWLER_RULE (name:VAR_FLESH_CRAWLER_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -1539,7 +1528,7 @@ label: 'Hide: Other'
 group: Flesh Crawler
 enum: ["Ashes", "Bottom of sceptre"]
 */
-#define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_OTHER []
+#define VAR_FLESH_CRAWLER_ENUMLIST_FILTER_OTHER ["Ashes"]
 CONST_FLESH_CRAWLER_RULE (name:VAR_FLESH_CRAWLER_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1573,7 +1562,7 @@ label: 'Hide: Always'
 group: Goblin
 enum: ["Bones"]
 */
-#define VAR_GOBLIN_ENUMLIST_FILTER_100 []
+#define VAR_GOBLIN_ENUMLIST_FILTER_100 ["Bones"]
 CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1583,7 +1572,7 @@ label: 'Hide: Weapons and Armour'
 group: Goblin
 enum: ["Bronze axe", "Bronze scimitar", "Bronze spear", "Bronze sq shield"]
 */
-#define VAR_GOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_GOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Bronze axe","Bronze scimitar","Bronze spear","Bronze sq shield"]
 CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1593,7 +1582,7 @@ label: 'Hide: Runes and Ammunition'
 group: Goblin
 enum: ["Body rune", "Bronze arrow", "Bronze bolts", "Bronze javelin", "Chaos rune", "Earth rune", "Mind rune", "Nature rune", "Water rune"]
 */
-#define VAR_GOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_GOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Body rune","Bronze arrow","Bronze bolts","Bronze javelin","Mind rune"]
 CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1613,7 +1602,7 @@ label: 'Hide: Other'
 group: Goblin
 enum: ["Air talisman", "Beer", "Brass necklace", "Chef's hat", "Goblin book", "Goblin mail", "Grapes", "Hammer", "Red cape", "Tin ore"]
 */
-#define VAR_GOBLIN_ENUMLIST_FILTER_OTHER []
+#define VAR_GOBLIN_ENUMLIST_FILTER_OTHER ["Air talisman","Beer","Brass necklace","Goblin book","Goblin mail","Hammer","Red cape","Tin ore"]
 CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1649,7 +1638,7 @@ label: 'Hide: Always'
 group: Greater demon
 enum: ["Vile ashes"]
 */
-#define VAR_GREATER_DEMON_ENUMLIST_FILTER_100 []
+#define VAR_GREATER_DEMON_ENUMLIST_FILTER_100 ["Vile ashes"]
 CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1659,7 +1648,7 @@ label: 'Hide: Weapons and Armour'
 group: Greater demon
 enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Adamant kiteshield", "Adamant platelegs", "Mithril kiteshield", "Rune full helm", "Steel 2h sword", "Steel axe", "Steel battleaxe"]
 */
-#define VAR_GREATER_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_GREATER_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant 2h sword","Adamant axe","Adamant battleaxe","Adamant kiteshield","Mithril kiteshield","Steel 2h sword","Steel axe","Steel battleaxe"]
 CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1679,7 +1668,7 @@ label: 'Hide: Other'
 group: Greater demon
 enum: ["Gold bar", "Gold ore", "Thread", "Tuna"]
 */
-#define VAR_GREATER_DEMON_ENUMLIST_FILTER_OTHER []
+#define VAR_GREATER_DEMON_ENUMLIST_FILTER_OTHER ["Gold bar","Gold ore","Thread","Tuna"]
 CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1713,7 +1702,7 @@ label: 'Hide: Always'
 group: Hellhound
 enum: ["Vile ashes"]
 */
-#define VAR_HELLHOUND_ENUMLIST_FILTER_100 []
+#define VAR_HELLHOUND_ENUMLIST_FILTER_100 ["Vile ashes"]
 CONST_HELLHOUND_RULE (name:VAR_HELLHOUND_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1781,7 +1770,7 @@ label: 'Hide: Weapons and Armour'
 group: Hill Giant
 enum: ["Iron dagger", "Iron full helm", "Iron kiteshield", "Iron med helm", "Steel longsword", "Steel scimitar"]
 */
-#define VAR_HILL_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_HILL_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Iron dagger","Iron full helm","Iron kiteshield","Iron med helm","Steel longsword","Steel scimitar"]
 CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1791,7 +1780,7 @@ label: 'Hide: Runes and Ammunition'
 group: Hill Giant
 enum: ["Chaos rune", "Cosmic rune", "Death rune", "Fire rune", "Iron arrow", "Law rune", "Mind rune", "Nature rune", "Steel arrow", "Water rune"]
 */
-#define VAR_HILL_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_HILL_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Iron arrow","Mind rune","Steel arrow"]
 CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1811,7 +1800,7 @@ label: 'Hide: Other'
 group: Hill Giant
 enum: ["Beer", "Body talisman", "Limpwurt root"]
 */
-#define VAR_HILL_GIANT_ENUMLIST_FILTER_OTHER []
+#define VAR_HILL_GIANT_ENUMLIST_FILTER_OTHER ["Beer","Body talisman"]
 CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1835,7 +1824,7 @@ label: 'Hide: Always'
 group: Hobgoblin
 enum: ["Bones"]
 */
-#define VAR_HOBGOBLIN_ENUMLIST_FILTER_100 []
+#define VAR_HOBGOBLIN_ENUMLIST_FILTER_100 ["Bones"]
 CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -1845,7 +1834,7 @@ label: 'Hide: Weapons and Armour'
 group: Hobgoblin
 enum: ["Bronze spear", "Iron spear", "Iron sword", "Steel dagger", "Steel longsword", "Steel spear"]
 */
-#define VAR_HOBGOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_HOBGOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Bronze spear","Iron spear","Iron sword","Steel dagger","Steel longsword","Steel spear"]
 CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1855,7 +1844,7 @@ label: 'Hide: Runes and Ammunition'
 group: Hobgoblin
 enum: ["Body rune", "Chaos rune", "Cosmic rune", "Fire rune", "Iron javelin", "Law rune", "Nature rune", "Water rune"]
 */
-#define VAR_HOBGOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_HOBGOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Body rune","Iron javelin"]
 CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1875,7 +1864,7 @@ label: 'Hide: Other'
 group: Hobgoblin
 enum: ["Goblin mail", "Limpwurt root", "Trading sticks"]
 */
-#define VAR_HOBGOBLIN_ENUMLIST_FILTER_OTHER []
+#define VAR_HOBGOBLIN_ENUMLIST_FILTER_OTHER ["Goblin mail"]
 CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1914,7 +1903,7 @@ label: 'Hide: Weapons and Armour'
 group: Ice giant
 enum: ["Adamant dagger", "Adamant kiteshield", "Adamant mace", "Adamant sq shield", "Adamant sword", "Black kiteshield", "Iron 2h sword", "Iron platelegs", "Mithril axe", "Mithril mace", "Mithril platelegs", "Mithril sq shield", "Rune dagger", "Steel axe", "Steel sword"]
 */
-#define VAR_ICE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_ICE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant dagger","Adamant kiteshield","Adamant mace","Adamant sq shield","Adamant sword","Black kiteshield","Iron 2h sword","Iron platelegs","Mithril axe","Mithril mace","Mithril platelegs","Mithril sq shield","Rune dagger","Steel axe","Steel sword"]
 CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -1924,7 +1913,7 @@ label: 'Hide: Runes and Ammunition'
 group: Ice giant
 enum: ["Adamant arrow", "Blood rune", "Body rune", "Chaos rune", "Cosmic rune", "Death rune", "Law rune", "Mind rune", "Nature rune", "Water rune"]
 */
-#define VAR_ICE_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_ICE_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow","Body rune","Mind rune"]
 CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -1944,7 +1933,7 @@ label: 'Hide: Other'
 group: Ice giant
 enum: ["Banana", "Jug of wine", "Mithril ore"]
 */
-#define VAR_ICE_GIANT_ENUMLIST_FILTER_OTHER []
+#define VAR_ICE_GIANT_ENUMLIST_FILTER_OTHER ["Banana","Jug of wine"]
 CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -1976,7 +1965,7 @@ label: 'Hide: Weapons and Armour'
 group: Ice warrior
 enum: ["Iron battleaxe", "Mithril mace"]
 */
-#define VAR_ICE_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_ICE_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Iron battleaxe","Mithril mace"]
 CONST_ICE_WARRIOR_RULE (name:VAR_ICE_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2062,7 +2051,7 @@ label: 'Hide: Always'
 group: Jungle horror
 enum: ["Bones"]
 */
-#define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_100 []
+#define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_100 ["Bones"]
 CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2102,7 +2091,7 @@ label: 'Hide: Other'
 group: Jungle horror
 enum: ["Big bones", "Bones", "Pineapple"]
 */
-#define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_OTHER []
+#define VAR_JUNGLE_HORROR_ENUMLIST_FILTER_OTHER ["Bones"]
 CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2164,7 +2153,7 @@ label: 'Hide: Other'
 group: Kalphites
 enum: ["Defence potion(3)", "Lobster", "Waterskin(4)"]
 */
-#define VAR_KALPHITES_ENUMLIST_FILTER_OTHER []
+#define VAR_KALPHITES_ENUMLIST_FILTER_OTHER ["Defence potion(3)","Waterskin(4)","Lobster"]
 CONST_KALPHITES_RULE (name:VAR_KALPHITES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2229,7 +2218,7 @@ label: 'Hide: Other'
 group: Lava dragon
 enum: ["Adamantite bar", "Chocolate cake", "Dragon javelin heads", "Fire orb", "Fire talisman", "Onyx bolt tips"]
 */
-#define VAR_LAVA_DRAGON_ENUMLIST_FILTER_OTHER []
+#define VAR_LAVA_DRAGON_ENUMLIST_FILTER_OTHER ["Adamantite bar","Chocolate cake"]
 CONST_LAVA_DRAGON_RULE (name:VAR_LAVA_DRAGON_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2268,7 +2257,7 @@ label: 'Hide: Always'
 group: Lesser demon
 enum: ["Vile ashes"]
 */
-#define VAR_LESSER_DEMON_ENUMLIST_FILTER_100 []
+#define VAR_LESSER_DEMON_ENUMLIST_FILTER_100 ["Vile ashes"]
 CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2308,7 +2297,7 @@ label: 'Hide: Other'
 group: Lesser demon
 enum: ["Gold ore", "Jug of wine"]
 */
-#define VAR_LESSER_DEMON_ENUMLIST_FILTER_OTHER []
+#define VAR_LESSER_DEMON_ENUMLIST_FILTER_OTHER ["Gold ore","Jug of wine"]
 CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2345,7 +2334,7 @@ label: 'Hide: Always'
 group: Lizardmen
 enum: ["Big bones", "Bones"]
 */
-#define VAR_LIZARDMEN_ENUMLIST_FILTER_100 []
+#define VAR_LIZARDMEN_ENUMLIST_FILTER_100 ["Bones"]
 CONST_LIZARDMEN_RULE (name:VAR_LIZARDMEN_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2355,7 +2344,7 @@ label: 'Hide: Weapons and Armour'
 group: Lizardmen
 enum: ["Earth battlestaff", "Mystic earth staff", "Red d'hide vambraces", "Rune chainbody", "Rune med helm", "Rune warhammer"]
 */
-#define VAR_LIZARDMEN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_LIZARDMEN_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Red d'hide vambraces"]
 CONST_LIZARDMEN_RULE (name:VAR_LIZARDMEN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2375,7 +2364,7 @@ label: 'Hide: Materials'
 group: Lizardmen
 enum: ["Acorn", "Apple tree seed", "Avantoe seed", "Banana tree seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Calquat tree seed", "Coal", "Curry tree seed", "Dwarf weed seed", "Grimy cadantine", "Grimy dwarf weed", "Grimy kwuarm", "Grimy lantadyme", "Guam seed", "Harralander seed", "Irit seed", "Iron ore", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Magic seed", "Maple seed", "Marrentill seed", "Mushroom spore", "Orange tree seed", "Palm tree seed", "Papaya tree seed", "Pineapple seed", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Runite ore", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Toadflax seed", "Watermelon seed", "Whiteberry seed", "Wildblood seed", "Willow seed", "Xerician fabric", "Yew seed"]
 */
-#define VAR_LIZARDMEN_ENUMLIST_FILTER_MATERIALS []
+#define VAR_LIZARDMEN_ENUMLIST_FILTER_MATERIALS ["Acorn","Apple tree seed","Mushroom spore","Xerician fabric"]
 CONST_LIZARDMEN_RULE (name:VAR_LIZARDMEN_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -2385,7 +2374,7 @@ label: 'Hide: Other'
 group: Lizardmen
 enum: ["Chilli potato", "Lizardman fang", "Xeric's talisman (inert)", "Xerician fabric"]
 */
-#define VAR_LIZARDMEN_ENUMLIST_FILTER_OTHER []
+#define VAR_LIZARDMEN_ENUMLIST_FILTER_OTHER ["Xerician fabric"]
 CONST_LIZARDMEN_RULE (name:VAR_LIZARDMEN_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2412,7 +2401,7 @@ label: 'Hide: Always'
 group: Magic axe
 enum: ["Iron battleaxe"]
 */
-#define VAR_MAGIC_AXE_ENUMLIST_FILTER_100 []
+#define VAR_MAGIC_AXE_ENUMLIST_FILTER_100 ["Iron battleaxe"]
 CONST_MAGIC_AXE_RULE (name:VAR_MAGIC_AXE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2459,7 +2448,7 @@ label: 'Hide: Always'
 group: Metal Dragons
 enum: ["Adamantite bar", "Bronze bar", "Dragon bones", "Iron bar", "Mithril bar", "Runite bar", "Steel bar"]
 */
-#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_100 []
+#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_100 ["Bronze bar","Iron bar","Steel bar","Mithril bar","Runite bar"]
 CONST_METAL_DRAGONS_RULE (name:VAR_METAL_DRAGONS_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2469,7 +2458,7 @@ label: 'Hide: Weapons and Armour'
 group: Metal Dragons
 enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Adamant dart(p)", "Adamant kiteshield", "Adamant platebody", "Adamant sq shield", "Dragon full helm", "Dragon med helm", "Dragon platelegs", "Dragon plateskirt", "Mithril 2h sword", "Mithril axe", "Mithril battleaxe", "Mithril kiteshield", "Rune axe", "Rune battleaxe", "Rune dart(p)", "Rune full helm", "Rune knife", "Rune longsword", "Rune mace", "Rune med helm", "Rune platebody", "Rune platelegs", "Rune scimitar", "Rune spear", "Rune warhammer"]
 */
-#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant dart(p)","Rune dart(p)"]
 CONST_METAL_DRAGONS_RULE (name:VAR_METAL_DRAGONS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2479,7 +2468,7 @@ label: 'Hide: Runes and Ammunition'
 group: Metal Dragons
 enum: ["Adamant arrow", "Adamant bolts", "Adamant javelin", "Blood rune", "Chaos rune", "Death rune", "Fire rune", "Law rune", "Mithril bolts", "Rune arrow", "Rune javelin", "Runite bolts", "Soul rune", "Wrath rune"]
 */
-#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow","Adamant javelin","Mithril bolts"]
 CONST_METAL_DRAGONS_RULE (name:VAR_METAL_DRAGONS_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -2499,7 +2488,7 @@ label: 'Hide: Other'
 group: Metal Dragons
 enum: ["Adamantite bar", "Ancient page", "Chewed bones", "Curry", "Dragon bolts (unf)", "Dragon javelin heads", "Dragonstone", "Rune javelin heads", "Runite bar", "Runite bolts (unf)", "Runite limbs", "Runite ore", "Super attack(3)", "Super defence(2)", "Super strength(1)", "Swordfish", "Wrath talisman"]
 */
-#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_OTHER []
+#define VAR_METAL_DRAGONS_ENUMLIST_FILTER_OTHER ["Rune javelin heads","Super attack(3)","Super defence(2)","Super strength(1)","Swordfish"]
 CONST_METAL_DRAGONS_RULE (name:VAR_METAL_DRAGONS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2527,7 +2516,7 @@ label: 'Hide: Always'
 group: Minotaur
 enum: ["Bones"]
 */
-#define VAR_MINOTAUR_ENUMLIST_FILTER_100 []
+#define VAR_MINOTAUR_ENUMLIST_FILTER_100 ["Bones"]
 CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2537,7 +2526,7 @@ label: 'Hide: Weapons and Armour'
 group: Minotaur
 enum: ["Bronze arrow", "Bronze dagger", "Bronze full helm", "Bronze spear", "Iron arrow"]
 */
-#define VAR_MINOTAUR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_MINOTAUR_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Bronze arrow","Iron arrow"]
 CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2547,7 +2536,7 @@ label: 'Hide: Runes and Ammunition'
 group: Minotaur
 enum: ["Mind rune"]
 */
-#define VAR_MINOTAUR_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_MINOTAUR_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mind rune"]
 CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -2557,7 +2546,7 @@ label: 'Hide: Other'
 group: Minotaur
 enum: ["Cooked meat", "Copper ore", "Pure essence", "Right skull half", "Rune essence", "Tin ore"]
 */
-#define VAR_MINOTAUR_ENUMLIST_FILTER_OTHER []
+#define VAR_MINOTAUR_ENUMLIST_FILTER_OTHER ["Cooked meat","Copper ore","Rune essence","Tin ore"]
 CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2606,7 +2595,7 @@ label: 'Hide: Weapons and Armour'
 group: Moss giant
 enum: ["Black sq shield", "Magic staff", "Mithril spear", "Mithril sword", "Steel kiteshield", "Steel med helm"]
 */
-#define VAR_MOSS_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_MOSS_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Magic staff"]
 CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2616,7 +2605,7 @@ label: 'Hide: Runes and Ammunition'
 group: Moss giant
 enum: ["Air rune", "Blood rune", "Chaos rune", "Cosmic rune", "Death rune", "Earth rune", "Iron arrow", "Law rune", "Nature rune", "Steel arrow"]
 */
-#define VAR_MOSS_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_MOSS_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Iron arrow","Steel arrow"]
 CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -2636,7 +2625,7 @@ label: 'Hide: Other'
 group: Moss giant
 enum: ["Coal", "Spinach roll", "Steel bar"]
 */
-#define VAR_MOSS_GIANT_ENUMLIST_FILTER_OTHER []
+#define VAR_MOSS_GIANT_ENUMLIST_FILTER_OTHER ["Coal","Spinach roll","Steel bar"]
 CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2689,7 +2678,7 @@ label: 'Hide: Weapons and Armour'
 group: Ogres
 enum: ["Mithril kiteshield"]
 */
-#define VAR_OGRES_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_OGRES_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Mithril kiteshield"]
 CONST_OGRES_RULE (name:VAR_OGRES_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2699,7 +2688,7 @@ label: 'Hide: Runes and Ammunition'
 group: Ogres
 enum: ["Air rune", "Chaos rune", "Cosmic rune", "Death rune", "Earth rune", "Fire rune", "Iron arrow", "Law rune", "Mind rune", "Mithril arrow", "Nature rune", "Steel arrow", "Water rune"]
 */
-#define VAR_OGRES_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_OGRES_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Iron arrow","Mind rune","Mithril arrow","Steel arrow"]
 CONST_OGRES_RULE (name:VAR_OGRES_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -2709,7 +2698,7 @@ label: 'Hide: Materials'
 group: Ogres
 enum: ["Avantoe seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Dwarf weed seed", "Guam seed", "Harralander seed", "Irit seed", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Limpwurt root", "Marrentill seed", "Mushroom spore", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Toadflax seed", "Uncut diamond", "Uncut emerald", "Uncut ruby", "Uncut sapphire", "Watermelon seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_OGRES_ENUMLIST_FILTER_MATERIALS []
+#define VAR_OGRES_ENUMLIST_FILTER_MATERIALS ["Uncut sapphire","Uncut ruby","Uncut emerald","Uncut diamond"]
 CONST_OGRES_RULE (name:VAR_OGRES_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -2753,7 +2742,7 @@ label: 'Hide: Other'
 group: Otherworldly being
 enum: ["Mackerel", "Mithril mace", "Ruby ring"]
 */
-#define VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_OTHER []
+#define VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_OTHER ["Mackerel","Mithril mace","Ruby ring"]
 CONST_OTHERWORLDLY_BEING_RULE (name:VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2776,7 +2765,7 @@ label: 'Hide: Always'
 group: Pirate
 enum: ["Bones"]
 */
-#define VAR_PIRATE_ENUMLIST_FILTER_100 []
+#define VAR_PIRATE_ENUMLIST_FILTER_100 ["Bones"]
 CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2786,7 +2775,7 @@ label: 'Hide: Weapons and Armour'
 group: Pirate
 enum: ["Bronze scimitar", "Iron dagger", "Iron platebody"]
 */
-#define VAR_PIRATE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_PIRATE_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Bronze scimitar","Iron dagger","Iron platebody"]
 CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2796,7 +2785,7 @@ label: 'Hide: Runes and Ammunition'
 group: Pirate
 enum: ["Air rune", "Bronze arrow", "Chaos rune", "Earth rune", "Fire rune", "Iron bolts", "Law rune", "Nature rune"]
 */
-#define VAR_PIRATE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_PIRATE_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Bronze arrow","Iron bolts"]
 CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -2806,7 +2795,7 @@ label: 'Hide: Other'
 group: Pirate
 enum: ["Chef's hat", "Iron bar", "Right eye patch"]
 */
-#define VAR_PIRATE_ENUMLIST_FILTER_OTHER []
+#define VAR_PIRATE_ENUMLIST_FILTER_OTHER ["Chef's hat","Iron bar","Right eye patch"]
 CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2831,7 +2820,7 @@ label: 'Hide: Always'
 group: Rogue
 enum: ["Bones"]
 */
-#define VAR_ROGUE_ENUMLIST_FILTER_100 []
+#define VAR_ROGUE_ENUMLIST_FILTER_100 ["Bones"]
 CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2841,7 +2830,7 @@ label: 'Hide: Weapons and Armour'
 group: Rogue
 enum: ["Bronze med helm", "Iron dagger"]
 */
-#define VAR_ROGUE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_ROGUE_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Bronze med helm","Iron dagger"]
 CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2851,7 +2840,7 @@ label: 'Hide: Runes and Ammunition'
 group: Rogue
 enum: ["Bronze arrow", "Bronze bolts", "Chaos rune", "Earth rune", "Fire rune", "Mind rune"]
 */
-#define VAR_ROGUE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_ROGUE_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Bronze arrow","Bronze bolts"]
 CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -2871,7 +2860,7 @@ label: 'Hide: Other'
 group: Rogue
 enum: ["Cabbage", "Copper ore", "Earth talisman", "Fishing bait"]
 */
-#define VAR_ROGUE_ENUMLIST_FILTER_OTHER []
+#define VAR_ROGUE_ENUMLIST_FILTER_OTHER ["Cabbage","Copper ore","Earth talisman","Fishing bait"]
 CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2900,7 +2889,7 @@ label: 'Hide: Always'
 group: Scabarites
 enum: ["Bones"]
 */
-#define VAR_SCABARITES_ENUMLIST_FILTER_100 []
+#define VAR_SCABARITES_ENUMLIST_FILTER_100 ["Bones"]
 CONST_SCABARITES_RULE (name:VAR_SCABARITES_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -2910,7 +2899,7 @@ label: 'Hide: Weapons and Armour'
 group: Scabarites
 enum: ["Adamant kiteshield", "Battlestaff", "Rune dagger", "Rune mace", "Rune sq shield"]
 */
-#define VAR_SCABARITES_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_SCABARITES_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff"]
 CONST_SCABARITES_RULE (name:VAR_SCABARITES_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2920,7 +2909,7 @@ label: 'Hide: Runes and Ammunition'
 group: Scabarites
 enum: ["Adamant arrow", "Blood rune", "Cosmic rune", "Fire rune", "Lava rune", "Rune arrow"]
 */
-#define VAR_SCABARITES_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_SCABARITES_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow"]
 CONST_SCABARITES_RULE (name:VAR_SCABARITES_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -2930,7 +2919,7 @@ label: 'Hide: Materials'
 group: Scabarites
 enum: ["Adamantite ore", "Celastrus seed", "Coal", "Desert goat horn", "Dragonfruit tree seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Hespori seed", "Mithril bar", "Raw bass", "Raw lobster", "Redwood tree seed", "Spirit seed", "Torstol seed", "Uncut sapphire", "White lily seed"]
 */
-#define VAR_SCABARITES_ENUMLIST_FILTER_MATERIALS []
+#define VAR_SCABARITES_ENUMLIST_FILTER_MATERIALS ["Adamantite ore","Coal","Mithril bar","Raw bass","Raw lobster","Uncut sapphire"]
 CONST_SCABARITES_RULE (name:VAR_SCABARITES_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -2940,7 +2929,7 @@ label: 'Hide: Other'
 group: Scabarites
 enum: ["Bass", "Lobster", "Marrentill tar", "Waterskin(4)"]
 */
-#define VAR_SCABARITES_ENUMLIST_FILTER_OTHER []
+#define VAR_SCABARITES_ENUMLIST_FILTER_OTHER ["Bass","Lobster","Marrentill tar","Waterskin(4)"]
 CONST_SCABARITES_RULE (name:VAR_SCABARITES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -2955,7 +2944,7 @@ label: 'Hide: Weapons and Armour'
 group: Shadow warrior
 enum: ["Adamant spear", "Black dagger(p)", "Black knife", "Black longsword", "Black robe"]
 */
-#define VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Black dagger(p)"]
 CONST_SHADOW_WARRIOR_RULE (name:VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -2985,7 +2974,7 @@ label: 'Hide: Other'
 group: Shadow warrior
 enum: ["Mithril bar", "Weapon poison"]
 */
-#define VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_OTHER []
+#define VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_OTHER ["Mithril bar","Weapon poison"]
 CONST_SHADOW_WARRIOR_RULE (name:VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3030,7 +3019,7 @@ label: 'Hide: Always'
 group: Skeleton
 enum: ["Bones"]
 */
-#define VAR_SKELETON_ENUMLIST_FILTER_100 []
+#define VAR_SKELETON_ENUMLIST_FILTER_100 ["Bones"]
 CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -3050,7 +3039,7 @@ label: 'Hide: Runes and Ammunition'
 group: Skeleton
 enum: ["Air rune", "Bronze arrow", "Chaos rune", "Cosmic rune", "Earth rune", "Fire rune", "Iron arrow", "Law rune", "Nature rune", "Steel arrow", "Water rune"]
 */
-#define VAR_SKELETON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_SKELETON_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Bronze arrow","Iron arrow","Steel arrow"]
 CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -3070,7 +3059,7 @@ label: 'Hide: Other'
 group: Skeleton
 enum: ["Bronze bar", "Fire talisman", "Grain", "Iron dagger", "Iron ore"]
 */
-#define VAR_SKELETON_ENUMLIST_FILTER_OTHER []
+#define VAR_SKELETON_ENUMLIST_FILTER_OTHER ["Bronze bar","Fire talisman","Grain","Iron dagger","Iron ore"]
 CONST_SKELETON_RULE (name:VAR_SKELETON_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3115,7 +3104,7 @@ label: 'Hide: Runes and Ammunition'
 group: Sourhog
 enum: ["Air rune", "Chaos rune", "Earth rune", "Mind rune", "Nature rune", "Steel arrow"]
 */
-#define VAR_SOURHOG_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_SOURHOG_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mind rune","Steel arrow"]
 CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -3135,7 +3124,7 @@ label: 'Hide: Other'
 group: Sourhog
 enum: ["Cabbage", "Cooking apple", "Limpwurt root", "Potato"]
 */
-#define VAR_SOURHOG_ENUMLIST_FILTER_OTHER []
+#define VAR_SOURHOG_ENUMLIST_FILTER_OTHER ["Cabbage","Cooking apple","Limpwurt root","Potato"]
 CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3172,7 +3161,7 @@ label: 'Hide: Always'
 group: Suqah
 enum: ["Big bones", "Suqah hide"]
 */
-#define VAR_SUQAH_ENUMLIST_FILTER_100 []
+#define VAR_SUQAH_ENUMLIST_FILTER_100 ["Suqah hide"]
 CONST_SUQAH_RULE (name:VAR_SUQAH_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -3182,7 +3171,7 @@ label: 'Hide: Other'
 group: Suqah
 enum: ["Grimy guam leaf", "Grimy marrentill", "Suqah tooth"]
 */
-#define VAR_SUQAH_ENUMLIST_FILTER_OTHER []
+#define VAR_SUQAH_ENUMLIST_FILTER_OTHER ["Suqah tooth","Grimy guam leaf","Grimy marrentill"]
 CONST_SUQAH_RULE (name:VAR_SUQAH_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3334,7 +3323,7 @@ label: 'Hide: Materials'
 group: Trolls
 enum: ["Avantoe seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Dwarf weed seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Guam seed", "Harralander seed", "Irit seed", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Marrentill seed", "Mushroom spore", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Raw herring", "Raw pike", "Raw salmon", "Raw sardine", "Raw shark", "Raw swordfish", "Raw tuna", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Toadflax seed", "Watermelon seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_TROLLS_ENUMLIST_FILTER_MATERIALS []
+#define VAR_TROLLS_ENUMLIST_FILTER_MATERIALS ["Raw herring","Raw pike","Raw salmon","Raw sardine","Raw swordfish","Raw tuna"]
 CONST_TROLLS_RULE (name:VAR_TROLLS_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -3344,7 +3333,7 @@ label: 'Hide: Other'
 group: Trolls
 enum: ["Ball of wool", "Casket", "Coal", "Fishing potion(3)", "Lobster", "Oyster", "Raw mackerel", "Raw shark", "Raw tuna", "Seaweed"]
 */
-#define VAR_TROLLS_ENUMLIST_FILTER_OTHER []
+#define VAR_TROLLS_ENUMLIST_FILTER_OTHER ["Ball of wool","Casket","Lobster","Oyster","Fishing potion(3)","Raw mackerel","Raw tuna","Seaweed"]
 CONST_TROLLS_RULE (name:VAR_TROLLS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3412,7 +3401,7 @@ label: 'Hide: Materials'
 group: Vampyres
 enum: ["Adamantite ore", "Avantoe seed", "Bark", "Belladonna seed", "Cactus seed", "Cadantine seed", "Coal", "Diamond bolt tips", "Dragonstone bolt tips", "Dwarf weed seed", "Emerald bolt tips", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Guam seed", "Harralander seed", "Irit seed", "Jade bolt tips", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Marrentill seed", "Mort myre fungus", "Mushroom spore", "Onyx bolt tips", "Opal bolt tips", "Pearl bolt tips", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Ruby bolt tips", "Runite bar", "Runite ore", "Sapphire bolt tips", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Toadflax seed", "Topaz bolt tips", "Watermelon seed", "Whiteberry seed", "Wildblood seed", "Yew logs"]
 */
-#define VAR_VAMPYRES_ENUMLIST_FILTER_MATERIALS []
+#define VAR_VAMPYRES_ENUMLIST_FILTER_MATERIALS ["Emerald bolt tips","Jade bolt tips","Opal bolt tips","Pearl bolt tips"]
 CONST_VAMPYRES_RULE (name:VAR_VAMPYRES_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -3450,7 +3439,7 @@ label: 'Hide: Always'
 group: Waterfiend
 enum: ["Fiendish ashes", "Water rune"]
 */
-#define VAR_WATERFIEND_ENUMLIST_FILTER_100 []
+#define VAR_WATERFIEND_ENUMLIST_FILTER_100 ["Fiendish ashes"]
 CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -3460,7 +3449,7 @@ label: 'Hide: Weapons and Armour'
 group: Waterfiend
 enum: ["Adamant chainbody", "Adamant warhammer", "Blue d'hide vambraces", "Mystic water staff", "Rune full helm", "Rune med helm", "Staff of water", "Water battlestaff"]
 */
-#define VAR_WATERFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_WATERFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Blue d'hide vambraces","Staff of water","Water battlestaff"]
 CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -3470,7 +3459,7 @@ label: 'Hide: Runes and Ammunition'
 group: Waterfiend
 enum: ["Blood rune", "Death rune", "Mist rune", "Mithril arrow", "Mud rune", "Sapphire bolts", "Steam rune", "Water rune"]
 */
-#define VAR_WATERFIEND_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_WATERFIEND_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mithril arrow"]
 CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -3480,7 +3469,7 @@ label: 'Hide: Materials'
 group: Waterfiend
 enum: ["Celastrus seed", "Dragonfruit tree seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Hespori seed", "Mithril bar", "Mithril ore", "Raw lobster", "Raw shark", "Redwood tree seed", "Shark", "Spirit seed", "Torstol seed", "Uncut diamond", "Uncut emerald", "Uncut ruby", "Uncut sapphire", "Watermelon seed", "White lily seed"]
 */
-#define VAR_WATERFIEND_ENUMLIST_FILTER_MATERIALS []
+#define VAR_WATERFIEND_ENUMLIST_FILTER_MATERIALS ["Raw lobster","Uncut diamond","Uncut emerald","Uncut ruby","Uncut sapphire"]
 CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -3490,7 +3479,7 @@ label: 'Hide: Other'
 group: Waterfiend
 enum: ["Oyster", "Seaweed", "Snape grass", "Vial of water", "Water orb", "Water talisman"]
 */
-#define VAR_WATERFIEND_ENUMLIST_FILTER_OTHER []
+#define VAR_WATERFIEND_ENUMLIST_FILTER_OTHER ["Oyster","Seaweed","Vial of water","Water talisman"]
 CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3518,7 +3507,7 @@ label: 'Hide: Always'
 group: Werewolf
 enum: ["Wolf bones"]
 */
-#define VAR_WEREWOLF_ENUMLIST_FILTER_100 []
+#define VAR_WEREWOLF_ENUMLIST_FILTER_100 ["Wolf bones"]
 CONST_WEREWOLF_RULE (name:VAR_WEREWOLF_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -3538,7 +3527,7 @@ label: 'Hide: Materials'
 group: Werewolf
 enum: ["Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Jug of wine", "Raw bear meat", "Raw beef", "Raw chicken"]
 */
-#define VAR_WEREWOLF_ENUMLIST_FILTER_MATERIALS []
+#define VAR_WEREWOLF_ENUMLIST_FILTER_MATERIALS ["Jug of wine","Raw bear meat","Raw beef","Raw chicken"]
 CONST_WEREWOLF_RULE (name:VAR_WEREWOLF_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -3548,7 +3537,7 @@ label: 'Hide: Other'
 group: Werewolf
 enum: ["Fur", "Grey wolf fur"]
 */
-#define VAR_WEREWOLF_ENUMLIST_FILTER_OTHER []
+#define VAR_WEREWOLF_ENUMLIST_FILTER_OTHER ["Fur","Grey wolf fur"]
 CONST_WEREWOLF_RULE (name:VAR_WEREWOLF_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3590,7 +3579,7 @@ label: 'Hide: Weapons and Armour'
 group: Abyssal demon
 enum: ["Abyssal dagger", "Abyssal whip", "Black axe", "Black sword", "Mithril kiteshield", "Rune chainbody", "Rune med helm", "Steel battleaxe"]
 */
-#define VAR_ABYSSAL_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_ABYSSAL_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Black axe","Black sword","Mithril kiteshield","Steel battleaxe"]
 CONST_ABYSSAL_DEMON_RULE (name:VAR_ABYSSAL_DEMON_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -3620,7 +3609,7 @@ label: 'Hide: Other'
 group: Abyssal demon
 enum: ["Chaos talisman", "Cosmic talisman", "Defence potion(3)", "Lobster"]
 */
-#define VAR_ABYSSAL_DEMON_ENUMLIST_FILTER_OTHER []
+#define VAR_ABYSSAL_DEMON_ENUMLIST_FILTER_OTHER ["Defence potion(3)","Lobster"]
 CONST_ABYSSAL_DEMON_RULE (name:VAR_ABYSSAL_DEMON_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3658,7 +3647,7 @@ label: 'Hide: Weapons and Armour'
 group: Araxyte
 enum: ["Adamant battleaxe", "Adamant longsword", "Aranea boots", "Rune dagger", "Rune med helm", "Rune platelegs"]
 */
-#define VAR_ARAXYTE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_ARAXYTE_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant battleaxe","Adamant longsword","Rune dagger"]
 CONST_ARAXYTE_RULE (name:VAR_ARAXYTE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -3703,7 +3692,7 @@ label: 'Hide: Weapons and Armour'
 group: Banshees
 enum: ["Adamant kiteshield", "Adamant mace", "Air battlestaff", "Battlestaff", "Iron dagger", "Iron kiteshield", "Iron mace", "Mystic gloves (dark)", "Rune dagger", "Rune full helm", "Rune med helm"]
 */
-#define VAR_BANSHEES_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_BANSHEES_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Air battlestaff","Battlestaff"]
 CONST_BANSHEES_RULE (name:VAR_BANSHEES_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -3723,7 +3712,7 @@ label: 'Hide: Materials'
 group: Banshees
 enum: ["Celastrus seed", "Dragonfruit tree seed", "Eye of newt", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Hespori seed", "Iron ore", "Mithril ore", "Pure essence", "Redwood tree seed", "Spirit seed", "Torstol seed", "White lily seed"]
 */
-#define VAR_BANSHEES_ENUMLIST_FILTER_MATERIALS []
+#define VAR_BANSHEES_ENUMLIST_FILTER_MATERIALS ["Eye of newt","Iron ore","Mithril ore"]
 CONST_BANSHEES_RULE (name:VAR_BANSHEES_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -3733,7 +3722,7 @@ label: 'Hide: Other'
 group: Banshees
 enum: ["Eye of newt", "Fishing bait", "Swordfish"]
 */
-#define VAR_BANSHEES_ENUMLIST_FILTER_OTHER []
+#define VAR_BANSHEES_ENUMLIST_FILTER_OTHER ["Eye of newt","Fishing bait","Swordfish"]
 CONST_BANSHEES_RULE (name:VAR_BANSHEES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3749,7 +3738,7 @@ label: 'Hide: Always'
 group: Basilisks
 enum: ["Big bones", "Bones"]
 */
-#define VAR_BASILISKS_ENUMLIST_FILTER_100 []
+#define VAR_BASILISKS_ENUMLIST_FILTER_100 ["Bones"]
 CONST_BASILISKS_RULE (name:VAR_BASILISKS_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -3759,7 +3748,7 @@ label: 'Hide: Weapons and Armour'
 group: Basilisks
 enum: ["Adamant full helm", "Adamant kiteshield", "Adamant platelegs", "Mithril axe", "Mithril kiteshield", "Mithril spear", "Mystic hat (light)", "Rune axe", "Rune battleaxe", "Rune dagger", "Rune med helm", "Rune scimitar", "Rune spear", "Steel battleaxe"]
 */
-#define VAR_BASILISKS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_BASILISKS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Rune dagger"]
 CONST_BASILISKS_RULE (name:VAR_BASILISKS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -3834,7 +3823,7 @@ label: 'Hide: Weapons and Armour'
 group: Bloodveld
 enum: ["Adamant chainbody", "Adamant knife", "Adamant longsword", "Adamant scimitar", "Black boots", "Black med helm", "Mithril axe", "Mithril battleaxe", "Mithril chainbody", "Mithril full helm", "Mithril platebody", "Mithril sq shield", "Rune battleaxe", "Rune dagger", "Rune med helm", "Steel axe", "Steel full helm", "Steel scimitar"]
 */
-#define VAR_BLOODVELD_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_BLOODVELD_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant knife","Adamant longsword","Adamant scimitar","Black boots","Black med helm","Mithril axe","Mithril battleaxe","Mithril chainbody","Mithril full helm","Mithril platebody","Mithril sq shield","Rune dagger","Steel axe","Steel full helm","Steel scimitar"]
 CONST_BLOODVELD_RULE (name:VAR_BLOODVELD_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -3864,7 +3853,7 @@ label: 'Hide: Other'
 group: Bloodveld
 enum: ["Big bones", "Bones", "Bow string", "Gold ore", "Meat pie", "Meat pizza", "Mithril bar", "Ruby amulet"]
 */
-#define VAR_BLOODVELD_ENUMLIST_FILTER_OTHER []
+#define VAR_BLOODVELD_ENUMLIST_FILTER_OTHER ["Bones","Bow string","Gold ore","Meat pie","Meat pizza"]
 CONST_BLOODVELD_RULE (name:VAR_BLOODVELD_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3888,7 +3877,7 @@ label: 'Hide: Always'
 group: Brine rat
 enum: ["Bones", "Raw rat meat"]
 */
-#define VAR_BRINE_RAT_ENUMLIST_FILTER_100 []
+#define VAR_BRINE_RAT_ENUMLIST_FILTER_100 ["Bones","Raw rat meat"]
 CONST_BRINE_RAT_RULE (name:VAR_BRINE_RAT_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -3918,7 +3907,7 @@ label: 'Hide: Materials'
 group: Brine rat
 enum: ["Raw lobster", "Raw pike", "Raw rat meat", "Raw shark", "Raw swordfish"]
 */
-#define VAR_BRINE_RAT_ENUMLIST_FILTER_MATERIALS []
+#define VAR_BRINE_RAT_ENUMLIST_FILTER_MATERIALS ["Raw lobster","Raw pike","Raw rat meat","Raw swordfish"]
 CONST_BRINE_RAT_RULE (name:VAR_BRINE_RAT_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -3928,7 +3917,7 @@ label: 'Hide: Other'
 group: Brine rat
 enum: ["Water talisman"]
 */
-#define VAR_BRINE_RAT_ENUMLIST_FILTER_OTHER []
+#define VAR_BRINE_RAT_ENUMLIST_FILTER_OTHER ["Water talisman"]
 CONST_BRINE_RAT_RULE (name:VAR_BRINE_RAT_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3974,7 +3963,7 @@ label: 'Hide: Materials'
 group: Cave bug
 enum: ["Eye of newt", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Limpwurt root", "Red spiders' eggs", "Snape grass", "Unicorn horn dust"]
 */
-#define VAR_CAVE_BUG_ENUMLIST_FILTER_MATERIALS []
+#define VAR_CAVE_BUG_ENUMLIST_FILTER_MATERIALS ["Eye of newt","Limpwurt root","Red spiders' eggs","Snape grass"]
 CONST_CAVE_BUG_RULE (name:VAR_CAVE_BUG_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -3984,7 +3973,7 @@ label: 'Hide: Other'
 group: Cave bug
 enum: ["Candle", "Empty candle lantern", "Swamp weed", "Tinderbox"]
 */
-#define VAR_CAVE_BUG_ENUMLIST_FILTER_OTHER []
+#define VAR_CAVE_BUG_ENUMLIST_FILTER_OTHER ["Candle","Empty candle lantern","Swamp weed","Tinderbox"]
 CONST_CAVE_BUG_RULE (name:VAR_CAVE_BUG_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -3998,7 +3987,7 @@ label: 'Hide: Weapons and Armour'
 group: Cave crawler
 enum: ["Bronze boots"]
 */
-#define VAR_CAVE_CRAWLER_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_CAVE_CRAWLER_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Bronze boots"]
 CONST_CAVE_CRAWLER_RULE (name:VAR_CAVE_CRAWLER_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4018,7 +4007,7 @@ label: 'Hide: Materials'
 group: Cave crawler
 enum: ["Cabbage seed", "Eye of newt", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Limpwurt root", "Onion seed", "Potato seed", "Red spiders' eggs", "Snape grass", "Strawberry seed", "Sweetcorn seed", "Tomato seed", "Unicorn horn dust", "Vial of water", "Watermelon seed", "White berries"]
 */
-#define VAR_CAVE_CRAWLER_ENUMLIST_FILTER_MATERIALS []
+#define VAR_CAVE_CRAWLER_ENUMLIST_FILTER_MATERIALS ["Cabbage seed","Eye of newt","Limpwurt root","Vial of water"]
 CONST_CAVE_CRAWLER_RULE (name:VAR_CAVE_CRAWLER_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -4055,7 +4044,7 @@ label: 'Hide: Weapons and Armour'
 group: Cave horror
 enum: ["Adamant full helm", "Black mask (10)", "Mithril axe", "Mithril kiteshield", "Rune dagger"]
 */
-#define VAR_CAVE_HORROR_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_CAVE_HORROR_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant full helm","Mithril axe","Mithril kiteshield","Rune dagger"]
 CONST_CAVE_HORROR_RULE (name:VAR_CAVE_HORROR_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4085,7 +4074,7 @@ label: 'Hide: Other'
 group: Cave horror
 enum: ["Limpwurt root", "Mahogany logs", "Teak logs"]
 */
-#define VAR_CAVE_HORROR_ENUMLIST_FILTER_OTHER []
+#define VAR_CAVE_HORROR_ENUMLIST_FILTER_OTHER ["Mahogany logs","Limpwurt root"]
 CONST_CAVE_HORROR_RULE (name:VAR_CAVE_HORROR_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4111,7 +4100,7 @@ label: 'Hide: Weapons and Armour'
 group: Cave kraken
 enum: ["Adamant spear", "Battlestaff", "Mystic water staff", "Rune med helm", "Rune warhammer", "Staff of water", "Uncharged trident", "Water battlestaff"]
 */
-#define VAR_CAVE_KRAKEN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_CAVE_KRAKEN_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff","Adamant spear","Staff of water"]
 CONST_CAVE_KRAKEN_RULE (name:VAR_CAVE_KRAKEN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4141,7 +4130,7 @@ label: 'Hide: Other'
 group: Cave kraken
 enum: ["Antidote++(4)", "Bucket", "Kraken tentacle", "Old boot", "Oyster", "Raw lobster", "Seaweed", "Shark", "Swamp tar", "Swordfish", "Vial of water", "Water orb", "Water talisman"]
 */
-#define VAR_CAVE_KRAKEN_ENUMLIST_FILTER_OTHER []
+#define VAR_CAVE_KRAKEN_ENUMLIST_FILTER_OTHER ["Bucket","Old boot","Oyster","Raw lobster","Seaweed","Swamp tar","Swordfish","Vial of water","Water talisman"]
 CONST_CAVE_KRAKEN_RULE (name:VAR_CAVE_KRAKEN_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4167,7 +4156,7 @@ label: 'Hide: Always'
 group: Cave slime
 enum: ["Swamp tar"]
 */
-#define VAR_CAVE_SLIME_ENUMLIST_FILTER_100 []
+#define VAR_CAVE_SLIME_ENUMLIST_FILTER_100 ["Swamp tar"]
 CONST_CAVE_SLIME_RULE (name:VAR_CAVE_SLIME_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4197,7 +4186,7 @@ label: 'Hide: Other'
 group: Cave slime
 enum: ["Gold bar", "Oil lantern frame", "Unlit torch"]
 */
-#define VAR_CAVE_SLIME_ENUMLIST_FILTER_OTHER []
+#define VAR_CAVE_SLIME_ENUMLIST_FILTER_OTHER ["Oil lantern frame","Unlit torch"]
 CONST_CAVE_SLIME_RULE (name:VAR_CAVE_SLIME_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4211,7 +4200,7 @@ label: 'Hide: Always'
 group: Cockatrice
 enum: ["Bones"]
 */
-#define VAR_COCKATRICE_ENUMLIST_FILTER_100 []
+#define VAR_COCKATRICE_ENUMLIST_FILTER_100 ["Bones"]
 CONST_COCKATRICE_RULE (name:VAR_COCKATRICE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4221,7 +4210,7 @@ label: 'Hide: Weapons and Armour'
 group: Cockatrice
 enum: ["Iron boots", "Iron javelin", "Iron sword", "Mystic boots (light)", "Steel dagger", "Steel longsword"]
 */
-#define VAR_COCKATRICE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_COCKATRICE_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Iron boots","Iron javelin"]
 CONST_COCKATRICE_RULE (name:VAR_COCKATRICE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4251,7 +4240,7 @@ label: 'Hide: Other'
 group: Cockatrice
 enum: ["Limpwurt root"]
 */
-#define VAR_COCKATRICE_ENUMLIST_FILTER_OTHER []
+#define VAR_COCKATRICE_ENUMLIST_FILTER_OTHER ["Limpwurt root"]
 CONST_COCKATRICE_RULE (name:VAR_COCKATRICE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4276,7 +4265,7 @@ label: 'Hide: Always'
 group: Crawling Hand
 enum: ["Bones"]
 */
-#define VAR_CRAWLING_HAND_ENUMLIST_FILTER_100 []
+#define VAR_CRAWLING_HAND_ENUMLIST_FILTER_100 ["Bones"]
 CONST_CRAWLING_HAND_RULE (name:VAR_CRAWLING_HAND_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4286,7 +4275,7 @@ label: 'Hide: Other'
 group: Crawling Hand
 enum: ["Emerald ring", "Gold ring", "Leather gloves", "Purple gloves", "Red gloves", "Sapphire ring", "Teal gloves", "Yellow gloves"]
 */
-#define VAR_CRAWLING_HAND_ENUMLIST_FILTER_OTHER []
+#define VAR_CRAWLING_HAND_ENUMLIST_FILTER_OTHER ["Emerald ring","Gold ring","Leather gloves","Purple gloves","Red gloves","Sapphire ring","Teal gloves","Yellow gloves"]
 CONST_CRAWLING_HAND_RULE (name:VAR_CRAWLING_HAND_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4429,7 +4418,7 @@ label: 'Hide: Other'
 group: Drake
 enum: ["Diamond", "Swordfish"]
 */
-#define VAR_DRAKE_ENUMLIST_FILTER_OTHER []
+#define VAR_DRAKE_ENUMLIST_FILTER_OTHER ["Diamond","Swordfish"]
 CONST_DRAKE_RULE (name:VAR_DRAKE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4456,7 +4445,7 @@ label: 'Hide: Always'
 group: Dust devil
 enum: ["Bones"]
 */
-#define VAR_DUST_DEVIL_ENUMLIST_FILTER_100 []
+#define VAR_DUST_DEVIL_ENUMLIST_FILTER_100 ["Bones"]
 CONST_DUST_DEVIL_RULE (name:VAR_DUST_DEVIL_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4466,7 +4455,7 @@ label: 'Hide: Weapons and Armour'
 group: Dust devil
 enum: ["Adamant axe", "Air battlestaff", "Black d'hide vambraces", "Dragon chainbody", "Dragon dagger", "Dust battlestaff", "Earth battlestaff", "Mystic air staff", "Mystic earth staff", "Red d'hide vambraces", "Rune dagger"]
 */
-#define VAR_DUST_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_DUST_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant axe","Black d'hide vambraces","Red d'hide vambraces","Rune dagger"]
 CONST_DUST_DEVIL_RULE (name:VAR_DUST_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4496,7 +4485,7 @@ label: 'Hide: Other'
 group: Dust devil
 enum: ["Adamantite bar", "Mithril bar", "Ugthanki kebab"]
 */
-#define VAR_DUST_DEVIL_ENUMLIST_FILTER_OTHER []
+#define VAR_DUST_DEVIL_ENUMLIST_FILTER_OTHER ["Ugthanki kebab"]
 CONST_DUST_DEVIL_RULE (name:VAR_DUST_DEVIL_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4521,7 +4510,7 @@ label: 'Hide: Always'
 group: Fever spider
 enum: ["Fever spider body"]
 */
-#define VAR_FEVER_SPIDER_ENUMLIST_FILTER_100 []
+#define VAR_FEVER_SPIDER_ENUMLIST_FILTER_100 ["Fever spider body"]
 CONST_FEVER_SPIDER_RULE (name:VAR_FEVER_SPIDER_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4531,7 +4520,7 @@ label: 'Hide: Weapons and Armour'
 group: Fever spider
 enum: ["Adamant axe", "Adamant battleaxe", "Adamant med helm", "Red d'hide chaps"]
 */
-#define VAR_FEVER_SPIDER_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_FEVER_SPIDER_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Red d'hide chaps"]
 CONST_FEVER_SPIDER_RULE (name:VAR_FEVER_SPIDER_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4551,7 +4540,7 @@ label: 'Hide: Other'
 group: Fever spider
 enum: ["Bass", "Limpwurt root", "Pure essence"]
 */
-#define VAR_FEVER_SPIDER_ENUMLIST_FILTER_OTHER []
+#define VAR_FEVER_SPIDER_ENUMLIST_FILTER_OTHER ["Bass"]
 CONST_FEVER_SPIDER_RULE (name:VAR_FEVER_SPIDER_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4583,7 +4572,7 @@ label: 'Hide: Weapons and Armour'
 group: Fossil Island Wyverns
 enum: ["Adamant battleaxe", "Adamant full helm", "Adamant platebody", "Air battlestaff", "Battlestaff", "Granite boots", "Granite longsword", "Mystic air staff", "Rune battleaxe", "Rune full helm", "Rune kiteshield", "Rune pickaxe"]
 */
-#define VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff","Air battlestaff"]
 CONST_FOSSIL_ISLAND_WYVERNS_RULE (name:VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4603,7 +4592,7 @@ label: 'Hide: Materials'
 group: Fossil Island Wyverns
 enum: ["Acorn", "Adamantite bar", "Adamantite ore", "Apple tree seed", "Banana tree seed", "Calquat tree seed", "Celastrus seed", "Curry tree seed", "Diamond", "Dragonfruit tree seed", "Grimy cadantine", "Grimy dwarf weed", "Grimy kwuarm", "Grimy lantadyme", "Grimy ranarr weed", "Grimy torstol", "Magic seed", "Mahogany logs", "Mahogany seed", "Maple seed", "Onyx bolt tips", "Orange tree seed", "Palm tree seed", "Papaya tree seed", "Pineapple seed", "Pure essence", "Ranarr seed", "Redwood tree seed", "Runite ore", "Seaweed spore", "Snapdragon seed", "Snape grass", "Spirit seed", "Teak logs", "Teak seed", "Torstol seed", "Volcanic ash", "Watermelon seed", "Willow seed", "Yew seed"]
 */
-#define VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_MATERIALS []
+#define VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_MATERIALS ["Diamond","Teak logs"]
 CONST_FOSSIL_ISLAND_WYVERNS_RULE (name:VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -4613,7 +4602,7 @@ label: 'Hide: Other'
 group: Fossil Island Wyverns
 enum: ["Adamant crossbow (u)", "Calcite", "Lobster", "Prayer potion(4)", "Pyrophosphite", "Runite crossbow (u)", "Shark", "Super combat potion(2)", "Super restore(4)", "Supercompost", "Volcanic ash"]
 */
-#define VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_OTHER []
+#define VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_OTHER ["Adamant crossbow (u)","Lobster","Supercompost"]
 CONST_FOSSIL_ISLAND_WYVERNS_RULE (name:VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4649,7 +4638,7 @@ label: 'Hide: Weapons and Armour'
 group: Gargoyle
 enum: ["Adamant boots", "Adamant platelegs", "Rune 2h sword", "Rune battleaxe", "Rune full helm", "Rune platelegs"]
 */
-#define VAR_GARGOYLE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_GARGOYLE_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant boots"]
 CONST_GARGOYLE_RULE (name:VAR_GARGOYLE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4694,7 +4683,7 @@ label: 'Hide: Weapons and Armour'
 group: Harpie Bug Swarm
 enum: ["Adamant med helm", "Mithril chainbody", "Staff of fire", "Steel axe", "Steel boots", "Steel full helm"]
 */
-#define VAR_HARPIE_BUG_SWARM_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_HARPIE_BUG_SWARM_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Staff of fire","Steel boots"]
 CONST_HARPIE_BUG_SWARM_RULE (name:VAR_HARPIE_BUG_SWARM_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4749,7 +4738,7 @@ label: 'Hide: Weapons and Armour'
 group: Hydra
 enum: ["Battlestaff", "Black d'hide chaps", "Dragon longsword", "Fire battlestaff", "Mystic robe bottom", "Rune kiteshield", "Rune platebody", "Water battlestaff"]
 */
-#define VAR_HYDRA_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_HYDRA_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff","Water battlestaff","Fire battlestaff"]
 CONST_HYDRA_RULE (name:VAR_HYDRA_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4769,7 +4758,7 @@ label: 'Hide: Materials'
 group: Hydra
 enum: ["Celastrus seed", "Diamond bolt tips", "Dragonfruit tree seed", "Dragonstone bolt tips", "Emerald bolt tips", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy snapdragon", "Grimy tarromin", "Grimy torstol", "Hespori seed", "Onyx bolt tips", "Redwood tree seed", "Ruby bolt tips", "Sapphire bolt tips", "Spirit seed", "Torstol seed", "White lily seed"]
 */
-#define VAR_HYDRA_ENUMLIST_FILTER_MATERIALS []
+#define VAR_HYDRA_ENUMLIST_FILTER_MATERIALS ["Emerald bolt tips"]
 CONST_HYDRA_RULE (name:VAR_HYDRA_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -4813,7 +4802,7 @@ label: 'Hide: Always'
 group: Infernal Mage
 enum: ["Bones"]
 */
-#define VAR_INFERNAL_MAGE_ENUMLIST_FILTER_100 []
+#define VAR_INFERNAL_MAGE_ENUMLIST_FILTER_100 ["Bones"]
 CONST_INFERNAL_MAGE_RULE (name:VAR_INFERNAL_MAGE_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4823,7 +4812,7 @@ label: 'Hide: Weapons and Armour'
 group: Infernal Mage
 enum: ["Staff", "Staff of fire"]
 */
-#define VAR_INFERNAL_MAGE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_INFERNAL_MAGE_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Staff","Staff of fire"]
 CONST_INFERNAL_MAGE_RULE (name:VAR_INFERNAL_MAGE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4833,7 +4822,7 @@ label: 'Hide: Runes and Ammunition'
 group: Infernal Mage
 enum: ["Air rune", "Blood rune", "Body rune", "Death rune", "Earth rune", "Fire rune", "Mind rune", "Water rune"]
 */
-#define VAR_INFERNAL_MAGE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_INFERNAL_MAGE_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Body rune","Mind rune"]
 CONST_INFERNAL_MAGE_RULE (name:VAR_INFERNAL_MAGE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -4850,7 +4839,7 @@ label: 'Hide: Weapons and Armour'
 group: Jellies
 enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Black 2h sword", "Mithril boots", "Mithril kiteshield", "Rune full helm", "Rune kiteshield", "Steel 2h sword", "Steel axe", "Steel battleaxe"]
 */
-#define VAR_JELLIES_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_JELLIES_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Mithril boots"]
 CONST_JELLIES_RULE (name:VAR_JELLIES_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4870,7 +4859,7 @@ label: 'Hide: Other'
 group: Jellies
 enum: ["Chaos rune", "Death rune", "Gold bar", "Lobster", "Thread"]
 */
-#define VAR_JELLIES_ENUMLIST_FILTER_OTHER []
+#define VAR_JELLIES_ENUMLIST_FILTER_OTHER ["Lobster","Thread"]
 CONST_JELLIES_RULE (name:VAR_JELLIES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4895,7 +4884,7 @@ label: 'Hide: Always'
 group: Killerwatt
 enum: ["Ashes"]
 */
-#define VAR_KILLERWATT_ENUMLIST_FILTER_100 []
+#define VAR_KILLERWATT_ENUMLIST_FILTER_100 ["Ashes"]
 CONST_KILLERWATT_RULE (name:VAR_KILLERWATT_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4905,7 +4894,7 @@ label: 'Hide: Weapons and Armour'
 group: Killerwatt
 enum: ["Air battlestaff", "Fire battlestaff", "Mystic fire staff", "Staff of air", "Staff of fire"]
 */
-#define VAR_KILLERWATT_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_KILLERWATT_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Fire battlestaff","Air battlestaff","Staff of air","Staff of fire"]
 CONST_KILLERWATT_RULE (name:VAR_KILLERWATT_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -4935,7 +4924,7 @@ label: 'Hide: Other'
 group: Killerwatt
 enum: ["Fire orb", "Soda ash"]
 */
-#define VAR_KILLERWATT_ENUMLIST_FILTER_OTHER []
+#define VAR_KILLERWATT_ENUMLIST_FILTER_OTHER ["Fire orb","Soda ash"]
 CONST_KILLERWATT_RULE (name:VAR_KILLERWATT_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -4952,7 +4941,7 @@ label: 'Hide: Always'
 group: Kurask
 enum: ["Bones"]
 */
-#define VAR_KURASK_ENUMLIST_FILTER_100 []
+#define VAR_KURASK_ENUMLIST_FILTER_100 ["Bones"]
 CONST_KURASK_RULE (name:VAR_KURASK_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -4962,7 +4951,7 @@ label: 'Hide: Weapons and Armour'
 group: Kurask
 enum: ["Adamant platebody", "Leaf-bladed battleaxe", "Leaf-bladed sword", "Mithril kiteshield", "Mystic robe top (light)", "Rune axe", "Rune longsword"]
 */
-#define VAR_KURASK_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_KURASK_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Rune axe"]
 CONST_KURASK_RULE (name:VAR_KURASK_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -5022,7 +5011,7 @@ label: 'Hide: Always'
 group: Lizards
 enum: ["Big bones", "Bones"]
 */
-#define VAR_LIZARDS_ENUMLIST_FILTER_100 []
+#define VAR_LIZARDS_ENUMLIST_FILTER_100 ["Bones"]
 CONST_LIZARDS_RULE (name:VAR_LIZARDS_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5052,7 +5041,7 @@ label: 'Hide: Materials'
 group: Lizards
 enum: ["Avantoe seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Celastrus seed", "Coal", "Copper ore", "Dragonfruit tree seed", "Dwarf weed seed", "Grimy avantoe", "Grimy cadantine", "Grimy dwarf weed", "Grimy guam leaf", "Grimy harralander", "Grimy irit leaf", "Grimy kwuarm", "Grimy lantadyme", "Grimy marrentill", "Grimy ranarr weed", "Grimy tarromin", "Grimy torstol", "Guam seed", "Harralander seed", "Hespori seed", "Irit seed", "Iron bar", "Iron ore", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Mahogany seed", "Marrentill seed", "Mithril ore", "Mushroom spore", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Redwood tree seed", "Silver bar", "Silver ore", "Snapdragon seed", "Spirit seed", "Steel bar", "Strawberry seed", "Tarromin seed", "Teak seed", "Tin ore", "Toadflax seed", "Torstol seed", "Watermelon seed", "White lily seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_LIZARDS_ENUMLIST_FILTER_MATERIALS []
+#define VAR_LIZARDS_ENUMLIST_FILTER_MATERIALS ["Copper ore","Silver bar","Silver ore","Tin ore","Iron bar","Iron ore","Mithril ore","Steel bar"]
 CONST_LIZARDS_RULE (name:VAR_LIZARDS_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -5062,7 +5051,7 @@ label: 'Hide: Other'
 group: Lizards
 enum: ["Earth talisman", "Kebab", "Oak roots", "Rainbow fish", "Water talisman", "Waterskin(0)"]
 */
-#define VAR_LIZARDS_ENUMLIST_FILTER_OTHER []
+#define VAR_LIZARDS_ENUMLIST_FILTER_OTHER ["Earth talisman","Kebab","Oak roots","Rainbow fish","Water talisman","Waterskin(0)"]
 CONST_LIZARDS_RULE (name:VAR_LIZARDS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5106,7 +5095,7 @@ label: 'Hide: Materials'
 group: Mogre
 enum: ["Avantoe seed", "Belladonna seed", "Cactus seed", "Cadantine seed", "Dwarf weed seed", "Guam seed", "Harralander seed", "Irit seed", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Marrentill seed", "Mushroom spore", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Raw herring", "Raw pike", "Raw salmon", "Raw sardine", "Raw shark", "Raw swordfish", "Raw tuna", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Toadflax seed", "Watermelon seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_MOGRE_ENUMLIST_FILTER_MATERIALS []
+#define VAR_MOGRE_ENUMLIST_FILTER_MATERIALS ["Raw herring","Raw pike","Raw salmon","Raw sardine","Raw swordfish","Raw tuna"]
 CONST_MOGRE_RULE (name:VAR_MOGRE_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -5116,7 +5105,7 @@ label: 'Hide: Other'
 group: Mogre
 enum: ["Fishbowl", "Fishing bait", "Flippers", "Mudskipper hat", "Oyster", "Seaweed", "Staff of water"]
 */
-#define VAR_MOGRE_ENUMLIST_FILTER_OTHER []
+#define VAR_MOGRE_ENUMLIST_FILTER_OTHER ["Fishbowl","Fishing bait","Oyster","Seaweed","Staff of water"]
 CONST_MOGRE_RULE (name:VAR_MOGRE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5140,7 +5129,7 @@ label: 'Hide: Always'
 group: Molanisk
 enum: ["Bones"]
 */
-#define VAR_MOLANISK_ENUMLIST_FILTER_100 []
+#define VAR_MOLANISK_ENUMLIST_FILTER_100 ["Bones"]
 CONST_MOLANISK_RULE (name:VAR_MOLANISK_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5170,7 +5159,7 @@ label: 'Hide: Other'
 group: Molanisk
 enum: ["Mole claw", "Swamp weed"]
 */
-#define VAR_MOLANISK_ENUMLIST_FILTER_OTHER []
+#define VAR_MOLANISK_ENUMLIST_FILTER_OTHER ["Swamp weed"]
 CONST_MOLANISK_RULE (name:VAR_MOLANISK_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5206,7 +5195,7 @@ label: 'Hide: Materials'
 group: Naguas
 enum: ["Coal", "Copper ore", "Gold ore", "Iron ore", "Mithril ore", "Silver ore", "Soft clay", "Sulphurous essence", "Tin ore"]
 */
-#define VAR_NAGUAS_ENUMLIST_FILTER_MATERIALS []
+#define VAR_NAGUAS_ENUMLIST_FILTER_MATERIALS ["Copper ore","Tin ore"]
 CONST_NAGUAS_RULE (name:VAR_NAGUAS_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -5216,7 +5205,7 @@ label: 'Hide: Other'
 group: Naguas
 enum: ["Blessed bone shards", "Jug of water", "Prayer potion(1)", "Rune mace", "Water orb", "Water talisman"]
 */
-#define VAR_NAGUAS_ENUMLIST_FILTER_OTHER []
+#define VAR_NAGUAS_ENUMLIST_FILTER_OTHER ["Jug of water","Water talisman"]
 CONST_NAGUAS_RULE (name:VAR_NAGUAS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5255,7 +5244,7 @@ label: 'Hide: Weapons and Armour'
 group: Nechryaels
 enum: ["Adamant battleaxe", "Adamant kiteshield", "Adamant platelegs", "Mystic air staff", "Rune 2h sword", "Rune axe", "Rune boots", "Rune chainbody", "Rune full helm", "Rune med helm", "Rune sq shield"]
 */
-#define VAR_NECHRYAELS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_NECHRYAELS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Rune axe","Rune boots","Adamant battleaxe","Adamant kiteshield","Adamant platelegs"]
 CONST_NECHRYAELS_RULE (name:VAR_NECHRYAELS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -5285,7 +5274,7 @@ label: 'Hide: Other'
 group: Nechryaels
 enum: ["Gold bar", "Lobster", "Soft clay", "Tuna", "Wine of zamorak"]
 */
-#define VAR_NECHRYAELS_ENUMLIST_FILTER_OTHER []
+#define VAR_NECHRYAELS_ENUMLIST_FILTER_OTHER ["Lobster","Soft clay","Tuna"]
 CONST_NECHRYAELS_RULE (name:VAR_NECHRYAELS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5315,7 +5304,7 @@ label: 'Hide: Always'
 group: Pyrefiend
 enum: ["Fiendish ashes"]
 */
-#define VAR_PYREFIEND_ENUMLIST_FILTER_100 []
+#define VAR_PYREFIEND_ENUMLIST_FILTER_100 ["Fiendish ashes"]
 CONST_PYREFIEND_RULE (name:VAR_PYREFIEND_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5325,7 +5314,7 @@ label: 'Hide: Weapons and Armour'
 group: Pyrefiend
 enum: ["Adamant med helm", "Mithril axe", "Mithril chainbody", "Mithril full helm", "Staff of fire", "Steel axe", "Steel boots", "Steel full helm"]
 */
-#define VAR_PYREFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_PYREFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Staff of fire","Steel boots"]
 CONST_PYREFIEND_RULE (name:VAR_PYREFIEND_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -5453,7 +5442,7 @@ label: 'Hide: Materials'
 group: Rockslug
 enum: ["Avantoe seed", "Belladonna seed", "Bronze bar", "Cactus seed", "Cadantine seed", "Coal", "Copper ore", "Dwarf weed seed", "Guam seed", "Harralander seed", "Irit seed", "Iron bar", "Iron ore", "Jangerberry seed", "Kwuarm seed", "Lantadyme seed", "Marrentill seed", "Mithril ore", "Mushroom spore", "Poison ivy seed", "Potato cactus seed", "Ranarr seed", "Snapdragon seed", "Strawberry seed", "Tarromin seed", "Tin ore", "Toadflax seed", "Watermelon seed", "Whiteberry seed", "Wildblood seed"]
 */
-#define VAR_ROCKSLUG_ENUMLIST_FILTER_MATERIALS []
+#define VAR_ROCKSLUG_ENUMLIST_FILTER_MATERIALS ["Bronze bar","Copper ore","Iron bar","Tin ore"]
 CONST_ROCKSLUG_RULE (name:VAR_ROCKSLUG_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -5463,7 +5452,7 @@ label: 'Hide: Other'
 group: Rockslug
 enum: ["Dwarven stout", "Hammer"]
 */
-#define VAR_ROCKSLUG_ENUMLIST_FILTER_OTHER []
+#define VAR_ROCKSLUG_ENUMLIST_FILTER_OTHER ["Dwarven stout","Hammer"]
 CONST_ROCKSLUG_RULE (name:VAR_ROCKSLUG_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5479,7 +5468,7 @@ label: 'Hide: Always'
 group: Sea Snakes
 enum: ["Big bones", "Bones"]
 */
-#define VAR_SEA_SNAKES_ENUMLIST_FILTER_100 []
+#define VAR_SEA_SNAKES_ENUMLIST_FILTER_100 ["Bones"]
 CONST_SEA_SNAKES_RULE (name:VAR_SEA_SNAKES_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5509,7 +5498,7 @@ label: 'Hide: Other'
 group: Sea Snakes
 enum: ["Adamant dart tip", "Casket", "Edible seaweed", "Fishing bait", "Oyster pearl", "Oyster pearls", "Pearl bolt tips", "Raw bass", "Raw lobster", "Seaweed", "Water orb"]
 */
-#define VAR_SEA_SNAKES_ENUMLIST_FILTER_OTHER []
+#define VAR_SEA_SNAKES_ENUMLIST_FILTER_OTHER ["Adamant dart tip","Casket","Edible seaweed","Fishing bait","Oyster pearl","Oyster pearls","Pearl bolt tips","Raw bass","Raw lobster","Seaweed","Water orb"]
 CONST_SEA_SNAKES_RULE (name:VAR_SEA_SNAKES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5553,7 +5542,7 @@ label: 'Hide: Weapons and Armour'
 group: Skeletal Wyvern
 enum: ["Battlestaff", "Earth battlestaff", "Rune axe", "Rune battleaxe", "Rune full helm", "Rune kiteshield", "Rune warhammer"]
 */
-#define VAR_SKELETAL_WYVERN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_SKELETAL_WYVERN_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff","Earth battlestaff","Rune axe"]
 CONST_SKELETAL_WYVERN_RULE (name:VAR_SKELETAL_WYVERN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -5583,7 +5572,7 @@ label: 'Hide: Other'
 group: Skeletal Wyvern
 enum: ["Lobster", "Prayer potion(4)", "Ranarr seed", "Runite crossbow (u)", "Snapdragon seed", "Unpowered orb"]
 */
-#define VAR_SKELETAL_WYVERN_ENUMLIST_FILTER_OTHER []
+#define VAR_SKELETAL_WYVERN_ENUMLIST_FILTER_OTHER ["Lobster","Unpowered orb"]
 CONST_SKELETAL_WYVERN_RULE (name:VAR_SKELETAL_WYVERN_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5608,7 +5597,7 @@ label: 'Hide: Always'
 group: Smoke devil
 enum: ["Ashes"]
 */
-#define VAR_SMOKE_DEVIL_ENUMLIST_FILTER_100 []
+#define VAR_SMOKE_DEVIL_ENUMLIST_FILTER_100 ["Ashes"]
 CONST_SMOKE_DEVIL_RULE (name:VAR_SMOKE_DEVIL_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5618,7 +5607,7 @@ label: 'Hide: Weapons and Armour'
 group: Smoke devil
 enum: ["Adamant battleaxe", "Air battlestaff", "Black d'hide vambraces", "Dragon chainbody", "Fire battlestaff", "Mithril plateskirt", "Occult necklace", "Red d'hide body", "Rune chainbody", "Rune dagger", "Rune full helm"]
 */
-#define VAR_SMOKE_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_SMOKE_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant battleaxe","Air battlestaff","Black d'hide vambraces","Fire battlestaff","Mithril plateskirt","Red d'hide body","Rune dagger"]
 CONST_SMOKE_DEVIL_RULE (name:VAR_SMOKE_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -5648,7 +5637,7 @@ label: 'Hide: Other'
 group: Smoke devil
 enum: ["Adamantite bar", "Coal", "Crossbow string", "Magic logs", "Shark", "Steel bar", "Ugthanki kebab"]
 */
-#define VAR_SMOKE_DEVIL_ENUMLIST_FILTER_OTHER []
+#define VAR_SMOKE_DEVIL_ENUMLIST_FILTER_OTHER ["Crossbow string","Ugthanki kebab"]
 CONST_SMOKE_DEVIL_RULE (name:VAR_SMOKE_DEVIL_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5675,7 +5664,7 @@ label: 'Hide: Weapons and Armour'
 group: Spectres
 enum: ["Adamant platelegs", "Battlestaff", "Black platelegs", "Lava battlestaff", "Mithril battleaxe", "Mithril kiteshield", "Mystic robe bottom (dark)", "Rune chainbody", "Rune full helm", "Steel axe"]
 */
-#define VAR_SPECTRES_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_SPECTRES_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff","Steel axe"]
 CONST_SPECTRES_RULE (name:VAR_SPECTRES_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -5742,7 +5731,7 @@ label: 'Hide: Weapons and Armour'
 group: Spiritual Creatures
 enum: ["Adamant 2h sword", "Adamant battleaxe", "Adamant full helm", "Black dagger", "Black kiteshield", "Black warhammer", "Iron plateskirt", "Iron scimitar", "Iron sword", "Leather gloves", "Magic shortbow", "Maple longbow", "Mithril axe", "Mithril mace", "Mithril platelegs", "Mithril spear(p)", "Oak shortbow", "Rune halberd", "Rune kiteshield", "Rune longsword", "Steel chainbody", "Steel crossbow", "Steel longsword", "Steel sword"]
 */
-#define VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Leather gloves","Mithril spear(p)","Oak shortbow","Steel crossbow"]
 CONST_SPIRITUAL_CREATURES_RULE (name:VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -5752,7 +5741,7 @@ label: 'Hide: Runes and Ammunition'
 group: Spiritual Creatures
 enum: ["Adamant arrow", "Adamant arrow(p++)", "Adamant bolts", "Adamant fire arrow", "Air rune", "Astral rune", "Blood rune", "Body rune", "Bronze arrow", "Bronze arrow(p+)", "Chaos rune", "Death rune", "Dust rune", "Fire rune", "Iron arrow", "Lava rune", "Law rune", "Mind rune", "Mist rune", "Mithril arrow(p+)", "Mud rune", "Nature rune", "Rune arrow", "Smoke rune", "Soul rune", "Steel arrow", "Water rune"]
 */
-#define VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow(p++)","Adamant arrow","Adamant fire arrow","Body rune","Bronze arrow","Bronze arrow(p+)","Iron arrow","Mind rune","Mithril arrow(p+)","Steel arrow"]
 CONST_SPIRITUAL_CREATURES_RULE (name:VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -5772,7 +5761,7 @@ label: 'Hide: Other'
 group: Spiritual Creatures
 enum: ["Adamant arrowtips", "Adamant chainbody", "Adamantite bar", "Antipoison(3)", "Blood essence", "Blue dragon scale", "Bow string", "Broken arrow", "Coal", "Dragon boots", "Green d'hide body", "Headless arrow", "Iron arrowtips", "Lobster", "Mithril longsword", "Nihil shard", "Oak longbow (u)", "Potato cactus", "Pure essence", "Shark", "Uncut diamond"]
 */
-#define VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_OTHER []
+#define VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_OTHER ["Adamant arrowtips","Adamant chainbody","Adamantite bar","Antipoison(3)","Bow string","Broken arrow","Green d'hide body","Headless arrow","Iron arrowtips","Lobster","Mithril longsword","Oak longbow (u)","Potato cactus","Uncut diamond"]
 CONST_SPIRITUAL_CREATURES_RULE (name:VAR_SPIRITUAL_CREATURES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5797,7 +5786,7 @@ label: 'Hide: Always'
 group: Terror dog
 enum: ["Big bones", "Bones"]
 */
-#define VAR_TERROR_DOG_ENUMLIST_FILTER_100 []
+#define VAR_TERROR_DOG_ENUMLIST_FILTER_100 ["Bones"]
 CONST_TERROR_DOG_RULE (name:VAR_TERROR_DOG_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5837,7 +5826,7 @@ label: 'Hide: Other'
 group: Terror dog
 enum: ["Adamantite ore", "Bass"]
 */
-#define VAR_TERROR_DOG_ENUMLIST_FILTER_OTHER []
+#define VAR_TERROR_DOG_ENUMLIST_FILTER_OTHER ["Bass"]
 CONST_TERROR_DOG_RULE (name:VAR_TERROR_DOG_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5861,7 +5850,7 @@ label: 'Hide: Always'
 group: Turoth
 enum: ["Bones"]
 */
-#define VAR_TUROTH_ENUMLIST_FILTER_100 []
+#define VAR_TUROTH_ENUMLIST_FILTER_100 ["Bones"]
 CONST_TUROTH_RULE (name:VAR_TUROTH_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5947,7 +5936,7 @@ label: 'Hide: Other'
 group: Wall beast
 enum: ["Bullseye lantern (unf)", "Eye of newt", "Lantern lens", "Tinderbox", "Unlit torch"]
 */
-#define VAR_WALL_BEAST_ENUMLIST_FILTER_OTHER []
+#define VAR_WALL_BEAST_ENUMLIST_FILTER_OTHER ["Bullseye lantern (unf)","Eye of newt","Lantern lens","Tinderbox","Unlit torch"]
 CONST_WALL_BEAST_RULE (name:VAR_WALL_BEAST_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -5968,7 +5957,7 @@ label: 'Hide: Always'
 group: Warped Creatures
 enum: ["Big bones", "Bones"]
 */
-#define VAR_WARPED_CREATURES_ENUMLIST_FILTER_100 []
+#define VAR_WARPED_CREATURES_ENUMLIST_FILTER_100 ["Bones"]
 CONST_WARPED_CREATURES_RULE (name:VAR_WARPED_CREATURES_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -5998,7 +5987,7 @@ label: 'Hide: Other'
 group: Warped Creatures
 enum: ["Adamantite ore", "Cabbage", "Chocolate bomb", "Coal", "Diamond bolt tips", "Feather", "Perfect shell", "Pineapple", "Raw shark", "Swamp tar", "Tangled toad's legs", "Tortoise shell", "Weapon poison"]
 */
-#define VAR_WARPED_CREATURES_ENUMLIST_FILTER_OTHER []
+#define VAR_WARPED_CREATURES_ENUMLIST_FILTER_OTHER ["Cabbage","Perfect shell","Pineapple","Swamp tar","Tangled toad's legs","Weapon poison"]
 CONST_WARPED_CREATURES_RULE (name:VAR_WARPED_CREATURES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -6044,7 +6033,7 @@ label: 'Hide: Weapons and Armour'
 group: Wyrm
 enum: ["Adamant 2h sword", "Adamant axe", "Adamant battleaxe", "Adamant sq shield", "Dragon dagger", "Earth battlestaff", "Red d'hide chaps", "Rune battleaxe", "Rune med helm"]
 */
-#define VAR_WYRM_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_WYRM_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Red d'hide chaps"]
 CONST_WYRM_RULE (name:VAR_WYRM_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -6074,7 +6063,7 @@ label: 'Hide: Other'
 group: Wyrm
 enum: ["Adamant arrowtips", "Bass", "Pure essence", "Rune arrowtips"]
 */
-#define VAR_WYRM_ENUMLIST_FILTER_OTHER []
+#define VAR_WYRM_ENUMLIST_FILTER_OTHER ["Adamant arrowtips","Bass"]
 CONST_WYRM_RULE (name:VAR_WYRM_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -6101,7 +6090,7 @@ label: 'Hide: Always'
 group: Zygomites
 enum: ["Ashes", "Mort myre fungus"]
 */
-#define VAR_ZYGOMITES_ENUMLIST_FILTER_100 []
+#define VAR_ZYGOMITES_ENUMLIST_FILTER_100 ["Ashes"]
 CONST_ZYGOMITES_RULE (name:VAR_ZYGOMITES_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -6141,7 +6130,7 @@ label: 'Hide: Other'
 group: Zygomites
 enum: ["Calcite", "Clay", "Fungicide", "Mort myre fungus", "Pyrophosphite", "Supercompost", "Volcanic ash"]
 */
-#define VAR_ZYGOMITES_ENUMLIST_FILTER_OTHER []
+#define VAR_ZYGOMITES_ENUMLIST_FILTER_OTHER ["Clay","Fungicide","Supercompost"]
 CONST_ZYGOMITES_RULE (name:VAR_ZYGOMITES_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -6155,6 +6144,7 @@ enum: ["Brimstone key", "Large fossil", "Medium fossil", "Rare fossil", "Small f
 CONST_ZYGOMITES_RULE (name:VAR_ZYGOMITES_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
+
 
 /*@ define:module:bosses
 name: 'PvM: Bosses'
@@ -6201,7 +6191,7 @@ label: 'Hide: Other'
 group: Amoxliatl
 enum: ["Adamantite ore", "Blessed bone shards", "Coal", "Gold ore", "Prayer potion(3)", "Runite ore", "Water orb", "Water talisman"]
 */
-#define VAR_AMOXLIATL_ENUMLIST_FILTER_OTHER []
+#define VAR_AMOXLIATL_ENUMLIST_FILTER_OTHER ["Water talisman"]
 CONST_AMOXLIATL_RULE (name:VAR_AMOXLIATL_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -6236,7 +6226,7 @@ label: 'Hide: Weapons and Armour'
 group: Bryophyta
 enum: ["Adamant kiteshield", "Adamant platebody", "Battlestaff", "Rune chainbody", "Rune longsword", "Rune med helm", "Rune platelegs", "Rune plateskirt", "Rune sq shield", "Rune sword"]
 */
-#define VAR_BRYOPHYTA_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_BRYOPHYTA_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff","Rune sword"]
 CONST_BRYOPHYTA_RULE (name:VAR_BRYOPHYTA_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -6246,7 +6236,7 @@ label: 'Hide: Runes and Ammunition'
 group: Bryophyta
 enum: ["Adamant arrow", "Blood rune", "Chaos rune", "Cosmic rune", "Death rune", "Law rune", "Nature rune"]
 */
-#define VAR_BRYOPHYTA_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_BRYOPHYTA_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow"]
 CONST_BRYOPHYTA_RULE (name:VAR_BRYOPHYTA_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -6266,7 +6256,7 @@ label: 'Hide: Other'
 group: Bryophyta
 enum: ["Bryophyta's essence", "Strength potion(4)"]
 */
-#define VAR_BRYOPHYTA_ENUMLIST_FILTER_OTHER []
+#define VAR_BRYOPHYTA_ENUMLIST_FILTER_OTHER ["Strength potion(4)"]
 CONST_BRYOPHYTA_RULE (name:VAR_BRYOPHYTA_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -6311,7 +6301,7 @@ label: 'Hide: Supplies'
 group: Commander Zilyana
 enum: ["Magic potion(3)", "Prayer potion(4)", "Saradomin brew(3)", "Super defence(3)", "Super restore(4)"]
 */
-#define VAR_COMMANDER_ZILYANA_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_COMMANDER_ZILYANA_ENUMLIST_FILTER_SUPPLIES ["Super defence(3)"]
 CONST_COMMANDER_ZILYANA_RULE (name:VAR_COMMANDER_ZILYANA_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -6321,7 +6311,7 @@ label: 'Hide: Weapons and Armour'
 group: Commander Zilyana
 enum: ["Adamant platebody", "Rune dart", "Rune kiteshield", "Rune plateskirt"]
 */
-#define VAR_COMMANDER_ZILYANA_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_COMMANDER_ZILYANA_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant platebody"]
 CONST_COMMANDER_ZILYANA_RULE (name:VAR_COMMANDER_ZILYANA_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -6367,7 +6357,7 @@ label: 'Hide: Runes and Ammunition'
 group: Corporeal Beast
 enum: ["Adamant arrow", "Cannonball", "Cosmic rune", "Death rune", "Law rune", "Onyx bolts (e)", "Runite bolts", "Soul rune"]
 */
-#define VAR_CORPOREAL_BEAST_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_CORPOREAL_BEAST_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow"]
 CONST_CORPOREAL_BEAST_RULE (name:VAR_CORPOREAL_BEAST_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -6417,7 +6407,7 @@ label: 'Hide: Always'
 group: Dagannoth Kings
 enum: ["Dagannoth bones", "Dagannoth hide"]
 */
-#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_100 []
+#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_100 ["Dagannoth hide"]
 CONST_DAGANNOTH_KINGS_RULE (name:VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -6427,7 +6417,7 @@ label: 'Hide: Supplies'
 group: Dagannoth Kings
 enum: ["Antifire potion(2)", "Prayer potion(2)", "Restore potion(2)", "Super attack(2)", "Super defence(2)", "Super strength(2)", "Zamorak brew(2)"]
 */
-#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_SUPPLIES ["Antifire potion(2)","Restore potion(2)","Zamorak brew(2)"]
 CONST_DAGANNOTH_KINGS_RULE (name:VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -6437,7 +6427,7 @@ label: 'Hide: Weapons and Armour'
 group: Dagannoth Kings
 enum: ["Adamant axe", "Adamant dart", "Adamant platebody", "Air battlestaff", "Archer helm", "Archers ring", "Battlestaff", "Berserker ring", "Dragon axe", "Earth battlestaff", "Farseer helm", "Fremennik blade", "Fremennik helm", "Fremennik shield", "Iron knife", "Mithril 2h sword", "Mithril knife", "Mithril pickaxe", "Mithril warhammer", "Mud battlestaff", "Red d'hide vambraces", "Ring of life", "Rock-shell legs", "Rock-shell plate", "Rune axe", "Rune thrownaxe", "Seercull", "Seers ring", "Skeletal bottoms", "Skeletal top", "Spined body", "Spined chaps", "Steel kiteshield", "Steel knife", "Steel platebody", "Warrior ring", "Water battlestaff"]
 */
-#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant dart","Air battlestaff","Battlestaff","Earth battlestaff","Fremennik blade","Fremennik helm","Fremennik shield","Iron knife","Mithril 2h sword","Mithril knife","Mithril pickaxe","Mithril warhammer","Red d'hide vambraces","Ring of life","Rune axe","Rune thrownaxe","Steel kiteshield","Steel knife","Steel platebody","Water battlestaff"]
 CONST_DAGANNOTH_KINGS_RULE (name:VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -6447,7 +6437,7 @@ label: 'Hide: Runes and Ammunition'
 group: Dagannoth Kings
 enum: ["Air rune", "Blood rune", "Death rune", "Earth rune", "Iron arrow", "Law rune", "Mud rune", "Nature rune", "Runite bolts", "Steel arrow"]
 */
-#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Air rune","Earth rune","Iron arrow","Steel arrow"]
 CONST_DAGANNOTH_KINGS_RULE (name:VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -6457,7 +6447,7 @@ label: 'Hide: Materials'
 group: Dagannoth Kings
 enum: ["Adamantite bar", "Air talisman", "Blood talisman", "Body talisman", "Celastrus seed", "Chaos talisman", "Coal", "Cosmic talisman", "Death talisman", "Dragonfruit tree seed", "Earth talisman", "Fire talisman", "Hespori seed", "Iron ore", "Law talisman", "Mind talisman", "Mithril ore", "Nature talisman", "Redwood tree seed", "Soul talisman", "Spirit seed", "Steel bar", "Torstol seed", "Water talisman", "White lily seed"]
 */
-#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_MATERIALS []
+#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_MATERIALS ["Adamantite bar","Air talisman","Body talisman","Chaos talisman","Cosmic talisman","Death talisman","Earth talisman","Fire talisman","Iron ore","Mind talisman","Law talisman","Mithril ore","Nature talisman","Steel bar","Water talisman","White lily seed"]
 CONST_DAGANNOTH_KINGS_RULE (name:VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -6467,7 +6457,7 @@ label: 'Hide: Other'
 group: Dagannoth Kings
 enum: ["Bass", "Feather", "Grimy ranarr weed", "Maple logs", "Opal bolt tips", "Oyster pearls", "Pure essence", "Runite limbs", "Shark", "Swordfish", "Yew logs"]
 */
-#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_OTHER []
+#define VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_OTHER ["Bass","Feather","Maple logs","Opal bolt tips","Oyster pearls","Runite limbs","Swordfish"]
 CONST_DAGANNOTH_KINGS_RULE (name:VAR_DAGANNOTH_KINGS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -6492,7 +6482,7 @@ label: 'Hide: Always'
 group: Deranged archaeologist
 enum: ["Bones"]
 */
-#define VAR_DERANGED_ARCHAEOLOGIST_ENUMLIST_FILTER_100 []
+#define VAR_DERANGED_ARCHAEOLOGIST_ENUMLIST_FILTER_100 ["Bones"]
 CONST_DERANGED_ARCHAEOLOGIST_RULE (name:VAR_DERANGED_ARCHAEOLOGIST_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -6502,7 +6492,7 @@ label: 'Hide: Supplies'
 group: Deranged archaeologist
 enum: ["Anchovy pizza", "Potato with cheese", "Prayer potion(3)", "Shark"]
 */
-#define VAR_DERANGED_ARCHAEOLOGIST_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_DERANGED_ARCHAEOLOGIST_ENUMLIST_FILTER_SUPPLIES ["Anchovy pizza"]
 CONST_DERANGED_ARCHAEOLOGIST_RULE (name:VAR_DERANGED_ARCHAEOLOGIST_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -6632,7 +6622,7 @@ label: 'Hide: Weapons and Armour'
 group: Giant Mole
 enum: ["Adamant longsword", "Amulet of strength", "Mithril axe", "Mithril battleaxe", "Mithril platebody", "Rune med helm"]
 */
-#define VAR_GIANT_MOLE_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_GIANT_MOLE_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Mithril axe","Mithril battleaxe"]
 CONST_GIANT_MOLE_RULE (name:VAR_GIANT_MOLE_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -6642,7 +6632,7 @@ label: 'Hide: Runes and Ammunition'
 group: Giant Mole
 enum: ["Air rune", "Blood rune", "Death rune", "Fire rune", "Iron arrow", "Law rune"]
 */
-#define VAR_GIANT_MOLE_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_GIANT_MOLE_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Iron arrow"]
 CONST_GIANT_MOLE_RULE (name:VAR_GIANT_MOLE_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -6652,7 +6642,7 @@ label: 'Hide: Other'
 group: Giant Mole
 enum: ["Iron ore", "Mithril bar", "Oyster pearls", "Shark", "Yew logs"]
 */
-#define VAR_GIANT_MOLE_ENUMLIST_FILTER_OTHER []
+#define VAR_GIANT_MOLE_ENUMLIST_FILTER_OTHER ["Oyster pearls"]
 CONST_GIANT_MOLE_RULE (name:VAR_GIANT_MOLE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -6762,7 +6752,7 @@ label: 'Hide: Weapons and Armour'
 group: Kalphite Queen
 enum: ["Battlestaff", "Lava battlestaff", "Red d'hide body", "Rune chainbody", "Rune knife(p++)"]
 */
-#define VAR_KALPHITE_QUEEN_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_KALPHITE_QUEEN_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff","Red d'hide body","Rune knife(p++)"]
 CONST_KALPHITE_QUEEN_RULE (name:VAR_KALPHITE_QUEEN_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -6772,7 +6762,7 @@ label: 'Hide: Runes and Ammunition'
 group: Kalphite Queen
 enum: ["Blood rune", "Death rune", "Mithril arrow", "Rune arrow"]
 */
-#define VAR_KALPHITE_QUEEN_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_KALPHITE_QUEEN_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mithril arrow"]
 CONST_KALPHITE_QUEEN_RULE (name:VAR_KALPHITE_QUEEN_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -6827,7 +6817,7 @@ label: 'Hide: Always'
 group: Kreearra
 enum: ["Big bones", "Feather", "Frozen key piece (armadyl)"]
 */
-#define VAR_KREEARRA_ENUMLIST_FILTER_100 []
+#define VAR_KREEARRA_ENUMLIST_FILTER_100 ["Big bones","Feather"]
 CONST_KREEARRA_RULE (name:VAR_KREEARRA_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -6902,7 +6892,7 @@ label: 'Hide: Supplies'
 group: Kril Tsutsaroth
 enum: ["Super attack(3)", "Super restore(3)", "Super strength(3)", "Zamorak brew(3)"]
 */
-#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_SUPPLIES ["Zamorak brew(3)"]
 CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -6912,7 +6902,7 @@ label: 'Hide: Weapons and Armour'
 group: Kril Tsutsaroth
 enum: ["Adamant arrow(p++)", "Adamant platebody", "Dragon dagger(p++)", "Rune platelegs", "Rune scimitar"]
 */
-#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant arrow(p++)","Dragon dagger(p++)"]
 CONST_KRIL_TSUTSAROTH_RULE (name:VAR_KRIL_TSUTSAROTH_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -6987,7 +6977,7 @@ label: 'Hide: Materials'
 group: Nex
 enum: ["Air orb", "Coal", "Runite ore", "Uncut diamond", "Uncut ruby", "Wine of zamorak"]
 */
-#define VAR_NEX_ENUMLIST_FILTER_MATERIALS []
+#define VAR_NEX_ENUMLIST_FILTER_MATERIALS ["Air orb"]
 CONST_NEX_RULE (name:VAR_NEX_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -6997,7 +6987,7 @@ label: 'Hide: Other'
 group: Nex
 enum: ["Blood essence", "Ecumenical key shard", "Nihil shard", "Rune sword"]
 */
-#define VAR_NEX_ENUMLIST_FILTER_OTHER []
+#define VAR_NEX_ENUMLIST_FILTER_OTHER ["Rune sword"]
 CONST_NEX_RULE (name:VAR_NEX_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -7162,7 +7152,7 @@ label: 'Hide: Weapons and Armour'
 group: Sarachnis
 enum: ["Battlestaff", "Rune 2h sword", "Rune med helm", "Rune platebody"]
 */
-#define VAR_SARACHNIS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_SARACHNIS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Battlestaff"]
 CONST_SARACHNIS_RULE (name:VAR_SARACHNIS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -7172,7 +7162,7 @@ label: 'Hide: Runes and Ammunition'
 group: Sarachnis
 enum: ["Blood rune", "Chaos rune", "Cosmic rune", "Death rune", "Mithril arrow", "Mithril bolts", "Soul rune"]
 */
-#define VAR_SARACHNIS_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_SARACHNIS_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Mithril bolts"]
 CONST_SARACHNIS_RULE (name:VAR_SARACHNIS_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -7192,7 +7182,7 @@ label: 'Hide: Other'
 group: Sarachnis
 enum: ["Crystal key", "Dragon bones", "Egg potato", "Spider carcass", "Weapon poison(++)"]
 */
-#define VAR_SARACHNIS_ENUMLIST_FILTER_OTHER []
+#define VAR_SARACHNIS_ENUMLIST_FILTER_OTHER ["Spider carcass"]
 CONST_SARACHNIS_RULE (name:VAR_SARACHNIS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -7217,7 +7207,7 @@ label: 'Hide: Always'
 group: Scurrius
 enum: ["Big bones", "Raw rat meat"]
 */
-#define VAR_SCURRIUS_ENUMLIST_FILTER_100 []
+#define VAR_SCURRIUS_ENUMLIST_FILTER_100 ["Raw rat meat"]
 CONST_SCURRIUS_RULE (name:VAR_SCURRIUS_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -7227,7 +7217,7 @@ label: 'Hide: Supplies'
 group: Scurrius
 enum: ["Cheese", "Lobster", "Prayer potion(4)", "Ranging potion(1)", "Shark", "Super strength(1)", "Trout", "Tuna"]
 */
-#define VAR_SCURRIUS_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_SCURRIUS_ENUMLIST_FILTER_SUPPLIES ["Cheese","Lobster","Trout","Tuna"]
 CONST_SCURRIUS_RULE (name:VAR_SCURRIUS_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -7247,7 +7237,7 @@ label: 'Hide: Runes and Ammunition'
 group: Scurrius
 enum: ["Adamant arrow", "Chaos rune", "Death rune", "Law rune", "Rune arrow"]
 */
-#define VAR_SCURRIUS_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_SCURRIUS_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow"]
 CONST_SCURRIUS_RULE (name:VAR_SCURRIUS_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -7412,7 +7402,7 @@ label: 'Hide: Supplies'
 group: Yama
 enum: ["Pineapple pizza", "Prayer potion(3)", "Super combat potion(1)", "Super restore mix(2)", "Wild pie", "Zamorak mix(2)"]
 */
-#define VAR_YAMA_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_YAMA_ENUMLIST_FILTER_SUPPLIES ["Zamorak mix(2)","Super restore mix(2)"]
 CONST_YAMA_RULE (name:VAR_YAMA_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -7442,7 +7432,7 @@ label: 'Hide: Other'
 group: Yama
 enum: ["Aether catalyst", "Barrel of demonic tallow (full)", "Black bead", "Cabbage", "Chasm teleport scroll", "Demon dung", "Diabolic worms", "Diamond", "Emerald", "Onyx bolt tips", "Ruby", "Spinach roll"]
 */
-#define VAR_YAMA_ENUMLIST_FILTER_OTHER []
+#define VAR_YAMA_ENUMLIST_FILTER_OTHER ["Black bead","Cabbage","Demon dung","Spinach roll"]
 CONST_YAMA_RULE (name:VAR_YAMA_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -7532,6 +7522,7 @@ CONST_ZULRAH_RULE (name:VAR_ZULRAH_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 
+
 /*@ define:module:wilderness
 name: 'PvM: Wilderness Bosses'
 description: |
@@ -7557,7 +7548,7 @@ label: 'Hide: Always'
 group: Callisto
 enum: ["Big bones", "Bones"]
 */
-#define VAR_CALLISTO_ENUMLIST_FILTER_100 []
+#define VAR_CALLISTO_ENUMLIST_FILTER_100 ["Bones"]
 CONST_CALLISTO_RULE (name:VAR_CALLISTO_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -7607,7 +7598,7 @@ label: 'Hide: Other'
 group: Callisto
 enum: ["Blighted anglerfish", "Dark crab", "Dragon bones", "Super restore(4)", "Supercompost", "Wilderness crabs teleport"]
 */
-#define VAR_CALLISTO_ENUMLIST_FILTER_OTHER []
+#define VAR_CALLISTO_ENUMLIST_FILTER_OTHER ["Supercompost"]
 CONST_CALLISTO_RULE (name:VAR_CALLISTO_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -7707,7 +7698,7 @@ label: 'Hide: Always'
 group: Chaos Fanatic
 enum: ["Bones"]
 */
-#define VAR_CHAOS_FANATIC_ENUMLIST_FILTER_100 []
+#define VAR_CHAOS_FANATIC_ENUMLIST_FILTER_100 ["Bones"]
 CONST_CHAOS_FANATIC_RULE (name:VAR_CHAOS_FANATIC_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -7717,7 +7708,7 @@ label: 'Hide: Supplies'
 group: Chaos Fanatic
 enum: ["Anchovy pizza", "Monkfish", "Prayer potion(4)", "Shark"]
 */
-#define VAR_CHAOS_FANATIC_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_CHAOS_FANATIC_ENUMLIST_FILTER_SUPPLIES ["Anchovy pizza"]
 CONST_CHAOS_FANATIC_RULE (name:VAR_CHAOS_FANATIC_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -7747,7 +7738,7 @@ label: 'Hide: Other'
 group: Chaos Fanatic
 enum: ["Chaos talisman", "Grimy lantadyme", "Pure essence", "Ring of life", "Sinister key", "Uncut emerald", "Uncut sapphire", "Wine of zamorak"]
 */
-#define VAR_CHAOS_FANATIC_ENUMLIST_FILTER_OTHER []
+#define VAR_CHAOS_FANATIC_ENUMLIST_FILTER_OTHER ["Ring of life"]
 CONST_CHAOS_FANATIC_RULE (name:VAR_CHAOS_FANATIC_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -7782,7 +7773,7 @@ label: 'Hide: Always'
 group: Crazy archaeologist
 enum: ["Bones"]
 */
-#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_100 []
+#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_100 ["Bones"]
 CONST_CRAZY_ARCHAEOLOGIST_RULE (name:VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -7792,7 +7783,7 @@ label: 'Hide: Supplies'
 group: Crazy archaeologist
 enum: ["Anchovy pizza", "Potato with cheese", "Prayer potion(4)", "Shark"]
 */
-#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_SUPPLIES ["Anchovy pizza"]
 CONST_CRAZY_ARCHAEOLOGIST_RULE (name:VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -7802,7 +7793,7 @@ label: 'Hide: Weapons and Armour'
 group: Crazy archaeologist
 enum: ["Amulet of power", "Red d'hide body", "Rune crossbow", "Rune knife"]
 */
-#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Red d'hide body","Rune knife"]
 CONST_CRAZY_ARCHAEOLOGIST_RULE (name:VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -7822,7 +7813,7 @@ label: 'Hide: Other'
 group: Crazy archaeologist
 enum: ["Grimy dwarf weed", "Long bone", "Muddy key", "Onyx bolt tips", "Red dragonhide", "Rusty sword", "Silver ore", "Uncut emerald", "Uncut sapphire", "White berries"]
 */
-#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_OTHER []
+#define VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_OTHER ["Rusty sword"]
 CONST_CRAZY_ARCHAEOLOGIST_RULE (name:VAR_CRAZY_ARCHAEOLOGIST_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -7877,7 +7868,7 @@ label: 'Hide: Runes and Ammunition'
 group: King Black Dragon
 enum: ["Air rune", "Blood rune", "Fire rune", "Iron arrow", "Law rune", "Runite bolts"]
 */
-#define VAR_KING_BLACK_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_KING_BLACK_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Iron arrow"]
 CONST_KING_BLACK_DRAGON_RULE (name:VAR_KING_BLACK_DRAGON_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -7997,7 +7988,7 @@ label: 'Hide: Always'
 group: Venenatis
 enum: ["Big bones", "Bones"]
 */
-#define VAR_VENENATIS_ENUMLIST_FILTER_100 []
+#define VAR_VENENATIS_ENUMLIST_FILTER_100 ["Bones"]
 CONST_VENENATIS_RULE (name:VAR_VENENATIS_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -8017,7 +8008,7 @@ label: 'Hide: Weapons and Armour'
 group: Venenatis
 enum: ["Dragon dagger", "Mystic air staff", "Rune dart", "Rune knife", "Rune pickaxe", "Rune platelegs", "Rune sq shield"]
 */
-#define VAR_VENENATIS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_VENENATIS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Rune dart","Rune knife"]
 CONST_VENENATIS_RULE (name:VAR_VENENATIS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -8047,7 +8038,7 @@ label: 'Hide: Other'
 group: Venenatis
 enum: ["Antidote++(4)", "Blighted anglerfish", "Dark crab", "Super restore(4)", "Supercompost", "Wilderness crabs teleport"]
 */
-#define VAR_VENENATIS_ENUMLIST_FILTER_OTHER []
+#define VAR_VENENATIS_ENUMLIST_FILTER_OTHER ["Supercompost"]
 CONST_VENENATIS_RULE (name:VAR_VENENATIS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -8082,7 +8073,7 @@ label: 'Hide: Always'
 group: Vetion
 enum: ["Big bones", "Bones"]
 */
-#define VAR_VETION_ENUMLIST_FILTER_100 []
+#define VAR_VETION_ENUMLIST_FILTER_100 ["Bones"]
 CONST_VETION_RULE (name:VAR_VETION_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -8102,7 +8093,7 @@ label: 'Hide: Weapons and Armour'
 group: Vetion
 enum: ["Mystic fire staff", "Mystic robe bottom", "Mystic robe top", "Mystic water staff", "Rune dart", "Rune full helm", "Rune knife", "Rune pickaxe"]
 */
-#define VAR_VETION_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_VETION_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Rune dart","Rune knife"]
 CONST_VETION_RULE (name:VAR_VETION_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -8132,7 +8123,7 @@ label: 'Hide: Other'
 group: Vetion
 enum: ["Blighted anglerfish", "Dark crab", "Sanfew serum(4)", "Super restore(4)", "Supercompost", "Wilderness crabs teleport"]
 */
-#define VAR_VETION_ENUMLIST_FILTER_OTHER []
+#define VAR_VETION_ENUMLIST_FILTER_OTHER ["Supercompost"]
 CONST_VETION_RULE (name:VAR_VETION_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -8146,6 +8137,7 @@ enum: ["Brimstone key", "Curved bone", "Long bone", "Looting bag", "Skeleton cha
 CONST_VETION_RULE (name:VAR_VETION_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
+
 
 /*@ define:module:dt2
 name: 'PvM: DT2 Bosses'
@@ -8182,7 +8174,7 @@ label: 'Hide: Weapons and Armour'
 group: Duke Sucellus
 enum: ["Adamant chainbody", "Bronze chainbody", "Dragon platelegs", "Mithril chainbody"]
 */
-#define VAR_DUKE_SUCELLUS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_DUKE_SUCELLUS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant chainbody","Bronze chainbody","Mithril chainbody"]
 CONST_DUKE_SUCELLUS_RULE (name:VAR_DUKE_SUCELLUS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -8202,7 +8194,7 @@ label: 'Hide: Materials'
 group: Duke Sucellus
 enum: ["Adamantite ore", "Bronze bar", "Coal", "Dragon arrowtips", "Dragon javelin heads", "Emerald", "Iron ore", "Mithril ore", "Pure essence", "Raw sea turtle", "Ruby", "Rune javelin heads", "Runite ore", "Sapphire", "Uncut diamond", "Uncut ruby"]
 */
-#define VAR_DUKE_SUCELLUS_ENUMLIST_FILTER_MATERIALS []
+#define VAR_DUKE_SUCELLUS_ENUMLIST_FILTER_MATERIALS ["Bronze bar"]
 CONST_DUKE_SUCELLUS_RULE (name:VAR_DUKE_SUCELLUS_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -8247,7 +8239,7 @@ label: 'Hide: Runes and Ammunition'
 group: Leviathan
 enum: ["Adamant arrow", "Body rune", "Bronze arrow", "Earth rune", "Mithril arrow", "Rune arrow", "Smoke rune", "Soul rune"]
 */
-#define VAR_LEVIATHAN_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_LEVIATHAN_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant arrow","Body rune","Bronze arrow"]
 CONST_LEVIATHAN_RULE (name:VAR_LEVIATHAN_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -8302,7 +8294,7 @@ label: 'Hide: Runes and Ammunition'
 group: Vardorvis
 enum: ["Adamant javelin", "Blood rune", "Bronze javelin", "Fire rune", "Lava rune", "Mind rune", "Mithril javelin", "Onyx bolts (e)", "Soul rune"]
 */
-#define VAR_VARDORVIS_ENUMLIST_FILTER_RUNESANDAMMUNITION []
+#define VAR_VARDORVIS_ENUMLIST_FILTER_RUNESANDAMMUNITION ["Adamant javelin","Bronze javelin","Mithril javelin"]
 CONST_VARDORVIS_RULE (name:VAR_VARDORVIS_ENUMLIST_FILTER_RUNESANDAMMUNITION) {
   hidden = true;
 }
@@ -8440,7 +8432,7 @@ label: 'Hide: Materials'
 group: Abyssal Sire
 enum: ["Acorn", "Air talisman", "Apple tree seed", "Banana tree seed", "Blood talisman", "Body talisman", "Calquat tree seed", "Chaos talisman", "Coal", "Cosmic talisman", "Curry tree seed", "Death talisman", "Earth orb", "Earth talisman", "Fire talisman", "Grimy cadantine", "Grimy dwarf weed", "Grimy kwuarm", "Grimy lantadyme", "Law talisman", "Magic logs", "Magic seed", "Maple seed", "Mind talisman", "Nature talisman", "Onyx bolt tips", "Orange tree seed", "Palm tree seed", "Papaya tree seed", "Pineapple seed", "Pure essence", "Runite bar", "Runite ore", "Soul talisman", "Uncut diamond", "Water talisman", "Willow seed", "Yew seed"]
 */
-#define VAR_ABYSSAL_SIRE_ENUMLIST_FILTER_MATERIALS []
+#define VAR_ABYSSAL_SIRE_ENUMLIST_FILTER_MATERIALS ["Air talisman","Body talisman","Cosmic talisman"]
 CONST_ABYSSAL_SIRE_RULE (name:VAR_ABYSSAL_SIRE_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -8450,7 +8442,7 @@ label: 'Hide: Other'
 group: Abyssal Sire
 enum: ["Binding necklace", "Chilli potato", "Jug of water", "Saradomin brew(3)", "Super restore(4)", "Unsired"]
 */
-#define VAR_ABYSSAL_SIRE_ENUMLIST_FILTER_OTHER []
+#define VAR_ABYSSAL_SIRE_ENUMLIST_FILTER_OTHER ["Jug of water"]
 CONST_ABYSSAL_SIRE_RULE (name:VAR_ABYSSAL_SIRE_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -8647,7 +8639,7 @@ label: 'Hide: Weapons and Armour'
 group: Cerberus
 enum: ["Battlestaff", "Black d'hide body", "Lava battlestaff", "Rune 2h sword", "Rune axe", "Rune chainbody", "Rune full helm", "Rune halberd", "Rune pickaxe", "Rune platebody"]
 */
-#define VAR_CERBERUS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_CERBERUS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Rune axe"]
 CONST_CERBERUS_RULE (name:VAR_CERBERUS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -8667,7 +8659,7 @@ label: 'Hide: Other'
 group: Cerberus
 enum: ["Ashes", "Coal", "Dragon bones", "Fire orb", "Grimy torstol", "Key master teleport", "Runite ore", "Summer pie", "Super restore(4)", "Torstol seed", "Uncut diamond", "Unholy symbol", "Wine of zamorak"]
 */
-#define VAR_CERBERUS_ENUMLIST_FILTER_OTHER []
+#define VAR_CERBERUS_ENUMLIST_FILTER_OTHER ["Ashes","Unholy symbol"]
 CONST_CERBERUS_RULE (name:VAR_CERBERUS_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -8712,7 +8704,7 @@ label: 'Hide: Supplies'
 group: Grotesque Guardians
 enum: ["Magic potion(2)", "Mushroom potato", "Prayer potion(4)", "Ranging potion(2)", "Saradomin brew(4)", "Super combat potion(2)"]
 */
-#define VAR_GROTESQUE_GUARDIANS_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_GROTESQUE_GUARDIANS_ENUMLIST_FILTER_SUPPLIES ["Magic potion(2)"]
 CONST_GROTESQUE_GUARDIANS_RULE (name:VAR_GROTESQUE_GUARDIANS_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -8722,7 +8714,7 @@ label: 'Hide: Weapons and Armour'
 group: Grotesque Guardians
 enum: ["Adamant boots", "Dragon longsword", "Dragon med helm", "Rune 2h sword", "Rune battleaxe", "Rune full helm", "Rune pickaxe", "Rune platelegs"]
 */
-#define VAR_GROTESQUE_GUARDIANS_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_GROTESQUE_GUARDIANS_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Adamant boots"]
 CONST_GROTESQUE_GUARDIANS_RULE (name:VAR_GROTESQUE_GUARDIANS_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -8787,7 +8779,7 @@ label: 'Hide: Materials'
 group: Kraken
 enum: ["Battlestaff", "Diamond", "Grimy snapdragon", "Magic seed", "Oak plank", "Raw monkfish", "Raw shark", "Runite bar", "Seaweed", "Torstol seed", "Unpowered orb", "Watermelon seed"]
 */
-#define VAR_KRAKEN_ENUMLIST_FILTER_MATERIALS []
+#define VAR_KRAKEN_ENUMLIST_FILTER_MATERIALS ["Seaweed"]
 CONST_KRAKEN_RULE (name:VAR_KRAKEN_ENUMLIST_FILTER_MATERIALS) {
   hidden = true;
 }
@@ -8797,7 +8789,7 @@ label: 'Hide: Other'
 group: Kraken
 enum: ["Antidote++(4)", "Bucket", "Crystal key", "Dragonstone ring", "Edible seaweed", "Harpoon", "Kraken tentacle", "Pirate boots", "Rusty sword", "Sanfew serum(4)", "Shark"]
 */
-#define VAR_KRAKEN_ENUMLIST_FILTER_OTHER []
+#define VAR_KRAKEN_ENUMLIST_FILTER_OTHER ["Bucket","Edible seaweed","Harpoon","Pirate boots","Rusty sword"]
 CONST_KRAKEN_RULE (name:VAR_KRAKEN_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
@@ -8822,7 +8814,7 @@ label: 'Hide: Always'
 group: Thermonuclear smoke devil
 enum: ["Ashes"]
 */
-#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_100 []
+#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_100 ["Ashes"]
 CONST_THERMONUCLEAR_SMOKE_DEVIL_RULE (name:VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_100) {
   hidden = true;
 }
@@ -8832,7 +8824,7 @@ label: 'Hide: Supplies'
 group: Thermonuclear smoke devil
 enum: ["Prayer potion(4)", "Sanfew serum(4)", "Tuna potato", "Ugthanki kebab"]
 */
-#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_SUPPLIES []
+#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_SUPPLIES ["Ugthanki kebab"]
 CONST_THERMONUCLEAR_SMOKE_DEVIL_RULE (name:VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_SUPPLIES) {
   hidden = true;
 }
@@ -8842,7 +8834,7 @@ label: 'Hide: Weapons and Armour'
 group: Thermonuclear smoke devil
 enum: ["Ancient staff", "Dragon chainbody", "Dragon scimitar", "Mystic air staff", "Mystic fire staff", "Occult necklace", "Red d'hide body", "Rune battleaxe", "Rune chainbody", "Rune dagger", "Rune knife(p++)", "Rune scimitar", "Smoke battlestaff"]
 */
-#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR []
+#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR ["Rune knife(p++)"]
 CONST_THERMONUCLEAR_SMOKE_DEVIL_RULE (name:VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_WEAPONSANDARMOUR) {
   hidden = true;
 }
@@ -8872,7 +8864,7 @@ label: 'Hide: Other'
 group: Thermonuclear smoke devil
 enum: ["Bullseye lantern", "Crystal key", "Desert goat horn", "Dragonstone ring", "Fire talisman", "Grapes", "Grimy toadflax", "Magic seed", "Onyx bolt tips", "Snapdragon seed", "Tinderbox"]
 */
-#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_OTHER []
+#define VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_OTHER ["Bullseye lantern"]
 CONST_THERMONUCLEAR_SMOKE_DEVIL_RULE (name:VAR_THERMONUCLEAR_SMOKE_DEVIL_ENUMLIST_FILTER_OTHER) {
   hidden = true;
 }
