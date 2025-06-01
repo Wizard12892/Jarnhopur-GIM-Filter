@@ -597,12 +597,12 @@ description: |
   Provides per-monster filtering for common monsters.
 */
 
-#define CONST_AREA_ANKOU0 [2950,3729,0,3001,3776,0] // [[The Forgotten Cemetery]]
-#define CONST_AREA_ANKOU1 [1953,4897,0,1988,4958,0] // [[Stronghold of Security: Sepulchre of Death]]
-#define CONST_AREA_ANKOU2 [1993,4941,0,2019,4967,0] // [[Stronghold of Security: Sepulchre of Death]]
-#define CONST_AREA_ANKOU3 [2458,9787,0,2491,9818,0] // [[Stronghold Slayer Cave]]
+#define CONST_AREA_ANKOU0 [2950,3729,0,3002,3776,0] // [[The Forgotten Cemetery]]
+#define CONST_AREA_ANKOU1 [1953,4897,0,1989,4958,0] // [[Stronghold of Security: Sepulchre of Death]]
+#define CONST_AREA_ANKOU2 [1993,4941,0,2021,4967,0] // [[Stronghold of Security: Sepulchre of Death]]
+#define CONST_AREA_ANKOU3 [2458,9787,0,2493,9818,0] // [[Stronghold Slayer Cave]]
 #define CONST_AREA_ANKOU4 [3338,10054,0,3382,10094,0] // [[Wilderness Slayer Cave]]
-#define CONST_AREA_ANKOU5 [1627,9980,0,1656,10009,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_ANKOU5 [1627,9980,0,1658,10009,0] // [[Catacombs of Kourend]]
 #define CONST_ANKOU_RULE(_cond) rule ((area:CONST_AREA_ANKOU0 || area:CONST_AREA_ANKOU1 || area:CONST_AREA_ANKOU2 || area:CONST_AREA_ANKOU3 || area:CONST_AREA_ANKOU4 || area:CONST_AREA_ANKOU5) && (_cond))
 
 /*@ define:input
@@ -667,8 +667,8 @@ CONST_ANKOU_RULE (name:VAR_ANKOU_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_AVIANSIE0 [2823,5249,0,2887,5320,0] // [[God Wars Dungeon]]
-#define CONST_AREA_AVIANSIE1 [2928,10096,0,2957,10133,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AREA_AVIANSIE0 [2823,5249,0,2888,5320,0] // [[God Wars Dungeon]]
+#define CONST_AREA_AVIANSIE1 [2928,10096,0,2961,10133,0] // [[Wilderness God Wars Dungeon]]
 #define CONST_AVIANSIE_RULE(_cond) rule ((area:CONST_AREA_AVIANSIE0 || area:CONST_AREA_AVIANSIE1) && (_cond))
 
 /*@ define:input
@@ -733,8 +733,9 @@ CONST_AVIANSIE_RULE (name:VAR_AVIANSIE_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_BANDIT0 [3014,3646,0,3050,3716,0] // [[Bandit Camp (Wilderness)]]
-#define CONST_BANDIT_RULE(_cond) rule ((area:CONST_AREA_BANDIT0) && (_cond))
+#define CONST_AREA_BANDIT0 [3014,3646,0,3054,3716,0] // [[Bandit Camp (Wilderness)]]
+#define CONST_AREA_BANDIT1 [3420,10060,0,3440,10080,0] // [[Wilderness Slayer Cave]]
+#define CONST_BANDIT_RULE(_cond) rule ((area:CONST_AREA_BANDIT0 || area:CONST_AREA_BANDIT1) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -798,12 +799,12 @@ CONST_BANDIT_RULE (name:VAR_BANDIT_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_BLACK_DEMON0 [2690,9469,0,2719,9499,0] // [[Brimhaven Dungeon]]
-#define CONST_AREA_BLACK_DEMON1 [1708,10069,0,1730,10100,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_BLACK_DEMON2 [1346,9859,0,1398,9911,0] // [[Chasm of Fire (Bottom Level)]]
-#define CONST_AREA_BLACK_DEMON3 [3074,9947,0,3098,9971,0] // [[Edgeville Dungeon (Wilderness)]]
+#define CONST_AREA_BLACK_DEMON0 [2690,9469,0,2725,9499,0] // [[Brimhaven Dungeon]]
+#define CONST_AREA_BLACK_DEMON1 [1708,10069,0,1731,10100,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_BLACK_DEMON2 [1346,9859,0,1399,9911,0] // [[Chasm of Fire (Bottom Level)]]
+#define CONST_AREA_BLACK_DEMON3 [3074,9947,0,3102,9971,0] // [[Edgeville Dungeon (Wilderness)]]
 #define CONST_AREA_BLACK_DEMON4 [2816,9753,0,2885,9811,0] // [[Taverley Dungeon]]
-#define CONST_AREA_BLACK_DEMON5 [3344,10104,0,3371,10135,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_BLACK_DEMON5 [3344,10104,0,3377,10135,0] // [[Wilderness Slayer Cave]]
 #define CONST_BLACK_DEMON_RULE(_cond) rule ((area:CONST_AREA_BLACK_DEMON0 || area:CONST_AREA_BLACK_DEMON1 || area:CONST_AREA_BLACK_DEMON2 || area:CONST_AREA_BLACK_DEMON3 || area:CONST_AREA_BLACK_DEMON4 || area:CONST_AREA_BLACK_DEMON5) && (_cond))
 
 /*@ define:input
@@ -868,15 +869,17 @@ CONST_BLACK_DEMON_RULE (name:VAR_BLACK_DEMON_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_BLACK_KNIGHT0 [3298,3755,0,3324,3783,0] // [[North-east of Bone Yard (Wilderness)]]
-#define CONST_AREA_BLACK_KNIGHT1 [3216,3505,0,3236,3525,0] // [[North of Varrock]]
-#define CONST_AREA_BLACK_KNIGHT2 [3006,3492,0,3041,3527,0] // [[Black Knights' Fortress (0)]]
-#define CONST_AREA_BLACK_KNIGHT3 [3013,3832,0,3067,3866,0] // [[Lava Maze (Wilderness)]]
-#define CONST_AREA_BLACK_KNIGHT4 [3005,3502,0,3033,3526,0] // [[Black Knights' Fortress (1)]]
-#define CONST_AREA_BLACK_KNIGHT5 [3004,3504,0,3033,3526,0] // [[Black Knights' Fortress (2)]]
-#define CONST_AREA_BLACK_KNIGHT6 [2881,9663,0,2933,9721,0] // [[Taverley Dungeon]]
-#define CONST_AREA_BLACK_KNIGHT7 [2929,9802,0,2949,9822,0] // [[Taverley Dungeon]]
-#define CONST_BLACK_KNIGHT_RULE(_cond) rule ((area:CONST_AREA_BLACK_KNIGHT0 || area:CONST_AREA_BLACK_KNIGHT1 || area:CONST_AREA_BLACK_KNIGHT2 || area:CONST_AREA_BLACK_KNIGHT3 || area:CONST_AREA_BLACK_KNIGHT4 || area:CONST_AREA_BLACK_KNIGHT5 || area:CONST_AREA_BLACK_KNIGHT6 || area:CONST_AREA_BLACK_KNIGHT7) && (_cond))
+#define CONST_AREA_BLACK_KNIGHT0 [3298,3755,0,3327,3783,0] // [[North-east of Bone Yard (Wilderness)]]
+#define CONST_AREA_BLACK_KNIGHT1 [3091,3210,0,3111,3230,0] // [[South of Draynor Village Bank]]
+#define CONST_AREA_BLACK_KNIGHT2 [3216,3505,0,3244,3528,0] // [[North of Varrock]]
+#define CONST_AREA_BLACK_KNIGHT3 [3267,3495,0,3287,3515,0] // [[Jolly Boar Inn]]
+#define CONST_AREA_BLACK_KNIGHT4 [3006,3492,0,3042,3527,0] // [[Black Knights' Fortress (0)]]
+#define CONST_AREA_BLACK_KNIGHT5 [3013,3832,0,3068,3866,0] // [[Lava Maze (Wilderness)]]
+#define CONST_AREA_BLACK_KNIGHT6 [3005,3500,0,3034,3526,0] // [[Black Knights' Fortress (1)]]
+#define CONST_AREA_BLACK_KNIGHT7 [3004,3497,0,3036,3526,0] // [[Black Knights' Fortress (2)]]
+#define CONST_AREA_BLACK_KNIGHT8 [2881,9663,0,2933,9721,0] // [[Taverley Dungeon]]
+#define CONST_AREA_BLACK_KNIGHT9 [2929,9791,0,2953,9822,0] // [[Taverley Dungeon]]
+#define CONST_BLACK_KNIGHT_RULE(_cond) rule ((area:CONST_AREA_BLACK_KNIGHT0 || area:CONST_AREA_BLACK_KNIGHT1 || area:CONST_AREA_BLACK_KNIGHT2 || area:CONST_AREA_BLACK_KNIGHT3 || area:CONST_AREA_BLACK_KNIGHT4 || area:CONST_AREA_BLACK_KNIGHT5 || area:CONST_AREA_BLACK_KNIGHT6 || area:CONST_AREA_BLACK_KNIGHT7 || area:CONST_AREA_BLACK_KNIGHT8 || area:CONST_AREA_BLACK_KNIGHT9) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -940,12 +943,12 @@ CONST_BLACK_KNIGHT_RULE (name:VAR_BLACK_KNIGHT_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_BRUTAL_DRAGONS0 [1746,5316,0,1784,5368,0] // [[Ancient Cavern]]
-#define CONST_AREA_BRUTAL_DRAGONS1 [1618,5316,0,1656,5368,0] // [[Ancient Cavern during Dragon Slayer II]]
-#define CONST_AREA_BRUTAL_DRAGONS2 [1619,10061,0,1639,10081,0] // [[Catacombs of Kourend (north-west)]]
+#define CONST_AREA_BRUTAL_DRAGONS0 [1746,5316,0,1788,5368,0] // [[Ancient Cavern]]
+#define CONST_AREA_BRUTAL_DRAGONS1 [1618,5316,0,1660,5368,0] // [[Ancient Cavern during Dragon Slayer II]]
+#define CONST_AREA_BRUTAL_DRAGONS2 [1619,10061,0,1643,10087,0] // [[Catacombs of Kourend (north-west)]]
 #define CONST_AREA_BRUTAL_DRAGONS3 [1636,9594,0,1666,9623,0] // [[Ruins of Tapoyauik]]
-#define CONST_AREA_BRUTAL_DRAGONS4 [1601,10066,0,1626,10087,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_BRUTAL_DRAGONS5 [1601,10080,0,1627,10107,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_BRUTAL_DRAGONS4 [1601,10061,0,1627,10087,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_BRUTAL_DRAGONS5 [1601,10080,0,1628,10107,0] // [[Catacombs of Kourend]]
 #define CONST_BRUTAL_DRAGONS_RULE(_cond) rule ((area:CONST_AREA_BRUTAL_DRAGONS0 || area:CONST_AREA_BRUTAL_DRAGONS1 || area:CONST_AREA_BRUTAL_DRAGONS2 || area:CONST_AREA_BRUTAL_DRAGONS3 || area:CONST_AREA_BRUTAL_DRAGONS4 || area:CONST_AREA_BRUTAL_DRAGONS5) && (_cond))
 
 /*@ define:input
@@ -1020,10 +1023,10 @@ CONST_BRUTAL_DRAGONS_RULE (name:VAR_BRUTAL_DRAGONS_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_CATABLEPON0 [1940,4985,0,1971,5010,0] // [[Stronghold of Security: Pit of Pestilence]]
-#define CONST_AREA_CATABLEPON1 [1956,5015,0,1980,5038,0] // [[Stronghold of Security: Pit of Pestilence]]
+#define CONST_AREA_CATABLEPON0 [1940,4985,0,1973,5010,0] // [[Stronghold of Security: Pit of Pestilence]]
+#define CONST_AREA_CATABLEPON1 [1956,5014,0,1982,5038,0] // [[Stronghold of Security: Pit of Pestilence]]
 #define CONST_AREA_CATABLEPON2 [1961,5034,0,1988,5060,0] // [[Stronghold of Security: Pit of Pestilence]]
-#define CONST_AREA_CATABLEPON3 [1917,5025,0,1947,5059,0] // [[Stronghold of Security: Pit of Pestilence]]
+#define CONST_AREA_CATABLEPON3 [1917,5025,0,1948,5059,0] // [[Stronghold of Security: Pit of Pestilence]]
 #define CONST_CATABLEPON_RULE(_cond) rule ((area:CONST_AREA_CATABLEPON0 || area:CONST_AREA_CATABLEPON1 || area:CONST_AREA_CATABLEPON2 || area:CONST_AREA_CATABLEPON3) && (_cond))
 
 /*@ define:input
@@ -1078,12 +1081,12 @@ CONST_CATABLEPON_RULE (name:VAR_CATABLEPON_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_CHAOS_DRUID0 [2551,3345,0,2573,3367,0] // [[Chaos Druid Tower]]
-#define CONST_AREA_CHAOS_DRUID1 [3726,3303,0,3749,3331,0] // [[Top of Slepe Church]]
+#define CONST_AREA_CHAOS_DRUID0 [2551,3345,0,2573,3368,0] // [[Chaos Druid Tower]]
+#define CONST_AREA_CHAOS_DRUID1 [3726,3303,0,3752,3331,0] // [[Top of Slepe Church]]
 #define CONST_AREA_CHAOS_DRUID2 [3094,9915,0,3125,9953,0] // [[Edgeville Dungeon (Wilderness)]]
-#define CONST_AREA_CHAOS_DRUID3 [2919,9836,0,2946,9862,0] // [[Taverley Dungeon]]
+#define CONST_AREA_CHAOS_DRUID3 [2919,9836,0,2947,9862,0] // [[Taverley Dungeon]]
 #define CONST_AREA_CHAOS_DRUID4 [2601,9472,0,2626,9498,0] // [[Yanille Agility Dungeon]]
-#define CONST_AREA_CHAOS_DRUID5 [2603,9511,0,2624,9535,0] // [[Yanille Agility Dungeon]]
+#define CONST_AREA_CHAOS_DRUID5 [2603,9511,0,2626,9535,0] // [[Yanille Agility Dungeon]]
 #define CONST_CHAOS_DRUID_RULE(_cond) rule ((area:CONST_AREA_CHAOS_DRUID0 || area:CONST_AREA_CHAOS_DRUID1 || area:CONST_AREA_CHAOS_DRUID2 || area:CONST_AREA_CHAOS_DRUID3 || area:CONST_AREA_CHAOS_DRUID4 || area:CONST_AREA_CHAOS_DRUID5) && (_cond))
 
 /*@ define:input
@@ -1138,30 +1141,32 @@ CONST_CHAOS_DRUID_RULE (name:VAR_CHAOS_DRUID_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_CHROMATIC_DRAGONS0 [3321,3662,0,3357,3717,0] // [[East of the Boneyard Hunter area]]
-#define CONST_AREA_CHROMATIC_DRAGONS1 [2963,3601,0,2987,3630,0] // [[West of the Dark Warriors' Fortress]]
-#define CONST_AREA_CHROMATIC_DRAGONS2 [3127,3685,0,3159,3717,0] // [[North of the Graveyard of Shadows]]
-#define CONST_AREA_CHROMATIC_DRAGONS3 [3068,3800,0,3117,3831,0] // [[South of the Lava Maze]]
+#define CONST_AREA_CHROMATIC_DRAGONS0 [3321,3662,0,3358,3717,0] // [[East of the Boneyard Hunter area]]
+#define CONST_AREA_CHROMATIC_DRAGONS1 [2963,3601,0,2992,3630,0] // [[West of the Dark Warriors' Fortress]]
+#define CONST_AREA_CHROMATIC_DRAGONS2 [3127,3685,0,3168,3718,0] // [[North of the Graveyard of Shadows]]
+#define CONST_AREA_CHROMATIC_DRAGONS3 [3068,3800,0,3128,3831,0] // [[South of the Lava Maze]]
 #define CONST_AREA_CHROMATIC_DRAGONS4 [3400,10053,0,3428,10078,0] // [[Wilderness Slayer Cave]]
-#define CONST_AREA_CHROMATIC_DRAGONS5 [3386,10109,0,3407,10134,0] // [[Wilderness Slayer Cave]]
-#define CONST_AREA_CHROMATIC_DRAGONS6 [1929,8981,0,1949,9001,0] // [[Corsair Cove Dungeon/Myths' Guild (basement)]]
+#define CONST_AREA_CHROMATIC_DRAGONS5 [3386,10109,0,3412,10134,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_CHROMATIC_DRAGONS6 [1929,8981,0,1954,9006,0] // [[Corsair Cove Dungeon/Myths' Guild (basement)]]
 #define CONST_AREA_CHROMATIC_DRAGONS7 [1915,8957,0,1941,8996,0] // [[Corsair Cove Dungeon/Myths' Guild (basement)Requires completion of Dragon Slayer II.]]
-#define CONST_AREA_CHROMATIC_DRAGONS8 [2110,9289,0,2137,9315,0] // [[Isle of Souls Dungeon]]
-#define CONST_AREA_CHROMATIC_DRAGONS9 [2558,9421,0,2619,9471,0] // [[Ogre EnclaveRequires completion of Watchtower.]]
-#define CONST_AREA_CHROMATIC_DRAGONS10 [2887,9764,0,2922,9812,0] // [[Taverley DungeonTaverley]]
-#define CONST_AREA_CHROMATIC_DRAGONS11 [2879,9794,0,2963,9837,0] // [[Taverley Dungeon (Upper Level)Requires a blue dragon Slayer task.Requires either a dusty key or .]]
-#define CONST_AREA_CHROMATIC_DRAGONS12 [1571,9595,0,1620,9624,0] // [[Ruins of Tapoyauik (Bottom floor)Requires completion of Heart of Darkness.]]
-#define CONST_AREA_CHROMATIC_DRAGONS13 [1565,9595,0,1586,9621,0] // [[Ruins of Tapoyauik (Bottom floor)Requires completion of Heart of Darkness.]]
-#define CONST_AREA_CHROMATIC_DRAGONS14 [2687,9490,0,2734,9560,0] // [[Brimhaven Dungeon]]
-#define CONST_AREA_CHROMATIC_DRAGONS15 [1900,8985,0,1921,9012,0] // [[Corsair Cove Dungeon/Myths' Guild (basement)]]
-#define CONST_AREA_CHROMATIC_DRAGONS16 [1802,9917,0,1832,9947,0] // [[Forthos Dungeon]]
-#define CONST_AREA_CHROMATIC_DRAGONS17 [2764,9601,0,2809,9659,0] // [[Taverley Dungeon (Upper Level)]]
-#define CONST_AREA_CHROMATIC_DRAGONS18 [2819,9816,0,2839,9836,0] // [[Taverley Dungeon]]
-#define CONST_AREA_CHROMATIC_DRAGONS19 [3346,10147,0,3371,10169,0] // [[Wilderness Slayer Cave]]
-#define CONST_AREA_CHROMATIC_DRAGONS20 [3038,10256,0,3058,10276,0] // [[Lava Maze Dungeon]]
-#define CONST_AREA_CHROMATIC_DRAGONS21 [1932,8957,0,1952,8977,0] // [[Corsair Cove Dungeon/Myths' Guild (basement)]]
-#define CONST_AREA_CHROMATIC_DRAGONS22 [2438,4349,0,2469,4380,0] // [[Evil Chicken's Lair]]
-#define CONST_CHROMATIC_DRAGONS_RULE(_cond) rule ((area:CONST_AREA_CHROMATIC_DRAGONS0 || area:CONST_AREA_CHROMATIC_DRAGONS1 || area:CONST_AREA_CHROMATIC_DRAGONS2 || area:CONST_AREA_CHROMATIC_DRAGONS3 || area:CONST_AREA_CHROMATIC_DRAGONS4 || area:CONST_AREA_CHROMATIC_DRAGONS5 || area:CONST_AREA_CHROMATIC_DRAGONS6 || area:CONST_AREA_CHROMATIC_DRAGONS7 || area:CONST_AREA_CHROMATIC_DRAGONS8 || area:CONST_AREA_CHROMATIC_DRAGONS9 || area:CONST_AREA_CHROMATIC_DRAGONS10 || area:CONST_AREA_CHROMATIC_DRAGONS11 || area:CONST_AREA_CHROMATIC_DRAGONS12 || area:CONST_AREA_CHROMATIC_DRAGONS13 || area:CONST_AREA_CHROMATIC_DRAGONS14 || area:CONST_AREA_CHROMATIC_DRAGONS15 || area:CONST_AREA_CHROMATIC_DRAGONS16 || area:CONST_AREA_CHROMATIC_DRAGONS17 || area:CONST_AREA_CHROMATIC_DRAGONS18 || area:CONST_AREA_CHROMATIC_DRAGONS19 || area:CONST_AREA_CHROMATIC_DRAGONS20 || area:CONST_AREA_CHROMATIC_DRAGONS21 || area:CONST_AREA_CHROMATIC_DRAGONS22) && (_cond))
+#define CONST_AREA_CHROMATIC_DRAGONS8 [2898,9895,0,2918,9915,0] // [[Heroes' Guild BasementRequires completion of Heroes' Quest.]]
+#define CONST_AREA_CHROMATIC_DRAGONS9 [2110,9289,0,2139,9315,0] // [[Isle of Souls Dungeon]]
+#define CONST_AREA_CHROMATIC_DRAGONS10 [2558,9421,0,2619,9471,0] // [[Ogre EnclaveRequires completion of Watchtower.]]
+#define CONST_AREA_CHROMATIC_DRAGONS11 [2887,9764,0,2930,9812,0] // [[Taverley DungeonTaverley]]
+#define CONST_AREA_CHROMATIC_DRAGONS12 [2879,9794,0,2965,9837,0] // [[Taverley Dungeon (Upper Level)Requires a blue dragon Slayer task.Requires either a dusty key or .]]
+#define CONST_AREA_CHROMATIC_DRAGONS13 [1571,9595,0,1620,9627,0] // [[Ruins of Tapoyauik (Bottom floor)Requires completion of Heart of Darkness.]]
+#define CONST_AREA_CHROMATIC_DRAGONS14 [1565,9595,0,1586,9621,0] // [[Ruins of Tapoyauik (Bottom floor)Requires completion of Heart of Darkness.]]
+#define CONST_AREA_CHROMATIC_DRAGONS15 [2687,9490,0,2734,9560,0] // [[Brimhaven Dungeon]]
+#define CONST_AREA_CHROMATIC_DRAGONS16 [1900,8985,0,1928,9015,0] // [[Corsair Cove Dungeon/Myths' Guild (basement)]]
+#define CONST_AREA_CHROMATIC_DRAGONS17 [1802,9917,0,1833,9947,0] // [[Forthos Dungeon]]
+#define CONST_AREA_CHROMATIC_DRAGONS18 [2764,9601,0,2817,9659,0] // [[Taverley Dungeon (Upper Level)]]
+#define CONST_AREA_CHROMATIC_DRAGONS19 [2819,9814,0,2845,9836,0] // [[Taverley Dungeon]]
+#define CONST_AREA_CHROMATIC_DRAGONS20 [3346,10145,0,3376,10169,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_CHROMATIC_DRAGONS21 [3038,10256,0,3064,10279,0] // [[Lava Maze Dungeon]]
+#define CONST_AREA_CHROMATIC_DRAGONS22 [1932,8957,0,1956,8981,0] // [[Corsair Cove Dungeon/Myths' Guild (basement)]]
+#define CONST_AREA_CHROMATIC_DRAGONS23 [2438,4349,0,2470,4386,0] // [[Evil Chicken's Lair]]
+#define CONST_AREA_CHROMATIC_DRAGONS24 [2145,3417,0,2165,3437,0] // [[Mynydd]]
+#define CONST_CHROMATIC_DRAGONS_RULE(_cond) rule ((area:CONST_AREA_CHROMATIC_DRAGONS0 || area:CONST_AREA_CHROMATIC_DRAGONS1 || area:CONST_AREA_CHROMATIC_DRAGONS2 || area:CONST_AREA_CHROMATIC_DRAGONS3 || area:CONST_AREA_CHROMATIC_DRAGONS4 || area:CONST_AREA_CHROMATIC_DRAGONS5 || area:CONST_AREA_CHROMATIC_DRAGONS6 || area:CONST_AREA_CHROMATIC_DRAGONS7 || area:CONST_AREA_CHROMATIC_DRAGONS8 || area:CONST_AREA_CHROMATIC_DRAGONS9 || area:CONST_AREA_CHROMATIC_DRAGONS10 || area:CONST_AREA_CHROMATIC_DRAGONS11 || area:CONST_AREA_CHROMATIC_DRAGONS12 || area:CONST_AREA_CHROMATIC_DRAGONS13 || area:CONST_AREA_CHROMATIC_DRAGONS14 || area:CONST_AREA_CHROMATIC_DRAGONS15 || area:CONST_AREA_CHROMATIC_DRAGONS16 || area:CONST_AREA_CHROMATIC_DRAGONS17 || area:CONST_AREA_CHROMATIC_DRAGONS18 || area:CONST_AREA_CHROMATIC_DRAGONS19 || area:CONST_AREA_CHROMATIC_DRAGONS20 || area:CONST_AREA_CHROMATIC_DRAGONS21 || area:CONST_AREA_CHROMATIC_DRAGONS22 || area:CONST_AREA_CHROMATIC_DRAGONS23 || area:CONST_AREA_CHROMATIC_DRAGONS24) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -1236,11 +1241,11 @@ CONST_CHROMATIC_DRAGONS_RULE (name:VAR_CHROMATIC_DRAGONS_ENUMLIST_FILTER_TERTIAR
 
 
 #define CONST_AREA_CROCODILE0 [3327,2911,0,3374,2947,0] // [[Along the River Elid]]
-#define CONST_AREA_CROCODILE1 [3286,2902,0,3311,2930,0] // [[Along the River Elid]]
-#define CONST_AREA_CROCODILE2 [3248,2808,0,3292,2901,0] // [[Along the River Elid]]
+#define CONST_AREA_CROCODILE1 [3286,2902,0,3318,2930,0] // [[Along the River Elid]]
+#define CONST_AREA_CROCODILE2 [3248,2808,0,3300,2901,0] // [[Along the River Elid]]
 #define CONST_AREA_CROCODILE3 [3249,2813,0,3269,2833,0] // [[Along the River Elid]]
-#define CONST_AREA_CROCODILE4 [3180,2807,0,3207,2836,0] // [[Near the Ruins of Unkah]]
-#define CONST_AREA_CROCODILE5 [3402,2751,0,3438,2798,0] // [[Near the Ruins of Ullek]]
+#define CONST_AREA_CROCODILE4 [3177,2807,0,3207,2836,0] // [[Near the Ruins of Unkah]]
+#define CONST_AREA_CROCODILE5 [3402,2751,0,3438,2800,0] // [[Near the Ruins of Ullek]]
 #define CONST_CROCODILE_RULE(_cond) rule ((area:CONST_AREA_CROCODILE0 || area:CONST_AREA_CROCODILE1 || area:CONST_AREA_CROCODILE2 || area:CONST_AREA_CROCODILE3 || area:CONST_AREA_CROCODILE4 || area:CONST_AREA_CROCODILE5) && (_cond))
 
 /*@ define:input
@@ -1266,10 +1271,10 @@ CONST_CROCODILE_RULE (name:VAR_CROCODILE_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_DAGANNOTH0 [2396,10400,0,2445,10446,0] // [[Jormungand's Prison]]
-#define CONST_AREA_DAGANNOTH1 [2424,10420,0,2494,10471,0] // [[Jormungand's Prison]]
+#define CONST_AREA_DAGANNOTH1 [2424,10420,0,2497,10471,0] // [[Jormungand's Prison]]
 #define CONST_AREA_DAGANNOTH2 [2469,10420,0,2489,10440,0] // [[Jormungand's Prison]]
 #define CONST_AREA_DAGANNOTH3 [1646,9984,0,1684,10012,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_DAGANNOTH4 [2501,10002,0,2544,10045,0] // [[Lighthouse]]
+#define CONST_AREA_DAGANNOTH4 [2501,10002,0,2545,10045,0] // [[Lighthouse]]
 #define CONST_DAGANNOTH_RULE(_cond) rule ((area:CONST_AREA_DAGANNOTH0 || area:CONST_AREA_DAGANNOTH1 || area:CONST_AREA_DAGANNOTH2 || area:CONST_AREA_DAGANNOTH3 || area:CONST_AREA_DAGANNOTH4) && (_cond))
 
 /*@ define:input
@@ -1337,7 +1342,7 @@ CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_TERTIARY) {
 #define CONST_AREA_DARK_WARRIOR0 [3012,3614,0,3046,3649,0] // [[Dark Warriors' Fortress]]
 #define CONST_AREA_DARK_WARRIOR1 [3011,3615,0,3047,3648,0] // [[Dark Warriors' Fortress]]
 #define CONST_AREA_DARK_WARRIOR2 [3012,3614,0,3046,3649,0] // [[Dark Warriors' Fortress (1)]]
-#define CONST_AREA_DARK_WARRIOR3 [1468,3524,0,1488,3544,0] // [[South of Shayzien]]
+#define CONST_AREA_DARK_WARRIOR3 [1468,3520,0,1490,3544,0] // [[South of Shayzien]]
 #define CONST_AREA_DARK_WARRIOR4 [1578,3741,0,1614,3776,0] // [[Woods between Lovakengj and Arceuus]]
 #define CONST_DARK_WARRIOR_RULE(_cond) rule ((area:CONST_AREA_DARK_WARRIOR0 || area:CONST_AREA_DARK_WARRIOR1 || area:CONST_AREA_DARK_WARRIOR2 || area:CONST_AREA_DARK_WARRIOR3 || area:CONST_AREA_DARK_WARRIOR4) && (_cond))
 
@@ -1468,7 +1473,7 @@ CONST_DEMONIC_GORILLA_RULE (name:VAR_DEMONIC_GORILLA_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_EARTH_WARRIOR0 [3106,9961,0,3135,10006,0] // [[Edgeville Dungeon (Wilderness)]]
+#define CONST_AREA_EARTH_WARRIOR0 [3106,9961,0,3136,10006,0] // [[Edgeville Dungeon (Wilderness)]]
 #define CONST_EARTH_WARRIOR_RULE(_cond) rule ((area:CONST_AREA_EARTH_WARRIOR0) && (_cond))
 
 /*@ define:input
@@ -1513,18 +1518,18 @@ CONST_EARTH_WARRIOR_RULE (name:VAR_EARTH_WARRIOR_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_FIRE_GIANT0 [2554,9533,0,2586,9587,0] // [[Brimhaven Dungeon (1)]]
+#define CONST_AREA_FIRE_GIANT0 [2554,9533,0,2589,9587,0] // [[Brimhaven Dungeon (1)]]
 #define CONST_AREA_FIRE_GIANT1 [2558,9575,0,2578,9595,0] // [[Brimhaven Dungeon (1)]]
-#define CONST_AREA_FIRE_GIANT2 [2645,9470,0,2674,9511,0] // [[Brimhaven Dungeon]]
-#define CONST_AREA_FIRE_GIANT3 [2381,9759,0,2422,9795,0] // [[Stronghold Slayer Dungeon]]
-#define CONST_AREA_FIRE_GIANT4 [3036,10328,0,3062,10357,0] // [[Deep Wilderness Dungeon]]
+#define CONST_AREA_FIRE_GIANT2 [2645,9470,0,2677,9511,0] // [[Brimhaven Dungeon]]
+#define CONST_AREA_FIRE_GIANT3 [2381,9759,0,2425,9795,0] // [[Stronghold Slayer Dungeon]]
+#define CONST_AREA_FIRE_GIANT4 [3036,10328,0,3063,10357,0] // [[Deep Wilderness Dungeon]]
 #define CONST_AREA_FIRE_GIANT5 [1608,10038,0,1647,10077,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_FIRE_GIANT6 [1441,9884,0,1470,9918,0] // [[Giants' Den]]
-#define CONST_AREA_FIRE_GIANT7 [1115,10248,0,1152,10289,0] // [[Karuulm Slayer Dungeon]]
+#define CONST_AREA_FIRE_GIANT6 [1441,9884,0,1471,9918,0] // [[Giants' Den]]
+#define CONST_AREA_FIRE_GIANT7 [1115,10248,0,1153,10289,0] // [[Karuulm Slayer Dungeon]]
 #define CONST_AREA_FIRE_GIANT8 [3284,9365,0,3316,9410,0] // [[Smoke Dungeon]]
-#define CONST_AREA_FIRE_GIANT9 [3234,9346,0,3262,9379,0] // [[Smoke Dungeon]]
-#define CONST_AREA_FIRE_GIANT10 [2552,9876,0,2590,9907,0] // [[Waterfall Dungeon]]
-#define CONST_AREA_FIRE_GIANT11 [2106,9310,0,2133,9341,0] // [[Isle of Souls Dungeon]]
+#define CONST_AREA_FIRE_GIANT9 [3234,9346,0,3262,9380,0] // [[Smoke Dungeon]]
+#define CONST_AREA_FIRE_GIANT10 [2552,9876,0,2591,9907,0] // [[Waterfall Dungeon]]
+#define CONST_AREA_FIRE_GIANT11 [2106,9310,0,2134,9341,0] // [[Isle of Souls Dungeon]]
 #define CONST_FIRE_GIANT_RULE(_cond) rule ((area:CONST_AREA_FIRE_GIANT0 || area:CONST_AREA_FIRE_GIANT1 || area:CONST_AREA_FIRE_GIANT2 || area:CONST_AREA_FIRE_GIANT3 || area:CONST_AREA_FIRE_GIANT4 || area:CONST_AREA_FIRE_GIANT5 || area:CONST_AREA_FIRE_GIANT6 || area:CONST_AREA_FIRE_GIANT7 || area:CONST_AREA_FIRE_GIANT8 || area:CONST_AREA_FIRE_GIANT9 || area:CONST_AREA_FIRE_GIANT10 || area:CONST_AREA_FIRE_GIANT11) && (_cond))
 
 /*@ define:input
@@ -1589,8 +1594,8 @@ CONST_FIRE_GIANT_RULE (name:VAR_FIRE_GIANT_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_FLESH_CRAWLER0 [1907,5125,0,1954,5151,0] // [[Stronghold of Security: Catacomb of Famine]]
-#define CONST_AREA_FLESH_CRAWLER1 [1931,5080,0,1958,5107,0] // [[Stronghold of Security: Catacomb of Famine]]
+#define CONST_AREA_FLESH_CRAWLER0 [1907,5125,0,1959,5151,0] // [[Stronghold of Security: Catacomb of Famine]]
+#define CONST_AREA_FLESH_CRAWLER1 [1931,5080,0,1959,5107,0] // [[Stronghold of Security: Catacomb of Famine]]
 #define CONST_AREA_FLESH_CRAWLER2 [1897,5093,0,1922,5119,0] // [[Stronghold of Security: Catacomb of Famine]]
 #define CONST_AREA_FLESH_CRAWLER3 [1882,5129,0,1908,5156,0] // [[Stronghold of Security: Catacomb of Famine]]
 #define CONST_FLESH_CRAWLER_RULE(_cond) rule ((area:CONST_AREA_FLESH_CRAWLER0 || area:CONST_AREA_FLESH_CRAWLER1 || area:CONST_AREA_FLESH_CRAWLER2 || area:CONST_AREA_FLESH_CRAWLER3) && (_cond))
@@ -1627,27 +1632,32 @@ CONST_FLESH_CRAWLER_RULE (name:VAR_FLESH_CRAWLER_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_GOBLIN0 [3131,3234,0,3227,3321,0] // [[Lumbridge]]
+#define CONST_AREA_GOBLIN0 [3131,3234,0,3234,3321,0] // [[Lumbridge]]
 #define CONST_AREA_GOBLIN1 [3231,3208,0,3273,3266,0] // [[Lumbridge]]
 #define CONST_AREA_GOBLIN2 [3127,3277,0,3171,3320,0] // [[Lumbridge]]
-#define CONST_AREA_GOBLIN3 [3108,3412,0,3136,3454,0] // [[West of Varrock]]
-#define CONST_AREA_GOBLIN4 [2985,3191,0,3014,3226,0] // [[Outside Port Sarim]]
-#define CONST_AREA_GOBLIN5 [3132,3217,0,3156,3244,0] // [[South-east of Draynor Village]]
-#define CONST_AREA_GOBLIN6 [2554,9809,0,2605,9860,0] // [[Goblin Cave]]
-#define CONST_AREA_GOBLIN7 [2553,3385,0,2594,3466,0] // [[West of Fishing Guild]]
-#define CONST_AREA_GOBLIN8 [2553,3388,0,2573,3426,0] // [[West of Fishing Guild]]
-#define CONST_AREA_GOBLIN9 [2610,3383,0,2633,3406,0] // [[Outside Fishing Guild]]
-#define CONST_AREA_GOBLIN10 [2495,3135,0,2565,3208,0] // [[Tree Gnome Village maze]]
-#define CONST_AREA_GOBLIN11 [2556,9610,0,2620,9663,0] // [[Clock Tower Dungeon]]
-#define CONST_AREA_GOBLIN12 [2552,9643,0,2575,9671,0] // [[Clock Tower Dungeon]]
-#define CONST_AREA_GOBLIN13 [1762,3492,0,1788,3518,0] // [[South of Hosidius]]
-#define CONST_AREA_GOBLIN14 [1311,3475,0,1337,3502,0] // [[Kebos Lowlands]]
-#define CONST_AREA_GOBLIN15 [2363,3323,0,2395,3349,0] // [[Entrance to Arandar]]
-#define CONST_AREA_GOBLIN16 [3455,9786,0,3476,9807,0] // [[The Hollows cave]]
-#define CONST_AREA_GOBLIN17 [2295,9335,0,2369,9414,0] // [[Observatory Dungeon]]
-#define CONST_AREA_GOBLIN18 [2428,9686,0,2449,9710,0] // [[Underground Pass]]
-#define CONST_AREA_GOBLIN19 [2367,9645,0,2406,9668,0] // [[Underground Pass]]
-#define CONST_GOBLIN_RULE(_cond) rule ((area:CONST_AREA_GOBLIN0 || area:CONST_AREA_GOBLIN1 || area:CONST_AREA_GOBLIN2 || area:CONST_AREA_GOBLIN3 || area:CONST_AREA_GOBLIN4 || area:CONST_AREA_GOBLIN5 || area:CONST_AREA_GOBLIN6 || area:CONST_AREA_GOBLIN7 || area:CONST_AREA_GOBLIN8 || area:CONST_AREA_GOBLIN9 || area:CONST_AREA_GOBLIN10 || area:CONST_AREA_GOBLIN11 || area:CONST_AREA_GOBLIN12 || area:CONST_AREA_GOBLIN13 || area:CONST_AREA_GOBLIN14 || area:CONST_AREA_GOBLIN15 || area:CONST_AREA_GOBLIN16 || area:CONST_AREA_GOBLIN17 || area:CONST_AREA_GOBLIN18 || area:CONST_AREA_GOBLIN19) && (_cond))
+#define CONST_AREA_GOBLIN3 [3249,3328,0,3269,3348,0] // [[Between Lumbridge and Varrock]]
+#define CONST_AREA_GOBLIN4 [3108,3412,0,3136,3460,0] // [[West of Varrock]]
+#define CONST_AREA_GOBLIN5 [3301,3365,0,3321,3385,0] // [[The Digsite]]
+#define CONST_AREA_GOBLIN6 [2985,3191,0,3014,3226,0] // [[Outside Port Sarim]]
+#define CONST_AREA_GOBLIN7 [3132,3217,0,3156,3244,0] // [[South-east of Draynor Village]]
+#define CONST_AREA_GOBLIN8 [3100,3271,0,3120,3291,0] // [[South-east of Draynor Village]]
+#define CONST_AREA_GOBLIN9 [3104,3300,0,3124,3320,0] // [[South of Draynor Manor]]
+#define CONST_AREA_GOBLIN10 [3157,3195,0,3177,3215,0] // [[Lumbridge Swamp]]
+#define CONST_AREA_GOBLIN11 [2554,9809,0,2607,9860,0] // [[Goblin Cave]]
+#define CONST_AREA_GOBLIN12 [2553,3385,0,2596,3466,0] // [[West of Fishing Guild]]
+#define CONST_AREA_GOBLIN13 [2553,3388,0,2573,3426,0] // [[West of Fishing Guild]]
+#define CONST_AREA_GOBLIN14 [2610,3383,0,2633,3407,0] // [[Outside Fishing Guild]]
+#define CONST_AREA_GOBLIN15 [2495,3135,0,2567,3208,0] // [[Tree Gnome Village maze]]
+#define CONST_AREA_GOBLIN16 [2556,9610,0,2620,9663,0] // [[Clock Tower Dungeon]]
+#define CONST_AREA_GOBLIN17 [2552,9643,0,2575,9671,0] // [[Clock Tower Dungeon]]
+#define CONST_AREA_GOBLIN18 [1762,3492,0,1789,3518,0] // [[South of Hosidius]]
+#define CONST_AREA_GOBLIN19 [1311,3475,0,1340,3502,0] // [[Kebos Lowlands]]
+#define CONST_AREA_GOBLIN20 [2363,3323,0,2404,3349,0] // [[Entrance to Arandar]]
+#define CONST_AREA_GOBLIN21 [3455,9786,0,3476,9808,0] // [[The Hollows cave]]
+#define CONST_AREA_GOBLIN22 [2295,9335,0,2373,9414,0] // [[Observatory Dungeon]]
+#define CONST_AREA_GOBLIN23 [2428,9686,0,2451,9710,0] // [[Underground Pass]]
+#define CONST_AREA_GOBLIN24 [2367,9645,0,2407,9668,0] // [[Underground Pass]]
+#define CONST_GOBLIN_RULE(_cond) rule ((area:CONST_AREA_GOBLIN0 || area:CONST_AREA_GOBLIN1 || area:CONST_AREA_GOBLIN2 || area:CONST_AREA_GOBLIN3 || area:CONST_AREA_GOBLIN4 || area:CONST_AREA_GOBLIN5 || area:CONST_AREA_GOBLIN6 || area:CONST_AREA_GOBLIN7 || area:CONST_AREA_GOBLIN8 || area:CONST_AREA_GOBLIN9 || area:CONST_AREA_GOBLIN10 || area:CONST_AREA_GOBLIN11 || area:CONST_AREA_GOBLIN12 || area:CONST_AREA_GOBLIN13 || area:CONST_AREA_GOBLIN14 || area:CONST_AREA_GOBLIN15 || area:CONST_AREA_GOBLIN16 || area:CONST_AREA_GOBLIN17 || area:CONST_AREA_GOBLIN18 || area:CONST_AREA_GOBLIN19 || area:CONST_AREA_GOBLIN20 || area:CONST_AREA_GOBLIN21 || area:CONST_AREA_GOBLIN22 || area:CONST_AREA_GOBLIN23 || area:CONST_AREA_GOBLIN24) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -1711,16 +1721,16 @@ CONST_GOBLIN_RULE (name:VAR_GOBLIN_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_GREATER_DEMON0 [3272,3870,0,3314,3904,0] // [[Wilderness near Demonic Ruins]]
-#define CONST_AREA_GREATER_DEMON1 [2556,9467,0,2588,9516,0] // [[Brimhaven Dungeon upper level]]
-#define CONST_AREA_GREATER_DEMON2 [3794,9815,0,3820,9839,0] // [[Sisterhood Sanctuary]]
-#define CONST_AREA_GREATER_DEMON3 [2851,9737,0,2871,9757,0] // [[Entrana Dungeon]]
-#define CONST_AREA_GREATER_DEMON4 [3018,10240,0,3040,10269,0] // [[Lava Maze Dungeon]]
-#define CONST_AREA_GREATER_DEMON5 [3411,10129,0,3443,10169,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_GREATER_DEMON0 [3272,3862,0,3314,3904,0] // [[Wilderness near Demonic Ruins]]
+#define CONST_AREA_GREATER_DEMON1 [2556,9466,0,2592,9516,0] // [[Brimhaven Dungeon upper level]]
+#define CONST_AREA_GREATER_DEMON2 [3794,9815,0,3821,9840,0] // [[Sisterhood Sanctuary]]
+#define CONST_AREA_GREATER_DEMON3 [2851,9737,0,2872,9761,0] // [[Entrana Dungeon]]
+#define CONST_AREA_GREATER_DEMON4 [3018,10235,0,3045,10269,0] // [[Lava Maze Dungeon]]
+#define CONST_AREA_GREATER_DEMON5 [3411,10129,0,3444,10169,0] // [[Wilderness Slayer Cave]]
 #define CONST_AREA_GREATER_DEMON6 [1669,10073,0,1728,10109,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_GREATER_DEMON7 [1346,9968,0,1399,10006,0] // [[Chasm of Fire]]
-#define CONST_AREA_GREATER_DEMON8 [1110,10145,0,1142,10183,0] // [[Karuulm Slayer Dungeon]]
-#define CONST_AREA_GREATER_DEMON9 [2576,9416,0,2625,9468,0] // [[Ogre Enclave]]
+#define CONST_AREA_GREATER_DEMON7 [1346,9968,0,1401,10008,0] // [[Chasm of Fire]]
+#define CONST_AREA_GREATER_DEMON8 [1110,10145,0,1145,10183,0] // [[Karuulm Slayer Dungeon]]
+#define CONST_AREA_GREATER_DEMON9 [2576,9414,0,2628,9468,0] // [[Ogre Enclave]]
 #define CONST_AREA_GREATER_DEMON10 [2602,9413,0,2625,9433,0] // [[Ogre Enclave]]
 #define CONST_AREA_GREATER_DEMON11 [2149,9313,0,2177,9347,0] // [[Isle of Souls Dungeon]]
 #define CONST_GREATER_DEMON_RULE(_cond) rule ((area:CONST_AREA_GREATER_DEMON0 || area:CONST_AREA_GREATER_DEMON1 || area:CONST_AREA_GREATER_DEMON2 || area:CONST_AREA_GREATER_DEMON3 || area:CONST_AREA_GREATER_DEMON4 || area:CONST_AREA_GREATER_DEMON5 || area:CONST_AREA_GREATER_DEMON6 || area:CONST_AREA_GREATER_DEMON7 || area:CONST_AREA_GREATER_DEMON8 || area:CONST_AREA_GREATER_DEMON9 || area:CONST_AREA_GREATER_DEMON10 || area:CONST_AREA_GREATER_DEMON11) && (_cond))
@@ -1777,15 +1787,15 @@ CONST_GREATER_DEMON_RULE (name:VAR_GREATER_DEMON_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_HELLHOUND0 [3159,3907,0,3190,3966,0] // [[Outside of the Wilderness Resource Area]]
+#define CONST_AREA_HELLHOUND0 [3159,3904,0,3201,3966,0] // [[Outside of the Wilderness Resource Area]]
 #define CONST_AREA_HELLHOUND1 [3170,3896,0,3190,3916,0] // [[Outside of the Wilderness Resource Area]]
 #define CONST_AREA_HELLHOUND2 [2724,9668,0,2754,9708,0] // [[Witchaven Dungeon]]
-#define CONST_AREA_HELLHOUND3 [2871,5292,0,2902,5339,0] // [[God Wars Dungeon]]
+#define CONST_AREA_HELLHOUND3 [2871,5292,0,2925,5355,0] // [[God Wars Dungeon]]
 #define CONST_AREA_HELLHOUND4 [2827,5325,0,2847,5345,0] // [[God Wars Dungeon]]
 #define CONST_AREA_HELLHOUND5 [2399,9760,0,2443,9811,0] // [[Stronghold Slayer Cave]]
 #define CONST_AREA_HELLHOUND6 [2841,9809,0,2881,9862,0] // [[Taverley Dungeon]]
 #define CONST_AREA_HELLHOUND7 [3429,10067,0,3455,10106,0] // [[Wilderness Slayer Cave]]
-#define CONST_AREA_HELLHOUND8 [1629,10048,0,1658,10081,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_HELLHOUND8 [1629,10048,0,1661,10081,0] // [[Catacombs of Kourend]]
 #define CONST_AREA_HELLHOUND9 [1176,10246,0,1220,10286,0] // [[Karuulm Slayer Dungeon]]
 #define CONST_HELLHOUND_RULE(_cond) rule ((area:CONST_AREA_HELLHOUND0 || area:CONST_AREA_HELLHOUND1 || area:CONST_AREA_HELLHOUND2 || area:CONST_AREA_HELLHOUND3 || area:CONST_AREA_HELLHOUND4 || area:CONST_AREA_HELLHOUND5 || area:CONST_AREA_HELLHOUND6 || area:CONST_AREA_HELLHOUND7 || area:CONST_AREA_HELLHOUND8 || area:CONST_AREA_HELLHOUND9) && (_cond))
 
@@ -1821,21 +1831,22 @@ CONST_HELLHOUND_RULE (name:VAR_HELLHOUND_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_HILL_GIANT0 [3084,3839,0,3127,3864,0] // [[Lava Maze]]
+#define CONST_AREA_HILL_GIANT0 [3084,3839,0,3127,3885,0] // [[Lava Maze]]
 #define CONST_AREA_HILL_GIANT1 [1429,3596,0,1458,3628,0] // [[Giant Pit]]
 #define CONST_AREA_HILL_GIANT2 [2535,3134,0,2558,3157,0] // [[Gnome Maze]]
-#define CONST_AREA_HILL_GIANT3 [2428,3198,0,2453,3228,0] // [[North of the Observatory]]
-#define CONST_AREA_HILL_GIANT4 [2359,3384,0,2382,3414,0] // [[South-west of Tree Gnome Stronghold]]
-#define CONST_AREA_HILL_GIANT5 [3297,3659,0,3317,3679,0] // [[Boneyard Hunter area]]
-#define CONST_AREA_HILL_GIANT6 [3089,9817,0,3127,9860,0] // [[Edgeville Dungeon]]
-#define CONST_AREA_HILL_GIANT7 [2892,9722,0,2923,9746,0] // [[Taverley Dungeon]]
-#define CONST_AREA_HILL_GIANT8 [3032,10296,0,3055,10331,0] // [[Deep Wilderness Dungeon]]
-#define CONST_AREA_HILL_GIANT9 [1416,9869,0,1449,9898,0] // [[Giants' Den]]
-#define CONST_AREA_HILL_GIANT10 [1652,10053,0,1675,10083,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_HILL_GIANT11 [1624,9998,0,1665,10048,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_HILL_GIANT12 [3362,3134,0,3390,3162,0] // [[Giants' Plateau]]
-#define CONST_AREA_HILL_GIANT13 [1603,2943,0,1630,2974,0] // [[Avium Savannah]]
-#define CONST_HILL_GIANT_RULE(_cond) rule ((area:CONST_AREA_HILL_GIANT0 || area:CONST_AREA_HILL_GIANT1 || area:CONST_AREA_HILL_GIANT2 || area:CONST_AREA_HILL_GIANT3 || area:CONST_AREA_HILL_GIANT4 || area:CONST_AREA_HILL_GIANT5 || area:CONST_AREA_HILL_GIANT6 || area:CONST_AREA_HILL_GIANT7 || area:CONST_AREA_HILL_GIANT8 || area:CONST_AREA_HILL_GIANT9 || area:CONST_AREA_HILL_GIANT10 || area:CONST_AREA_HILL_GIANT11 || area:CONST_AREA_HILL_GIANT12 || area:CONST_AREA_HILL_GIANT13) && (_cond))
+#define CONST_AREA_HILL_GIANT3 [2497,3139,0,2517,3159,0] // [[Gnome Maze]]
+#define CONST_AREA_HILL_GIANT4 [2428,3198,0,2455,3228,0] // [[North of the Observatory]]
+#define CONST_AREA_HILL_GIANT5 [2359,3384,0,2382,3414,0] // [[South-west of Tree Gnome Stronghold]]
+#define CONST_AREA_HILL_GIANT6 [3290,3639,0,3317,3679,0] // [[Boneyard Hunter area]]
+#define CONST_AREA_HILL_GIANT7 [3089,9817,0,3132,9860,0] // [[Edgeville Dungeon]]
+#define CONST_AREA_HILL_GIANT8 [2892,9722,0,2923,9751,0] // [[Taverley Dungeon]]
+#define CONST_AREA_HILL_GIANT9 [3032,10296,0,3056,10331,0] // [[Deep Wilderness Dungeon]]
+#define CONST_AREA_HILL_GIANT10 [1416,9869,0,1454,9898,0] // [[Giants' Den]]
+#define CONST_AREA_HILL_GIANT11 [1652,10053,0,1675,10083,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_HILL_GIANT12 [1624,9998,0,1665,10048,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_HILL_GIANT13 [3362,3134,0,3391,3162,0] // [[Giants' Plateau]]
+#define CONST_AREA_HILL_GIANT14 [1603,2943,0,1633,2974,0] // [[Avium Savannah]]
+#define CONST_HILL_GIANT_RULE(_cond) rule ((area:CONST_AREA_HILL_GIANT0 || area:CONST_AREA_HILL_GIANT1 || area:CONST_AREA_HILL_GIANT2 || area:CONST_AREA_HILL_GIANT3 || area:CONST_AREA_HILL_GIANT4 || area:CONST_AREA_HILL_GIANT5 || area:CONST_AREA_HILL_GIANT6 || area:CONST_AREA_HILL_GIANT7 || area:CONST_AREA_HILL_GIANT8 || area:CONST_AREA_HILL_GIANT9 || area:CONST_AREA_HILL_GIANT10 || area:CONST_AREA_HILL_GIANT11 || area:CONST_AREA_HILL_GIANT12 || area:CONST_AREA_HILL_GIANT13 || area:CONST_AREA_HILL_GIANT14) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -1910,21 +1921,21 @@ CONST_HILL_GIANT_RULE (name:VAR_HILL_GIANT_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_HOBGOBLIN0 [2433,3319,0,2461,3372,0] // [[Outpost]]
-#define CONST_AREA_HOBGOBLIN1 [1822,3589,0,1852,3652,0] // [[Peninsula north-east of the Hosidius vinery]]
-#define CONST_AREA_HOBGOBLIN2 [2895,3259,0,2927,3305,0] // [[Hobgoblin Peninsula west of the Crafting Guild]]
-#define CONST_AREA_HOBGOBLIN3 [2646,3710,0,2679,3741,0] // [[North of Rellekka]]
-#define CONST_AREA_HOBGOBLIN4 [2493,3720,0,2513,3740,0] // [[Waterbirth Island]]
-#define CONST_AREA_HOBGOBLIN5 [2777,3003,0,2801,3023,0] // [[South of Tai Bwo Wannai]]
-#define CONST_AREA_HOBGOBLIN6 [2808,3272,0,2834,3308,0] // [[Crandor]]
-#define CONST_AREA_HOBGOBLIN7 [3065,3732,0,3115,3784,0] // [[Bandit Camp mine (Wilderness)]]
-#define CONST_AREA_HOBGOBLIN8 [2556,9622,0,2576,9642,0] // [[Clock Tower Dungeon]]
-#define CONST_AREA_HOBGOBLIN9 [2684,9677,0,2707,9703,0] // [[Witchaven Dungeon]]
-#define CONST_AREA_HOBGOBLIN10 [3000,9568,0,3026,9605,0] // [[Asgarnian Ice Dungeon]]
-#define CONST_AREA_HOBGOBLIN11 [2844,5302,0,2889,5354,0] // [[God Wars Dungeon]]
-#define CONST_AREA_HOBGOBLIN12 [3108,9861,0,3136,9889,0] // [[Edgeville Dungeon]]
-#define CONST_AREA_HOBGOBLIN13 [3459,9786,0,3479,9806,0] // [[The Hollows]]
-#define CONST_AREA_HOBGOBLIN14 [2503,9545,0,2539,9583,0] // [[Tree Gnome Village dungeon (roaming)]]
-#define CONST_AREA_HOBGOBLIN15 [2566,4448,0,2591,4473,0] // [[Tree Gnome Village dungeon (in prison)]]
+#define CONST_AREA_HOBGOBLIN1 [1798,3589,0,1852,3652,0] // [[Peninsula north-east of the Hosidius vinery]]
+#define CONST_AREA_HOBGOBLIN2 [2895,3256,0,2930,3305,0] // [[Hobgoblin Peninsula west of the Crafting Guild]]
+#define CONST_AREA_HOBGOBLIN3 [2646,3710,0,2685,3741,0] // [[North of Rellekka]]
+#define CONST_AREA_HOBGOBLIN4 [2493,3720,0,2536,3749,0] // [[Waterbirth Island]]
+#define CONST_AREA_HOBGOBLIN5 [2777,3003,0,2804,3023,0] // [[South of Tai Bwo Wannai]]
+#define CONST_AREA_HOBGOBLIN6 [2808,3272,0,2844,3315,0] // [[Crandor]]
+#define CONST_AREA_HOBGOBLIN7 [3065,3732,0,3117,3784,0] // [[Bandit Camp mine (Wilderness)]]
+#define CONST_AREA_HOBGOBLIN8 [2556,9616,0,2583,9642,0] // [[Clock Tower Dungeon]]
+#define CONST_AREA_HOBGOBLIN9 [2684,9677,0,2709,9703,0] // [[Witchaven Dungeon]]
+#define CONST_AREA_HOBGOBLIN10 [3000,9568,0,3029,9605,0] // [[Asgarnian Ice Dungeon]]
+#define CONST_AREA_HOBGOBLIN11 [2844,5302,0,2889,5355,0] // [[God Wars Dungeon]]
+#define CONST_AREA_HOBGOBLIN12 [3108,9861,0,3138,9889,0] // [[Edgeville Dungeon]]
+#define CONST_AREA_HOBGOBLIN13 [3459,9786,0,3479,9807,0] // [[The Hollows]]
+#define CONST_AREA_HOBGOBLIN14 [2503,9545,0,2543,9583,0] // [[Tree Gnome Village dungeon (roaming)]]
+#define CONST_AREA_HOBGOBLIN15 [2566,4448,0,2592,4473,0] // [[Tree Gnome Village dungeon (in prison)]]
 #define CONST_HOBGOBLIN_RULE(_cond) rule ((area:CONST_AREA_HOBGOBLIN0 || area:CONST_AREA_HOBGOBLIN1 || area:CONST_AREA_HOBGOBLIN2 || area:CONST_AREA_HOBGOBLIN3 || area:CONST_AREA_HOBGOBLIN4 || area:CONST_AREA_HOBGOBLIN5 || area:CONST_AREA_HOBGOBLIN6 || area:CONST_AREA_HOBGOBLIN7 || area:CONST_AREA_HOBGOBLIN8 || area:CONST_AREA_HOBGOBLIN9 || area:CONST_AREA_HOBGOBLIN10 || area:CONST_AREA_HOBGOBLIN11 || area:CONST_AREA_HOBGOBLIN12 || area:CONST_AREA_HOBGOBLIN13 || area:CONST_AREA_HOBGOBLIN14 || area:CONST_AREA_HOBGOBLIN15) && (_cond))
 
 /*@ define:input
@@ -1990,11 +2001,11 @@ CONST_HOBGOBLIN_RULE (name:VAR_HOBGOBLIN_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_ICE_GIANT0 [2937,3879,0,2988,3966,0] // [[Frozen Waste Plateau (Wilderness)Waste plateau]]
-#define CONST_AREA_ICE_GIANT1 [1541,3871,0,1567,3904,0] // [[Settlement Ruins]]
-#define CONST_AREA_ICE_GIANT2 [2794,3497,0,2834,3524,0] // [[White Wolf Mountain On toppick]]
+#define CONST_AREA_ICE_GIANT1 [1541,3871,0,1572,3904,0] // [[Settlement Ruins]]
+#define CONST_AREA_ICE_GIANT2 [2794,3496,0,2834,3524,0] // [[White Wolf Mountain On toppick]]
 #define CONST_AREA_ICE_GIANT3 [3047,9561,0,3075,9583,0] // [[Asgarnian Ice Dungeon]]
 #define CONST_AREA_ICE_GIANT4 [2950,9553,0,2976,9580,0] // [[Asgarnian Ice Dungeon]]
-#define CONST_AREA_ICE_GIANT5 [2870,9917,0,2900,9969,0] // [[Ice Queen's Lairpick]]
+#define CONST_AREA_ICE_GIANT5 [2870,9917,0,2901,9969,0] // [[Ice Queen's Lairpick]]
 #define CONST_AREA_ICE_GIANT6 [2873,9955,0,2893,9975,0] // [[Ice Queen's Lairpick]]
 #define CONST_AREA_ICE_GIANT7 [3322,10042,0,3367,10070,0] // [[Wilderness Slayer Cave]]
 #define CONST_AREA_ICE_GIANT8 [1572,9633,0,1625,9667,0] // [[Ruins of Tapoyauik]]
@@ -2062,14 +2073,14 @@ CONST_ICE_GIANT_RULE (name:VAR_ICE_GIANT_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_ICE_WARRIOR0 [2935,3847,0,2972,3897,0] // [[Southern Frozen Waste Plateau]]
-#define CONST_AREA_ICE_WARRIOR1 [2937,3903,0,2988,3963,0] // [[Northern Frozen Waste Plateau]]
+#define CONST_AREA_ICE_WARRIOR0 [2935,3847,0,2973,3897,0] // [[Southern Frozen Waste Plateau]]
+#define CONST_AREA_ICE_WARRIOR1 [2937,3903,0,2994,3963,0] // [[Northern Frozen Waste Plateau]]
 #define CONST_AREA_ICE_WARRIOR2 [3034,9562,0,3072,9600,0] // [[Asgarnian Ice Dungeon]]
-#define CONST_AREA_ICE_WARRIOR3 [2837,3504,0,2857,3524,0] // [[White Wolf Mountain]]
-#define CONST_AREA_ICE_WARRIOR4 [2824,9907,0,2878,9963,0] // [[Ice Queen's Lair]]
+#define CONST_AREA_ICE_WARRIOR3 [2837,3502,0,2860,3524,0] // [[White Wolf Mountain]]
+#define CONST_AREA_ICE_WARRIOR4 [2824,9902,0,2878,9963,0] // [[Ice Queen's Lair]]
 #define CONST_AREA_ICE_WARRIOR5 [2812,9891,0,2846,9915,0] // [[Ice Queen's Lair]]
-#define CONST_AREA_ICE_WARRIOR6 [1698,9622,0,1732,9660,0] // [[Ruins of Tapoyauik - middle level]]
-#define CONST_AREA_ICE_WARRIOR7 [1668,9643,0,1691,9666,0] // [[Ruins of Tapoyauik - lower level]]
+#define CONST_AREA_ICE_WARRIOR6 [1694,9622,0,1732,9664,0] // [[Ruins of Tapoyauik - middle level]]
+#define CONST_AREA_ICE_WARRIOR7 [1666,9640,0,1691,9666,0] // [[Ruins of Tapoyauik - lower level]]
 #define CONST_ICE_WARRIOR_RULE(_cond) rule ((area:CONST_AREA_ICE_WARRIOR0 || area:CONST_AREA_ICE_WARRIOR1 || area:CONST_AREA_ICE_WARRIOR2 || area:CONST_AREA_ICE_WARRIOR3 || area:CONST_AREA_ICE_WARRIOR4 || area:CONST_AREA_ICE_WARRIOR5 || area:CONST_AREA_ICE_WARRIOR6 || area:CONST_AREA_ICE_WARRIOR7) && (_cond))
 
 /*@ define:input
@@ -2114,14 +2125,14 @@ CONST_ICE_WARRIOR_RULE (name:VAR_ICE_WARRIOR_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_ICEFIENDS0 [2985,3455,0,3016,3506,0] // [[Ice Mountain]]
-#define CONST_AREA_ICEFIENDS1 [2844,5286,0,2897,5322,0] // [[God Wars Dungeon]]
+#define CONST_AREA_ICEFIENDS0 [2985,3455,0,3016,3511,0] // [[Ice Mountain]]
+#define CONST_AREA_ICEFIENDS1 [2844,5286,0,2908,5325,0] // [[God Wars Dungeon]]
 #define CONST_AREA_ICEFIENDS2 [2915,5232,0,2935,5252,0] // [[God Wars Dungeon]]
-#define CONST_AREA_ICEFIENDS3 [2948,10080,0,2968,10100,0] // [[Wilderness God Wars Dungeon]]
-#define CONST_AREA_ICEFIENDS4 [1426,3197,0,1459,3224,0] // [[Ralos' Rise]]
+#define CONST_AREA_ICEFIENDS3 [2948,10078,0,2972,10100,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AREA_ICEFIENDS4 [1426,3197,0,1463,3224,0] // [[Ralos' Rise]]
 #define CONST_AREA_ICEFIENDS5 [1419,3246,0,1451,3276,0] // [[Mons Gratia]]
 #define CONST_AREA_ICEFIENDS6 [1672,9624,0,1716,9656,0] // [[Ruins of Tapoyauik 0]]
-#define CONST_AREA_ICEFIENDS7 [2631,10414,0,2657,10436,0] // [[Iceberg]]
+#define CONST_AREA_ICEFIENDS7 [2631,10413,0,2660,10436,0] // [[Iceberg]]
 #define CONST_ICEFIENDS_RULE(_cond) rule ((area:CONST_AREA_ICEFIENDS0 || area:CONST_AREA_ICEFIENDS1 || area:CONST_AREA_ICEFIENDS2 || area:CONST_AREA_ICEFIENDS3 || area:CONST_AREA_ICEFIENDS4 || area:CONST_AREA_ICEFIENDS5 || area:CONST_AREA_ICEFIENDS6 || area:CONST_AREA_ICEFIENDS7) && (_cond))
 
 /*@ define:input
@@ -2158,7 +2169,7 @@ CONST_ICEFIENDS_RULE (name:VAR_ICEFIENDS_ENUMLIST_FILTER_TERTIARY) {
 
 #define CONST_AREA_JUNGLE_HORROR0 [3647,2976,0,3800,3065,0] // [[Mos Le'Harmless]]
 #define CONST_AREA_JUNGLE_HORROR1 [3660,3011,0,3686,3040,0] // [[Mos Le'Harmless]]
-#define CONST_AREA_JUNGLE_HORROR2 [3723,2947,0,3743,2967,0] // [[Mos Le'Harmless]]
+#define CONST_AREA_JUNGLE_HORROR2 [3723,2937,0,3754,2967,0] // [[Mos Le'Harmless]]
 #define CONST_JUNGLE_HORROR_RULE(_cond) rule ((area:CONST_AREA_JUNGLE_HORROR0 || area:CONST_AREA_JUNGLE_HORROR1 || area:CONST_AREA_JUNGLE_HORROR2) && (_cond))
 
 /*@ define:input
@@ -2223,14 +2234,14 @@ CONST_JUNGLE_HORROR_RULE (name:VAR_JUNGLE_HORROR_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_KALPHITES0 [3174,9468,0,3230,9537,0] // [[Kalphite Lair]]
+#define CONST_AREA_KALPHITES0 [3167,9468,0,3230,9537,0] // [[Kalphite Lair]]
 #define CONST_AREA_KALPHITES1 [3199,9466,0,3219,9486,0] // [[Kalphite Lair]]
 #define CONST_AREA_KALPHITES2 [3326,9485,0,3405,9536,0] // [[Kalphite Cave (on Slayer task)]]
-#define CONST_AREA_KALPHITES3 [3167,9466,0,3216,9511,0] // [[Kalphite Lair]]
-#define CONST_AREA_KALPHITES4 [3355,9466,0,3410,9547,0] // [[Kalphite Cave (on Slayer task)]]
+#define CONST_AREA_KALPHITES3 [3165,9466,0,3216,9511,0] // [[Kalphite Lair]]
+#define CONST_AREA_KALPHITES4 [3353,9466,0,3410,9547,0] // [[Kalphite Cave (on Slayer task)]]
 #define CONST_AREA_KALPHITES5 [3207,9483,0,3233,9509,0] // [[Kalphite Lair]]
-#define CONST_AREA_KALPHITES6 [3198,9420,0,3218,9440,0] // [[Kalphite Lair]]
-#define CONST_AREA_KALPHITES7 [3329,9468,0,3358,9502,0] // [[Kalphite Cave (on Slayer task)]]
+#define CONST_AREA_KALPHITES6 [3197,9407,0,3218,9440,0] // [[Kalphite Lair]]
+#define CONST_AREA_KALPHITES7 [3322,9468,0,3358,9502,0] // [[Kalphite Cave (on Slayer task)]]
 #define CONST_KALPHITES_RULE(_cond) rule ((area:CONST_AREA_KALPHITES0 || area:CONST_AREA_KALPHITES1 || area:CONST_AREA_KALPHITES2 || area:CONST_AREA_KALPHITES3 || area:CONST_AREA_KALPHITES4 || area:CONST_AREA_KALPHITES5 || area:CONST_AREA_KALPHITES6 || area:CONST_AREA_KALPHITES7) && (_cond))
 
 /*@ define:input
@@ -2285,7 +2296,7 @@ CONST_KALPHITES_RULE (name:VAR_KALPHITES_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_LAVA_DRAGON0 [3180,3799,0,3233,3856,0] // [[Lava Dragon Isle]]
+#define CONST_AREA_LAVA_DRAGON0 [3177,3799,0,3233,3856,0] // [[Lava Dragon Isle]]
 #define CONST_LAVA_DRAGON_RULE(_cond) rule ((area:CONST_AREA_LAVA_DRAGON0) && (_cond))
 
 /*@ define:input
@@ -2350,22 +2361,25 @@ CONST_LAVA_DRAGON_RULE (name:VAR_LAVA_DRAGON_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_LESSER_DEMON0 [3081,3851,0,3101,3871,0] // [[Wilderness - by the muddy chest in the Lava Maze]]
-#define CONST_AREA_LESSER_DEMON1 [3301,3835,0,3321,3855,0] // [[Wilderness - south-east of the Demonic Ruins]]
-#define CONST_AREA_LESSER_DEMON2 [3004,3835,0,3026,3861,0] // [[Wilderness - King Black Dragon Lair entrance]]
-#define CONST_AREA_LESSER_DEMON3 [2822,3268,0,2842,3288,0] // [[Crandor]]
-#define CONST_AREA_LESSER_DEMON4 [2825,9592,0,2849,9633,0] // [[Crandor and Karamja Dungeon]]
-#define CONST_AREA_LESSER_DEMON5 [2821,9542,0,2851,9575,0] // [[Crandor and Karamja Dungeon]]
-#define CONST_AREA_LESSER_DEMON6 [3835,9728,0,3859,9787,0] // [[Sisterhood Sanctuary]]
-#define CONST_AREA_LESSER_DEMON7 [3836,9725,0,3856,9745,0] // [[Sisterhood Sanctuary]]
-#define CONST_AREA_LESSER_DEMON8 [2916,9788,0,2942,9820,0] // [[Taverley Dungeon]]
-#define CONST_AREA_LESSER_DEMON9 [3322,10115,0,3350,10154,0] // [[Wilderness Slayer Cave]]
-#define CONST_AREA_LESSER_DEMON10 [1360,10063,0,1391,10095,0] // [[Chasm of Fire]]
-#define CONST_AREA_LESSER_DEMON11 [1696,10053,0,1730,10081,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_LESSER_DEMON12 [2620,9857,0,2641,9890,0] // [[Temple of Ikov]]
-#define CONST_AREA_LESSER_DEMON13 [2402,4667,0,2423,4691,0] // [[Viyeldi caves]]
-#define CONST_AREA_LESSER_DEMON14 [2139,9322,0,2165,9347,0] // [[Isle of Souls Dungeon]]
-#define CONST_LESSER_DEMON_RULE(_cond) rule ((area:CONST_AREA_LESSER_DEMON0 || area:CONST_AREA_LESSER_DEMON1 || area:CONST_AREA_LESSER_DEMON2 || area:CONST_AREA_LESSER_DEMON3 || area:CONST_AREA_LESSER_DEMON4 || area:CONST_AREA_LESSER_DEMON5 || area:CONST_AREA_LESSER_DEMON6 || area:CONST_AREA_LESSER_DEMON7 || area:CONST_AREA_LESSER_DEMON8 || area:CONST_AREA_LESSER_DEMON9 || area:CONST_AREA_LESSER_DEMON10 || area:CONST_AREA_LESSER_DEMON11 || area:CONST_AREA_LESSER_DEMON12 || area:CONST_AREA_LESSER_DEMON13 || area:CONST_AREA_LESSER_DEMON14) && (_cond))
+#define CONST_AREA_LESSER_DEMON0 [3081,3851,0,3104,3879,0] // [[Wilderness - by the muddy chest in the Lava Maze]]
+#define CONST_AREA_LESSER_DEMON1 [3301,3835,0,3334,3866,0] // [[Wilderness - south-east of the Demonic Ruins]]
+#define CONST_AREA_LESSER_DEMON2 [3004,3835,0,3027,3862,0] // [[Wilderness - King Black Dragon Lair entrance]]
+#define CONST_AREA_LESSER_DEMON3 [2822,3268,0,2847,3290,0] // [[Crandor]]
+#define CONST_AREA_LESSER_DEMON4 [1609,3657,0,1629,3677,0] // [[Kourend Castle - Cage on the top floor]]
+#define CONST_AREA_LESSER_DEMON5 [3100,3147,0,3120,3167,0] // [[Wizards' Tower - Cage on the top floor]]
+#define CONST_AREA_LESSER_DEMON6 [1670,3668,0,1690,3688,0] // [[Kingstown - Councillor Hughes' house]]
+#define CONST_AREA_LESSER_DEMON7 [2825,9592,0,2855,9633,0] // [[Crandor and Karamja Dungeon]]
+#define CONST_AREA_LESSER_DEMON8 [2821,9542,0,2853,9575,0] // [[Crandor and Karamja Dungeon]]
+#define CONST_AREA_LESSER_DEMON9 [3835,9728,0,3859,9790,0] // [[Sisterhood Sanctuary]]
+#define CONST_AREA_LESSER_DEMON10 [3836,9725,0,3856,9745,0] // [[Sisterhood Sanctuary]]
+#define CONST_AREA_LESSER_DEMON11 [2916,9783,0,2946,9820,0] // [[Taverley Dungeon]]
+#define CONST_AREA_LESSER_DEMON12 [3322,10115,0,3351,10154,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_LESSER_DEMON13 [1360,10063,0,1392,10095,0] // [[Chasm of Fire]]
+#define CONST_AREA_LESSER_DEMON14 [1696,10053,0,1732,10081,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_LESSER_DEMON15 [2620,9857,0,2642,9890,0] // [[Temple of Ikov]]
+#define CONST_AREA_LESSER_DEMON16 [2402,4667,0,2426,4694,0] // [[Viyeldi caves]]
+#define CONST_AREA_LESSER_DEMON17 [2139,9320,0,2166,9347,0] // [[Isle of Souls Dungeon]]
+#define CONST_LESSER_DEMON_RULE(_cond) rule ((area:CONST_AREA_LESSER_DEMON0 || area:CONST_AREA_LESSER_DEMON1 || area:CONST_AREA_LESSER_DEMON2 || area:CONST_AREA_LESSER_DEMON3 || area:CONST_AREA_LESSER_DEMON4 || area:CONST_AREA_LESSER_DEMON5 || area:CONST_AREA_LESSER_DEMON6 || area:CONST_AREA_LESSER_DEMON7 || area:CONST_AREA_LESSER_DEMON8 || area:CONST_AREA_LESSER_DEMON9 || area:CONST_AREA_LESSER_DEMON10 || area:CONST_AREA_LESSER_DEMON11 || area:CONST_AREA_LESSER_DEMON12 || area:CONST_AREA_LESSER_DEMON13 || area:CONST_AREA_LESSER_DEMON14 || area:CONST_AREA_LESSER_DEMON15 || area:CONST_AREA_LESSER_DEMON16 || area:CONST_AREA_LESSER_DEMON17) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -2429,19 +2443,19 @@ CONST_LESSER_DEMON_RULE (name:VAR_LESSER_DEMON_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_LIZARDMEN0 [1306,3576,0,1333,3613,0] // [[South of Xeric's Shrine]]
+#define CONST_AREA_LIZARDMEN0 [1306,3573,0,1335,3613,0] // [[South of Xeric's Shrine]]
 #define CONST_AREA_LIZARDMEN1 [1359,3487,0,1403,3537,0] // [[Shayzien's Wall]]
-#define CONST_AREA_LIZARDMEN2 [1368,3564,0,1390,3591,0] // [[Shayzien's Wall]]
+#define CONST_AREA_LIZARDMEN2 [1368,3560,0,1402,3591,0] // [[Shayzien's Wall]]
 #define CONST_AREA_LIZARDMEN3 [1308,3664,0,1343,3698,0] // [[Molch]]
-#define CONST_AREA_LIZARDMEN4 [1272,3654,0,1292,3674,0] // [[Molch]]
-#define CONST_AREA_LIZARDMEN5 [1296,3531,0,1350,3572,0] // [[Lizardman Settlement]]
-#define CONST_AREA_LIZARDMEN6 [1308,3622,0,1328,3642,0] // [[Kebos Swamp]]
+#define CONST_AREA_LIZARDMEN4 [1272,3651,0,1295,3674,0] // [[Molch]]
+#define CONST_AREA_LIZARDMEN5 [1296,3531,0,1352,3572,0] // [[Lizardman Settlement]]
+#define CONST_AREA_LIZARDMEN6 [1288,3620,0,1328,3642,0] // [[Kebos Swamp]]
 #define CONST_AREA_LIZARDMEN7 [1270,3605,0,1290,3625,0] // [[Kebos Swamp]]
 #define CONST_AREA_LIZARDMEN8 [1438,3680,0,1534,3732,0] // [[Lizardman Canyon]]
-#define CONST_AREA_LIZARDMEN9 [1336,3687,0,1395,3733,0] // [[Battlefront]]
-#define CONST_AREA_LIZARDMEN10 [1414,3690,0,1434,3728,0] // [[Lizardman Canyon, west side]]
-#define CONST_AREA_LIZARDMEN11 [1276,9919,0,1337,9964,0] // [[Lizardman Caves, underneath Lizardman Settlement (Slayer task only)]]
-#define CONST_AREA_LIZARDMEN12 [1280,10084,0,1337,10108,0] // [[Lizardman Temple, beneath Molch]]
+#define CONST_AREA_LIZARDMEN9 [1336,3687,0,1403,3733,0] // [[Battlefront]]
+#define CONST_AREA_LIZARDMEN10 [1414,3690,0,1444,3728,0] // [[Lizardman Canyon, west side]]
+#define CONST_AREA_LIZARDMEN11 [1276,9919,0,1340,9964,0] // [[Lizardman Caves, underneath Lizardman Settlement (Slayer task only)]]
+#define CONST_AREA_LIZARDMEN12 [1280,10084,0,1341,10108,0] // [[Lizardman Temple, beneath Molch]]
 #define CONST_LIZARDMEN_RULE(_cond) rule ((area:CONST_AREA_LIZARDMEN0 || area:CONST_AREA_LIZARDMEN1 || area:CONST_AREA_LIZARDMEN2 || area:CONST_AREA_LIZARDMEN3 || area:CONST_AREA_LIZARDMEN4 || area:CONST_AREA_LIZARDMEN5 || area:CONST_AREA_LIZARDMEN6 || area:CONST_AREA_LIZARDMEN7 || area:CONST_AREA_LIZARDMEN8 || area:CONST_AREA_LIZARDMEN9 || area:CONST_AREA_LIZARDMEN10 || area:CONST_AREA_LIZARDMEN11 || area:CONST_AREA_LIZARDMEN12) && (_cond))
 
 /*@ define:input
@@ -2506,9 +2520,9 @@ CONST_LIZARDMEN_RULE (name:VAR_LIZARDMEN_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_MAGIC_AXE0 [3177,3948,0,3203,3971,0] // [[Magic axe hut (23 Thieving and lockpick required)]]
-#define CONST_AREA_MAGIC_AXE1 [2945,9765,0,2976,9801,0] // [[Taverley Dungeon]]
-#define CONST_AREA_MAGIC_AXE2 [1629,10006,0,1660,10043,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_MAGIC_AXE0 [3177,3948,0,3204,3971,0] // [[Magic axe hut (23 Thieving and lockpick required)]]
+#define CONST_AREA_MAGIC_AXE1 [2945,9765,0,2976,9805,0] // [[Taverley Dungeon]]
+#define CONST_AREA_MAGIC_AXE2 [1629,10006,0,1660,10045,0] // [[Catacombs of Kourend]]
 #define CONST_MAGIC_AXE_RULE(_cond) rule ((area:CONST_AREA_MAGIC_AXE0 || area:CONST_AREA_MAGIC_AXE1 || area:CONST_AREA_MAGIC_AXE2) && (_cond))
 
 /*@ define:input
@@ -2543,19 +2557,19 @@ CONST_MAGIC_AXE_RULE (name:VAR_MAGIC_AXE_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_METAL_DRAGONS0 [2721,9472,0,2741,9501,0] // [[Brimhaven Dungeon]]
-#define CONST_AREA_METAL_DRAGONS1 [2622,9436,0,2652,9467,0] // [[Brimhaven Dungeon (Task only area)]]
-#define CONST_AREA_METAL_DRAGONS2 [1635,10081,0,1660,10105,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_METAL_DRAGONS3 [2651,9432,0,2684,9469,0] // [[Brimhaven Dungeon (Task only area)]]
-#define CONST_AREA_METAL_DRAGONS4 [1645,10075,0,1665,10095,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_METAL_DRAGONS5 [2694,9410,0,2748,9470,0] // [[Brimhaven Dungeon]]
-#define CONST_AREA_METAL_DRAGONS6 [2138,9280,0,2163,9303,0] // [[Isle of Souls Dungeon]]
-#define CONST_AREA_METAL_DRAGONS7 [2692,9425,0,2733,9468,0] // [[Brimhaven Dungeon]]
-#define CONST_AREA_METAL_DRAGONS8 [2622,9408,0,2665,9442,0] // [[Brimhaven Dungeon (Task only area)]]
-#define CONST_AREA_METAL_DRAGONS9 [1597,10047,0,1617,10067,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_METAL_DRAGONS10 [1809,5380,0,1855,5430,0] // [[Ancient Cavern (upper level)]]
-#define CONST_AREA_METAL_DRAGONS11 [1532,5056,0,1559,5091,0] // [[Lithkren Vault]]
-#define CONST_AREA_METAL_DRAGONS12 [1571,5056,0,1598,5090,0] // [[Lithkren Vault]]
+#define CONST_AREA_METAL_DRAGONS0 [2721,9472,0,2750,9502,0] // [[Brimhaven Dungeon]]
+#define CONST_AREA_METAL_DRAGONS1 [2622,9436,0,2656,9467,0] // [[Brimhaven Dungeon (Task only area)]]
+#define CONST_AREA_METAL_DRAGONS2 [1635,10081,0,1660,10108,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_METAL_DRAGONS3 [2651,9432,0,2688,9469,0] // [[Brimhaven Dungeon (Task only area)]]
+#define CONST_AREA_METAL_DRAGONS4 [1645,10075,0,1671,10096,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_METAL_DRAGONS5 [2694,9410,0,2749,9470,0] // [[Brimhaven Dungeon]]
+#define CONST_AREA_METAL_DRAGONS6 [2138,9280,0,2170,9304,0] // [[Isle of Souls Dungeon]]
+#define CONST_AREA_METAL_DRAGONS7 [2692,9425,0,2736,9468,0] // [[Brimhaven Dungeon]]
+#define CONST_AREA_METAL_DRAGONS8 [2622,9407,0,2673,9442,0] // [[Brimhaven Dungeon (Task only area)]]
+#define CONST_AREA_METAL_DRAGONS9 [1597,10040,0,1619,10067,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_METAL_DRAGONS10 [1809,5380,0,1857,5430,0] // [[Ancient Cavern (upper level)]]
+#define CONST_AREA_METAL_DRAGONS11 [1532,5056,0,1560,5091,0] // [[Lithkren Vault]]
+#define CONST_AREA_METAL_DRAGONS12 [1571,5056,0,1600,5090,0] // [[Lithkren Vault]]
 #define CONST_METAL_DRAGONS_RULE(_cond) rule ((area:CONST_AREA_METAL_DRAGONS0 || area:CONST_AREA_METAL_DRAGONS1 || area:CONST_AREA_METAL_DRAGONS2 || area:CONST_AREA_METAL_DRAGONS3 || area:CONST_AREA_METAL_DRAGONS4 || area:CONST_AREA_METAL_DRAGONS5 || area:CONST_AREA_METAL_DRAGONS6 || area:CONST_AREA_METAL_DRAGONS7 || area:CONST_AREA_METAL_DRAGONS8 || area:CONST_AREA_METAL_DRAGONS9 || area:CONST_AREA_METAL_DRAGONS10 || area:CONST_AREA_METAL_DRAGONS11 || area:CONST_AREA_METAL_DRAGONS12) && (_cond))
 
 /*@ define:input
@@ -2630,7 +2644,7 @@ CONST_METAL_DRAGONS_RULE (name:VAR_METAL_DRAGONS_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_MINOTAUR0 [1852,5178,0,1907,5254,0] // [[Stronghold of Security Level 1 (Vault of War)]]
+#define CONST_AREA_MINOTAUR0 [1852,5178,0,1909,5254,0] // [[Stronghold of Security Level 1 (Vault of War)]]
 #define CONST_AREA_MINOTAUR1 [1860,5217,0,1882,5252,0] // [[Stronghold of Security Level 1 (Vault of War)]]
 #define CONST_AREA_MINOTAUR2 [1880,5179,0,1914,5254,0] // [[Stronghold of Security Level 1 (Vault of War)]]
 #define CONST_AREA_MINOTAUR3 [1880,5233,0,1900,5253,0] // [[Stronghold of Security Level 1 (Vault of War)]]
@@ -2688,22 +2702,23 @@ CONST_MINOTAUR_RULE (name:VAR_MINOTAUR_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_MOSS_GIANT0 [1503,3491,0,1529,3518,0] // [[Kourend Woodland]]
-#define CONST_AREA_MOSS_GIANT1 [2681,3194,0,2708,3226,0] // [[Moss Giant Island, west of Brimhaven (10 Agility required)]]
-#define CONST_AREA_MOSS_GIANT2 [3129,3795,0,3155,3836,0] // [[Deep Wilderness]]
-#define CONST_AREA_MOSS_GIANT3 [2817,3233,0,2841,3256,0] // [[Crandor]]
-#define CONST_AREA_MOSS_GIANT4 [2185,3794,0,2221,3834,0] // [[Pirates' Cove]]
-#define CONST_AREA_MOSS_GIANT5 [2539,3391,0,2564,3419,0] // [[West of Fishing Guild]]
-#define CONST_AREA_MOSS_GIANT6 [2632,9474,0,2657,9528,0] // [[Brimhaven Dungeon]]
+#define CONST_AREA_MOSS_GIANT0 [1503,3491,0,1532,3518,0] // [[Kourend Woodland]]
+#define CONST_AREA_MOSS_GIANT1 [2681,3194,0,2709,3226,0] // [[Moss Giant Island, west of Brimhaven (10 Agility required)]]
+#define CONST_AREA_MOSS_GIANT2 [3129,3795,0,3157,3836,0] // [[Deep Wilderness]]
+#define CONST_AREA_MOSS_GIANT3 [2817,3232,0,2844,3256,0] // [[Crandor]]
+#define CONST_AREA_MOSS_GIANT4 [2185,3794,0,2224,3834,0] // [[Pirates' Cove]]
+#define CONST_AREA_MOSS_GIANT5 [2539,3391,0,2566,3419,0] // [[West of Fishing Guild]]
+#define CONST_AREA_MOSS_GIANT6 [2632,9474,0,2657,9542,0] // [[Brimhaven Dungeon]]
 #define CONST_AREA_MOSS_GIANT7 [2626,9518,0,2692,9604,0] // [[Brimhaven Dungeon]]
 #define CONST_AREA_MOSS_GIANT8 [2626,9527,0,2658,9564,0] // [[Brimhaven Dungeon]]
 #define CONST_AREA_MOSS_GIANT9 [2630,9573,0,2650,9593,0] // [[Brimhaven Dungeon]]
-#define CONST_AREA_MOSS_GIANT10 [3145,9867,0,3176,9916,0] // [[Varrock Sewers]]
-#define CONST_AREA_MOSS_GIANT11 [1645,10002,0,1703,10060,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_MOSS_GIANT12 [1409,9852,0,1469,9880,0] // [[Giants' Den]]
-#define CONST_AREA_MOSS_GIANT13 [2212,2806,0,2242,2831,0] // [[Isle of Souls]]
-#define CONST_AREA_MOSS_GIANT14 [1379,3098,0,1408,3133,0] // [[West of Ralos' Rise]]
-#define CONST_MOSS_GIANT_RULE(_cond) rule ((area:CONST_AREA_MOSS_GIANT0 || area:CONST_AREA_MOSS_GIANT1 || area:CONST_AREA_MOSS_GIANT2 || area:CONST_AREA_MOSS_GIANT3 || area:CONST_AREA_MOSS_GIANT4 || area:CONST_AREA_MOSS_GIANT5 || area:CONST_AREA_MOSS_GIANT6 || area:CONST_AREA_MOSS_GIANT7 || area:CONST_AREA_MOSS_GIANT8 || area:CONST_AREA_MOSS_GIANT9 || area:CONST_AREA_MOSS_GIANT10 || area:CONST_AREA_MOSS_GIANT11 || area:CONST_AREA_MOSS_GIANT12 || area:CONST_AREA_MOSS_GIANT13 || area:CONST_AREA_MOSS_GIANT14) && (_cond))
+#define CONST_AREA_MOSS_GIANT10 [3145,9867,0,3177,9916,0] // [[Varrock Sewers]]
+#define CONST_AREA_MOSS_GIANT11 [1628,10002,0,1703,10060,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_MOSS_GIANT12 [1409,9852,0,1470,9880,0] // [[Giants' Den]]
+#define CONST_AREA_MOSS_GIANT13 [2212,2805,0,2242,2831,0] // [[Isle of Souls]]
+#define CONST_AREA_MOSS_GIANT14 [2291,3371,0,2311,3391,0] // [[North east of PrifddinasCannot actually be fought, as this particular giant is only visible when the player is inside the walls of Prifddinas.]]
+#define CONST_AREA_MOSS_GIANT15 [1379,3098,0,1408,3133,0] // [[West of Ralos' Rise]]
+#define CONST_MOSS_GIANT_RULE(_cond) rule ((area:CONST_AREA_MOSS_GIANT0 || area:CONST_AREA_MOSS_GIANT1 || area:CONST_AREA_MOSS_GIANT2 || area:CONST_AREA_MOSS_GIANT3 || area:CONST_AREA_MOSS_GIANT4 || area:CONST_AREA_MOSS_GIANT5 || area:CONST_AREA_MOSS_GIANT6 || area:CONST_AREA_MOSS_GIANT7 || area:CONST_AREA_MOSS_GIANT8 || area:CONST_AREA_MOSS_GIANT9 || area:CONST_AREA_MOSS_GIANT10 || area:CONST_AREA_MOSS_GIANT11 || area:CONST_AREA_MOSS_GIANT12 || area:CONST_AREA_MOSS_GIANT13 || area:CONST_AREA_MOSS_GIANT14 || area:CONST_AREA_MOSS_GIANT15) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -2770,23 +2785,26 @@ CONST_MOSS_GIANT_RULE (name:VAR_MOSS_GIANT_ENUMLIST_FILTER_TERTIARY) {
 #define CONST_AREA_OGRES0 [2510,2951,0,2624,3008,0] // [[Feldip Hills]]
 #define CONST_AREA_OGRES1 [2494,2955,0,2514,2994,0] // [[Feldip Hills]]
 #define CONST_AREA_OGRES2 [2541,2945,0,2561,2965,0] // [[Feldip Hills]]
-#define CONST_AREA_OGRES3 [2500,3008,0,2588,3067,0] // [[Gu'Tanoth (Requires partial completion of Watchtower)]]
-#define CONST_AREA_OGRES4 [2486,3074,0,2523,3143,0] // [[West of Yanille]]
-#define CONST_AREA_OGRES5 [2513,3363,0,2541,3386,0] // [[Combat Training Camp (requires Biohazard)]]
-#define CONST_AREA_OGRES6 [2709,9692,0,2734,9725,0] // [[Witchaven Dungeon]]
-#define CONST_AREA_OGRES7 [2709,9658,0,2729,9678,0] // [[Witchaven Dungeon]]
-#define CONST_AREA_OGRES8 [2575,9598,0,2596,9624,0] // [[Clock Tower Dungeon]]
-#define CONST_AREA_OGRES9 [2571,9723,0,2597,9752,0] // [[Chaos Druid Tower Dungeon (requires 46 Thieving)]]
-#define CONST_AREA_OGRES10 [2857,5303,0,2887,5323,0] // [[God Wars Dungeon]]
-#define CONST_AREA_OGRES11 [2377,9675,0,2397,9695,0] // [[Underground Pass (dungeon)]]
-#define CONST_AREA_OGRES12 [2495,3012,0,2528,3051,0] // [[Gu'Tanoth]]
-#define CONST_AREA_OGRES13 [2558,9421,0,2621,9464,0] // [[Ogre Enclave]]
-#define CONST_AREA_OGRES14 [2497,3026,0,2517,3046,0] // [[Gu'Tanoth]]
-#define CONST_AREA_OGRES15 [1952,8963,0,2045,9090,0] // [[Corsair Cove Dungeon]]
-#define CONST_AREA_OGRES16 [1947,8957,0,2049,9050,0] // [[Corsair Cove Dungeon]]
-#define CONST_AREA_OGRES17 [1953,9056,0,1981,9087,0] // [[Corsair Cove Dungeon]]
-#define CONST_AREA_OGRES18 [1960,9012,0,1980,9032,0] // [[Corsair Cove Dungeon]]
-#define CONST_OGRES_RULE(_cond) rule ((area:CONST_AREA_OGRES0 || area:CONST_AREA_OGRES1 || area:CONST_AREA_OGRES2 || area:CONST_AREA_OGRES3 || area:CONST_AREA_OGRES4 || area:CONST_AREA_OGRES5 || area:CONST_AREA_OGRES6 || area:CONST_AREA_OGRES7 || area:CONST_AREA_OGRES8 || area:CONST_AREA_OGRES9 || area:CONST_AREA_OGRES10 || area:CONST_AREA_OGRES11 || area:CONST_AREA_OGRES12 || area:CONST_AREA_OGRES13 || area:CONST_AREA_OGRES14 || area:CONST_AREA_OGRES15 || area:CONST_AREA_OGRES16 || area:CONST_AREA_OGRES17 || area:CONST_AREA_OGRES18) && (_cond))
+#define CONST_AREA_OGRES3 [2500,3006,0,2588,3067,0] // [[Gu'Tanoth (Requires partial completion of Watchtower)]]
+#define CONST_AREA_OGRES4 [2544,3182,0,2564,3202,0] // [[Gnome Maze]]
+#define CONST_AREA_OGRES5 [2486,3071,0,2524,3143,0] // [[West of Yanille]]
+#define CONST_AREA_OGRES6 [2513,3363,0,2542,3386,0] // [[Combat Training Camp (requires Biohazard)]]
+#define CONST_AREA_OGRES7 [2709,9692,0,2734,9725,0] // [[Witchaven Dungeon]]
+#define CONST_AREA_OGRES8 [2709,9658,0,2732,9679,0] // [[Witchaven Dungeon]]
+#define CONST_AREA_OGRES9 [2575,9596,0,2598,9624,0] // [[Clock Tower Dungeon]]
+#define CONST_AREA_OGRES10 [2571,9723,0,2600,9752,0] // [[Chaos Druid Tower Dungeon (requires 46 Thieving)]]
+#define CONST_AREA_OGRES11 [2857,5303,0,2888,5342,0] // [[God Wars Dungeon]]
+#define CONST_AREA_OGRES12 [2377,9673,0,2399,9695,0] // [[Underground Pass (dungeon)]]
+#define CONST_AREA_OGRES13 [2964,10086,0,2984,10106,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AREA_OGRES14 [2605,2977,0,2625,2997,0] // [[Eastern Feldip Hills]]
+#define CONST_AREA_OGRES15 [2495,3012,0,2538,3054,0] // [[Gu'Tanoth]]
+#define CONST_AREA_OGRES16 [2558,9421,0,2626,9464,0] // [[Ogre Enclave]]
+#define CONST_AREA_OGRES17 [2497,3026,0,2517,3050,0] // [[Gu'Tanoth]]
+#define CONST_AREA_OGRES18 [1952,8955,0,2045,9090,0] // [[Corsair Cove Dungeon]]
+#define CONST_AREA_OGRES19 [1947,8957,0,2049,9055,0] // [[Corsair Cove Dungeon]]
+#define CONST_AREA_OGRES20 [1953,9056,0,1981,9087,0] // [[Corsair Cove Dungeon]]
+#define CONST_AREA_OGRES21 [1960,9012,0,1980,9032,0] // [[Corsair Cove Dungeon]]
+#define CONST_OGRES_RULE(_cond) rule ((area:CONST_AREA_OGRES0 || area:CONST_AREA_OGRES1 || area:CONST_AREA_OGRES2 || area:CONST_AREA_OGRES3 || area:CONST_AREA_OGRES4 || area:CONST_AREA_OGRES5 || area:CONST_AREA_OGRES6 || area:CONST_AREA_OGRES7 || area:CONST_AREA_OGRES8 || area:CONST_AREA_OGRES9 || area:CONST_AREA_OGRES10 || area:CONST_AREA_OGRES11 || area:CONST_AREA_OGRES12 || area:CONST_AREA_OGRES13 || area:CONST_AREA_OGRES14 || area:CONST_AREA_OGRES15 || area:CONST_AREA_OGRES16 || area:CONST_AREA_OGRES17 || area:CONST_AREA_OGRES18 || area:CONST_AREA_OGRES19 || area:CONST_AREA_OGRES20 || area:CONST_AREA_OGRES21) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -2875,16 +2893,17 @@ CONST_OTHERWORLDLY_BEING_RULE (name:VAR_OTHERWORLDLY_BEING_ENUMLIST_FILTER_OTHER
 }
 
 
-#define CONST_AREA_PIRATE0 [2974,9559,0,3009,9594,0] // [[Asgarnian Ice Dungeon]]
-#define CONST_AREA_PIRATE1 [2779,3147,0,2821,3208,0] // [[Brimhaven]]
-#define CONST_AREA_PIRATE2 [1813,4821,0,1834,4844,0] // [[Cabin Fever quest (cabin)]]
-#define CONST_AREA_PIRATE3 [1812,4817,0,1835,4845,0] // [[Cabin Fever quest (deck)]]
-#define CONST_AREA_PIRATE4 [2184,3796,0,2204,3816,0] // [[Pirates' Cove]]
+#define CONST_AREA_PIRATE0 [2974,9559,0,3010,9594,0] // [[Asgarnian Ice Dungeon]]
+#define CONST_AREA_PIRATE1 [2753,3147,0,2821,3208,0] // [[Brimhaven]]
+#define CONST_AREA_PIRATE2 [1813,4821,0,1835,4846,0] // [[Cabin Fever quest (cabin)]]
+#define CONST_AREA_PIRATE3 [1812,4817,0,1835,4846,0] // [[Cabin Fever quest (deck)]]
+#define CONST_AREA_PIRATE4 [2184,3796,0,2215,3824,0] // [[Pirates' Cove]]
 #define CONST_AREA_PIRATE5 [3029,3940,0,3053,3968,0] // [[Pirates' Hideout]]
-#define CONST_AREA_PIRATE6 [1796,3665,0,1836,3724,0] // [[Port Piscarilius]]
-#define CONST_AREA_PIRATE7 [1763,3719,0,1855,3766,0] // [[Port Piscarilius]]
-#define CONST_AREA_PIRATE8 [1754,3722,0,1805,3765,0] // [[Port Piscarilius]]
-#define CONST_PIRATE_RULE(_cond) rule ((area:CONST_AREA_PIRATE0 || area:CONST_AREA_PIRATE1 || area:CONST_AREA_PIRATE2 || area:CONST_AREA_PIRATE3 || area:CONST_AREA_PIRATE4 || area:CONST_AREA_PIRATE5 || area:CONST_AREA_PIRATE6 || area:CONST_AREA_PIRATE7 || area:CONST_AREA_PIRATE8) && (_cond))
+#define CONST_AREA_PIRATE6 [3004,3181,0,3024,3201,0] // [[Port Sarim jail]]
+#define CONST_AREA_PIRATE7 [1796,3665,0,1836,3724,0] // [[Port Piscarilius]]
+#define CONST_AREA_PIRATE8 [1741,3719,0,1855,3766,0] // [[Port Piscarilius]]
+#define CONST_AREA_PIRATE9 [1754,3722,0,1805,3765,0] // [[Port Piscarilius]]
+#define CONST_PIRATE_RULE(_cond) rule ((area:CONST_AREA_PIRATE0 || area:CONST_AREA_PIRATE1 || area:CONST_AREA_PIRATE2 || area:CONST_AREA_PIRATE3 || area:CONST_AREA_PIRATE4 || area:CONST_AREA_PIRATE5 || area:CONST_AREA_PIRATE6 || area:CONST_AREA_PIRATE7 || area:CONST_AREA_PIRATE8 || area:CONST_AREA_PIRATE9) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -2939,10 +2958,10 @@ CONST_PIRATE_RULE (name:VAR_PIRATE_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_ROGUE0 [3266,3914,0,3307,3956,0] // [[Rogues' Castle (0)]]
-#define CONST_AREA_ROGUE1 [3278,3921,0,3298,3941,0] // [[Rogues' Castle (1)]]
-#define CONST_AREA_ROGUE2 [3276,3919,0,3303,3949,0] // [[Rogues' Castle (2)]]
-#define CONST_AREA_ROGUE3 [3271,3924,0,3291,3944,0] // [[Rogues' Castle (3)]]
-#define CONST_AREA_ROGUE4 [3066,3906,0,3086,3926,0] // [[South-west of Mage Arena]]
+#define CONST_AREA_ROGUE1 [3278,3920,0,3299,3941,0] // [[Rogues' Castle (1)]]
+#define CONST_AREA_ROGUE2 [3276,3919,0,3306,3949,0] // [[Rogues' Castle (2)]]
+#define CONST_AREA_ROGUE3 [3271,3924,0,3292,3948,0] // [[Rogues' Castle (3)]]
+#define CONST_AREA_ROGUE4 [3066,3899,0,3089,3926,0] // [[South-west of Mage Arena]]
 #define CONST_ROGUE_RULE(_cond) rule ((area:CONST_AREA_ROGUE0 || area:CONST_AREA_ROGUE1 || area:CONST_AREA_ROGUE2 || area:CONST_AREA_ROGUE3 || area:CONST_AREA_ROGUE4) && (_cond))
 
 /*@ define:input
@@ -3010,9 +3029,10 @@ CONST_ROGUE_RULE (name:VAR_ROGUE_ENUMLIST_FILTER_TERTIARY) {
 #define CONST_AREA_SCABARITES0 [3400,9214,0,3440,9281,0] // [[Scabaras Dungeon]]
 #define CONST_AREA_SCABARITES1 [2364,4221,0,2424,4286,0] // [[Sophanem Dungeon (cavern level)]]
 #define CONST_AREA_SCABARITES2 [2130,4382,0,2150,4402,0] // [[Sophanem Dungeon (maze level)]]
-#define CONST_AREA_SCABARITES3 [3851,4672,0,3899,4734,0] // [[Uzer Mastaba - lower level]]
-#define CONST_AREA_SCABARITES4 [3879,4673,0,3901,4696,0] // [[Uzer Mastaba - lower level]]
-#define CONST_SCABARITES_RULE(_cond) rule ((area:CONST_AREA_SCABARITES0 || area:CONST_AREA_SCABARITES1 || area:CONST_AREA_SCABARITES2 || area:CONST_AREA_SCABARITES3 || area:CONST_AREA_SCABARITES4) && (_cond))
+#define CONST_AREA_SCABARITES3 [2137,4346,0,2157,4366,0] // [[Sophanem Dungeon (maze level)]]
+#define CONST_AREA_SCABARITES4 [3851,4672,0,3899,4734,0] // [[Uzer Mastaba - lower level]]
+#define CONST_AREA_SCABARITES5 [3879,4673,0,3901,4696,0] // [[Uzer Mastaba - lower level]]
+#define CONST_SCABARITES_RULE(_cond) rule ((area:CONST_AREA_SCABARITES0 || area:CONST_AREA_SCABARITES1 || area:CONST_AREA_SCABARITES2 || area:CONST_AREA_SCABARITES3 || area:CONST_AREA_SCABARITES4 || area:CONST_AREA_SCABARITES5) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -3066,7 +3086,7 @@ CONST_SCABARITES_RULE (name:VAR_SCABARITES_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_SHADOW_WARRIOR0 [2683,9743,0,2717,9791,0] // [[Legends'_Guild#Dungeon]]
+#define CONST_AREA_SHADOW_WARRIOR0 [2683,9743,0,2718,9791,0] // [[Legends' Guild Dungeon]]
 #define CONST_SHADOW_WARRIOR_RULE(_cond) rule ((area:CONST_AREA_SHADOW_WARRIOR0) && (_cond))
 
 /*@ define:input
@@ -3111,38 +3131,40 @@ CONST_SHADOW_WARRIOR_RULE (name:VAR_SHADOW_WARRIOR_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_SKELETON0 [1414,3765,0,1434,3785,0] // [[Lovakengj]]
+#define CONST_AREA_SKELETON0 [1414,3764,0,1438,3785,0] // [[Lovakengj]]
 #define CONST_AREA_SKELETON1 [1415,3503,0,1441,3527,0] // [[Shayzien's Wall]]
-#define CONST_AREA_SKELETON2 [2810,3224,0,2862,3270,0] // [[Crandor]]
+#define CONST_AREA_SKELETON2 [2810,3224,0,2864,3270,0] // [[Crandor]]
 #define CONST_AREA_SKELETON3 [1693,3866,0,1744,3899,0] // [[Near the Dark Altar]]
 #define CONST_AREA_SKELETON4 [1676,3868,0,1702,3890,0] // [[Near the Dark Altar]]
 #define CONST_AREA_SKELETON5 [2820,9618,0,2855,9671,0] // [[Crandor and Karamja Dungeon]]
-#define CONST_AREA_SKELETON6 [2838,9562,0,2870,9591,0] // [[Crandor and Karamja Dungeon]]
-#define CONST_AREA_SKELETON7 [3091,9661,0,3125,9685,0] // [[Draynor Sewers]]
+#define CONST_AREA_SKELETON6 [2838,9558,0,2874,9591,0] // [[Crandor and Karamja Dungeon]]
+#define CONST_AREA_SKELETON7 [3091,9659,0,3133,9685,0] // [[Draynor Sewers]]
 #define CONST_AREA_SKELETON8 [3111,9859,0,3154,9924,0] // [[Edgeville Dungeon]]
 #define CONST_AREA_SKELETON9 [3084,9879,0,3124,9922,0] // [[Edgeville Dungeon]]
 #define CONST_AREA_SKELETON10 [3200,9896,0,3221,9918,0] // [[Varrock Sewers]]
 #define CONST_AREA_SKELETON11 [3238,9899,0,3285,9926,0] // [[Varrock Sewers]]
-#define CONST_AREA_SKELETON12 [3091,9938,0,3121,9966,0] // [[Edgeville Dungeon (Wilderness area)]]
-#define CONST_AREA_SKELETON13 [2874,9802,0,2896,9846,0] // [[Taverley Dungeon]]
-#define CONST_AREA_SKELETON14 [2552,9494,0,2577,9519,0] // [[Yanille Dungeon]]
-#define CONST_AREA_SKELETON15 [3358,9733,0,3392,9767,0] // [[Digsite Dungeon (During The Dig Site)]]
-#define CONST_AREA_SKELETON16 [3358,9797,0,3392,9831,0] // [[Digsite Dungeon (After The Dig Site)]]
-#define CONST_AREA_SKELETON17 [2519,9803,0,2553,9857,0] // [[Glarial's Tomb]]
-#define CONST_AREA_SKELETON18 [2566,9426,0,2600,9447,0] // [[Ogre Enclave]]
+#define CONST_AREA_SKELETON12 [3091,9938,0,3122,9968,0] // [[Edgeville Dungeon (Wilderness area)]]
+#define CONST_AREA_SKELETON13 [2874,9802,0,2897,9846,0] // [[Taverley Dungeon]]
+#define CONST_AREA_SKELETON14 [2552,9494,0,2578,9519,0] // [[Yanille Dungeon]]
+#define CONST_AREA_SKELETON15 [3358,9733,0,3393,9767,0] // [[Digsite Dungeon (During The Dig Site)]]
+#define CONST_AREA_SKELETON16 [3358,9797,0,3393,9831,0] // [[Digsite Dungeon (After The Dig Site)]]
+#define CONST_AREA_SKELETON17 [2519,9803,0,2555,9857,0] // [[Glarial's Tomb]]
+#define CONST_AREA_SKELETON18 [2566,9426,0,2600,9471,0] // [[Ogre Enclave]]
 #define CONST_AREA_SKELETON19 [2627,9867,0,2674,9904,0] // [[Temple of Ikov (dungeon)]]
-#define CONST_AREA_SKELETON20 [2648,9810,0,2680,9841,0] // [[Temple of Ikov (dungeon)]]
-#define CONST_AREA_SKELETON21 [2361,9595,0,2415,9621,0] // [[Underground Pass (dungeon)]]
-#define CONST_AREA_SKELETON22 [2576,9873,0,2598,9894,0] // [[Waterfall Dungeon]]
-#define CONST_AREA_SKELETON23 [2967,3743,0,2987,3763,0] // [[The Forgotten Cemetery]]
+#define CONST_AREA_SKELETON20 [2648,9810,0,2681,9841,0] // [[Temple of Ikov (dungeon)]]
+#define CONST_AREA_SKELETON21 [2361,9595,0,2418,9621,0] // [[Underground Pass (dungeon)]]
+#define CONST_AREA_SKELETON22 [2576,9873,0,2599,9896,0] // [[Waterfall Dungeon]]
+#define CONST_AREA_SKELETON23 [2967,3743,0,2990,3773,0] // [[The Forgotten Cemetery]]
 #define CONST_AREA_SKELETON24 [2998,3574,0,3035,3612,0] // [[Wilderness mine just south of the Dark Warriors' Fortress]]
 #define CONST_AREA_SKELETON25 [2984,10332,0,3016,10372,0] // [[Wilderness Agility Course Dungeon]]
 #define CONST_AREA_SKELETON26 [3062,3514,0,3127,3580,0] // [[Wilderness, north of Edgeville]]
 #define CONST_AREA_SKELETON27 [3127,3788,0,3153,3812,0] // [[Wilderness, north of Black chinchompa (Hunter)]]
-#define CONST_AREA_SKELETON28 [3230,3716,0,3290,3755,0] // [[Bone Yard, in the Wilderness]]
-#define CONST_AREA_SKELETON29 [3201,3728,0,3238,3756,0] // [[Bone Yard, in the Wilderness]]
-#define CONST_AREA_SKELETON30 [2121,9288,0,2161,9332,0] // [[Isle of Souls Dungeon]]
-#define CONST_SKELETON_RULE(_cond) rule ((area:CONST_AREA_SKELETON0 || area:CONST_AREA_SKELETON1 || area:CONST_AREA_SKELETON2 || area:CONST_AREA_SKELETON3 || area:CONST_AREA_SKELETON4 || area:CONST_AREA_SKELETON5 || area:CONST_AREA_SKELETON6 || area:CONST_AREA_SKELETON7 || area:CONST_AREA_SKELETON8 || area:CONST_AREA_SKELETON9 || area:CONST_AREA_SKELETON10 || area:CONST_AREA_SKELETON11 || area:CONST_AREA_SKELETON12 || area:CONST_AREA_SKELETON13 || area:CONST_AREA_SKELETON14 || area:CONST_AREA_SKELETON15 || area:CONST_AREA_SKELETON16 || area:CONST_AREA_SKELETON17 || area:CONST_AREA_SKELETON18 || area:CONST_AREA_SKELETON19 || area:CONST_AREA_SKELETON20 || area:CONST_AREA_SKELETON21 || area:CONST_AREA_SKELETON22 || area:CONST_AREA_SKELETON23 || area:CONST_AREA_SKELETON24 || area:CONST_AREA_SKELETON25 || area:CONST_AREA_SKELETON26 || area:CONST_AREA_SKELETON27 || area:CONST_AREA_SKELETON28 || area:CONST_AREA_SKELETON29 || area:CONST_AREA_SKELETON30) && (_cond))
+#define CONST_AREA_SKELETON28 [3169,3776,0,3189,3796,0] // [[Wilderness, north of Black chinchompa (Hunter)]]
+#define CONST_AREA_SKELETON29 [3230,3716,0,3290,3755,0] // [[Bone Yard, in the Wilderness]]
+#define CONST_AREA_SKELETON30 [3201,3728,0,3238,3756,0] // [[Bone Yard, in the Wilderness]]
+#define CONST_AREA_SKELETON31 [2972,3937,0,2992,3957,0] // [[Frozen Waste Plateau, in the Wilderness]]
+#define CONST_AREA_SKELETON32 [2121,9288,0,2163,9332,0] // [[Isle of Souls Dungeon]]
+#define CONST_SKELETON_RULE(_cond) rule ((area:CONST_AREA_SKELETON0 || area:CONST_AREA_SKELETON1 || area:CONST_AREA_SKELETON2 || area:CONST_AREA_SKELETON3 || area:CONST_AREA_SKELETON4 || area:CONST_AREA_SKELETON5 || area:CONST_AREA_SKELETON6 || area:CONST_AREA_SKELETON7 || area:CONST_AREA_SKELETON8 || area:CONST_AREA_SKELETON9 || area:CONST_AREA_SKELETON10 || area:CONST_AREA_SKELETON11 || area:CONST_AREA_SKELETON12 || area:CONST_AREA_SKELETON13 || area:CONST_AREA_SKELETON14 || area:CONST_AREA_SKELETON15 || area:CONST_AREA_SKELETON16 || area:CONST_AREA_SKELETON17 || area:CONST_AREA_SKELETON18 || area:CONST_AREA_SKELETON19 || area:CONST_AREA_SKELETON20 || area:CONST_AREA_SKELETON21 || area:CONST_AREA_SKELETON22 || area:CONST_AREA_SKELETON23 || area:CONST_AREA_SKELETON24 || area:CONST_AREA_SKELETON25 || area:CONST_AREA_SKELETON26 || area:CONST_AREA_SKELETON27 || area:CONST_AREA_SKELETON28 || area:CONST_AREA_SKELETON29 || area:CONST_AREA_SKELETON30 || area:CONST_AREA_SKELETON31 || area:CONST_AREA_SKELETON32) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -3271,10 +3293,11 @@ CONST_SOURHOG_RULE (name:VAR_SOURHOG_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_SUQAH0 [2086,3916,0,2165,3961,0] // [[North Lunar Isle]]
+#define CONST_AREA_SUQAH0 [2086,3916,0,2170,3961,0] // [[North Lunar Isle]]
 #define CONST_AREA_SUQAH1 [2060,3843,0,2151,3896,0] // [[South Lunar Isle]]
 #define CONST_AREA_SUQAH2 [2054,3870,0,2074,3890,0] // [[South Lunar Isle]]
-#define CONST_SUQAH_RULE(_cond) rule ((area:CONST_AREA_SUQAH0 || area:CONST_AREA_SUQAH1 || area:CONST_AREA_SUQAH2) && (_cond))
+#define CONST_AREA_SUQAH3 [2132,3890,0,2152,3910,0] // [[Lady Zay - Cage on the bottom floor]]
+#define CONST_SUQAH_RULE(_cond) rule ((area:CONST_AREA_SUQAH0 || area:CONST_AREA_SUQAH1 || area:CONST_AREA_SUQAH2 || area:CONST_AREA_SUQAH3) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -3318,7 +3341,11 @@ CONST_SUQAH_RULE (name:VAR_SUQAH_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-
+#define CONST_AREA_TORMENTED_DEMON0 [4073,4353,0,4161,4435,0] // [[Ancient Guthixian Temple]]
+#define CONST_AREA_TORMENTED_DEMON1 [4129,4420,0,4159,4474,0] // [[Ancient Guthixian Temple]]
+#define CONST_AREA_TORMENTED_DEMON2 [4028,4369,0,4089,4459,0] // [[Ancient Guthixian Temple]]
+#define CONST_AREA_TORMENTED_DEMON3 [4094,4456,0,4144,4477,0] // [[Ancient Guthixian Temple]]
+#define CONST_TORMENTED_DEMON_RULE(_cond) rule ((area:CONST_AREA_TORMENTED_DEMON0 || area:CONST_AREA_TORMENTED_DEMON1 || area:CONST_AREA_TORMENTED_DEMON2 || area:CONST_AREA_TORMENTED_DEMON3) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -3394,28 +3421,28 @@ CONST_TORMENTED_DEMON_RULE (name:VAR_TORMENTED_DEMON_ENUMLIST_FILTER_TERTIARY) {
 
 #define CONST_AREA_TROLLS0 [1209,3478,0,1256,3531,0] // [[South of Mount Quidamortem]]
 #define CONST_AREA_TROLLS1 [2842,3574,0,2886,3605,0] // [[Death Plateau]]
-#define CONST_AREA_TROLLS2 [2894,3621,0,2926,3652,0] // [[North of the Troll arena]]
-#define CONST_AREA_TROLLS3 [2833,3663,0,2862,3694,0] // [[Troll Stronghold (Surface)]]
-#define CONST_AREA_TROLLS4 [2815,10076,0,2850,10111,0] // [[South of Keldagrim]]
-#define CONST_AREA_TROLLS5 [2954,10106,0,2990,10181,0] // [[Troll Stronghold (Underground)]]
+#define CONST_AREA_TROLLS2 [2894,3621,0,2927,3652,0] // [[North of the Troll arena]]
+#define CONST_AREA_TROLLS3 [2833,3663,0,2866,3694,0] // [[Troll Stronghold (Surface)]]
+#define CONST_AREA_TROLLS4 [2815,10073,0,2854,10111,0] // [[South of Keldagrim]]
+#define CONST_AREA_TROLLS5 [2954,10106,0,2993,10181,0] // [[Troll Stronghold (Underground)]]
 #define CONST_AREA_TROLLS6 [2879,10099,0,2913,10143,0] // [[Troll Stronghold (Underground)]]
-#define CONST_AREA_TROLLS7 [2911,10017,0,2934,10042,0] // [[Tunnel between Troll arena and Trollheim]]
-#define CONST_AREA_TROLLS8 [2313,3880,0,2374,3902,0] // [[Fremennik Isles]]
-#define CONST_AREA_TROLLS9 [2403,10255,0,2424,10287,0] // [[Ice Troll Caves]]
+#define CONST_AREA_TROLLS7 [2911,10017,0,2935,10044,0] // [[Tunnel between Troll arena and Trollheim]]
+#define CONST_AREA_TROLLS8 [2313,3880,0,2389,3903,0] // [[Fremennik Isles]]
+#define CONST_AREA_TROLLS9 [2403,10255,0,2430,10287,0] // [[Ice Troll Caves]]
 #define CONST_AREA_TROLLS10 [2315,3846,0,2416,3904,0] // [[Fremennik Isles]]
 #define CONST_AREA_TROLLS11 [2315,3818,0,2380,3846,0] // [[Fremennik Isles]]
 #define CONST_AREA_TROLLS12 [2311,3881,0,2331,3901,0] // [[Fremennik Isles]]
-#define CONST_AREA_TROLLS13 [2396,10249,0,2416,10269,0] // [[Ice Troll Caves]]
-#define CONST_AREA_TROLLS14 [2392,10205,0,2430,10237,0] // [[Jatizso mine]]
-#define CONST_AREA_TROLLS15 [2310,3843,0,2428,3903,0] // [[Fremennik Isles]]
-#define CONST_AREA_TROLLS16 [2405,10274,0,2425,10294,0] // [[Ice Troll Caves]]
-#define CONST_AREA_TROLLS17 [2391,10210,0,2411,10230,0] // [[Jatizso mine]]
-#define CONST_AREA_TROLLS18 [2308,3819,0,2413,3904,0] // [[Fremennik Isles]]
+#define CONST_AREA_TROLLS13 [2396,10247,0,2424,10269,0] // [[Ice Troll Caves]]
+#define CONST_AREA_TROLLS14 [2368,10205,0,2430,10237,0] // [[Jatizso mine]]
+#define CONST_AREA_TROLLS15 [2310,3824,0,2428,3903,0] // [[Fremennik Isles]]
+#define CONST_AREA_TROLLS16 [2405,10256,0,2431,10294,0] // [[Ice Troll Caves]]
+#define CONST_AREA_TROLLS17 [2391,10210,0,2421,10230,0] // [[Jatizso mine]]
+#define CONST_AREA_TROLLS18 [2308,3819,0,2418,3904,0] // [[Fremennik Isles]]
 #define CONST_AREA_TROLLS19 [2332,3880,0,2387,3905,0] // [[Fremennik Isles]]
-#define CONST_AREA_TROLLS20 [2406,10262,0,2426,10282,0] // [[Ice Troll Caves]]
-#define CONST_AREA_TROLLS21 [2391,10207,0,2413,10233,0] // [[Jatizso mine]]
+#define CONST_AREA_TROLLS20 [2406,10262,0,2429,10292,0] // [[Ice Troll Caves]]
+#define CONST_AREA_TROLLS21 [2391,10207,0,2419,10233,0] // [[Jatizso mine]]
 #define CONST_AREA_TROLLS22 [2839,3710,0,2875,3745,0] // [[Ice Path]]
-#define CONST_AREA_TROLLS23 [2760,10189,0,2811,10243,0] // [[Trollweiss Dungeon]]
+#define CONST_AREA_TROLLS23 [2760,10188,0,2811,10243,0] // [[Trollweiss Dungeon]]
 #define CONST_TROLLS_RULE(_cond) rule ((area:CONST_AREA_TROLLS0 || area:CONST_AREA_TROLLS1 || area:CONST_AREA_TROLLS2 || area:CONST_AREA_TROLLS3 || area:CONST_AREA_TROLLS4 || area:CONST_AREA_TROLLS5 || area:CONST_AREA_TROLLS6 || area:CONST_AREA_TROLLS7 || area:CONST_AREA_TROLLS8 || area:CONST_AREA_TROLLS9 || area:CONST_AREA_TROLLS10 || area:CONST_AREA_TROLLS11 || area:CONST_AREA_TROLLS12 || area:CONST_AREA_TROLLS13 || area:CONST_AREA_TROLLS14 || area:CONST_AREA_TROLLS15 || area:CONST_AREA_TROLLS16 || area:CONST_AREA_TROLLS17 || area:CONST_AREA_TROLLS18 || area:CONST_AREA_TROLLS19 || area:CONST_AREA_TROLLS20 || area:CONST_AREA_TROLLS21 || area:CONST_AREA_TROLLS22 || area:CONST_AREA_TROLLS23) && (_cond))
 
 /*@ define:input
@@ -3482,7 +3509,7 @@ CONST_TROLLS_RULE (name:VAR_TROLLS_ENUMLIST_FILTER_TERTIARY) {
 
 #define CONST_AREA_TZHAAR0 [2476,5061,0,2550,5155,0] // [[Mor Ul Rek]]
 #define CONST_AREA_TZHAAR1 [2442,5078,0,2513,5179,0] // [[Mor Ul Rek]]
-#define CONST_AREA_TZHAAR2 [2427,5080,0,2547,5167,0] // [[Mor Ul Rek]]
+#define CONST_AREA_TZHAAR2 [2427,5074,0,2547,5167,0] // [[Mor Ul Rek]]
 #define CONST_AREA_TZHAAR3 [2487,5058,0,2538,5120,0] // [[Mor Ul Rek]]
 #define CONST_AREA_TZHAAR4 [2519,5132,0,2539,5152,0] // [[Mor Ul Rek]]
 #define CONST_AREA_TZHAAR5 [2472,5068,0,2502,5111,0] // [[Mor Ul Rek]]
@@ -3543,19 +3570,19 @@ CONST_TZHAAR_RULE (name:VAR_TZHAAR_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_VAMPYRES0 [3614,3312,0,3634,3332,0] // [[Meiyerditch]]
+#define CONST_AREA_VAMPYRES0 [3614,3295,0,3641,3332,0] // [[Meiyerditch]]
 #define CONST_AREA_VAMPYRES1 [3587,3172,0,3648,3289,0] // [[Meiyerditch]]
 #define CONST_AREA_VAMPYRES2 [3583,3198,0,3603,3218,0] // [[Meiyerditch]]
-#define CONST_AREA_VAMPYRES3 [3703,3355,0,3758,3392,0] // [[Slepe]]
+#define CONST_AREA_VAMPYRES3 [3703,3355,0,3760,3392,0] // [[Slepe]]
 #define CONST_AREA_VAMPYRES4 [3579,3159,0,3655,3325,0] // [[Meiyerditch (1st Floor)]]
 #define CONST_AREA_VAMPYRES5 [3579,3197,0,3605,3239,0] // [[Meiyerditch (1st Floor)]]
 #define CONST_AREA_VAMPYRES6 [3609,3199,0,3629,3219,0] // [[Meiyerditch (2nd Floor)]]
-#define CONST_AREA_VAMPYRES7 [3588,3283,0,3652,3334,0] // [[Meiyerditch (2nd Floor)]]
-#define CONST_AREA_VAMPYRES8 [3600,3198,0,3620,3218,0] // [[Meiyerditch (3rd Floor)]]
+#define CONST_AREA_VAMPYRES7 [3588,3280,0,3652,3334,0] // [[Meiyerditch (2nd Floor)]]
+#define CONST_AREA_VAMPYRES8 [3600,3198,0,3632,3222,0] // [[Meiyerditch (3rd Floor)]]
 #define CONST_AREA_VAMPYRES9 [3620,3330,0,3667,3403,0] // [[Darkmeyer]]
 #define CONST_AREA_VAMPYRES10 [3643,3330,0,3663,3350,0] // [[Darkmeyer]]
 #define CONST_AREA_VAMPYRES11 [3604,3369,0,3624,3389,0] // [[Darkmeyer]]
-#define CONST_AREA_VAMPYRES12 [3582,3314,0,3621,3399,0] // [[Darkmeyer]]
+#define CONST_AREA_VAMPYRES12 [3582,3314,0,3635,3399,0] // [[Darkmeyer]]
 #define CONST_AREA_VAMPYRES13 [3614,3365,0,3658,3397,0] // [[Darkmeyer]]
 #define CONST_VAMPYRES_RULE(_cond) rule ((area:CONST_AREA_VAMPYRES0 || area:CONST_AREA_VAMPYRES1 || area:CONST_AREA_VAMPYRES2 || area:CONST_AREA_VAMPYRES3 || area:CONST_AREA_VAMPYRES4 || area:CONST_AREA_VAMPYRES5 || area:CONST_AREA_VAMPYRES6 || area:CONST_AREA_VAMPYRES7 || area:CONST_AREA_VAMPYRES8 || area:CONST_AREA_VAMPYRES9 || area:CONST_AREA_VAMPYRES10 || area:CONST_AREA_VAMPYRES11 || area:CONST_AREA_VAMPYRES12 || area:CONST_AREA_VAMPYRES13) && (_cond))
 
@@ -3611,8 +3638,8 @@ CONST_VAMPYRES_RULE (name:VAR_VAMPYRES_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_WATERFIEND0 [1728,5330,0,1776,5373,0] // [[Ancient Cavern]]
-#define CONST_AREA_WATERFIEND1 [1600,5330,0,1648,5373,0] // [[Unlit Ancient Cavern during Dragon Slayer II]]
+#define CONST_AREA_WATERFIEND0 [1728,5330,0,1777,5373,0] // [[Ancient Cavern]]
+#define CONST_AREA_WATERFIEND1 [1600,5330,0,1649,5373,0] // [[Unlit Ancient Cavern during Dragon Slayer II]]
 #define CONST_AREA_WATERFIEND2 [2238,9977,0,2297,10007,0] // [[Kraken Cove (Slayer Task Only)]]
 #define CONST_AREA_WATERFIEND3 [3151,12435,0,3202,12486,0] // [[Iorwerth Dungeon]]
 #define CONST_WATERFIEND_RULE(_cond) rule ((area:CONST_AREA_WATERFIEND0 || area:CONST_AREA_WATERFIEND1 || area:CONST_AREA_WATERFIEND2 || area:CONST_AREA_WATERFIEND3) && (_cond))
@@ -3692,8 +3719,9 @@ CONST_WATERFIEND_RULE (name:VAR_WATERFIEND_ENUMLIST_FILTER_TERTIARY) {
 #define CONST_AREA_WEREWOLF0 [2826,5273,0,2946,5371,0] // [[God Wars Dungeon]]
 #define CONST_AREA_WEREWOLF1 [2825,5267,0,2868,5325,0] // [[God Wars Dungeon]]
 #define CONST_AREA_WEREWOLF2 [2914,5227,0,2934,5247,0] // [[God Wars Dungeon]]
-#define CONST_AREA_WEREWOLF3 [2955,10089,0,2975,10109,0] // [[Wilderness God Wars Dungeon]]
-#define CONST_WEREWOLF_RULE(_cond) rule ((area:CONST_AREA_WEREWOLF0 || area:CONST_AREA_WEREWOLF1 || area:CONST_AREA_WEREWOLF2 || area:CONST_AREA_WEREWOLF3) && (_cond))
+#define CONST_AREA_WEREWOLF3 [2941,5275,0,2961,5295,0] // [[God Wars Dungeon]]
+#define CONST_AREA_WEREWOLF4 [2955,10089,0,2980,10109,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_WEREWOLF_RULE(_cond) rule ((area:CONST_AREA_WEREWOLF0 || area:CONST_AREA_WEREWOLF1 || area:CONST_AREA_WEREWOLF2 || area:CONST_AREA_WEREWOLF3 || area:CONST_AREA_WEREWOLF4) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -3752,11 +3780,11 @@ description: |
   Provides per-monster filtering for common slayer monsters.
 */
 
-#define CONST_AREA_ABYSSAL_DEMON0 [3006,4864,0,3066,4927,0] // [[Abyssal Area (alr)]]
+#define CONST_AREA_ABYSSAL_DEMON0 [3006,4864,0,3071,4927,0] // [[Abyssal Area (alr)]]
 #define CONST_AREA_ABYSSAL_DEMON1 [1659,10044,0,1688,10108,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_ABYSSAL_DEMON2 [3398,3552,0,3436,3586,0] // [[Slayer Tower (2)]]
-#define CONST_AREA_ABYSSAL_DEMON3 [3417,9944,0,3452,9984,0] // [[Slayer Tower (basement)]]
-#define CONST_AREA_ABYSSAL_DEMON4 [3325,10148,0,3355,10178,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_ABYSSAL_DEMON2 [3398,3552,0,3437,3586,0] // [[Slayer Tower (2)]]
+#define CONST_AREA_ABYSSAL_DEMON3 [3417,9944,0,3455,9984,0] // [[Slayer Tower (basement)]]
+#define CONST_AREA_ABYSSAL_DEMON4 [3325,10148,0,3357,10178,0] // [[Wilderness Slayer Cave]]
 #define CONST_ABYSSAL_DEMON_RULE(_cond) rule ((area:CONST_AREA_ABYSSAL_DEMON0 || area:CONST_AREA_ABYSSAL_DEMON1 || area:CONST_AREA_ABYSSAL_DEMON2 || area:CONST_AREA_ABYSSAL_DEMON3 || area:CONST_AREA_ABYSSAL_DEMON4) && (_cond))
 
 /*@ define:input
@@ -3821,9 +3849,9 @@ CONST_ABYSSAL_DEMON_RULE (name:VAR_ABYSSAL_DEMON_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_ARAXYTE0 [3648,9792,0,3694,9852,0] // [[Morytania Spider Cave]]
+#define CONST_AREA_ARAXYTE0 [3648,9792,0,3697,9852,0] // [[Morytania Spider Cave]]
 #define CONST_AREA_ARAXYTE1 [3683,9822,0,3715,9857,0] // [[Morytania Spider Cave (task-only area)]]
-#define CONST_AREA_ARAXYTE2 [3650,9807,0,3685,9851,0] // [[Morytania Spider Cave]]
+#define CONST_AREA_ARAXYTE2 [3650,9807,0,3691,9851,0] // [[Morytania Spider Cave]]
 #define CONST_AREA_ARAXYTE3 [3656,9802,0,3712,9869,0] // [[Morytania Spider Cave (task-only area)]]
 #define CONST_ARAXYTE_RULE(_cond) rule ((area:CONST_AREA_ARAXYTE0 || area:CONST_AREA_ARAXYTE1 || area:CONST_AREA_ARAXYTE2 || area:CONST_AREA_ARAXYTE3) && (_cond))
 
@@ -3879,8 +3907,8 @@ CONST_ARAXYTE_RULE (name:VAR_ARAXYTE_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_BANSHEES0 [3419,3529,0,3453,3574,0] // [[Slayer Tower (0)]]
-#define CONST_AREA_BANSHEES1 [1598,9982,0,1633,10008,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_BANSHEES0 [3419,3527,0,3454,3574,0] // [[Slayer Tower (0)]]
+#define CONST_AREA_BANSHEES1 [1598,9982,0,1635,10008,0] // [[Catacombs of Kourend]]
 #define CONST_BANSHEES_RULE(_cond) rule ((area:CONST_AREA_BANSHEES0 || area:CONST_AREA_BANSHEES1) && (_cond))
 
 /*@ define:input
@@ -3926,7 +3954,7 @@ CONST_BANSHEES_RULE (name:VAR_BANSHEES_ENUMLIST_FILTER_OTHER) {
 
 
 #define CONST_AREA_BASILISKS0 [2728,9992,0,2756,10028,0] // [[Fremennik Slayer Dungeon (ajr)]]
-#define CONST_AREA_BASILISKS1 [2449,10388,0,2492,10420,0] // [[Jormungand's Prison]]
+#define CONST_AREA_BASILISKS1 [2449,10388,0,2495,10420,0] // [[Jormungand's Prison]]
 #define CONST_AREA_BASILISKS2 [2393,10365,0,2470,10407,0] // [[Jormungand's Prison]]
 #define CONST_BASILISKS_RULE(_cond) rule ((area:CONST_AREA_BASILISKS0 || area:CONST_AREA_BASILISKS1 || area:CONST_AREA_BASILISKS2) && (_cond))
 
@@ -3994,16 +4022,16 @@ CONST_BASILISKS_RULE (name:VAR_BASILISKS_ENUMLIST_FILTER_TERTIARY) {
 
 #define CONST_AREA_BLOODVELD0 [2844,5289,0,2945,5372,0] // [[God Wars Dungeon]]
 #define CONST_AREA_BLOODVELD1 [2835,5273,0,2855,5293,0] // [[God Wars Dungeon]]
-#define CONST_AREA_BLOODVELD2 [3554,9725,0,3582,9751,0] // [[Meiyerditch Laboratories]]
+#define CONST_AREA_BLOODVELD2 [3554,9725,0,3584,9751,0] // [[Meiyerditch Laboratories]]
 #define CONST_AREA_BLOODVELD3 [3399,3547,0,3436,3586,0] // [[Slayer Tower (1)]]
-#define CONST_AREA_BLOODVELD4 [3393,9919,0,3431,9959,0] // [[Slayer Tower (basement)]]
-#define CONST_AREA_BLOODVELD5 [2424,9807,0,2498,9844,0] // [[Stronghold Slayer Cave]]
-#define CONST_AREA_BLOODVELD6 [2940,10075,0,2971,10109,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AREA_BLOODVELD4 [3393,9919,0,3433,9959,0] // [[Slayer Tower (basement)]]
+#define CONST_AREA_BLOODVELD5 [2424,9807,0,2499,9844,0] // [[Stronghold Slayer Cave]]
+#define CONST_AREA_BLOODVELD6 [2940,10075,0,2978,10111,0] // [[Wilderness God Wars Dungeon]]
 #define CONST_AREA_BLOODVELD7 [1615,10018,0,1644,10045,0] // [[Catacombs of Kourend]]
 #define CONST_AREA_BLOODVELD8 [1662,10061,0,1695,10087,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_BLOODVELD9 [1678,10003,0,1704,10028,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_BLOODVELD10 [3220,12404,0,3265,12453,0] // [[Iorwerth Dungeon]]
-#define CONST_AREA_BLOODVELD11 [3578,9725,0,3609,9760,0] // [[Meiyerditch Laboratories]]
+#define CONST_AREA_BLOODVELD9 [1678,10003,0,1704,10029,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_BLOODVELD10 [3220,12404,0,3266,12453,0] // [[Iorwerth Dungeon]]
+#define CONST_AREA_BLOODVELD11 [3578,9725,0,3610,9760,0] // [[Meiyerditch Laboratories]]
 #define CONST_BLOODVELD_RULE(_cond) rule ((area:CONST_AREA_BLOODVELD0 || area:CONST_AREA_BLOODVELD1 || area:CONST_AREA_BLOODVELD2 || area:CONST_AREA_BLOODVELD3 || area:CONST_AREA_BLOODVELD4 || area:CONST_AREA_BLOODVELD5 || area:CONST_AREA_BLOODVELD6 || area:CONST_AREA_BLOODVELD7 || area:CONST_AREA_BLOODVELD8 || area:CONST_AREA_BLOODVELD9 || area:CONST_AREA_BLOODVELD10 || area:CONST_AREA_BLOODVELD11) && (_cond))
 
 /*@ define:input
@@ -4068,7 +4096,7 @@ CONST_BLOODVELD_RULE (name:VAR_BLOODVELD_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_BRINE_RAT0 [2692,10121,0,2720,10147,0] // [[Brine Rat Cavern (dks)]]
+#define CONST_AREA_BRINE_RAT0 [2692,10121,0,2722,10147,0] // [[Brine Rat Cavern (dks)]]
 #define CONST_BRINE_RAT_RULE(_cond) rule ((area:CONST_AREA_BRINE_RAT0) && (_cond))
 
 /*@ define:input
@@ -4134,7 +4162,7 @@ CONST_BRINE_RAT_RULE (name:VAR_BRINE_RAT_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_CAVE_BUG0 [2687,5183,0,2757,5251,0] // [[Dorgesh-Kaan South Dungeon]]
-#define CONST_AREA_CAVE_BUG1 [3139,9532,0,3237,9599,0] // [[Lumbridge Swamp Caves]]
+#define CONST_AREA_CAVE_BUG1 [3139,9532,0,3239,9599,0] // [[Lumbridge Swamp Caves]]
 #define CONST_CAVE_BUG_RULE(_cond) rule ((area:CONST_AREA_CAVE_BUG0 || area:CONST_AREA_CAVE_BUG1) && (_cond))
 
 /*@ define:input
@@ -4179,10 +4207,10 @@ CONST_CAVE_BUG_RULE (name:VAR_CAVE_BUG_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_CAVE_CRAWLER0 [2700,5193,0,2722,5234,0] // [[Dorgesh-Kaan South Dungeon (ajq)]]
+#define CONST_AREA_CAVE_CRAWLER0 [2698,5193,0,2722,5234,0] // [[Dorgesh-Kaan South Dungeon (ajq)]]
 #define CONST_AREA_CAVE_CRAWLER1 [2771,9982,0,2805,10010,0] // [[Fremennik Slayer Dungeon (ajr)]]
-#define CONST_AREA_CAVE_CRAWLER2 [3176,9564,0,3199,9592,0] // [[Lumbridge Swamp Caves]]
-#define CONST_AREA_CAVE_CRAWLER3 [1659,9598,0,1684,9635,0] // [[Ruins of Tapoyauik - top level]]
+#define CONST_AREA_CAVE_CRAWLER2 [3176,9556,0,3199,9592,0] // [[Lumbridge Swamp Caves]]
+#define CONST_AREA_CAVE_CRAWLER3 [1659,9595,0,1687,9635,0] // [[Ruins of Tapoyauik - top level]]
 #define CONST_CAVE_CRAWLER_RULE(_cond) rule ((area:CONST_AREA_CAVE_CRAWLER0 || area:CONST_AREA_CAVE_CRAWLER1 || area:CONST_AREA_CAVE_CRAWLER2 || area:CONST_AREA_CAVE_CRAWLER3) && (_cond))
 
 /*@ define:input
@@ -4350,9 +4378,9 @@ CONST_CAVE_KRAKEN_RULE (name:VAR_CAVE_KRAKEN_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_CAVE_SLIME0 [2686,5222,0,2738,5248,0] // [[Dorgesh-Kaan South Dungeon (ajq)]]
+#define CONST_AREA_CAVE_SLIME0 [2686,5222,0,2741,5248,0] // [[Dorgesh-Kaan South Dungeon (ajq)]]
 #define CONST_AREA_CAVE_SLIME1 [3140,9533,0,3220,9602,0] // [[Lumbridge Swamp Caves]]
-#define CONST_AREA_CAVE_SLIME2 [3236,9558,0,3256,9583,0] // [[Lumbridge Swamp Caves]]
+#define CONST_AREA_CAVE_SLIME2 [3236,9558,0,3263,9583,0] // [[Lumbridge Swamp Caves]]
 #define CONST_CAVE_SLIME_RULE(_cond) rule ((area:CONST_AREA_CAVE_SLIME0 || area:CONST_AREA_CAVE_SLIME1 || area:CONST_AREA_CAVE_SLIME2) && (_cond))
 
 /*@ define:input
@@ -4397,7 +4425,7 @@ CONST_CAVE_SLIME_RULE (name:VAR_CAVE_SLIME_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_COCKATRICE0 [2775,10022,0,2807,10048,0] // [[Fremennik Slayer Cave (AJR)]]
+#define CONST_AREA_COCKATRICE0 [2775,10021,0,2809,10048,0] // [[Fremennik Slayer Cave (AJR)]]
 #define CONST_COCKATRICE_RULE(_cond) rule ((area:CONST_AREA_COCKATRICE0) && (_cond))
 
 /*@ define:input
@@ -4499,8 +4527,8 @@ CONST_CRAWLING_HAND_RULE (name:VAR_CRAWLING_HAND_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_DARK_BEAST0 [3148,12412,0,3179,12441,0] // [[Iorwerth Dungeon]]
-#define CONST_AREA_DARK_BEAST1 [3209,12375,0,3242,12409,0] // [[Iorwerth Dungeon]]
-#define CONST_AREA_DARK_BEAST2 [1978,4622,0,2042,4674,0] // [[Mourner Tunnels]]
+#define CONST_AREA_DARK_BEAST1 [3209,12375,0,3244,12409,0] // [[Iorwerth Dungeon]]
+#define CONST_AREA_DARK_BEAST2 [1978,4622,0,2043,4674,0] // [[Mourner Tunnels]]
 #define CONST_DARK_BEAST_RULE(_cond) rule ((area:CONST_AREA_DARK_BEAST0 || area:CONST_AREA_DARK_BEAST1 || area:CONST_AREA_DARK_BEAST2) && (_cond))
 
 /*@ define:input
@@ -4641,9 +4669,9 @@ CONST_DRAKE_RULE (name:VAR_DRAKE_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_DUST_DEVIL0 [3169,9337,0,3269,9412,0] // [[Smoke Dungeon]]
-#define CONST_AREA_DUST_DEVIL1 [3421,10107,0,3454,10137,0] // [[Wilderness Slayer Cave]]
-#define CONST_AREA_DUST_DEVIL2 [1698,10001,0,1727,10044,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_DUST_DEVIL0 [3169,9337,0,3271,9412,0] // [[Smoke Dungeon]]
+#define CONST_AREA_DUST_DEVIL1 [3421,10107,0,3458,10137,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_DUST_DEVIL2 [1698,10001,0,1728,10045,0] // [[Catacombs of Kourend]]
 #define CONST_DUST_DEVIL_RULE(_cond) rule ((area:CONST_AREA_DUST_DEVIL0 || area:CONST_AREA_DUST_DEVIL1 || area:CONST_AREA_DUST_DEVIL2) && (_cond))
 
 /*@ define:input
@@ -4708,7 +4736,7 @@ CONST_DUST_DEVIL_RULE (name:VAR_DUST_DEVIL_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_FEVER_SPIDER0 [2130,5083,0,2169,5114,0] // [[Braindeath Island]]
+#define CONST_AREA_FEVER_SPIDER0 [2130,5083,0,2170,5114,0] // [[Braindeath Island]]
 #define CONST_FEVER_SPIDER_RULE(_cond) rule ((area:CONST_AREA_FEVER_SPIDER0) && (_cond))
 
 /*@ define:input
@@ -4753,14 +4781,14 @@ CONST_FEVER_SPIDER_RULE (name:VAR_FEVER_SPIDER_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS0 [3617,10236,0,3642,10262,0] // [[Wyvern Cave (Slayer task only)]]
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS1 [3624,10195,0,3644,10215,0] // [[Wyvern Cave]]
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS2 [3613,10175,0,3634,10205,0] // [[Wyvern Cave]]
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS3 [3593,10256,0,3621,10290,0] // [[Wyvern Cave (Slayer task only)]]
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS4 [3595,10194,0,3620,10225,0] // [[Wyvern Cave]]
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS5 [3612,10272,0,3638,10301,0] // [[Wyvern Cave (Slayer task only)]]
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS6 [3587,10240,0,3619,10264,0] // [[Wyvern Cave]]
-#define CONST_AREA_FOSSIL_ISLAND_WYVERNS7 [3586,10176,0,3611,10210,0] // [[Wyvern Cave (Slayer task only)]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS0 [3617,10236,0,3646,10262,0] // [[Wyvern Cave (Slayer task only)]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS1 [3624,10195,0,3644,10222,0] // [[Wyvern Cave]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS2 [3613,10175,0,3640,10205,0] // [[Wyvern Cave]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS3 [3593,10256,0,3622,10290,0] // [[Wyvern Cave (Slayer task only)]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS4 [3595,10194,0,3622,10225,0] // [[Wyvern Cave]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS5 [3612,10270,0,3644,10301,0] // [[Wyvern Cave (Slayer task only)]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS6 [3587,10239,0,3625,10264,0] // [[Wyvern Cave]]
+#define CONST_AREA_FOSSIL_ISLAND_WYVERNS7 [3586,10176,0,3612,10210,0] // [[Wyvern Cave (Slayer task only)]]
 #define CONST_FOSSIL_ISLAND_WYVERNS_RULE(_cond) rule ((area:CONST_AREA_FOSSIL_ISLAND_WYVERNS0 || area:CONST_AREA_FOSSIL_ISLAND_WYVERNS1 || area:CONST_AREA_FOSSIL_ISLAND_WYVERNS2 || area:CONST_AREA_FOSSIL_ISLAND_WYVERNS3 || area:CONST_AREA_FOSSIL_ISLAND_WYVERNS4 || area:CONST_AREA_FOSSIL_ISLAND_WYVERNS5 || area:CONST_AREA_FOSSIL_ISLAND_WYVERNS6 || area:CONST_AREA_FOSSIL_ISLAND_WYVERNS7) && (_cond))
 
 /*@ define:input
@@ -4825,8 +4853,8 @@ CONST_FOSSIL_ISLAND_WYVERNS_RULE (name:VAR_FOSSIL_ISLAND_WYVERNS_ENUMLIST_FILTER
 }
 
 
-#define CONST_AREA_GARGOYLE0 [3422,3527,0,3455,3558,0] // [[Slayer Tower top floor]]
-#define CONST_AREA_GARGOYLE1 [3417,9918,0,3450,9958,0] // [[Slayer Tower basement (Slayer task only)]]
+#define CONST_AREA_GARGOYLE0 [3422,3525,0,3456,3558,0] // [[Slayer Tower top floor]]
+#define CONST_AREA_GARGOYLE1 [3417,9918,0,3454,9958,0] // [[Slayer Tower basement (Slayer task only)]]
 #define CONST_GARGOYLE_RULE(_cond) rule ((area:CONST_AREA_GARGOYLE0 || area:CONST_AREA_GARGOYLE1) && (_cond))
 
 /*@ define:input
@@ -4881,7 +4909,7 @@ CONST_GARGOYLE_RULE (name:VAR_GARGOYLE_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_HARPIE_BUG_SWARM0 [2844,3095,0,2896,3133,0] // [[North-east of Tai Bwo Wannai (dkp)]]
+#define CONST_AREA_HARPIE_BUG_SWARM0 [2844,3095,0,2899,3133,0] // [[North-east of Tai Bwo Wannai (dkp)]]
 #define CONST_AREA_HARPIE_BUG_SWARM1 [1676,2891,0,1708,2922,0] // [[East of the Colossal Wyrm Remains]]
 #define CONST_HARPIE_BUG_SWARM_RULE(_cond) rule ((area:CONST_AREA_HARPIE_BUG_SWARM0 || area:CONST_AREA_HARPIE_BUG_SWARM1) && (_cond))
 
@@ -4992,7 +5020,7 @@ CONST_HYDRA_RULE (name:VAR_HYDRA_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_INFERNAL_MAGE0 [3423,3545,0,3456,3585,0] // [[Slayer Tower (1)]]
+#define CONST_AREA_INFERNAL_MAGE0 [3423,3545,0,3458,3585,0] // [[Slayer Tower (1)]]
 #define CONST_INFERNAL_MAGE_RULE(_cond) rule ((area:CONST_AREA_INFERNAL_MAGE0) && (_cond))
 
 /*@ define:input
@@ -5037,10 +5065,10 @@ CONST_INFERNAL_MAGE_RULE (name:VAR_INFERNAL_MAGE_ENUMLIST_FILTER_RUNESANDAMMUNIT
 }
 
 
-#define CONST_AREA_JELLIES0 [2689,10013,0,2718,10041,0] // [[Fremennik Slayer Dungeon (AJR)]]
+#define CONST_AREA_JELLIES0 [2689,10013,0,2721,10041,0] // [[Fremennik Slayer Dungeon (AJR)]]
 #define CONST_AREA_JELLIES1 [3414,10087,0,3449,10118,0] // [[Wilderness Slayer Cave]]
 #define CONST_AREA_JELLIES2 [1674,9984,0,1701,10010,0] // [[Catacombs of Kourend]]
-#define CONST_AREA_JELLIES3 [1704,10034,0,1735,10065,0] // [[Catacombs of Kourend]]
+#define CONST_AREA_JELLIES3 [1704,10034,0,1736,10065,0] // [[Catacombs of Kourend]]
 #define CONST_JELLIES_RULE(_cond) rule ((area:CONST_AREA_JELLIES0 || area:CONST_AREA_JELLIES1 || area:CONST_AREA_JELLIES2 || area:CONST_AREA_JELLIES3) && (_cond))
 
 /*@ define:input
@@ -5085,7 +5113,7 @@ CONST_JELLIES_RULE (name:VAR_JELLIES_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_KILLERWATT0 [2632,5187,0,2683,5240,0] // [[Killerwatt plane]]
+#define CONST_AREA_KILLERWATT0 [2632,5187,0,2685,5240,0] // [[Killerwatt plane]]
 #define CONST_KILLERWATT_RULE(_cond) rule ((area:CONST_AREA_KILLERWATT0) && (_cond))
 
 /*@ define:input
@@ -5140,8 +5168,8 @@ CONST_KILLERWATT_RULE (name:VAR_KILLERWATT_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_KURASK0 [2684,9982,0,2709,10011,0] // [[Fremennik Slayer Dungeon AJR]]
-#define CONST_AREA_KURASK1 [2686,9949,0,2723,9987,0] // [[Fremennik Slayer Dungeon (Slayer task only)]]
+#define CONST_AREA_KURASK0 [2684,9982,0,2711,10011,0] // [[Fremennik Slayer Dungeon AJR]]
+#define CONST_AREA_KURASK1 [2686,9949,0,2726,9987,0] // [[Fremennik Slayer Dungeon (Slayer task only)]]
 #define CONST_AREA_KURASK2 [3207,12347,0,3268,12399,0] // [[Iorwerth Dungeon]]
 #define CONST_AREA_KURASK3 [3198,12355,0,3224,12381,0] // [[Iorwerth Dungeon]]
 #define CONST_KURASK_RULE(_cond) rule ((area:CONST_AREA_KURASK0 || area:CONST_AREA_KURASK1 || area:CONST_AREA_KURASK2 || area:CONST_AREA_KURASK3) && (_cond))
@@ -5210,14 +5238,15 @@ CONST_KURASK_RULE (name:VAR_KURASK_ENUMLIST_FILTER_TERTIARY) {
 
 #define CONST_AREA_LIZARDS0 [3374,3005,0,3481,3070,0] // [[South-east of Shantay Pass]]
 #define CONST_AREA_LIZARDS1 [3376,3049,0,3415,3075,0] // [[South-east of Shantay Pass]]
-#define CONST_AREA_LIZARDS2 [3334,2790,0,3358,2814,0] // [[West of Ruins of Ullek]]
-#define CONST_AREA_LIZARDS3 [1473,9694,0,1514,9728,0] // [[Neypotzli - Streambound Cavern]]
+#define CONST_AREA_LIZARDS2 [3334,2790,0,3362,2815,0] // [[West of Ruins of Ullek]]
+#define CONST_AREA_LIZARDS3 [1473,9694,0,1520,9728,0] // [[Neypotzli - Streambound Cavern]]
 #define CONST_AREA_LIZARDS4 [3377,3052,0,3414,3078,0] // [[Kharidian Desert (DLQ)]]
 #define CONST_AREA_LIZARDS5 [3431,3024,0,3455,3071,0] // [[Kharidian Desert (DLQ)]]
-#define CONST_AREA_LIZARDS6 [3374,3002,0,3483,3077,0] // [[North of Nardah]]
-#define CONST_AREA_LIZARDS7 [3333,2789,0,3362,2817,0] // [[West of Ruins of Ullek]]
-#define CONST_AREA_LIZARDS8 [1164,10121,0,1204,10159,0] // [[Karuulm Slayer Dungeon (1)]]
-#define CONST_LIZARDS_RULE(_cond) rule ((area:CONST_AREA_LIZARDS0 || area:CONST_AREA_LIZARDS1 || area:CONST_AREA_LIZARDS2 || area:CONST_AREA_LIZARDS3 || area:CONST_AREA_LIZARDS4 || area:CONST_AREA_LIZARDS5 || area:CONST_AREA_LIZARDS6 || area:CONST_AREA_LIZARDS7 || area:CONST_AREA_LIZARDS8) && (_cond))
+#define CONST_AREA_LIZARDS6 [3377,3007,0,3397,3027,0] // [[Kharidian Desert (DLQ)]]
+#define CONST_AREA_LIZARDS7 [3374,3002,0,3483,3077,0] // [[North of Nardah]]
+#define CONST_AREA_LIZARDS8 [3333,2789,0,3365,2817,0] // [[West of Ruins of Ullek]]
+#define CONST_AREA_LIZARDS9 [1164,10121,0,1204,10159,0] // [[Karuulm Slayer Dungeon (1)]]
+#define CONST_LIZARDS_RULE(_cond) rule ((area:CONST_AREA_LIZARDS0 || area:CONST_AREA_LIZARDS1 || area:CONST_AREA_LIZARDS2 || area:CONST_AREA_LIZARDS3 || area:CONST_AREA_LIZARDS4 || area:CONST_AREA_LIZARDS5 || area:CONST_AREA_LIZARDS6 || area:CONST_AREA_LIZARDS7 || area:CONST_AREA_LIZARDS8 || area:CONST_AREA_LIZARDS9) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -5281,7 +5310,7 @@ CONST_LIZARDS_RULE (name:VAR_LIZARDS_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_MOGRE0 [2972,3096,0,3006,3123,0] // [[Mudskipper Point (aiq)]]
+#define CONST_AREA_MOGRE0 [2972,3096,0,3015,3127,0] // [[Mudskipper Point (aiq)]]
 #define CONST_MOGRE_RULE(_cond) rule ((area:CONST_AREA_MOGRE0) && (_cond))
 
 /*@ define:input
@@ -5336,7 +5365,7 @@ CONST_MOGRE_RULE (name:VAR_MOGRE_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_MOLANISK0 [2693,5183,0,2752,5244,0] // [[Dorgesh-Kaan South Dungeon (ajq)]]
+#define CONST_AREA_MOLANISK0 [2693,5183,0,2757,5244,0] // [[Dorgesh-Kaan South Dungeon (ajq)]]
 #define CONST_MOLANISK_RULE(_cond) rule ((area:CONST_AREA_MOLANISK0) && (_cond))
 
 /*@ define:input
@@ -5381,7 +5410,7 @@ CONST_MOLANISK_RULE (name:VAR_MOLANISK_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_NAGUAS0 [1617,9608,0,1657,9653,0] // [[Ruins of Tapoyauik]]
+#define CONST_AREA_NAGUAS0 [1617,9608,0,1662,9653,0] // [[Ruins of Tapoyauik]]
 #define CONST_AREA_NAGUAS1 [1340,9540,0,1388,9584,0] // [[Neypotzli - Ancient Prison]]
 #define CONST_NAGUAS_RULE(_cond) rule ((area:CONST_AREA_NAGUAS0 || area:CONST_AREA_NAGUAS1) && (_cond))
 
@@ -5437,11 +5466,11 @@ CONST_NAGUAS_RULE (name:VAR_NAGUAS_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_NECHRYAELS0 [3423,3550,0,3457,3584,0] // [[Slayer Tower Top Floor]]
+#define CONST_AREA_NECHRYAELS0 [3423,3550,0,3459,3584,0] // [[Slayer Tower Top Floor]]
 #define CONST_AREA_NECHRYAELS1 [3393,9944,0,3434,9981,0] // [[Slayer Tower Basement]]
 #define CONST_AREA_NECHRYAELS2 [1681,10068,0,1719,10095,0] // [[Catacombs of Kourend]]
 #define CONST_AREA_NECHRYAELS3 [3208,12407,0,3244,12471,0] // [[Iorwerth Dungeon]]
-#define CONST_AREA_NECHRYAELS4 [3322,10091,0,3349,10124,0] // [[Wilderness Slayer Cave]]
+#define CONST_AREA_NECHRYAELS4 [3322,10091,0,3351,10124,0] // [[Wilderness Slayer Cave]]
 #define CONST_NECHRYAELS_RULE(_cond) rule ((area:CONST_AREA_NECHRYAELS0 || area:CONST_AREA_NECHRYAELS1 || area:CONST_AREA_NECHRYAELS2 || area:CONST_AREA_NECHRYAELS3 || area:CONST_AREA_NECHRYAELS4) && (_cond))
 
 /*@ define:input
@@ -5507,13 +5536,13 @@ CONST_NECHRYAELS_RULE (name:VAR_NECHRYAELS_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_PYREFIEND0 [2747,9988,0,2775,10022,0] // [[Fremennik Slayer Cave (ajr)]]
-#define CONST_AREA_PYREFIEND1 [2853,5270,0,2874,5317,0] // [[God Wars Dungeon]]
-#define CONST_AREA_PYREFIEND2 [2237,2948,0,2270,2977,0] // [[Isle of Souls (bjp)]]
-#define CONST_AREA_PYREFIEND3 [3853,9745,0,3894,9796,0] // [[Sisterhood Sanctuary]]
-#define CONST_AREA_PYREFIEND4 [3238,9340,0,3326,9411,0] // [[Smoke Dungeon]]
-#define CONST_AREA_PYREFIEND5 [2949,10083,0,2969,10103,0] // [[Wilderness God Wars Dungeon]]
-#define CONST_AREA_PYREFIEND6 [2240,2948,0,2266,2972,0] // [[Isle of Souls]]
-#define CONST_AREA_PYREFIEND7 [3856,9746,0,3892,9794,0] // [[Sisterhood Sanctuary]]
+#define CONST_AREA_PYREFIEND1 [2853,5270,0,2883,5322,0] // [[God Wars Dungeon]]
+#define CONST_AREA_PYREFIEND2 [2237,2948,0,2272,2977,0] // [[Isle of Souls (bjp)]]
+#define CONST_AREA_PYREFIEND3 [3853,9744,0,3896,9796,0] // [[Sisterhood Sanctuary]]
+#define CONST_AREA_PYREFIEND4 [3238,9340,0,3328,9413,0] // [[Smoke Dungeon]]
+#define CONST_AREA_PYREFIEND5 [2949,10081,0,2972,10103,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AREA_PYREFIEND6 [2240,2948,0,2269,2972,0] // [[Isle of Souls]]
+#define CONST_AREA_PYREFIEND7 [3856,9746,0,3895,9794,0] // [[Sisterhood Sanctuary]]
 #define CONST_PYREFIEND_RULE(_cond) rule ((area:CONST_AREA_PYREFIEND0 || area:CONST_AREA_PYREFIEND1 || area:CONST_AREA_PYREFIEND2 || area:CONST_AREA_PYREFIEND3 || area:CONST_AREA_PYREFIEND4 || area:CONST_AREA_PYREFIEND5 || area:CONST_AREA_PYREFIEND6 || area:CONST_AREA_PYREFIEND7) && (_cond))
 
 /*@ define:input
@@ -5631,9 +5660,10 @@ CONST_REVENANTS_RULE (name:VAR_REVENANTS_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
 
-#define CONST_AREA_ROCKSLUG0 [2783,10005,0,2813,10030,0] // [[Fremennik Slayer Dungeon (ajr)]]
-#define CONST_AREA_ROCKSLUG1 [3212,9561,0,3235,9593,0] // [[Lumbridge Swamp Caves]]
-#define CONST_ROCKSLUG_RULE(_cond) rule ((area:CONST_AREA_ROCKSLUG0 || area:CONST_AREA_ROCKSLUG1) && (_cond))
+#define CONST_AREA_ROCKSLUG0 [2719,5213,0,2739,5233,0] // [[Dorgesh-Kaan South Dungeon (ajq)]]
+#define CONST_AREA_ROCKSLUG1 [2783,10005,0,2814,10030,0] // [[Fremennik Slayer Dungeon (ajr)]]
+#define CONST_AREA_ROCKSLUG2 [3212,9561,0,3236,9593,0] // [[Lumbridge Swamp Caves]]
+#define CONST_ROCKSLUG_RULE(_cond) rule ((area:CONST_AREA_ROCKSLUG0 || area:CONST_AREA_ROCKSLUG1 || area:CONST_AREA_ROCKSLUG2) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -5677,8 +5707,8 @@ CONST_ROCKSLUG_RULE (name:VAR_ROCKSLUG_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_SEA_SNAKES0 [2567,10277,0,2599,10307,0] // [[Miscellania and Etceteria Dungeon]]
-#define CONST_AREA_SEA_SNAKES1 [2585,10237,0,2615,10290,0] // [[Miscellania and Etceteria Dungeon]]
+#define CONST_AREA_SEA_SNAKES0 [2567,10277,0,2602,10307,0] // [[Miscellania and Etceteria Dungeon]]
+#define CONST_AREA_SEA_SNAKES1 [2585,10237,0,2621,10290,0] // [[Miscellania and Etceteria Dungeon]]
 #define CONST_SEA_SNAKES_RULE(_cond) rule ((area:CONST_AREA_SEA_SNAKES0 || area:CONST_AREA_SEA_SNAKES1) && (_cond))
 
 /*@ define:input
@@ -5733,7 +5763,7 @@ CONST_SEA_SNAKES_RULE (name:VAR_SEA_SNAKES_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_SKELETAL_WYVERN0 [3015,9529,0,3086,9596,0] // [[Asgarnian Ice Dungeon (AIQ)]]
+#define CONST_AREA_SKELETAL_WYVERN0 [3015,9529,0,3088,9596,0] // [[Asgarnian Ice Dungeon (AIQ)]]
 #define CONST_SKELETAL_WYVERN_RULE(_cond) rule ((area:CONST_AREA_SKELETAL_WYVERN0) && (_cond))
 
 /*@ define:input
@@ -5808,7 +5838,7 @@ CONST_SKELETAL_WYVERN_RULE (name:VAR_SKELETAL_WYVERN_ENUMLIST_FILTER_TERTIARY) {
 }
 
 
-#define CONST_AREA_SMOKE_DEVIL0 [2341,9411,0,2431,9475,0] // [[Smoke Devil Dungeon]]
+#define CONST_AREA_SMOKE_DEVIL0 [2341,9411,0,2432,9475,0] // [[Smoke Devil Dungeon]]
 #define CONST_SMOKE_DEVIL_RULE(_cond) rule ((area:CONST_AREA_SMOKE_DEVIL0) && (_cond))
 
 /*@ define:input
@@ -5929,21 +5959,21 @@ CONST_SPECTRES_RULE (name:VAR_SPECTRES_ENUMLIST_FILTER_TERTIARY) {
 #define CONST_AREA_SPIRITUAL_CREATURES5 [2913,5225,0,2933,5245,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES6 [2846,5189,0,2901,5233,0] // [[God Wars Dungeon - Ancient Prison]]
 #define CONST_AREA_SPIRITUAL_CREATURES7 [2932,10070,0,2988,10127,0] // [[Wilderness God Wars Dungeon]]
-#define CONST_AREA_SPIRITUAL_CREATURES8 [2817,5253,0,2868,5374,0] // [[God Wars Dungeon]]
+#define CONST_AREA_SPIRITUAL_CREATURES8 [2817,5253,0,2899,5374,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES9 [2940,5263,0,2963,5298,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES10 [2870,5274,0,2937,5367,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES11 [2911,5225,0,2931,5245,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES12 [2870,5280,0,2890,5300,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES13 [2824,5340,0,2844,5360,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES14 [2842,5190,0,2904,5229,0] // [[God Wars Dungeon - Ancient Prison]]
-#define CONST_AREA_SPIRITUAL_CREATURES15 [2932,10072,0,2984,10126,0] // [[Wilderness God Wars Dungeon]]
-#define CONST_AREA_SPIRITUAL_CREATURES16 [2877,5277,0,2946,5373,0] // [[God Wars Dungeon]]
+#define CONST_AREA_SPIRITUAL_CREATURES15 [2932,10068,0,2984,10126,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AREA_SPIRITUAL_CREATURES16 [2877,5273,0,2946,5373,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES17 [2817,5274,0,2893,5370,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES18 [2827,5255,0,2893,5313,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES19 [2908,5225,0,2928,5245,0] // [[God Wars Dungeon]]
 #define CONST_AREA_SPIRITUAL_CREATURES20 [2938,5259,0,2966,5290,0] // [[God Wars Dungeon]]
-#define CONST_AREA_SPIRITUAL_CREATURES21 [2854,5192,0,2897,5223,0] // [[God Wars Dungeon - Ancient Prison]]
-#define CONST_AREA_SPIRITUAL_CREATURES22 [2930,10073,0,2978,10129,0] // [[Wilderness God Wars Dungeon]]
+#define CONST_AREA_SPIRITUAL_CREATURES21 [2854,5192,0,2897,5231,0] // [[God Wars Dungeon - Ancient Prison]]
+#define CONST_AREA_SPIRITUAL_CREATURES22 [2930,10073,0,2981,10129,0] // [[Wilderness God Wars Dungeon]]
 #define CONST_SPIRITUAL_CREATURES_RULE(_cond) rule ((area:CONST_AREA_SPIRITUAL_CREATURES0 || area:CONST_AREA_SPIRITUAL_CREATURES1 || area:CONST_AREA_SPIRITUAL_CREATURES2 || area:CONST_AREA_SPIRITUAL_CREATURES3 || area:CONST_AREA_SPIRITUAL_CREATURES4 || area:CONST_AREA_SPIRITUAL_CREATURES5 || area:CONST_AREA_SPIRITUAL_CREATURES6 || area:CONST_AREA_SPIRITUAL_CREATURES7 || area:CONST_AREA_SPIRITUAL_CREATURES8 || area:CONST_AREA_SPIRITUAL_CREATURES9 || area:CONST_AREA_SPIRITUAL_CREATURES10 || area:CONST_AREA_SPIRITUAL_CREATURES11 || area:CONST_AREA_SPIRITUAL_CREATURES12 || area:CONST_AREA_SPIRITUAL_CREATURES13 || area:CONST_AREA_SPIRITUAL_CREATURES14 || area:CONST_AREA_SPIRITUAL_CREATURES15 || area:CONST_AREA_SPIRITUAL_CREATURES16 || area:CONST_AREA_SPIRITUAL_CREATURES17 || area:CONST_AREA_SPIRITUAL_CREATURES18 || area:CONST_AREA_SPIRITUAL_CREATURES19 || area:CONST_AREA_SPIRITUAL_CREATURES20 || area:CONST_AREA_SPIRITUAL_CREATURES21 || area:CONST_AREA_SPIRITUAL_CREATURES22) && (_cond))
 
 /*@ define:input
@@ -6119,7 +6149,7 @@ CONST_TUROTH_RULE (name:VAR_TUROTH_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_WALL_BEAST0 [3151,9537,0,3174,9584,0] // [[Lumbridge Swamp Caves]]
-#define CONST_AREA_WALL_BEAST1 [3188,9544,0,3225,9582,0] // [[Lumbridge Swamp Caves]]
+#define CONST_AREA_WALL_BEAST1 [3188,9544,0,3226,9598,0] // [[Lumbridge Swamp Caves]]
 #define CONST_WALL_BEAST_RULE(_cond) rule ((area:CONST_AREA_WALL_BEAST0 || area:CONST_AREA_WALL_BEAST1) && (_cond))
 
 /*@ define:input
@@ -6164,14 +6194,15 @@ CONST_WALL_BEAST_RULE (name:VAR_WALL_BEAST_ENUMLIST_FILTER_OTHER) {
 }
 
 
-#define CONST_AREA_WARPED_CREATURES0 [1470,4220,0,1531,4313,0] // [[Poison Waste Dungeon - main level]]
+#define CONST_AREA_WARPED_CREATURES0 [1470,4220,0,1541,4313,0] // [[Poison Waste Dungeon - main level]]
 #define CONST_AREA_WARPED_CREATURES1 [1482,4327,0,1502,4347,0] // [[Poison Waste Dungeon - main level]]
 #define CONST_AREA_WARPED_CREATURES2 [1467,4245,0,1487,4265,0] // [[Poison Waste Dungeon - main level]]
-#define CONST_AREA_WARPED_CREATURES3 [1477,4271,0,1497,4291,0] // [[Poison Waste Dungeon - lower level]]
+#define CONST_AREA_WARPED_CREATURES3 [1477,4270,0,1505,4291,0] // [[Poison Waste Dungeon - lower level]]
 #define CONST_AREA_WARPED_CREATURES4 [1469,4307,0,1509,4328,0] // [[Poison Waste Dungeon - main level]]
 #define CONST_AREA_WARPED_CREATURES5 [1466,4227,0,1524,4292,0] // [[Poison Waste Dungeon - main level]]
 #define CONST_AREA_WARPED_CREATURES6 [1342,4225,0,1362,4245,0] // [[Poison Waste Dungeon - lower level]]
-#define CONST_WARPED_CREATURES_RULE(_cond) rule ((area:CONST_AREA_WARPED_CREATURES0 || area:CONST_AREA_WARPED_CREATURES1 || area:CONST_AREA_WARPED_CREATURES2 || area:CONST_AREA_WARPED_CREATURES3 || area:CONST_AREA_WARPED_CREATURES4 || area:CONST_AREA_WARPED_CREATURES5 || area:CONST_AREA_WARPED_CREATURES6) && (_cond))
+#define CONST_AREA_WARPED_CREATURES7 [1517,4231,0,1537,4251,0] // [[Poison Waste Dungeon - lower level]]
+#define CONST_WARPED_CREATURES_RULE(_cond) rule ((area:CONST_AREA_WARPED_CREATURES0 || area:CONST_AREA_WARPED_CREATURES1 || area:CONST_AREA_WARPED_CREATURES2 || area:CONST_AREA_WARPED_CREATURES3 || area:CONST_AREA_WARPED_CREATURES4 || area:CONST_AREA_WARPED_CREATURES5 || area:CONST_AREA_WARPED_CREATURES6 || area:CONST_AREA_WARPED_CREATURES7) && (_cond))
 
 /*@ define:input
 type: enumlist
@@ -6225,8 +6256,8 @@ CONST_WARPED_CREATURES_RULE (name:VAR_WARPED_CREATURES_ENUMLIST_FILTER_TERTIARY)
 }
 
 
-#define CONST_AREA_WYRM0 [1250,10169,0,1285,10207,0] // [[Karuulm Slayer Dungeon - lower level]]
-#define CONST_AREA_WYRM1 [1242,10137,0,1277,10169,0] // [[Karuulm Slayer Dungeon - lower level (task-only)]]
+#define CONST_AREA_WYRM0 [1250,10169,0,1290,10207,0] // [[Karuulm Slayer Dungeon - lower level]]
+#define CONST_AREA_WYRM1 [1242,10137,0,1283,10169,0] // [[Karuulm Slayer Dungeon - lower level (task-only)]]
 #define CONST_WYRM_RULE(_cond) rule ((area:CONST_AREA_WYRM0 || area:CONST_AREA_WYRM1) && (_cond))
 
 /*@ define:input
@@ -6302,8 +6333,8 @@ CONST_WYRM_RULE (name:VAR_WYRM_ENUMLIST_FILTER_TERTIARY) {
 
 
 #define CONST_AREA_ZYGOMITES0 [2402,4457,0,2429,4485,0] // [[Zanaris]]
-#define CONST_AREA_ZYGOMITES1 [2402,4360,0,2430,4387,0] // [[Zanaris]]
-#define CONST_AREA_ZYGOMITES2 [3663,3806,0,3708,3900,0] // [[Fossil Island]]
+#define CONST_AREA_ZYGOMITES1 [2402,4360,0,2431,4387,0] // [[Zanaris]]
+#define CONST_AREA_ZYGOMITES2 [3663,3806,0,3713,3900,0] // [[Fossil Island]]
 #define CONST_ZYGOMITES_RULE(_cond) rule ((area:CONST_AREA_ZYGOMITES0 || area:CONST_AREA_ZYGOMITES1 || area:CONST_AREA_ZYGOMITES2) && (_cond))
 
 /*@ define:input
