@@ -451,13 +451,11 @@ def parse_monster_list(monster_list_file):
 def parse_coordinates(loc_text):
     """Parse x,y coordinates from location text."""
     coords = []
-    
-    # Pattern for x:y: format
-    coord_pattern1 = r'x:(\d+),y:(\d+)(?:,.*?)?(?:\||$)'
-    # Pattern for direct coordinate pairs
-    coord_pattern2 = r'(?:^|\|)(\d+),(\d+)(?:\||$)'
-    
-    # Try x:y: format first
+    # Pattern for x:y: format (now matches |, newline, or end)
+    coord_pattern1 = r'x:(\d+),y:(\d+)(?:,.*?)?(?:\||\n|$)'
+    # Pattern for direct coordinate pairs (now matches |, newline, or end)
+    coord_pattern2 = r'(?:^|\||\n)(\d+),(\d+)(?:\||\n|$)'
+
     matches = re.finditer(coord_pattern1, loc_text)
     for match in matches:
         x, y = int(match.group(1)), int(match.group(2))

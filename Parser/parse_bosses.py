@@ -37,7 +37,7 @@ SECTION_ALIASES = {
     "RUNESANDAMMUNITION": ["runes and ammunition", "runes", "ammunition", "elemental runes", "catalytic runes", "combination runes"],
     "MATERIALS": ["materials", "herbs", "seeds", "ores and bars", "fish", "fishing", "bait", "bolt tips", "resources", "noted herbs", "food", "talismans", "talismans (noted)", "gemstones", "dragonhide", "fletching materials", "tree-herb seed drop table"],
     "OTHER": ["other", "gloves", "jewellery", "junk", "catacombs drops", "fossils"],
-    "TERTIARY": ["tertiary", "ancient statuettes", "secondary", "catacombs tertiary", "chasm of fire tertiary"],
+    "TERTIARY": ["tertiary", "ancient statuettes", "secondary", "catacombs tertiary", "chasm of fire tertiary", "wilderness slayer tertiary"],
     "UNIQUE": ["unique", "uniques", "pre-roll", "sigils", "mutagens", "secondary uniques"]
 }
 
@@ -129,13 +129,104 @@ HARDCODED_LOCATIONS = {
     }
 }
 
+def extract_template_params(template):
+    """
+    Return a dictionary of all parameters in a mwparserfromhell Template node.
+    Strips code and whitespace from each value.
+    """
+    params = {}
+    for param in template.params:
+        key = str(param.name).strip().lower()
+        value = param.value.strip_code().strip()
+        params[key] = value
+    return params
+
+def extract_section(wikitext, section_names):
+    """
+    Extract the content of the first section whose heading matches one of section_names (case-insensitive).
+    Returns the section content as a string, or "" if not found.
+    """
+    code = mwparserfromhell.parse(wikitext)
+    section_names = {name.lower().strip() for name in section_names}
+    found = False
+    extracted = []
+    for node in code.nodes:
+        if isinstance(node, mwparserfromhell.nodes.Heading) and node.level == 2:
+            heading_title = node.title.strip().lower()
+            if found:
+                # End of the section
+                break
+            if heading_title in section_names:
+                found = True
+                continue  # Don't include the heading itself
+        if found:
+            extracted.append(str(node))
+    return "".join(extracted).strip()
+
+def extract_all_drop_sections(wikitext):
+    """
+    Extract and combine all drop-related sections (e.g., Drops, Wilderness Slayer Cave drops).
+    Returns a single wikitext string containing all drop sections.
+    """
+    code = mwparserfromhell.parse(wikitext)
+    drop_section_titles = []
+    # Collect all level 2 headings containing 'drops'
+    for node in code.nodes:
+        if isinstance(node, mwparserfromhell.nodes.Heading) and node.level == 2:
+            title = node.title.strip().lower()
+            if "drops" in title:
+                drop_section_titles.append(title)
+    # Extract all such sections and concatenate
+    all_drops = []
+    for section_title in drop_section_titles:
+        section = extract_section(wikitext, {section_title})
+        if section:
+            all_drops.append(section)
+    return "\n".join(all_drops)
+
+def strip_wiki_markup(text):
+    """
+    Remove wiki markup (links, tags, templates, references) and return plain text.
+    """
+    # Remove <ref>...</ref> and <ref .../> tags before parsing
+    text = re.sub(r'<ref[^>]*>.*?</ref>', '', text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r'<ref[^>]*/>', '', text, flags=re.DOTALL | re.IGNORECASE)
+    code = mwparserfromhell.parse(text)
+    cleaned = []
+    for node in code.nodes:
+        # Remove references, comments, and tags
+        if isinstance(node, (mwparserfromhell.nodes.Tag, mwparserfromhell.nodes.Comment)):
+            continue
+        # Replace wikilinks with their display text or title
+        if isinstance(node, mwparserfromhell.nodes.Wikilink):
+            if node.text:
+                cleaned.append(str(node.text))
+            else:
+                cleaned.append(str(node.title))
+            continue
+        # Replace templates with their display text if possible, else skip
+        if isinstance(node, mwparserfromhell.nodes.Template):
+            # For simple templates, try to use the first parameter as display
+            if node.params:
+                cleaned.append(node.params[0].value.strip_code().strip())
+            continue
+        # Otherwise, just add the plain text
+        cleaned.append(str(node))
+    result = "".join(cleaned).strip()
+    # Now remove any leftover brackets or whitespace
+    result = result.replace('[[', '').replace(']]', '').strip()
+    # Remove any double spaces left by tag removal
+    result = re.sub(r'\s{2,}', ' ', result)
+    return result
+
 def map_section_to_enum(section_title):
     section_title_clean = section_title.lower().strip()
     for enum_key, aliases in SECTION_ALIASES.items():
-        if section_title_clean in aliases:
-            if debug_enum_mapping:
-                print(f"DEBUG: Section heading '{section_title}' mapped to enum '{enum_key}'")
-            return enum_key
+        for alias in aliases:
+            if alias in section_title_clean:
+                if debug_enum_mapping:
+                    print(f"DEBUG: Section heading '{section_title}' mapped to enum '{enum_key}' (via alias '{alias}')")
+                return enum_key
     if debug_enum_mapping:
         print(f"DEBUG: Section heading '{section_title}' mapped to enum 'None'")
     unmapped_sections.add(section_title.strip())
@@ -178,26 +269,37 @@ def extract_items_from_nodes(nodes):
 
 # Extract categorized drops from the wikitext
 def extract_categorized_drops(wikitext):
+    """
+    Extract categorized drops from the wikitext using mwparserfromhell.
+    Handles subsections and adjacent templates robustly.
+    """
     code = mwparserfromhell.parse(wikitext)
     categorized_drops = defaultdict(set)
 
-    current_section = None
-    section_nodes = []
+    # Walk each section (including subsections)
+    for section in code.get_sections(include_headings=True, flat=True):
+        headings = section.filter_headings()
+        if not headings:
+            continue
+        heading_title = headings[0].title.strip()
+        section_key = map_section_to_enum(heading_title)
+        if not section_key:
+            continue
 
-    for node in code.nodes:
-        if isinstance(node, mwparserfromhell.nodes.Heading):
-            if current_section:
-                items = extract_items_from_nodes(section_nodes)
-                categorized_drops[current_section].update(items)
-            section_nodes = []
-            current_section = map_section_to_enum(node.title.strip())
-        else:
-            if current_section:
-                section_nodes.append(node)
-
-    if current_section:
-        items = extract_items_from_nodes(section_nodes)
-        categorized_drops[current_section].update(items)
+        # Find all drop templates in this section
+        for template in section.ifilter_templates(recursive=True):
+            template_name = str(template.name).strip()
+            if template_name in {"DropsLine", "Drops line"}:
+                item = None
+                for param in ['item', 'name', 'drop']:
+                    if template.has(param):
+                        item = template.get(param).value.strip_code().strip()
+                        break
+                if item and item not in IGNORE_ITEMS:
+                    item = strip_wiki_markup(item)
+                    categorized_drops[section_key].add(item)
+            elif template_name in DROP_TABLE_TEMPLATES:
+                categorized_drops[section_key].update(DROP_TABLE_TEMPLATES[template_name])
 
     # Remove empty categories and sort
     categorized_drops = {k: sorted(v) for k, v in categorized_drops.items() if v}
@@ -286,18 +388,18 @@ def run_batch(monster_list_file='bosses.txt', template_path='boss_template.txt',
                     print(f"Processing monster: '{monster}'")
                 wikitext = get_wikitext(monster)
                 # Extract locations section - check both singular and plural
-                locations_section = ""
-                if "\n==Locations==" in wikitext:
-                    locations_section = wikitext.split("\n==Locations==")[1].split("\n==")[0]
-                elif "\n==Location==" in wikitext:
-                    locations_section = wikitext.split("\n==Location==")[1].split("\n==")[0]
+                locations_section = extract_section(wikitext, {"locations", "location"})
 
                 if locations_section:
                     if debug_locations:
                         print(f"DEBUG: {monster} locations section:\n{locations_section}")
                     combined_locations.append(locations_section)
                 
-                drops = extract_categorized_drops(wikitext)
+                drops_section = extract_section(wikitext, {"drops"})
+                if debug_drops:
+                    print(f"DEBUG: Extracted drops section for {monster}:\n{drops_section[:500]}")
+                all_drops_section = extract_all_drop_sections(wikitext)
+                drops = extract_categorized_drops(all_drops_section if all_drops_section else wikitext)
                 if debug_drops:
                     print(f"DEBUG: {monster} categorized drops: {dict(drops)}")
                 for k, v in drops.items():
@@ -400,45 +502,8 @@ def parse_coordinates(loc_text):
 
 def extract_location(location_text):
     """Extract clean location name from wiki format."""
-    # Remove all reference tags first
-    location_text = re.sub(r'<ref[^>]*?/>|<ref[^>]*?>.*?</ref>', '', location_text)
-    
-    # Clean up location text first
-    location_text = (location_text
-        .replace('[[[[', '[[')  # Fix quadruple brackets
-        .replace(']]]]', ']]')  # Fix quadruple closing brackets
-        .replace('[[/', '[[')   # Fix malformed slash brackets
-        .replace('//', '/')     # Fix double slashes
-        .strip())               # Remove leading/trailing whitespace
-    
-    # Handle nested brackets
-    while '[[' in location_text and ']]' in location_text:
-        # Find innermost bracketed content first
-        bracket_match = re.search(r'\[\[([^\[\]]*?)\]\]', location_text)
-        if not bracket_match:
-            break
-        linked_location = bracket_match.group(1)
-        # Handle pipe characters
-        if '|' in linked_location:
-            linked_location = linked_location.split('|')[0]
-        
-        # Clean up any parenthetical suffixes
-        if '(' in linked_location:
-            base_name = linked_location.split('(')[0].strip()
-            # Check for special location suffixes
-            if any(suffix in linked_location.lower() for suffix in ['(location)', '(dungeon)']):
-                linked_location = base_name
-            else:
-                # Keep other suffixes like (Upper), (Lower), etc.
-                suffix_match = re.search(r'\((Upper|Lower|Middle)\s*(?:Level)?\)', linked_location)
-                if suffix_match:
-                    linked_location = f"{base_name}({suffix_match.group(1)})"
-                else:
-                    linked_location = base_name
-        
-        # Replace just this bracketed section
-        location_text = location_text.replace(f'[[{bracket_match.group(1)}]]', linked_location)
-    return location_text.strip()
+    # Use mwparserfromhell-based cleaner for robust markup removal
+    return strip_wiki_markup(location_text).strip()
 
 def group_coordinates_by_proximity(coords, max_distance=adjacent_group_range):
     """Group coordinates that are within max_distance of each other."""
@@ -470,37 +535,16 @@ def group_coordinates_by_proximity(coords, max_distance=adjacent_group_range):
     return groups
 
 def clean_single_location(text):
-    """Clean a single location name without slash separators."""
-    # Remove reference tags
-    text = re.sub(r'<ref[^>]*?/>|<ref[^>]*?>.*?</ref>', '', text)
-    
-    # Handle wiki brackets
-    while '[[' in text and ']]' in text:
-        match = re.search(r'\[\[([^\[\]]*?)\]\]', text)
-        if not match:
-            break
-        content = match.group(1)
-        # Handle piped links
-        if '|' in content:
-            content = content.split('|')[0]
-        
-        # Clean up suffixes - remove requirement text in parentheses
-        if '(' in content:
-            base_name = content.split('(')[0].strip()
-            # Check for special location suffixes vs requirements
-            if re.search(r'\((Upper|Lower|Middle)\s*(?:Level)?\)', content, re.IGNORECASE):
-                suffix = re.search(r'\((Upper|Lower|Middle)\s*(?:Level)?\)', content).group(1)
-                content = f"{base_name}({suffix})"
-            elif re.search(r'\((.*?(?:required|requires|task|only|slayer).*?)\)', content, re.IGNORECASE):
-                # This is a requirement suffix - remove it
-                content = base_name
-            else:
-                content = base_name
-        text = text.replace(f'[[{match.group(1)}]]', content)
-    return text.strip()
+    # Remove <ref>...</ref> and <ref .../> tags before further processing
+    text = re.sub(r'<ref[^>]*>.*?</ref>', '', text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r'<ref[^>]*/>', '', text, flags=re.DOTALL | re.IGNORECASE)
+    return strip_wiki_markup(text)
 
 def clean_location_name(location_name):
     """Clean up location name and remove special suffixes."""
+    # Remove <ref>...</ref> and <ref .../> tags FIRST
+    location_name = re.sub(r'<ref[^>]*>.*?</ref>', '', location_name, flags=re.DOTALL | re.IGNORECASE)
+    location_name = re.sub(r'<ref[^>]*/>', '', location_name, flags=re.DOTALL | re.IGNORECASE)
     # Fix malformed brackets
     location_name = re.sub(r'\[{2,}', '[[', location_name)
     location_name = re.sub(r'\]{2,}', ']]', location_name)
@@ -540,21 +584,28 @@ def format_area_constants(monster_name, locations_text, buffer_size=wander_range
             rule_def = f"#define CONST_{monster_name}_RULE(_cond) rule (({area_refs}) && (_cond))"
             area_blocks.append(rule_def)
             return "".join(area_blocks)
-    
-    # Split into location blocks
-    loc_blocks = re.findall(r'\{\{LocLine(.*?)\}\}', locations_text, re.DOTALL)
-    
-    # First collect coordinates grouped by location
-    for block in loc_blocks:
-        coords = parse_coordinates(block)
-        if coords:
-            # Get location name
-            location_match = re.search(r'\|location = ([^\n|]*)', block)
-            if location_match:
-                location_text = location_match.group(1).strip()
-                location_name = clean_location_name(location_text)
-                location_groups.append((location_name.strip(), coords))
-    
+
+    # Parse the locations_text as wikitext using mwparserfromhell
+    code = mwparserfromhell.parse(locations_text)
+    for template in code.filter_templates():
+        if template.name.matches("LocLine"):
+            # Extract coordinates
+            block = str(template)
+            coords = parse_coordinates(block)
+            if coords:
+                # Extract location name
+                location_text = ""
+                if template.has("location"):
+                    location_text = str(template.get("location").value).strip()
+                else:
+                    # Fallback: try to extract from raw block
+                    location_match = re.search(r'\|location\s*=\s*([^\n|}]*)', block)
+                    if location_match:
+                        location_text = location_match.group(1).strip()
+                if location_text:
+                    location_name = clean_location_name(location_text)
+                    location_groups.append((location_name, coords))
+
     # Process each location separately
     for location_name, coords in location_groups:
         # Group coordinates within this location
@@ -573,39 +624,34 @@ def format_area_constants(monster_name, locations_text, buffer_size=wander_range
                 max_x = max_x + buffer_size
                 max_y = max_y + buffer_size
                 
-                # Add newline to area constant definition
+                # Re-wrap location name in double brackets for output
                 area_constant = (
                     f"#define CONST_AREA_{monster_name}{current_area} "
-                    f"[{min_x},{min_y},0,{max_x},{max_y},0] // [[{location_name}]]\n"
+                    f"[{min_x},{min_y},0,{max_x},{max_y},0] // [[{location_name}]]"
                 )
                 area_blocks.append(area_constant)
                 current_area += 1
     
-    # Generate single rule combining all areas
+    # Generate the rule combining all areas
     if area_blocks:
         area_refs = " || ".join(f"area:CONST_AREA_{monster_name}{i}" 
-                              for i in range(current_area))
-        rule_def = f"#define CONST_{monster_name}_RULE(_cond) rule (({area_refs}) && (_cond))"
+                              for i in range(len(area_blocks)))
+        rule_def = (
+            f"#define CONST_{monster_name}_RULE(_cond) "
+            f"rule (({area_refs}) && (_cond))"
+        )
         area_blocks.append(rule_def)
     
-    return "".join(area_blocks)  # Join without additional newlines
+    return "\n".join(area_blocks)
 
 def update_template(template_text, monster_name, locations_text):
     """Replace placeholder area definitions with actual coordinates."""
-    normalized_name = monster_name.upper().replace(" ", "_").replace("'", "")
-
-    # Pattern matches any boss's area section (MONSTER or already replaced)
-    area_pattern = (
-        r'#define CONST_AREA_[A-Z0-9_]+0[^\n]*\n'
-        r'#define CONST_[A-Z0-9_]+_RULE\(_cond\)[^\n]*\n'
-    )
-    if normalized_name in HARDCODED_LOCATIONS:
-        new_section = HARDCODED_LOCATIONS[normalized_name]["template"] + "\n"
-        template_text = re.sub(area_pattern, new_section, template_text, flags=re.DOTALL)
-    else:
-        area_constants = format_area_constants(monster_name, locations_text)
-        if area_constants:
-            template_text = re.sub(area_pattern, area_constants + "\n", template_text, flags=re.DOTALL)
+    area_constants = format_area_constants(monster_name, locations_text)
+    
+    # Replace the placeholder area definitions
+    pattern = r'#define CONST_AREA_MONSTER.*?(?=\n\n|$)'
+    template_text = re.sub(pattern, area_constants, template_text, flags=re.DOTALL)
+    
     return template_text
 
 if __name__ == "__main__":
